@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OPM0PG_HFT_2022231.Logic\OPM0PG_HFT_2022231.Logic.csproj" />
+    <ProjectReference Include="..\OPM0PG_HFT_2022231.Models\OPM0PG_HFT_2022231.Models.csproj" />
+    <ProjectReference Include="..\OPM0PG_HFT_2022231.Repository\OPM0PG_HFT_2022231.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
