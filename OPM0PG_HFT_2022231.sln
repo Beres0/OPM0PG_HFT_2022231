@@ -21,6 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OPM0PG_HFT_2022231.Client",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OPM0PG_HFT_2022231.Test", "OPM0PG_HFT_2022231.Test\OPM0PG_HFT_2022231.Test.csproj", "{4BFF406E-F294-4913-96AE-233649B7D4E5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{0E20343C-53C1-483F-A7D6-D65907405F02}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
