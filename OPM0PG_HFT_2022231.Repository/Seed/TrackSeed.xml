@@ -1,5 +1,2980 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfTrack xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Nqz 9 Chaos Rave 1st Edit +6</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>19 Osc Freeze Edit</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>33,000 Note Sweeps</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Buchla 200 Rhtym 2B</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>2 Tran 1 Env 4 Decay B Edit</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Short Forgotten Produk Trk</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>2nd Neotek Test B + 11</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Nqz 2 Edit + 6</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Buchla 200e Pulses 8LP9</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Buchla 200e XY MARF</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>3buchla + MARF B + 6</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>@FX - MATRIXT9</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>ModularT4 [Spektral Modblues]</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>Nqz FS AK9</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>15</Id>
+    <Title>Nqz 25</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>16</Id>
+    <Title>Nqz 27</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>17</Id>
+    <Title>Nqz 3 Singing Montage Chaos +6</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>18</Id>
+    <Title>Talkin2u Mix2</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>19</Id>
+    <Title>Matrix Del1 Edit</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>20</Id>
+    <Title>Buchla 200 6</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>21</Id>
+    <Title>Buchla 200QUAD EQ,FM OSC F6 Net 2dk Edit</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>22</Id>
+    <Title>Marshall Chords 01</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>23</Id>
+    <Title>ModularT8 Spectral Modular 2</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>24</Id>
+    <Title>ModularT3 Schmoo Pulse</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>25</Id>
+    <Title>Springs 3-AFX Edit</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>26</Id>
+    <Title>Rebrab</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>27</Id>
+    <Title>Buchla 200e 31patches</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>28</Id>
+    <Title>291E Buchla Talk 1</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>29</Id>
+    <Title>Nqz 18 Impulse B</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>30</Id>
+    <Title>Nqz 7 Dark Rave</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>31</Id>
+    <Title>Sines 2 Seq Edit</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>32</Id>
+    <Title>10 Partial Gen</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>33</Id>
+    <Title>FREEZE QRS Edit</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>34</Id>
+    <Title>Nqz 14 ENV DelFS Edit</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>35</Id>
+    <Title>Nagradrums 2+7</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>36</Id>
+    <Title>Buchla Master Edit Rend</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>37</Id>
+    <Title>DOT PATTERNS</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>38</Id>
+    <Title>10 Partial Gen 2</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>39</Id>
+    <Title>Nqz 21</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>40</Id>
+    <Title>Nqz Baby</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>41</Id>
+    <Title>SH MATRIXT1</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>42</Id>
+    <Title>Z Freqdelay Serve</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>43</Id>
+    <Title>Nqz 11 Fucked PWM F6 Edit +6</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>44</Id>
+    <Title>Nqz 12 FS Del</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1465758</AlbumId>
+    <PartId>1</PartId>
+    <Id>45</Id>
+    <Title>Snh Edit B</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Motivation</Title>
+    <Duration>PT4M28S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>All I Need</Title>
+    <Duration>PT3M44S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Real Shit From A Real Nigga</Title>
+    <Duration>PT2M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Realist Alive</Title>
+    <Duration>PT4M</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Numb</Title>
+    <Duration>PT3M55S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>What You Doin’</Title>
+    <Duration>PT4M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>The World Needs Change</Title>
+    <Duration>PT2M25S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>I’m Official</Title>
+    <Duration>PT2M18S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Brainwash By London</Title>
+    <Duration>PT2M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Illest Alive</Title>
+    <Duration>PT4M9S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>She’s Hot</Title>
+    <Duration>PT2M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Cold War</Title>
+    <Duration>PT2M50S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>353700</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>13</Title>
+    <Duration>PT1M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Fall</Title>
+    <Duration>PT1M25S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Unearth</Title>
+    <Duration>PT3M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Eternal</Title>
+    <Duration>PT3M42S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Goth</Title>
+    <Duration>PT3M27S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>White Light</Title>
+    <Duration>PT4M24S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Above</Title>
+    <Duration>PT3M34S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Pure</Title>
+    <Duration>PT5M</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>XXX</Title>
+    <Duration>PT1M20S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Disappear</Title>
+    <Duration>PT2M50S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Blood</Title>
+    <Duration>PT2M14S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Sleep Paralysis</Title>
+    <Duration>PT3M26S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Rapture</Title>
+    <Duration>PT2M38S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Body</Title>
+    <Duration>PT3M28S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1392190</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>Underwater Sun</Title>
+    <Duration>PT3M9S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Entity Part 2</Title>
+    <Duration>PT1M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Zero</Title>
+    <Duration>PT3M45S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Dead Idols</Title>
+    <Duration>PT3M29S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Empath</Title>
+    <Duration>PT4M13S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Destroy</Title>
+    <Duration>PT4M36S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Fractals</Title>
+    <Duration>PT3M5S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Abduction </Title>
+    <Duration>PT3M22S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Crush</Title>
+    <Duration>PT4M47S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Elixir</Title>
+    <Duration>PT5M54S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Ocean</Title>
+    <Duration>PT3M47S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Loss</Title>
+    <Duration>PT4M27S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Take Me</Title>
+    <Duration>PT3M29S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Lucid Dreams</Title>
+    <Duration>PT4M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1574811</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>Gone</Title>
+    <Duration>PT5M20S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>1029904</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Scars</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1029904</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Void</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1029904</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Womb Of Emptiness</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1029904</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Autumn Shades</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1029904</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>The Wind And The Leaves</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1029904</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Climax Of Sorrow</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1029904</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Nightfall</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1029904</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Escape II</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Drowning In Deep Silence</Title>
+    <Duration>PT5M17S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Defiled And Raped</Title>
+    <Duration>PT5M13S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Dead End</Title>
+    <Duration>PT5M23S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Traitors Of Our Age</Title>
+    <Duration>PT4M33S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Pitch Black</Title>
+    <Duration>PT5M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Netherworld</Title>
+    <Duration>PT2M21S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Reap The Whirlwind</Title>
+    <Duration>PT4M28S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Rotten To The Core</Title>
+    <Duration>PT4M36S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Vicious Eyes</Title>
+    <Duration>PT4M48S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>My Inner Storm Blows</Title>
+    <Duration>PT4M24S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Death Plan</Title>
+    <Duration>PT5M12S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Theodicy</Title>
+    <Duration>PT4M12S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42319</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>This Gloomy Alleyway</Title>
+    <Duration>PT5M11S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>My Revelation</Title>
+    <Duration>PT4M42S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>C'mon Devil</Title>
+    <Duration>PT4M46S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Masochist</Title>
+    <Duration>PT5M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Archenemys Revenge</Title>
+    <Duration>PT4M17S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Labyrinth Of Thoughts</Title>
+    <Duration>PT4M3S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Black Clouds</Title>
+    <Duration>PT4M31S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Human Consistency</Title>
+    <Duration>PT4M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Psycho Maniac</Title>
+    <Duration>PT4M41S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>The Dungeon Of Reality</Title>
+    <Duration>PT4M40S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>No Fiend To Exorcise</Title>
+    <Duration>PT4M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Kalter Schatten</Title>
+    <Duration>PT3M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Near End</Title>
+    <Duration>PT4M27S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Demons Of Hate</Title>
+    <Duration>PT4M41S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>Black Clouds (Winter Gale Mix)</Title>
+    <Duration>PT4M22S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42312</AlbumId>
+    <PartId>1</PartId>
+    <Id>15</Id>
+    <Title>Achluophobia</Title>
+    <Duration>PT3M23S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Machine Screw</Title>
+    <Duration>PT39S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Christian Woman</Title>
+    <Duration>PT8M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Black No. 1 (Little Miss Scare-All)</Title>
+    <Duration>PT11M14S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Fay Wray Come Out And Play</Title>
+    <Duration>PT1M2S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Kill All The White People</Title>
+    <Duration>PT3M23S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Summer Breeze</Title>
+    <Duration>PT4M49S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Set Me On Fire</Title>
+    <Duration>PT3M29S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Dark Side Of The Womb</Title>
+    <Duration>PT27S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>We Hate Everyone</Title>
+    <Duration>PT6M50S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Bloody Kisses (A Death In The Family)</Title>
+    <Duration>PT10M55S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>3.0.I.F.</Title>
+    <Duration>PT2M5S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Too Late: Frozen</Title>
+    <Duration>PT7M50S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Blood &amp; Fire</Title>
+    <Duration>PT5M32S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27518</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>Can't Lose You</Title>
+    <Duration>PT6M5S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Bad Ground</Title>
+    <Duration>PT38S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Untitled</Title>
+    <Duration>PT21S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Love You To Death</Title>
+    <Duration>PT7M9S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Be My Druidess</Title>
+    <Duration>PT5M26S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Green Man</Title>
+    <Duration>PT5M48S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Red Water (Christmas Mourning)</Title>
+    <Duration>PT6M49S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>My Girlfriend's Girlfriend</Title>
+    <Duration>PT3M46S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Die With Me</Title>
+    <Duration>PT7M13S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Burnt Flowers Fallen</Title>
+    <Duration>PT6M10S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>In Praise Of Bacchus</Title>
+    <Duration>PT7M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Cinnamon Girl</Title>
+    <Duration>PT4M1S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>The Glorious Liberation Of The People's Technocratic Republic Of Vinnland By The Combined Forces Of The United Territories Of Europa</Title>
+    <Duration>PT1M7S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Wolf Moon (Including Zoanthropic Paranoia)</Title>
+    <Duration>PT6M38S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>Haunted</Title>
+    <Duration>PT10M7S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27564</AlbumId>
+    <PartId>1</PartId>
+    <Id>15</Id>
+    <Title>Untitled</Title>
+    <Duration>PT9S</Duration>
+  </Track>
+   <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Mirror Part I</Title>
+    <Duration>PT50S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Song Of The Winds</Title>
+    <Duration>PT5M20S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Mirror Part II</Title>
+    <Duration>PT2M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Pan</Title>
+    <Duration>PT5M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Mirror Part III</Title>
+    <Duration>PT58S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Entity</Title>
+    <Duration>PT8M18S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Mirror Part IV</Title>
+    <Duration>PT2M58S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Oceans Of Whispers</Title>
+    <Duration>PT4M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Mirror Part V</Title>
+    <Duration>PT1M18S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>The Refuge</Title>
+    <Duration>PT5M14S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>The Abeyance</Title>
+    <Duration>PT5M48S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Hell</Title>
+    <Duration>PT7M31S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Mirror Part VI</Title>
+    <Duration>PT1M41S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>Souls</Title>
+    <Duration>PT4M25S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>15</Id>
+    <Title>Mirror Part VII</Title>
+    <Duration>PT56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55827</AlbumId>
+    <PartId>1</PartId>
+    <Id>16</Id>
+    <Title>A Few Years Later</Title>
+    <Duration>PT5M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Acrid Avid Jam Shred</Title>
+    <Duration>PT7M38S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>The Waxen Pith</Title>
+    <Duration>PT4M49S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Wax The Nip</Title>
+    <Duration>PT4M18S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>2</PartId>
+    <Id>4</Id>
+    <Title>Icct Hedral (Edit)</Title>
+    <Duration>PT6M7S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>2</PartId>
+    <Id>5</Id>
+    <Title>Ventolin (Video Version)</Title>
+    <Duration>PT4M29S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>2</PartId>
+    <Id>6</Id>
+    <Title>Come On You Slags!</Title>
+    <Duration>PT5M44S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>3</PartId>
+    <Id>7</Id>
+    <Title>Start As You Mean To Go On</Title>
+    <Duration>PT6M5S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>3</PartId>
+    <Id>8</Id>
+    <Title>Wet Tip Hen Ax</Title>
+    <Duration>PT5M17S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>3</PartId>
+    <Id>9</Id>
+    <Title>Mookid</Title>
+    <Duration>PT3M51S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>4</PartId>
+    <Id>10</Id>
+    <Title>Alberto Balsalm</Title>
+    <Duration>PT5M10S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>4</PartId>
+    <Id>11</Id>
+    <Title>Cow Cud Is A Twin</Title>
+    <Duration>PT5M33S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>461</AlbumId>
+    <PartId>4</PartId>
+    <Id>12</Id>
+    <Title>Next Heap With</Title>
+    <Duration>PT4M43S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Golgotha</Title>
+    <Duration>PT6M26S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Embryodead</Title>
+    <Duration>PT5M27S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Down Where We Belong</Title>
+    <Duration>PT3M39S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Slave To Evil</Title>
+    <Duration>PT4M23S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>War</Title>
+    <Duration>PT4M43S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Is It You</Title>
+    <Duration>PT5M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Pest</Title>
+    <Duration>PT4M38S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Womb</Title>
+    <Duration>PT4M54S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Angel</Title>
+    <Duration>PT4M25S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27179</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Stillbirth</Title>
+    <Duration>PT6M24S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Schlechter Mensch</Title>
+    <Duration>PT44S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>The Boo</Title>
+    <Duration>PT4M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Fuckit</Title>
+    <Duration>PT3M20S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Cut To See How Much I Bleed</Title>
+    <Duration>PT3M34S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Achtung, Menschen</Title>
+    <Duration>PT3M27S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Autophagy Day</Title>
+    <Duration>PT3M43S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Pooch</Title>
+    <Duration>PT4M54S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Leichenteilchen</Title>
+    <Duration>PT3M34S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Broken</Title>
+    <Duration>PT5M47S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Bloodbathing Tub</Title>
+    <Duration>PT4M12S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Rumpelkammer</Title>
+    <Duration>PT3M55S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Gulag</Title>
+    <Duration>PT3M54S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27210</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Schlechter Mensch</Title>
+    <Duration>PT44S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Untrust Us</Title>
+    <Duration>PT3M6S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Alice Practice</Title>
+    <Duration>PT2M41S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Crimewave (Crystal Castles Vs. Health)</Title>
+    <Duration>PT4M18S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Magic Spells</Title>
+    <Duration>PT6M7S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>XXZXCUZX Me</Title>
+    <Duration>PT1M54S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Air War</Title>
+    <Duration>PT4M12S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Courtship Dating</Title>
+    <Duration>PT3M30S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Good Time</Title>
+    <Duration>PT2M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>1991</Title>
+    <Duration>PT1M54S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Vanished</Title>
+    <Duration>PT4M3S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Knights</Title>
+    <Duration>PT3M14S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Love And Caring</Title>
+    <Duration>PT2M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Through The Hosiery</Title>
+    <Duration>PT3M7S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>Reckless</Title>
+    <Duration>PT3M28S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>15</Id>
+    <Title>Black Panther</Title>
+    <Duration>PT2M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>33450</AlbumId>
+    <PartId>1</PartId>
+    <Id>16</Id>
+    <Title>Tell Me What To Swallow</Title>
+    <Duration>PT2M17S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Fainting Spells</Title>
+    <Duration>PT2M43S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Celestica</Title>
+    <Duration>PT3M50S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Doe Deer</Title>
+    <Duration>PT1M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Baptism</Title>
+    <Duration>PT4M12S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Year Of Silence</Title>
+    <Duration>PT4M53S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Empathy</Title>
+    <Duration>PT4M11S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Suffocation</Title>
+    <Duration>PT4M2S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Violent Dreams</Title>
+    <Duration>PT4M35S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Vietnam</Title>
+    <Duration>PT5M8S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Birds</Title>
+    <Duration>PT2M30S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Pap Smear</Title>
+    <Duration>PT3M42S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Not In Love</Title>
+    <Duration>PT3M33S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Intimate</Title>
+    <Duration>PT4M45S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>250274</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>I Am Made Of Chalk</Title>
+    <Duration>PT3M9S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Plague</Title>
+    <Duration>PT4M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Kerosene</Title>
+    <Duration>PT3M12S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Wrath Of God</Title>
+    <Duration>PT3M7S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Affection</Title>
+    <Duration>PT2M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Pale Flesh</Title>
+    <Duration>PT3M</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Sad Eyes</Title>
+    <Duration>PT3M27S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Insulin</Title>
+    <Duration>PT1M47S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Transgender</Title>
+    <Duration>PT3M5S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Violent Youth</Title>
+    <Duration>PT4M22S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Telepath</Title>
+    <Duration>PT3M55S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Mercenary</Title>
+    <Duration>PT2M39S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>491967</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Child I Will Hurt You</Title>
+    <Duration>PT3M33S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10889</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Slow Pulse Boy</Title>
+    <Duration>PT5M13S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10889</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Maps In Her Wrists And Arms</Title>
+    <Duration>PT4M20S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10889</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>The Dwelling Place</Title>
+    <Duration>PT2M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10889</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Vincent Craine</Title>
+    <Duration>PT6M24S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10889</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Jack</Title>
+    <Duration>PT4M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10889</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>The Headless Clay Woman</Title>
+    <Duration>PT5M27S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10889</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Gone... Like The Swallows</Title>
+    <Duration>PT4M16S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10889</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Virus Meadow</Title>
+    <Duration>PT4M53S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Prince Rupert</Title>
+    <Duration>PT4M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Macbeth's Head</Title>
+    <Duration>PT4M8S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>The Nobody Inn</Title>
+    <Duration>PT45S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Belief In The Rose</Title>
+    <Duration>PT4M8S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>The Street Organ</Title>
+    <Duration>PT3M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Lady D'Arbanville</Title>
+    <Duration>PT4M24S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Misfortunes</Title>
+    <Duration>PT4M15S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>The Pear Tree</Title>
+    <Duration>PT3M38S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Ill Omen</Title>
+    <Duration>PT3M51S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>The Horse Fair</Title>
+    <Duration>PT3M34S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>The Harp</Title>
+    <Duration>PT4M2S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>10795</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Anchor Yard</Title>
+    <Duration>PT4M3S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>1</Id>
+    <Title>Reise, Reise</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>2</Id>
+    <Title>Links 2 3 4</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>3</Id>
+    <Title>Keine Lust</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>4</Id>
+    <Title>Feuer Frei!</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>5</Id>
+    <Title>Asche Zu Asche</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>6</Id>
+    <Title>Morgenstern</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>7</Id>
+    <Title>Mein Teil</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>8</Id>
+    <Title>Stein Um Stein</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>9</Id>
+    <Title>Los</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>10</Id>
+    <Title>Du Riechst So Gut</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>11</Id>
+    <Title>Benzin</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>12</Id>
+    <Title>Du Hast</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>13</Id>
+    <Title>Sehnsucht</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>14</Id>
+    <Title>Amerika</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>15</Id>
+    <Title>Rammstein</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>16</Id>
+    <Title>Sonne</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>17</Id>
+    <Title>Ich Will</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>18</Id>
+    <Title>Ohne Dich</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>2</PartId>
+    <Id>19</Id>
+    <Title>Stripped</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>3</PartId>
+    <Id>20</Id>
+    <Title>Sonne</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>3</PartId>
+    <Id>21</Id>
+    <Title>Rein Raus</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>3</PartId>
+    <Id>22</Id>
+    <Title>Ohne Dich</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>3</PartId>
+    <Id>23</Id>
+    <Title>Feuer Frei!</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>4</PartId>
+    <Id>24</Id>
+    <Title>Mein Teil</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>4</PartId>
+    <Id>25</Id>
+    <Title>Du Hast</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>4</PartId>
+    <Id>26</Id>
+    <Title>Los (Trailer)</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>5</PartId>
+    <Id>27</Id>
+    <Title>Moskau (Special Version)</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>28</Id>
+    <Title>Intro</Title>
+    <Duration>PT2M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>29</Id>
+    <Title>Reise, Reise</Title>
+    <Duration>PT5M31S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>30</Id>
+    <Title>Links 2 3 4</Title>
+    <Duration>PT4M51S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>31</Id>
+    <Title>Keine Lust</Title>
+    <Duration>PT3M52S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>32</Id>
+    <Title>Feuer Frei!</Title>
+    <Duration>PT3M32S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>33</Id>
+    <Title>Asche Zu Asche</Title>
+    <Duration>PT4M6S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>34</Id>
+    <Title>Morgenstern</Title>
+    <Duration>PT4M53S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>35</Id>
+    <Title>Mein Teil</Title>
+    <Duration>PT6M26S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>36</Id>
+    <Title>Los</Title>
+    <Duration>PT6M25S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>37</Id>
+    <Title>Du Riechst So Gut</Title>
+    <Duration>PT5M48S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>38</Id>
+    <Title>Benzin</Title>
+    <Duration>PT4M5S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>39</Id>
+    <Title>Du Hast</Title>
+    <Duration>PT4M21S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>40</Id>
+    <Title>Sehnsucht</Title>
+    <Duration>PT4M23S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>41</Id>
+    <Title>Amerika</Title>
+    <Duration>PT6M20S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>42</Id>
+    <Title>Sonne</Title>
+    <Duration>PT4M51S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95298</AlbumId>
+    <PartId>6</PartId>
+    <Id>43</Id>
+    <Title>Ich Will</Title>
+    <Duration>PT4M22S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Mein Herz Brennt</Title>
+    <Duration>PT4M39S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Links 2 3 4</Title>
+    <Duration>PT3M36S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Sonne</Title>
+    <Duration>PT4M32S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Ich Will</Title>
+    <Duration>PT3M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Feuer Frei!</Title>
+    <Duration>PT3M8S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Mutter</Title>
+    <Duration>PT4M28S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Spieluhr</Title>
+    <Duration>PT4M46S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Zwitter</Title>
+    <Duration>PT4M17S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Rein Raus</Title>
+    <Duration>PT3M9S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Adios</Title>
+    <Duration>PT3M48S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>95285</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Nebel</Title>
+    <Duration>PT4M54S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Lost Youth Of A Prisoner</Title>
+    <Duration>PT4M15S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Fire And Ice</Title>
+    <Duration>PT4M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Inside</Title>
+    <Duration>PT4M</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Doom</Title>
+    <Duration>PT4M3S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Box Of Steel</Title>
+    <Duration>PT4M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>K.N.K.A.</Title>
+    <Duration>PT4M11S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Vietnam</Title>
+    <Duration>PT6M3S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Message</Title>
+    <Duration>PT6M5S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>In The Year 2525</Title>
+    <Duration>PT4M17S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Lie On Grass</Title>
+    <Duration>PT2M41S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>2nd Step</Title>
+    <Duration>PT5M18S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55817</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Suicide Of The Guardian Angel</Title>
+    <Duration>PT3M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>17225</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Assimilate</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>17225</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Dead Lines</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>17225</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Blood On The Wall</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>17225</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Icebreaker</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>17225</AlbumId>
+    <PartId>2</PartId>
+    <Id>5</Id>
+    <Title>The Choke</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>17225</AlbumId>
+    <PartId>2</PartId>
+    <Id>6</Id>
+    <Title>Social Deception</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>17225</AlbumId>
+    <PartId>2</PartId>
+    <Id>7</Id>
+    <Title>Basement</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>17225</AlbumId>
+    <PartId>2</PartId>
+    <Id>8</Id>
+    <Title>Last Call</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>17225</AlbumId>
+    <PartId>2</PartId>
+    <Id>9</Id>
+    <Title>Film</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Rodent</Title>
+    <Duration>PT5M49S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Hexonxonx</Title>
+    <Duration>PT5M25S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Two Time Grime</Title>
+    <Duration>PT5M39S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Fascist Jock Itch</Title>
+    <Duration>PT4M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Worlock</Title>
+    <Duration>PT5M30S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Rain</Title>
+    <Duration>PT1M26S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Tin Omen</Title>
+    <Duration>PT4M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Rivers</Title>
+    <Duration>PT4M49S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Choralone</Title>
+    <Duration>PT3M2S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Amputate</Title>
+    <Duration>PT3M15S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>3815</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Spahn Dirge (Live)</Title>
+    <Duration>PT16M22S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Jahya</Title>
+    <Duration>PT3M34S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Death</Title>
+    <Duration>PT3M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Candle</Title>
+    <Duration>PT4M58S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Hardset Head</Title>
+    <Duration>PT4M6S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Cult</Title>
+    <Duration>PT3M3S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Process</Title>
+    <Duration>PT5M2S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Curcible</Title>
+    <Duration>PT3M28S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Blue Serge</Title>
+    <Duration>PT5M13S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Morter</Title>
+    <Duration>PT4M39S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Amnesia</Title>
+    <Duration>PT4M20S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>4130</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Cellar Heat</Title>
+    <Duration>PT50S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Phucking Phreak</Title>
+    <Duration>PT7M40S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Malfunction</Title>
+    <Duration>PT5M5S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Bsat2</Title>
+    <Duration>PT5M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>The Calling (Fuck Shit Mother Fucker Mix)</Title>
+    <Duration>PT5M22S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>The Dead (Death Wish Mix)</Title>
+    <Duration>PT5M11S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Timeless Visions</Title>
+    <Duration>PT7M58S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Pray For Life</Title>
+    <Duration>PT5M36S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Exquisite Stench</Title>
+    <Duration>PT5M55S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>The Hand (Violent Trance Mix)</Title>
+    <Duration>PT6M1S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Zix Zix Zix (666 Mix)</Title>
+    <Duration>PT4M49S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27483</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Decay</Title>
+    <Duration>PT4M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Wound</Title>
+    <Duration>PT4M11S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Parasite</Title>
+    <Duration>PT4M15S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Discolored Eyes</Title>
+    <Duration>PT5M24S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Crushed</Title>
+    <Duration>PT6M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Disconnected Nightmare</Title>
+    <Duration>PT5M17S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Polyester Meth Zeus</Title>
+    <Duration>PT4M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Kashmir Crack Krishna</Title>
+    <Duration>PT3M2S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Ghost In The Circuit</Title>
+    <Duration>PT5M45S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Machine</Title>
+    <Duration>PT5M50S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Lust</Title>
+    <Duration>PT3M30S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>For</Title>
+    <Duration>PT4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Blood</Title>
+    <Duration>PT7M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Psychoaktive Landscapes</Title>
+    <Duration>PT7M19S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>723622</AlbumId>
+    <PartId>1</PartId>
+    <Id>14</Id>
+    <Title>Ghost Regen</Title>
+    <Duration>PT6M31S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Inward</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Black</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Far</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Wasting</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Wrong </Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Try</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Desertion</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Without</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Feel</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Deeper</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>796235</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Being</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Burn</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Choke</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Give Something</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Like A Father</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>The Pain</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>It Kills</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>ILL</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Young</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Born Into This</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>1308061</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Criminal</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>5668</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Something</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>5668</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Tiny Golden Books</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>5668</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Ether</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>5668</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Paranoid Inlay</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>5668</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>An Emergency</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>5668</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Where Are You?</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>5668</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Batwings (A Limnal Hymn)</Title>
+    <Duration xsi:nil="true" />
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Fire Of The Mind</Title>
+    <Duration>PT5M14S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>The Last Amethyst Deceiver</Title>
+    <Duration>PT10M11S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Tattooed Man</Title>
+    <Duration>PT6M33S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Triple Sun</Title>
+    <Duration>PT3M46S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>It's In My Blood</Title>
+    <Duration>PT4M51S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>I Don't Get It</Title>
+    <Duration>PT5M35S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Heaven's Blade</Title>
+    <Duration>PT4M21S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Cold Cell</Title>
+    <Duration>PT4M8S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Teenage Lightning 2005</Title>
+    <Duration>PT7M11S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Amber Rain</Title>
+    <Duration>PT5M12S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>5642</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Going Up</Title>
+    <Duration>PT8M30S</Duration>
+  </Track>
   <Track>
     <AlbumId>27330</AlbumId>
     <PartId>1</PartId>

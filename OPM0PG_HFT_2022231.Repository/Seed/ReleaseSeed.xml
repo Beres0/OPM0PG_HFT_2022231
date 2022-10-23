@@ -1,5 +1,1896 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfRelease xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <Release>
+    <Id>10631286</Id>
+    <AlbumId>1465758</AlbumId>
+    <ReleaseYear>2017</ReleaseYear>
+    <Publisher>Not On Label (Aphex Twin Self-released)</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>12904226</Id>
+    <AlbumId>1465758</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Star Line (7)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>3046945</Id>
+    <AlbumId>353700</AlbumId>
+    <ReleaseYear>2011</ReleaseYear>
+    <Publisher>Type</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>3307343</Id>
+    <AlbumId>353700</AlbumId>
+    <ReleaseYear>2011</ReleaseYear>
+    <Publisher>Not On Label (Clams Casino Self-released)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>11451828</Id>
+    <AlbumId>353700</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Not On Label (Clams Casino Self-released)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>5125085</Id>
+    <AlbumId>353700</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Not On Label</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>6737387</Id>
+    <AlbumId>1392190</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Not On Label (Sidewalks And Skeletons Self-released)</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>12252312</Id>
+    <AlbumId>1392190</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Not On Label (Sidewalks And Skeletons Self-released)</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>18489511</Id>
+    <AlbumId>1392190</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Not On Label (Sidewalks And Skeletons Self-released)</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>15065675</Id>
+    <AlbumId>1574811</AlbumId>
+    <ReleaseYear>2019</ReleaseYear>
+    <Publisher>Not On Label (Sidewalks and Skeletons Self-released)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>13855240</Id>
+    <AlbumId>1574811</AlbumId>
+    <ReleaseYear>2019</ReleaseYear>
+    <Publisher>Re:Mission Entertainment</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>8725184</Id>
+    <AlbumId>1029904</AlbumId>
+    <ReleaseYear>2016</ReleaseYear>
+    <Publisher>Cold Dimensions</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1119573</Id>
+    <AlbumId>42319</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Gravitator Records</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>1068596</Id>
+    <AlbumId>42319</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Scanner (2)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>3227617</Id>
+    <AlbumId>42319</AlbumId>
+    <ReleaseYear>2011</ReleaseYear>
+    <Publisher>Scanner (2)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>19243801</Id>
+    <AlbumId>42319</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Scanner (2)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>436384</Id>
+    <AlbumId>42312</AlbumId>
+    <ReleaseYear>2005</ReleaseYear>
+    <Publisher>Scanner (2)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>3485431</Id>
+    <AlbumId>42312</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Scanner (2)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>19230730</Id>
+    <AlbumId>42312</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Scanner (2)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2845529</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>18371464</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Chile</Country>
+  </Release>
+  <Release>
+    <Id>11535610</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Metal Mind Records</Publisher>
+    <Country>Poland</Country>
+  </Release>
+  <Release>
+    <Id>2775573</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Apollon International</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>19756729</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>3218984</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Always Records</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>3340728</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>15468241</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Metal Mind Records</Publisher>
+    <Country>Yugoslavia</Country>
+  </Release>
+  <Release>
+    <Id>16030884</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Brazil</Country>
+  </Release>
+  <Release>
+    <Id>7580362</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records (6)</Publisher>
+    <Country>Bulgaria</Country>
+  </Release>
+  <Release>
+    <Id>3219007</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Hades Records (3)</Publisher>
+    <Country>Turkey</Country>
+  </Release>
+  <Release>
+    <Id>1997231</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>386059</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Netherlands</Country>
+  </Release>
+  <Release>
+    <Id>22360870</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>The All Blacks B.V.</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>9508436</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>7568256</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Malaysia</Country>
+  </Release>
+  <Release>
+    <Id>11079712</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Indonesia</Country>
+  </Release>
+  <Release>
+    <Id>4444890</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1994</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>2039469</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1994</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>3433618</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1994</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>2239022</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1994</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Australia</Country>
+  </Release>
+  <Release>
+    <Id>5882659</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>13381457</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Brazil</Country>
+  </Release>
+  <Release>
+    <Id>12425892</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Jigu Records</Publisher>
+    <Country>South Korea</Country>
+  </Release>
+  <Release>
+    <Id>11885708</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Jigu Records Corporation</Publisher>
+    <Country>South Korea</Country>
+  </Release>
+  <Release>
+    <Id>3478228</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>South Africa</Country>
+  </Release>
+  <Release>
+    <Id>14461026</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Argentina</Country>
+  </Release>
+  <Release>
+    <Id>2886052</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Metal Mind Records</Publisher>
+    <Country>Poland</Country>
+  </Release>
+  <Release>
+    <Id>3032433</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>2990438</Id>
+    <AlbumId>27518</AlbumId>
+    <ReleaseYear>1997</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Poland</Country>
+  </Release>
+  <Release>
+    <Id>12501659</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>2242524</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Jigu Records Corporation</Publisher>
+    <Country>South Korea</Country>
+  </Release>
+  <Release>
+    <Id>3099015</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>7806727</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Globus International</Publisher>
+    <Country>Czech Republic</Country>
+  </Release>
+  <Release>
+    <Id>7167382</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Not On Label (Type O Negative)</Publisher>
+    <Country>Bulgaria</Country>
+  </Release>
+  <Release>
+    <Id>2986936</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>5215083</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Music World (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>18355270</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Netherlands</Country>
+  </Release>
+  <Release>
+    <Id>2845555</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Hades Records (3)</Publisher>
+    <Country>Turkey</Country>
+  </Release>
+  <Release>
+    <Id>2867780</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>2815709</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>367628</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>2886054</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Metal Mind Records</Publisher>
+    <Country>Poland</Country>
+  </Release>
+  <Release>
+    <Id>12799379</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Thailand</Country>
+  </Release>
+  <Release>
+    <Id>15468349</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records (6)</Publisher>
+    <Country>Serbia and Montenegro</Country>
+  </Release>
+  <Release>
+    <Id>8687651</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Atlantic Recording Corporation (3)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>476812</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Australia</Country>
+  </Release>
+  <Release>
+    <Id>8102504</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Takt Gold</Publisher>
+    <Country>Poland</Country>
+  </Release>
+  <Release>
+    <Id>3072976</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Israel</Country>
+  </Release>
+  <Release>
+    <Id>6164513</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Argentina</Country>
+  </Release>
+  <Release>
+    <Id>3489889</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>South Africa</Country>
+  </Release>
+  <Release>
+    <Id>5811248</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Brazil</Country>
+  </Release>
+  <Release>
+    <Id>5588430</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1997</ReleaseYear>
+    <Publisher>Roadrunner Records (6)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>12573536</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1997</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>1766627</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1997</ReleaseYear>
+    <Publisher>Roadrunner Records</Publisher>
+    <Country>Poland</Country>
+  </Release>
+  <Release>
+    <Id>7198413</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1998</ReleaseYear>
+    <Publisher>Not On Label (Type O Negative)</Publisher>
+    <Country>Bulgaria</Country>
+  </Release>
+  <Release>
+    <Id>8983196</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1998</ReleaseYear>
+    <Publisher>ООО "ДОРА"</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>3132307</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>1998</ReleaseYear>
+    <Publisher>Moon Records (2)</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+  <Release>
+    <Id>3515049</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Metal Mind Productions</Publisher>
+    <Country>Poland</Country>
+  </Release>
+  <Release>
+    <Id>5047232</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>BMG Russia</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+  <Release>
+    <Id>11391684</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>2002</ReleaseYear>
+    <Publisher>Capitol Records (2)</Publisher>
+    <Country>Asia</Country>
+  </Release>
+  <Release>
+    <Id>4072178</Id>
+    <AlbumId>27564</AlbumId>
+    <ReleaseYear>2002</ReleaseYear>
+    <Publisher>BMG Russia</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+   <Release>
+    <Id>781165</Id>
+    <AlbumId>55827</AlbumId>
+    <ReleaseYear>1992</ReleaseYear>
+    <Publisher>Hypnobeat</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>163266</Id>
+    <AlbumId>55827</AlbumId>
+    <ReleaseYear>1994</ReleaseYear>
+    <Publisher>SPV Recordings</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>585012</Id>
+    <AlbumId>55827</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>Candyland Entertainment</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>12946448</Id>
+    <AlbumId>55827</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Candyland Entertainment</Publisher>
+    <Country>Germany</Country>
+  </Release>
+
+  <Release>
+    <Id>968067</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Sire</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>6401584</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Sire</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>354741</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>1164206</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Sire</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>5103268</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>10439151</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Music World (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>7925000</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Sire</Publisher>
+    <Country>Australia</Country>
+  </Release>
+  <Release>
+    <Id>215808</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Rough Trade</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1065958</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>PIAS</Publisher>
+    <Country>Belgium</Country>
+  </Release>
+  <Release>
+    <Id>7179915</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>Sire</Publisher>
+    <Country>Thailand</Country>
+  </Release>
+  <Release>
+    <Id>13333810</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1998</ReleaseYear>
+    <Publisher>Moon Records (2)</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+  <Release>
+    <Id>9458420</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>B.O.G.O.R.</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>6779021</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>2002</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>5793547</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>5133561</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>2009</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>3979609</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>3909105</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>1972</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>10833550</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>2017</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>10742550</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>2017</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>12730990</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>23388938</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear>2022</ReleaseYear>
+    <Publisher>Warp Records</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>10646187</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Warp Records</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>11000670</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Sire (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>16030535</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Warp Records</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>13719951</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Sire</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>3298854</Id>
+    <AlbumId>461</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Not On Label (Aphex Twin)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>15601629</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>1997</ReleaseYear>
+    <Publisher>Beton Kopf Media</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>16378</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>1997</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1674192</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>1997</ReleaseYear>
+    <Publisher>Nova Tekk Media + Distribution</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1022249</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>Beton Kopf Media</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2541877</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>2000</ReleaseYear>
+    <Publisher>Beton Kopf Media</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1187251</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>2002</ReleaseYear>
+    <Publisher>Beton Kopf Media</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>334268</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>2004</ReleaseYear>
+    <Publisher>Beton Kopf Media</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>507084</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>2005</ReleaseYear>
+    <Publisher>Beton Kopf Media</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>3487796</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Beton Kopf Media</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>10587010</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>2017</ReleaseYear>
+    <Publisher>Not On Label (:wumpscut: Self-released)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>11671735</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Not On Label (:wumpscut: Self-released)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>18597064</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Beton Kopf Media</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>14592544</Id>
+    <AlbumId>27179</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1682537</Id>
+    <AlbumId>27210</AlbumId>
+    <ReleaseYear>2009</ReleaseYear>
+    <Publisher>Beton Kopf Media</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1733938</Id>
+    <AlbumId>27210</AlbumId>
+    <ReleaseYear>2009</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>8978794</Id>
+    <AlbumId>27210</AlbumId>
+    <ReleaseYear>2016</ReleaseYear>
+    <Publisher>Not On Label (:wumpscut: Self-released)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>10866778</Id>
+    <AlbumId>27210</AlbumId>
+    <ReleaseYear>2017</ReleaseYear>
+    <Publisher>Not On Label (:wumpscut: Self-released)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>11666778</Id>
+    <AlbumId>27210</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Not On Label (:wumpscut: Self-released)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>4693377</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Different</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>1857949</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Lies Records</Publisher>
+    <Country>Australia &amp; New Zealand</Country>
+  </Release>
+  <Release>
+    <Id>1375511</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Different</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>4669070</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Universal Music Publishing Group</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>4499023</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Lies Records</Publisher>
+    <Country>Australia</Country>
+  </Release>
+  <Release>
+    <Id>6308044</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Last Gang Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>9645472</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Universal Music Publishing Group</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>1344818</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>[PIAS] Recordings</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>14776932</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Love Da Records</Publisher>
+    <Country>Hong Kong</Country>
+  </Release>
+  <Release>
+    <Id>1356081</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Last Gang Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>1971629</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Canyon International</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>2946756</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Soyuz Music</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>15689158</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Last Gang Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>6713771</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2016</ReleaseYear>
+    <Publisher>Last Gang Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>13839494</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2017</ReleaseYear>
+    <Publisher>Last Gang Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>23261678</Id>
+    <AlbumId>33450</AlbumId>
+    <ReleaseYear>2022</ReleaseYear>
+    <Publisher>Last Gang Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>3750299</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>4723769</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Universal Music</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>11828503</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>China</Country>
+  </Release>
+  <Release>
+    <Id>2764009</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>4683268</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Polydor</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>2291866</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>10369272</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Fiction Records (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>15403008</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Brazil</Country>
+  </Release>
+  <Release>
+    <Id>5906572</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Universal Motown</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>2288795</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Polydor</Publisher>
+    <Country>Australia &amp; New Zealand</Country>
+  </Release>
+  <Release>
+    <Id>4385703</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Poland</Country>
+  </Release>
+  <Release>
+    <Id>2256137</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Polydor</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>4693595</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Universal Music Group</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>9764960</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Universal Music Group</Publisher>
+    <Country>Argentina</Country>
+  </Release>
+  <Release>
+    <Id>13334068</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Universal Music</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>5087839</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2011</ReleaseYear>
+    <Publisher>Shock (2)</Publisher>
+    <Country>Australia</Country>
+  </Release>
+  <Release>
+    <Id>2701977</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2011</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Australia &amp; New Zealand</Country>
+  </Release>
+  <Release>
+    <Id>4693563</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2011</ReleaseYear>
+    <Publisher>Universal Motown</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>4683244</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear>2011</ReleaseYear>
+    <Publisher>Polydor</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>10523486</Id>
+    <AlbumId>250274</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>The Return Of Cassetteman</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>4033857</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>4762007</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Polydor Ltd.</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>4757301</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>4161491</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Casablanca</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>4499036</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Australia</Country>
+  </Release>
+  <Release>
+    <Id>8991705</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Fiction Records (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>4723803</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Universal Music</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>4762051</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Casablanca</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>4187815</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Last Gang Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>4766422</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>13973454</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2013</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Colombia</Country>
+  </Release>
+  <Release>
+    <Id>13743351</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Fiction Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>10988310</Id>
+    <AlbumId>491967</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>The Return Of Cassetteman</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>3996710</Id>
+    <AlbumId>10889</AlbumId>
+    <ReleaseYear>1985</ReleaseYear>
+    <Publisher>Reflex Records (9)</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>1848136</Id>
+    <AlbumId>10889</AlbumId>
+    <ReleaseYear>1986</ReleaseYear>
+    <Publisher>Digitalis Purpurea</Publisher>
+    <Country>Italy</Country>
+  </Release>
+  <Release>
+    <Id>403024</Id>
+    <AlbumId>10889</AlbumId>
+    <ReleaseYear>1986</ReleaseYear>
+    <Publisher>Reflex Records (9)</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>3609202</Id>
+    <AlbumId>10889</AlbumId>
+    <ReleaseYear>1986</ReleaseYear>
+    <Publisher>Reflex Records (9)</Publisher>
+    <Country>France</Country>
+  </Release>
+  <Release>
+    <Id>1138295</Id>
+    <AlbumId>10889</AlbumId>
+    <ReleaseYear>1992</ReleaseYear>
+    <Publisher>Normal</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>20662582</Id>
+    <AlbumId>10889</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>AATT</Publisher>
+    <Country>UK &amp; Europe</Country>
+  </Release>
+  <Release>
+    <Id>607991</Id>
+    <AlbumId>10889</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Normal</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>901609</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Reflex Records (9)</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>1890189</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Troy Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>2184128</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Normal</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>9944220</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Reflex Records (9)</Publisher>
+    <Country>France</Country>
+  </Release>
+  <Release>
+    <Id>3598250</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Reflex Records (9)</Publisher>
+    <Country>Greece</Country>
+  </Release>
+  <Release>
+    <Id>634345</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>NORMAL</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>4898958</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear>1990</ReleaseYear>
+    <Publisher>General Publishing Company</Publisher>
+    <Country>Greece</Country>
+  </Release>
+  <Release>
+    <Id>3993348</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear>1990</ReleaseYear>
+    <Publisher>Reflex Records (9)</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>23624996</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Reflex Records (9)</Publisher>
+    <Country>France</Country>
+  </Release>
+  <Release>
+    <Id>15264655</Id>
+    <AlbumId>10795</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Normal</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>17688781</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music (3)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>2554626</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music Group</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>1671446</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music Group</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>4513779</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>1860532</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music Group (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>889978</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music Russia</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>5461111</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music Group</Publisher>
+    <Country>Argentina</Country>
+  </Release>
+  <Release>
+    <Id>1716768</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music Group</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2424979</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal (3)</Publisher>
+    <Country>China</Country>
+  </Release>
+  <Release>
+    <Id>9451994</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music Group</Publisher>
+    <Country>Mexico</Country>
+  </Release>
+  <Release>
+    <Id>4577736</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Ukrainian Records</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+  <Release>
+    <Id>6256566</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal (3)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>5729204</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Universal Music Group (2)</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>10845305</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Universal Music Group</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1077030</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Universal Music</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>5142082</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Tempstar Records</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>10156141</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2012</ReleaseYear>
+    <Publisher>ООО «Юниверсал Мьюзик»</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>7036842</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Not On Label (Rammstein)</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>16839243</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Not On Label (Rammstein)</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>13756448</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Universal Music Group</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>9026155</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Universal Music Group (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>20118871</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Universal Music Group</Publisher>
+    <Country>Mexico</Country>
+  </Release>
+  <Release>
+    <Id>20135395</Id>
+    <AlbumId>95298</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Universal (3)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>1127717</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Universal Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>4789574</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Universal</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+  <Release>
+    <Id>5292777</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>2652790</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>1563233</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor</Publisher>
+    <Country>Brazil</Country>
+  </Release>
+  <Release>
+    <Id>4173371</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>South Korea</Country>
+  </Release>
+  <Release>
+    <Id>4638465</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>380607</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Universal</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>9165843</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+  <Release>
+    <Id>2141540</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music (2)</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>9719532</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>9790565</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor</Publisher>
+    <Country>Thailand</Country>
+  </Release>
+  <Release>
+    <Id>11346374</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>3942836</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music (2)</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>5141729</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>7990696</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Not On Label (Rammstein)</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+  <Release>
+    <Id>11037368</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Universal Music</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>6392649</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>UK &amp; Europe</Country>
+  </Release>
+  <Release>
+    <Id>18708733</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Bulgaria</Country>
+  </Release>
+  <Release>
+    <Id>6793184</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Malaysia</Country>
+  </Release>
+  <Release>
+    <Id>10297071</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor</Publisher>
+    <Country>Turkey</Country>
+  </Release>
+  <Release>
+    <Id>5214943</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Invisible Halahup</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>19021990</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor</Publisher>
+    <Country>Malaysia</Country>
+  </Release>
+  <Release>
+    <Id>4058799</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Mosh Records</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+  <Release>
+    <Id>4678643</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Grand Records (6)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>2214495</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor</Publisher>
+    <Country>Australasia</Country>
+  </Release>
+  <Release>
+    <Id>2424569</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music (2)</Publisher>
+    <Country>China</Country>
+  </Release>
+  <Release>
+    <Id>4840704</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Not On Label (Rammstein)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>2920665</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Argentina</Country>
+  </Release>
+  <Release>
+    <Id>14741655</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Belarus</Country>
+  </Release>
+  <Release>
+    <Id>10307068</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Republic Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>995646</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>2286006</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor Music</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>13050941</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor</Publisher>
+    <Country>Mexico</Country>
+  </Release>
+  <Release>
+    <Id>9168340</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Motor</Publisher>
+    <Country>Colombia</Country>
+  </Release>
+  <Release>
+    <Id>4463266</Id>
+    <AlbumId>95285</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Flower Records (7)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>2123278</Id>
+    <AlbumId>5668</AlbumId>
+    <ReleaseYear>2000</ReleaseYear>
+    <Publisher>Chalice</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>1928491</Id>
+    <AlbumId>5668</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Not On Label (Coil)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>6764574</Id>
+    <AlbumId>5668</AlbumId>
+    <ReleaseYear>2002</ReleaseYear>
+    <Publisher>Chalice</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>2596644</Id>
+    <AlbumId>5668</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Chalice</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>8626812</Id>
+    <AlbumId>5668</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Chalice (4)</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>22902680</Id>
+    <AlbumId>5668</AlbumId>
+    <ReleaseYear>2022</ReleaseYear>
+    <Publisher>Dais Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>23718638</Id>
+    <AlbumId>5668</AlbumId>
+    <ReleaseYear>2022</ReleaseYear>
+    <Publisher>Dais Records</Publisher>
+    <Country>Worldwide</Country>
+  </Release>
+  <Release>
+    <Id>4497932</Id>
+    <AlbumId>5668</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>M.A.D. Records (4)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>4917044</Id>
+    <AlbumId>5642</AlbumId>
+    <ReleaseYear>2005</ReleaseYear>
+    <Publisher>Threshold House</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>8092865</Id>
+    <AlbumId>5642</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Balalayka Records</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>1474563</Id>
+    <AlbumId>5642</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Threshold House</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>7047663</Id>
+    <AlbumId>5642</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Threshold House (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>7090909</Id>
+    <AlbumId>5642</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Threshold House (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>9092156</Id>
+    <AlbumId>5642</AlbumId>
+    <ReleaseYear>2016</ReleaseYear>
+    <Publisher>Important Records (2)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>12766891</Id>
+    <AlbumId>5642</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Important Records (2)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>20302036</Id>
+    <AlbumId>5642</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Important Records (2)</Publisher>
+    <Country>US</Country>
+  </Release>
   <Release>
     <Id>1404564</Id>
     <AlbumId>27330</AlbumId>
@@ -9,41 +1900,6 @@
   </Release>
   <Release>
     <Id>1258680</Id>
-    <AlbumId>27330</AlbumId>
-    <ReleaseYear>2008</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>1258255</Id>
-    <AlbumId>27330</AlbumId>
-    <ReleaseYear>2008</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>9136349</Id>
-    <AlbumId>27330</AlbumId>
-    <ReleaseYear>2008</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>2695733</Id>
-    <AlbumId>27330</AlbumId>
-    <ReleaseYear>2008</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>1264482</Id>
-    <AlbumId>27330</AlbumId>
-    <ReleaseYear>2008</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>3759687</Id>
     <AlbumId>27330</AlbumId>
     <ReleaseYear>2008</ReleaseYear>
     <Publisher>Out Of Line</Publisher>
@@ -78,41 +1934,6 @@
     <Country>Germany</Country>
   </Release>
   <Release>
-    <Id>6379255</Id>
-    <AlbumId>279762</AlbumId>
-    <ReleaseYear>2010</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>11855632</Id>
-    <AlbumId>279762</AlbumId>
-    <ReleaseYear>2010</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>3115546</Id>
-    <AlbumId>279762</AlbumId>
-    <ReleaseYear>2010</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>2480584</Id>
-    <AlbumId>279762</AlbumId>
-    <ReleaseYear>2010</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>2473461</Id>
-    <AlbumId>279762</AlbumId>
-    <ReleaseYear>2010</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
     <Id>2642979</Id>
     <AlbumId>279762</AlbumId>
     <ReleaseYear>2011</ReleaseYear>
@@ -139,20 +1960,6 @@
     <ReleaseYear>2004</ReleaseYear>
     <Publisher>Metropolis</Publisher>
     <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>1823411</Id>
-    <AlbumId>27320</AlbumId>
-    <ReleaseYear>2004</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>340597</Id>
-    <AlbumId>27320</AlbumId>
-    <ReleaseYear>2004</ReleaseYear>
-    <Publisher>Out Of Line</Publisher>
-    <Country>Germany</Country>
   </Release>
   <Release>
     <Id>2675339</Id>
@@ -183,27 +1990,6 @@
     <Country>US</Country>
   </Release>
   <Release>
-    <Id>8053500</Id>
-    <AlbumId>42663</AlbumId>
-    <ReleaseYear>1999</ReleaseYear>
-    <Publisher>Metropolis</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>3944320</Id>
-    <AlbumId>42663</AlbumId>
-    <ReleaseYear>1999</ReleaseYear>
-    <Publisher>Pandaimonium Records</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>259644</Id>
-    <AlbumId>42663</AlbumId>
-    <ReleaseYear>1999</ReleaseYear>
-    <Publisher>Pandaimonium Records</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
     <Id>13933710</Id>
     <AlbumId>42663</AlbumId>
     <ReleaseYear>2000</ReleaseYear>
@@ -232,53 +2018,11 @@
     <Country>US</Country>
   </Release>
   <Release>
-    <Id>19536859</Id>
-    <AlbumId>42663</AlbumId>
-    <ReleaseYear xsi:nil="true" />
-    <Publisher>Metropolis</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>23477414</Id>
-    <AlbumId>42663</AlbumId>
-    <ReleaseYear xsi:nil="true" />
-    <Publisher>Metropolis</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
     <Id>3198446</Id>
     <AlbumId>42663</AlbumId>
     <ReleaseYear xsi:nil="true" />
     <Publisher>Pandaimonium Records</Publisher>
     <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>15302762</Id>
-    <AlbumId>42663</AlbumId>
-    <ReleaseYear xsi:nil="true" />
-    <Publisher>Pandaimonium Records</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>12731398</Id>
-    <AlbumId>42663</AlbumId>
-    <ReleaseYear xsi:nil="true" />
-    <Publisher>Metropolis</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>162073</Id>
-    <AlbumId>42663</AlbumId>
-    <ReleaseYear xsi:nil="true" />
-    <Publisher>Metropolis</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>9487040</Id>
-    <AlbumId>42663</AlbumId>
-    <ReleaseYear xsi:nil="true" />
-    <Publisher>Metropolis</Publisher>
-    <Country>US</Country>
   </Release>
   <Release>
     <Id>376404</Id>
@@ -289,20 +2033,6 @@
   </Release>
   <Release>
     <Id>1418601</Id>
-    <AlbumId>55577</AlbumId>
-    <ReleaseYear>2001</ReleaseYear>
-    <Publisher>Pandaimonium Records</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>445498</Id>
-    <AlbumId>55577</AlbumId>
-    <ReleaseYear>2001</ReleaseYear>
-    <Publisher>Pandaimonium Records</Publisher>
-    <Country>Germany</Country>
-  </Release>
-  <Release>
-    <Id>1762314</Id>
     <AlbumId>55577</AlbumId>
     <ReleaseYear>2001</ReleaseYear>
     <Publisher>Pandaimonium Records</Publisher>
@@ -338,13 +2068,6 @@
   </Release>
   <Release>
     <Id>13724811</Id>
-    <AlbumId>55577</AlbumId>
-    <ReleaseYear xsi:nil="true" />
-    <Publisher>Metropolis</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>19803658</Id>
     <AlbumId>55577</AlbumId>
     <ReleaseYear xsi:nil="true" />
     <Publisher>Metropolis</Publisher>
@@ -393,21 +2116,7 @@
     <Country>Portugal</Country>
   </Release>
   <Release>
-    <Id>5913782</Id>
-    <AlbumId>48191</AlbumId>
-    <ReleaseYear>2014</ReleaseYear>
-    <Publisher>War Arts Productions</Publisher>
-    <Country>Portugal</Country>
-  </Release>
-  <Release>
     <Id>8093560</Id>
-    <AlbumId>48191</AlbumId>
-    <ReleaseYear>2015</ReleaseYear>
-    <Publisher>Children Of The Night (2)</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>10266453</Id>
     <AlbumId>48191</AlbumId>
     <ReleaseYear>2015</ReleaseYear>
     <Publisher>Children Of The Night (2)</Publisher>
@@ -442,13 +2151,6 @@
     <Country>UK</Country>
   </Release>
   <Release>
-    <Id>17655049</Id>
-    <AlbumId>48191</AlbumId>
-    <ReleaseYear>2021</ReleaseYear>
-    <Publisher>Back On Black</Publisher>
-    <Country>UK</Country>
-  </Release>
-  <Release>
     <Id>18631963</Id>
     <AlbumId>48191</AlbumId>
     <ReleaseYear>2021</ReleaseYear>
@@ -463,49 +2165,7 @@
     <Country>US</Country>
   </Release>
   <Release>
-    <Id>3774840</Id>
-    <AlbumId>48184</AlbumId>
-    <ReleaseYear>2006</ReleaseYear>
-    <Publisher>Hydra Head Records</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>1003986</Id>
-    <AlbumId>48184</AlbumId>
-    <ReleaseYear>2006</ReleaseYear>
-    <Publisher>Hydra Head Records</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
     <Id>936996</Id>
-    <AlbumId>48184</AlbumId>
-    <ReleaseYear>2007</ReleaseYear>
-    <Publisher>Hydra Head Records</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>2426060</Id>
-    <AlbumId>48184</AlbumId>
-    <ReleaseYear>2007</ReleaseYear>
-    <Publisher>Hydra Head Records</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>2061656</Id>
-    <AlbumId>48184</AlbumId>
-    <ReleaseYear>2007</ReleaseYear>
-    <Publisher>Hydra Head Records</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>4257503</Id>
-    <AlbumId>48184</AlbumId>
-    <ReleaseYear>2007</ReleaseYear>
-    <Publisher>Hydra Head Records</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
-    <Id>4569520</Id>
     <AlbumId>48184</AlbumId>
     <ReleaseYear>2007</ReleaseYear>
     <Publisher>Hydra Head Records</Publisher>
@@ -526,13 +2186,6 @@
     <Country>US</Country>
   </Release>
   <Release>
-    <Id>8793155</Id>
-    <AlbumId>48184</AlbumId>
-    <ReleaseYear>2010</ReleaseYear>
-    <Publisher>Hydra Head Records</Publisher>
-    <Country>US</Country>
-  </Release>
-  <Release>
     <Id>21430810</Id>
     <AlbumId>48184</AlbumId>
     <ReleaseYear>2018</ReleaseYear>
@@ -547,10 +2200,451 @@
     <Country>USA &amp; Europe</Country>
   </Release>
   <Release>
-    <Id>21269659</Id>
-    <AlbumId>48184</AlbumId>
+    <Id>7738103</Id>
+    <AlbumId>55817</AlbumId>
+    <ReleaseYear>1991</ReleaseYear>
+    <Publisher>Hypnobeat</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>5352339</Id>
+    <AlbumId>55817</AlbumId>
+    <ReleaseYear>1992</ReleaseYear>
+    <Publisher>Hypnobeat</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>163264</Id>
+    <AlbumId>55817</AlbumId>
+    <ReleaseYear>1994</ReleaseYear>
+    <Publisher>SPV Recordings</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>585009</Id>
+    <AlbumId>55817</AlbumId>
+    <ReleaseYear>2000</ReleaseYear>
+    <Publisher>Candyland Entertainment</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>8886604</Id>
+    <AlbumId>55817</AlbumId>
+    <ReleaseYear>2003</ReleaseYear>
+    <Publisher>Candyland Entertainment</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>12734769</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>1985</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>7832973</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>1985</ReleaseYear>
+    <Publisher>Scarface</Publisher>
+    <Country>Belgium</Country>
+  </Release>
+  <Release>
+    <Id>116569</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>1985</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>81688</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>1986</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>2887121</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Scarface</Publisher>
+    <Country>Benelux</Country>
+  </Release>
+  <Release>
+    <Id>1622545</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>438729</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Nettwerk America</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>13491923</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Nettwerk America</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>10984239</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>2017</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>24474104</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear>2022</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>93505</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Nettwerk</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>11845363</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Nettwerk America</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>4995733</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Nettwerk</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>4559963</Id>
+    <AlbumId>17225</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Nettwerk</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>13761314</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Capitol Records</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>4216941</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>11670</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Capitol Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>340947</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Capitol Records</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>617963</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Capitol Records</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>14474702</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1989</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>104388</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1990</ReleaseYear>
+    <Publisher>Nettwerk Europe</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>117520</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1993</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>90103</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1998</ReleaseYear>
+    <Publisher>Nettwerk America</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1967615</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>1998</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>14317788</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>2019</ReleaseYear>
+    <Publisher>Nettwerk</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>14317552</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear>2019</ReleaseYear>
+    <Publisher>Nettwerk Productions Ltd.</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>19326643</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Capitol Records</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>15194503</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Nettwerk America</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>15385666</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Capitol Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>3558053</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Music For The People</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>12989500</Id>
+    <AlbumId>3815</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Nettwerk</Publisher>
+    <Country>USA &amp; Canada</Country>
+  </Release>
+  <Release>
+    <Id>542380</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear>1995</ReleaseYear>
+    <Publisher>American Recordings</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1127455</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>American Recordings</Publisher>
+    <Country>Europe</Country>
+  </Release>
+  <Release>
+    <Id>2878663</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>American Recordings</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>10484752</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>American Recordings</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>1764963</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>ООО "ДОРА"</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>15361877</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Music World (2)</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>2077651</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>RCA</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>104382</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>American Recordings</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>10354938</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear>1996</ReleaseYear>
+    <Publisher>Always Records</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>14104331</Id>
+    <AlbumId>4130</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>American Recordings</Publisher>
+    <Country>Thailand</Country>
+  </Release>
+  <Release>
+    <Id>184472</Id>
+    <AlbumId>27483</AlbumId>
+    <ReleaseYear>1997</ReleaseYear>
+    <Publisher>Off Beat</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>330236</Id>
+    <AlbumId>27483</AlbumId>
+    <ReleaseYear>1997</ReleaseYear>
+    <Publisher>Not On Label (Velvet Acid Christ Self-released)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>17169</Id>
+    <AlbumId>27483</AlbumId>
+    <ReleaseYear>1998</ReleaseYear>
+    <Publisher>Pendragon Records (4)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>879026</Id>
+    <AlbumId>27483</AlbumId>
+    <ReleaseYear>2002</ReleaseYear>
+    <Publisher>Synthetic Symphony</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>774129</Id>
+    <AlbumId>27483</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>12847264</Id>
+    <AlbumId>27483</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Pendragon Records (4)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>792874</Id>
+    <AlbumId>723622</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>6006101</Id>
+    <AlbumId>723622</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>ООО "Союз Мьюзик"</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>10049913</Id>
+    <AlbumId>723622</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Moon Records (2)</Publisher>
+    <Country>Ukraine</Country>
+  </Release>
+  <Release>
+    <Id>6642465</Id>
+    <AlbumId>796235</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Captured Tracks</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>10303083</Id>
+    <AlbumId>796235</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Captured Tracks</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>10725053</Id>
+    <AlbumId>796235</AlbumId>
+    <ReleaseYear>2016</ReleaseYear>
+    <Publisher>Captured Tracks</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>17618641</Id>
+    <AlbumId>796235</AlbumId>
     <ReleaseYear>2021</ReleaseYear>
-    <Publisher>Lupus Lounge</Publisher>
-    <Country>USA &amp; Europe</Country>
+    <Publisher>Captured Tracks</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>11535033</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Sacred Bones Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>11523620</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Sacred Bones Records</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>19575316</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Hostess Entertainment Unlimited</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>17617789</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Sacred Bones Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>24614390</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2022</ReleaseYear>
+    <Publisher>Sacred Bones Records</Publisher>
+    <Country>US</Country>
   </Release>
 </ArrayOfRelease>

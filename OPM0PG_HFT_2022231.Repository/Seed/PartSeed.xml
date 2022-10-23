@@ -1,6 +1,201 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Part>
+    <AlbumId>1465758</AlbumId>
+    <Id>1</Id>
+    <Title>Aphex Mt. Fuji 2017</Title>
+  </Part>
+  <Part>
+    <AlbumId>353700</AlbumId>
+    <Id>1</Id>
+    <Title>Instrumental Mixtape</Title>
+  </Part>
+  <Part>
+    <AlbumId>1392190</AlbumId>
+    <Id>1</Id>
+    <Title>White Light</Title>
+  </Part>
+  <Part>
+    <AlbumId>1574811</AlbumId>
+    <Id>1</Id>
+    <Title>Entity </Title>
+  </Part>
+  <Part>
+    <AlbumId>1029904</AlbumId>
+    <Id>1</Id>
+    <Title>Autumn</Title>
+  </Part>
+  <Part>
+    <AlbumId>42319</AlbumId>
+    <Id>1</Id>
+    <Title>Rotten To The Core</Title>
+  </Part>
+  <Part>
+    <AlbumId>42312</AlbumId>
+    <Id>1</Id>
+    <Title>Demons Of Hate</Title>
+  </Part>
+  <Part>
+    <AlbumId>27518</AlbumId>
+    <Id>1</Id>
+    <Title>Bloody Kisses</Title>
+  </Part>
+  <Part>
+    <AlbumId>27564</AlbumId>
+    <Id>1</Id>
+    <Title>October Rust</Title>
+  </Part>
+  <Part>
+    <AlbumId>55827</AlbumId>
+    <Id>1</Id>
+    <Title>Entities</Title>
+  </Part>
+  <Part>
+    <AlbumId>461</AlbumId>
+    <Id>1</Id>
+    <Title>Side A</Title>
+  </Part>
+  <Part>
+    <AlbumId>461</AlbumId>
+    <Id>2</Id>
+    <Title>Side B.</Title>
+  </Part>
+  <Part>
+    <AlbumId>461</AlbumId>
+    <Id>3</Id>
+    <Title>Side 3.</Title>
+  </Part>
+  <Part>
+    <AlbumId>461</AlbumId>
+    <Id>4</Id>
+    <Title>Side 4</Title>
+  </Part>
+  <Part>
+    <AlbumId>27179</AlbumId>
+    <Id>1</Id>
+    <Title>Embryodead</Title>
+  </Part>
+  <Part>
+    <AlbumId>27210</AlbumId>
+    <Id>1</Id>
+    <Title>Fuckit</Title>
+  </Part>
+  <Part>
+    <AlbumId>33450</AlbumId>
+    <Id>1</Id>
+    <Title>Crystal Castles</Title>
+  </Part>
+  <Part>
+    <AlbumId>250274</AlbumId>
+    <Id>1</Id>
+    <Title>Crystal Castles (II)</Title>
+  </Part>
+  <Part>
+    <AlbumId>491967</AlbumId>
+    <Id>1</Id>
+    <Title>(III)</Title>
+  </Part>
+  <Part>
+    <AlbumId>10889</AlbumId>
+    <Id>1</Id>
+    <Title>Virus Meadow</Title>
+  </Part>
+  <Part>
+    <AlbumId>10795</AlbumId>
+    <Id>1</Id>
+    <Title>Farewell To The Shade</Title>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>1</Id>
+    <Title>Live Concerts</Title>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>2</Id>
+    <Title>France: Les Arènes De Nîmes, 23.07.2005</Title>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>3</Id>
+    <Title>England: Brixton Academy, London, 03-05.02.2005</Title>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>4</Id>
+    <Title>Japan: Club Citta, Tokyo, 03.06.2005</Title>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>5</Id>
+    <Title>Russia: Sport Complex Olympiski, Moscow, 28.11.2004</Title>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>6</Id>
+    <Title>Live In Nîmes</Title>
+  </Part>
+  <Part>
+    <AlbumId>95285</AlbumId>
+    <Id>1</Id>
+    <Title>Mutter</Title>
+  </Part>
+  <Part>
+    <AlbumId>55817</AlbumId>
+    <Id>1</Id>
+    <Title>Dhyani</Title>
+  </Part>
+  <Part>
+    <AlbumId>17225</AlbumId>
+    <Id>1</Id>
+    <Title>Attack</Title>
+  </Part>
+  <Part>
+    <AlbumId>17225</AlbumId>
+    <Id>2</Id>
+    <Title>Decay</Title>
+  </Part>
+  <Part>
+    <AlbumId>3815</AlbumId>
+    <Id>1</Id>
+    <Title>Rabies</Title>
+  </Part>
+  <Part>
+    <AlbumId>4130</AlbumId>
+    <Id>1</Id>
+    <Title>The Process</Title>
+  </Part>
+  <Part>
+    <AlbumId>27483</AlbumId>
+    <Id>1</Id>
+    <Title>Calling Ov The Dead</Title>
+  </Part>
+  <Part>
+    <AlbumId>723622</AlbumId>
+    <Id>1</Id>
+    <Title>Lust For Blood</Title>
+  </Part>
+  <Part>
+    <AlbumId>796235</AlbumId>
+    <Id>1</Id>
+    <Title>Deeper</Title>
+  </Part>
+  <Part>
+    <AlbumId>1308061</AlbumId>
+    <Id>1</Id>
+    <Title>Criminal</Title>
+  </Part>
+   <Part>
+    <AlbumId>5668</AlbumId>
+    <Id>1</Id>
+    <Title>Musick To Play In The Dark²</Title>
+  </Part>
+  <Part>
+    <AlbumId>5642</AlbumId>
+    <Id>1</Id>
+    <Title>The Ape Of Naples</Title>
+  </Part>
+  <Part>
     <AlbumId>27330</AlbumId>
     <Id>1</Id>
     <Title>Memorias Atrás</Title>
