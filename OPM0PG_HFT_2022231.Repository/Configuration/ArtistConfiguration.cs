@@ -1,0 +1,17 @@
+﻿using Microsoft.EntityFrameworkCore;
+using OPM0PG_HFT_2022231.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace OPM0PG_HFT_2022231.Repository.Configuration
+{
+
+    public class ArtistConfiguration : IEntityTypeConfiguration<Artist>
+    {
+        public void Configure(EntityTypeBuilder<Artist> builder)
+        {
+            builder.SetDatabaseGeneratedPrimaryKey(a => a.Id);
+            builder.SetDefaultTextType(a => a.Name).IsRequired();
+            builder.SetSeed();
+        }
+    }
+}
