@@ -20,5 +20,19 @@ namespace OPM0PG_HFT_2022231.Models
 
         [JsonIgnore,XmlIgnore]
         public virtual Album Album { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Release release &&
+                   AlbumId == release.AlbumId &&
+                   ReleaseYear == release.ReleaseYear &&
+                   Publisher == release.Publisher &&
+                   Country == release.Country;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(AlbumId, ReleaseYear, Publisher, Country);
+        }
     }
 }
