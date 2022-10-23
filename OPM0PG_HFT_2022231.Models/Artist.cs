@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
@@ -13,16 +14,12 @@ namespace OPM0PG_HFT_2022231.Models
         [StringLength(255), Required]
         public string Name { get; set; }
 
-        [ForeignKey(nameof(Band))]
-        public int? BandId { get; set; }
+        [JsonIgnore, XmlIgnore,InverseProperty(nameof(Member.Artist))]
+        public virtual ICollection<Member> Members { get; set; }
+        [JsonIgnore,XmlIgnore,InverseProperty(nameof(Member.Band))]
+        public virtual ICollection<Member> Bands { get; set; }
 
-        [JsonIgnore]
-        public virtual Artist Band { get; set; }
-
-        [JsonIgnore, InverseProperty(nameof(Band))]
-        public virtual ICollection<Artist> Members { get; set; }
-
-        [JsonIgnore]
+        [JsonIgnore, XmlIgnore]
         public virtual ICollection<Contributor> ContributedAlbums { get; set; }
     }
 }

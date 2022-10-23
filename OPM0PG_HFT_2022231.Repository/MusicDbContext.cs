@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OPM0PG_HFT_2022231.Models;
+using System;
 
 namespace OPM0PG_HFT_2022231.Repository
 {
@@ -7,15 +8,12 @@ namespace OPM0PG_HFT_2022231.Repository
     {
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
-        public DbSet<AlbumGenre> AlbumGenres { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Member> Members { get; set; }
         public DbSet<Contributor> Contributors { get; set; }
-        public Publisher Publishers { get; set; }
         public DbSet<Track> Tracks { get; set; }
-        public DbSet<User> User { get; set; }
-        public DbSet<Like> Likes { get; set; }
-        public DbSet<Playlist> Playlists { get; set; }
-        public DbSet<PlaylistItem> PlaylistItems { get; set; }
-
+        public DbSet<Part> Parts { get; set; }
+        public DbSet<Release> Releases { get; set; }
         public MusicDbContext()
         {
             Database.EnsureCreated();
@@ -24,11 +22,13 @@ namespace OPM0PG_HFT_2022231.Repository
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies();
-            optionsBuilder.UseSqlServer("");
+            string connStr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Beres\\OneDrive\\OE-UMI\\repos\\3_felev\\Halfej\\OPM0PG_HFT_2022231\\OPM0PG_HFT_2022231.Repository\\Database\\MusicDb.mdf;Integrated Security=True;MultipleActiveResultSets=True";
+            optionsBuilder.UseSqlServer(connStr);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
         }
     }
 }
