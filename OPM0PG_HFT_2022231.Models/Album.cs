@@ -9,13 +9,8 @@ namespace OPM0PG_HFT_2022231.Models
 {
     public class Album : IEntity<int>
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-
-        [StringLength(255), Required]
         public string Title { get; set; }
-
-        [Range(1800, 2100)]
         public int Year { get; set; }
 
 
