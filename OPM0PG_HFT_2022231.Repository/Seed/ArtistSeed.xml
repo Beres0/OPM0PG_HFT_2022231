@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfArtist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Artist>
+    <Id>69226</Id>
+    <Name>Hocico</Name>
+  </Artist>
+  <Artist>
+    <Id>244386</Id>
+    <Name>Erk Aicrag</Name>
+  </Artist>
+  <Artist>
+    <Id>480658</Id>
+    <Name>Racso Agroyam</Name>
+  </Artist>
+  <Artist>
+    <Id>58955</Id>
+    <Name>Clan Of Xymox</Name>
+  </Artist>
+  <Artist>
+    <Id>142412</Id>
+    <Name>Ronny Moorings</Name>
+  </Artist>
+  <Artist>
+    <Id>227457</Id>
+    <Name>Pieter Nooten</Name>
+  </Artist>
+  <Artist>
+    <Id>308509</Id>
+    <Name>Mojca</Name>
+  </Artist>
+  <Artist>
+    <Id>400588</Id>
+    <Name>Frank Weyzig</Name>
+  </Artist>
+  <Artist>
+    <Id>400589</Id>
+    <Name>Willem van Antwerpen</Name>
+  </Artist>
+  <Artist>
+    <Id>566611</Id>
+    <Name>Anke Wolbert</Name>
+  </Artist>
+  <Artist>
+    <Id>1363751</Id>
+    <Name>Rob Vonk</Name>
+  </Artist>
+  <Artist>
+    <Id>1363752</Id>
+    <Name>Nina Simic</Name>
+  </Artist>
+  <Artist>
+    <Id>1363753</Id>
+    <Name>Rui Ramos</Name>
+  </Artist>
+  <Artist>
+    <Id>2017036</Id>
+    <Name>Yvonne de Ray</Name>
+  </Artist>
+  <Artist>
+    <Id>6001173</Id>
+    <Name>Patrick van Alphen</Name>
+  </Artist>
+  <Artist>
+    <Id>324134</Id>
+    <Name>Xasthur</Name>
+  </Artist>
+  <Artist>
+    <Id>840110</Id>
+    <Name>Mark Hunter (4)</Name>
+  </Artist>
+  <Artist>
+    <Id>2470200</Id>
+    <Name>Scott Conner</Name>
+  </Artist>
+  <Artist>
+    <Id>2993664</Id>
+    <Name>Mike Pardi</Name>
+  </Artist>
+  <Artist>
+    <Id>660</Id>
+    <Name>Coil</Name>
+  </Artist>
+  <Artist>
+    <Id>34069</Id>
+    <Name>Peter Christopherson</Name>
+  </Artist>
+  <Artist>
+    <Id>52097</Id>
+    <Name>Stephen Thrower</Name>
+  </Artist>
+  <Artist>
+    <Id>62067</Id>
+    <Name>Danny Hyde</Name>
+  </Artist>
+  <Artist>
+    <Id>65583</Id>
+    <Name>Drew McDowall</Name>
+  </Artist>
+  <Artist>
+    <Id>66721</Id>
+    <Name>William Breeze</Name>
+  </Artist>
+  <Artist>
+    <Id>139103</Id>
+    <Name>Ossian Brown</Name>
+  </Artist>
+  <Artist>
+    <Id>274002</Id>
+    <Name>Tim Lewis</Name>
+  </Artist>
+  <Artist>
+    <Id>304486</Id>
+    <Name>Tom Edwards</Name>
+  </Artist>
+  <Artist>
+    <Id>400782</Id>
+    <Name>Otto Avery</Name>
+  </Artist>
+  <Artist>
+    <Id>548529</Id>
+    <Name>Geoff Rushton</Name>
+  </Artist>
+  <Artist>
+    <Id>5256294</Id>
+    <Name>Michael J. York</Name>
+  </Artist>
+</ArrayOfArtist>

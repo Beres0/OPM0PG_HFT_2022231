@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfContributor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Contributor>
+    <AlbumId>27330</AlbumId>
+    <ArtistId>69226</ArtistId>
+  </Contributor>
+  <Contributor>
+    <AlbumId>279762</AlbumId>
+    <ArtistId>69226</ArtistId>
+  </Contributor>
+  <Contributor>
+    <AlbumId>27320</AlbumId>
+    <ArtistId>69226</ArtistId>
+  </Contributor>
+  <Contributor>
+    <AlbumId>42663</AlbumId>
+    <ArtistId>58955</ArtistId>
+  </Contributor>
+  <Contributor>
+    <AlbumId>55577</AlbumId>
+    <ArtistId>58955</ArtistId>
+  </Contributor>
+  <Contributor>
+    <AlbumId>48191</AlbumId>
+    <ArtistId>324134</ArtistId>
+  </Contributor>
+  <Contributor>
+    <AlbumId>48184</AlbumId>
+    <ArtistId>324134</ArtistId>
+  </Contributor>
+</ArrayOfContributor>

@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTrack xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>A Fatal Desire</Title>
+    <Duration>PT4M46S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>The Shape Of Things To Come</Title>
+    <Duration>PT6M3S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Stop My Madness</Title>
+    <Duration>PT4M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>About A Dead</Title>
+    <Duration>PT6M9S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Fed Up</Title>
+    <Duration>PT4M42S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Metamorphous</Title>
+    <Duration>PT2M43S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Spirals Of Time</Title>
+    <Duration>PT5M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Doomed To Perish</Title>
+    <Duration>PT5M43S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Blindfold</Title>
+    <Duration>PT5M20S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Taste The Waste</Title>
+    <Duration>PT5M54S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Drowning</Title>
+    <Duration>PT4M36S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27330</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Escapando De Los Recuerdos</Title>
+    <Duration>PT3M35S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>I Want To Go To Hell</Title>
+    <Duration>PT4M41S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Where Words Fail, Hate Speaks</Title>
+    <Duration>PT4M26S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Flesh To Lacerate</Title>
+    <Duration>PT4M59S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Dog Eat Dog</Title>
+    <Duration>PT4M59S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Hey... It's Me</Title>
+    <Duration>PT3M27S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Bite Me!</Title>
+    <Duration>PT5M28S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Lost Fate</Title>
+    <Duration>PT4M36S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Kiss Of The Apocalypse</Title>
+    <Duration>PT3M47S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Twist The Thorn</Title>
+    <Duration>PT4M57S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Tiempos De Furia</Title>
+    <Duration>PT4M35S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Not Human</Title>
+    <Duration>PT4M22S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>Altered States</Title>
+    <Duration>PT5M20S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>279762</AlbumId>
+    <PartId>1</PartId>
+    <Id>13</Id>
+    <Title>Los Espejos Rotos</Title>
+    <Duration>PT2M18S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>El Infierno Que Viene</Title>
+    <Duration>PT1M32S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Tales From The Third World</Title>
+    <Duration>PT6M6S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Bizarre Words</Title>
+    <Duration>PT5M53S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Spirits Of Crime</Title>
+    <Duration>PT6M3S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Born To Be (Hated) - Original Odium</Title>
+    <Duration>PT6M5S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Love Posing As A Prostitute</Title>
+    <Duration>PT5M24S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Ecos</Title>
+    <Duration>PT5M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Oración Nocturna</Title>
+    <Duration>PT8M17S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Death As A Gift</Title>
+    <Duration>PT5M45S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Padre No Nuestro</Title>
+    <Duration>PT2M6S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Untitled</Title>
+    <Duration>PT3M36S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>2</PartId>
+    <Id>12</Id>
+    <Title>Spirits Of Crime (Bestializtik Mix By DL)</Title>
+    <Duration>PT6M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>2</PartId>
+    <Id>13</Id>
+    <Title>Pentaprisma</Title>
+    <Duration>PT2M55S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>2</PartId>
+    <Id>14</Id>
+    <Title>Ladykiller (Sick Bastard Version)</Title>
+    <Duration>PT6M12S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>27320</AlbumId>
+    <PartId>2</PartId>
+    <Id>15</Id>
+    <Title>La Cara De La Muerte</Title>
+    <Duration>PT1M41S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Jasmine And Rose</Title>
+    <Duration>PT5M42S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Crucified</Title>
+    <Duration>PT5M58S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Taste Of Medicine</Title>
+    <Duration>PT7M48S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Undermined</Title>
+    <Duration>PT6M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Consolation</Title>
+    <Duration>PT4M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Waterfront</Title>
+    <Duration>PT5M38S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Creature</Title>
+    <Duration>PT5M3S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>All I Have</Title>
+    <Duration>PT5M35S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Falling Down</Title>
+    <Duration>PT6M14S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Without A Name</Title>
+    <Duration>PT4M2S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>42663</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Doubts</Title>
+    <Duration>PT5M36S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Innocent</Title>
+    <Duration>PT5M51S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>I Want You Now</Title>
+    <Duration>PT5M22S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Internal Darkness</Title>
+    <Duration>PT5M13S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>At Your Mercy</Title>
+    <Duration>PT6M48S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Anguish</Title>
+    <Duration>PT8M51S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Number One</Title>
+    <Duration>PT5M39S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Into Her Web</Title>
+    <Duration>PT2M56S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>The Bitter Sweet</Title>
+    <Duration>PT5M15S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Liberty</Title>
+    <Duration>PT5M58S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Something Wrong</Title>
+    <Duration>PT7M18S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Mysterium</Title>
+    <Duration>PT2M45S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>55577</AlbumId>
+    <PartId>1</PartId>
+    <Id>12</Id>
+    <Title>The Same Dream</Title>
+    <Duration>PT4M21S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48191</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Intro</Title>
+    <Duration>PT2M6S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48191</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>Xastur Within</Title>
+    <Duration>PT6M14S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48191</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Dreams Blacker Than Death</Title>
+    <Duration>PT5M24S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48191</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Screaming At Forgotten Fears</Title>
+    <Duration>PT8M24S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48191</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Consumed By A Dark Paranoia</Title>
+    <Duration>PT3M40S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48191</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Marked By Shadows</Title>
+    <Duration>PT6M43S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48191</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Apparitional Void Of Failure</Title>
+    <Duration>PT4M37S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48191</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>A Gate Through Bloodstained Mirrors</Title>
+    <Duration>PT12M6S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48191</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Walker Of Dissonant Worlds</Title>
+    <Duration>PT5M40S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>1</Id>
+    <Title>Disharmonic Convergence</Title>
+    <Duration>PT1M50S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>2</Id>
+    <Title>The Prison Of Mirrors</Title>
+    <Duration>PT12M42S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>3</Id>
+    <Title>Beauty Is Only Razor Deep</Title>
+    <Duration>PT7M</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>4</Id>
+    <Title>Trauma Will Always Linger</Title>
+    <Duration>PT8M29S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>5</Id>
+    <Title>Pyramid Of Skulls</Title>
+    <Duration>PT2M36S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>6</Id>
+    <Title>Arcane And Misanthropic Projection</Title>
+    <Duration>PT9M40S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>7</Id>
+    <Title>Victim Of Your Dreams</Title>
+    <Duration>PT6M12S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>8</Id>
+    <Title>Through A Trance Of Despondency</Title>
+    <Duration>PT3M30S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>9</Id>
+    <Title>Loss And Inner Distortion</Title>
+    <Duration>PT4M4S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>10</Id>
+    <Title>Subliminal Genocide</Title>
+    <Duration>PT8M49S</Duration>
+  </Track>
+  <Track>
+    <AlbumId>48184</AlbumId>
+    <PartId>1</PartId>
+    <Id>11</Id>
+    <Title>Malice Hidden In Surrealism</Title>
+    <Duration>PT6M37S</Duration>
+  </Track>
+</ArrayOfTrack>

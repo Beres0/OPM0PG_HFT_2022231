@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRelease xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Release>
+    <Id>1404564</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Irond</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>1258680</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1258255</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>9136349</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2695733</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1264482</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>3759687</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1264103</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>COP International</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>14669384</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2514036</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>2551533</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>6379255</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>11855632</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>3115546</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2480584</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2473461</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2642979</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2011</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>14730509</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>336020</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2004</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>385313</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2004</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1823411</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2004</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>340597</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2004</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2675339</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2005</ReleaseYear>
+    <Publisher>Irond</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>14655884</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>14752518</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>15870800</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>8053500</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>3944320</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>259644</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>13933710</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>2000</ReleaseYear>
+    <Publisher>Arteria Records</Publisher>
+    <Country>Mexico</Country>
+  </Release>
+  <Release>
+    <Id>1039188</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Gravitator Records</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>13240988</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>2019</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>16282560</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>19536859</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>23477414</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>3198446</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>15302762</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>12731398</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>162073</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>9487040</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>376404</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1418601</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>445498</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1762314</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>17197174</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Pandaimonium Records (2)</Publisher>
+    <Country>China</Country>
+  </Release>
+  <Release>
+    <Id>3807342</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2002</ReleaseYear>
+    <Publisher>Irond</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>1404412</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Gravitator Records</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>13245616</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2019</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>13724811</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>19803658</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>3227388</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear xsi:nil="true" />
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>585570</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2004</ReleaseYear>
+    <Publisher>Total Holocaust Records</Publisher>
+    <Country>Sweden</Country>
+  </Release>
+  <Release>
+    <Id>773126</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2005</ReleaseYear>
+    <Publisher>Perverted Taste</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>736722</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2005</ReleaseYear>
+    <Publisher>Moribund Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>4981196</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2013</ReleaseYear>
+    <Publisher>Children Of The Night (2)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>5611638</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2014</ReleaseYear>
+    <Publisher>War Arts Productions</Publisher>
+    <Country>Portugal</Country>
+  </Release>
+  <Release>
+    <Id>5913782</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2014</ReleaseYear>
+    <Publisher>War Arts Productions</Publisher>
+    <Country>Portugal</Country>
+  </Release>
+  <Release>
+    <Id>8093560</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Children Of The Night (2)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>10266453</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Children Of The Night (2)</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>13324865</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2019</ReleaseYear>
+    <Publisher>Oracular Visions</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>13370847</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2019</ReleaseYear>
+    <Publisher>Oracular Visions</Publisher>
+    <Country>Canada</Country>
+  </Release>
+  <Release>
+    <Id>16098352</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Obskure Chaos Distro</Publisher>
+    <Country>Brazil</Country>
+  </Release>
+  <Release>
+    <Id>22509512</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Back On Black</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>17655049</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Back On Black</Publisher>
+    <Country>UK</Country>
+  </Release>
+  <Release>
+    <Id>18631963</Id>
+    <AlbumId>48191</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Moribund Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>15876690</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>3774840</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1003986</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>936996</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>2426060</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>2061656</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>4257503</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>4569520</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2007</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1714855</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Total Holocaust Records</Publisher>
+    <Country>Sweden</Country>
+  </Release>
+  <Release>
+    <Id>8239569</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>8793155</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Hydra Head Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>21430810</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Prophecy Productions</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>21269500</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Lupus Lounge</Publisher>
+    <Country>USA &amp; Europe</Country>
+  </Release>
+  <Release>
+    <Id>21269659</Id>
+    <AlbumId>48184</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Lupus Lounge</Publisher>
+    <Country>USA &amp; Europe</Country>
+  </Release>
+</ArrayOfRelease>

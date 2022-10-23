@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Part>
+    <AlbumId>27330</AlbumId>
+    <Id>1</Id>
+    <Title>Memorias Atrás</Title>
+  </Part>
+  <Part>
+    <AlbumId>279762</AlbumId>
+    <Id>1</Id>
+    <Title>Tiempos De Furia</Title>
+  </Part>
+  <Part>
+    <AlbumId>27320</AlbumId>
+    <Id>1</Id>
+    <Title>Wrack And Ruin</Title>
+  </Part>
+  <Part>
+    <AlbumId>27320</AlbumId>
+    <Id>2</Id>
+    <Title>Maldiciones Para Un Mundo En Decadencia</Title>
+  </Part>
+  <Part>
+    <AlbumId>42663</AlbumId>
+    <Id>1</Id>
+    <Title>Creatures</Title>
+  </Part>
+  <Part>
+    <AlbumId>55577</AlbumId>
+    <Id>1</Id>
+    <Title>Notes From The Underground</Title>
+  </Part>
+  <Part>
+    <AlbumId>48191</AlbumId>
+    <Id>1</Id>
+    <Title>To Violate The Oblivious</Title>
+  </Part>
+  <Part>
+    <AlbumId>48184</AlbumId>
+    <Id>1</Id>
+    <Title>Subliminal Genocide</Title>
+  </Part>
+</ArrayOfPart>
