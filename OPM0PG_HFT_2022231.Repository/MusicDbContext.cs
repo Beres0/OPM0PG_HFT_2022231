@@ -9,9 +9,9 @@ namespace OPM0PG_HFT_2022231.Repository
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Contributor> Contributors { get; set; }
+        public DbSet<Contribution> Contributions { get; set; }
         public DbSet<Track> Tracks { get; set; }
-        public DbSet<Member> Members { get; set; }
+        public DbSet<Membership> Memberships { get; set; }
         public DbSet<Part> Parts { get; set; }
         public DbSet<Release> Releases { get; set; }
 
@@ -30,9 +30,9 @@ namespace OPM0PG_HFT_2022231.Repository
         {
             modelBuilder.ApplyConfiguration(new AlbumConfiguration());
             modelBuilder.ApplyConfiguration(new ArtistConfiguration());
-            modelBuilder.ApplyConfiguration(new ContributorConfiguration());
+            modelBuilder.ApplyConfiguration(new ContributionConfiguration());
             modelBuilder.ApplyConfiguration(new GenreConfiguration());
-            modelBuilder.ApplyConfiguration(new MemberConfiguration());
+            modelBuilder.ApplyConfiguration(new MembershipConfiguration());
             modelBuilder.ApplyConfiguration(new PartConfiguration());
             modelBuilder.ApplyConfiguration(new ReleaseConfiguration());
             modelBuilder.ApplyConfiguration(new TrackConfiguration());
