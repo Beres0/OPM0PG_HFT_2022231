@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
@@ -13,9 +10,13 @@ namespace OPM0PG_HFT_2022231.Models
         public string Title { get; set; }
         public int Year { get; set; }
 
+        public Album()
+        {
+            CollectionSetter<Album>.SetCollections(this);
+        }
 
         [JsonIgnore, XmlIgnore]
-        public virtual ICollection<Contributor> Contributors { get; set; }
+        public virtual ICollection<Contribution> Contributions { get; set; }
 
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Genre> Genres { get; set; }
@@ -25,8 +26,8 @@ namespace OPM0PG_HFT_2022231.Models
 
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Track> Tracks { get; set; }
-        [JsonIgnore,XmlIgnore]
-        public virtual ICollection<Release> Releases { get; set; }
 
+        [JsonIgnore, XmlIgnore]
+        public virtual ICollection<Release> Releases { get; set; }
     }
 }
