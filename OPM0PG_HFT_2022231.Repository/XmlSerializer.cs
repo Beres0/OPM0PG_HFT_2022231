@@ -3,13 +3,15 @@ using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
-    class XmlSerializer<T>
+    public class XmlSerializer<T>
     {
-        XmlSerializer serializer;
+        private XmlSerializer serializer;
+
         public XmlSerializer()
         {
             serializer = new XmlSerializer(typeof(T));
         }
+
         public void Serialize(string path, T obj)
         {
             using (var writer = new StreamWriter(path, true))
@@ -17,6 +19,7 @@ namespace OPM0PG_HFT_2022231.Models
                 serializer.Serialize(writer, obj);
             }
         }
+
         public T Deserialize(string path)
         {
             using (var reader = new StreamReader(path, true))
