@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfMember xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ArrayOfMembership xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Member>
     <BandId>11612</BandId>
     <BandMemberId>251809</BandMemberId>
@@ -410,4 +410,4 @@
     <BandMemberId>5256294</BandMemberId>
     <Active>true</Active>
   </Member>
-</ArrayOfMember>
+</ArrayOfMembership>

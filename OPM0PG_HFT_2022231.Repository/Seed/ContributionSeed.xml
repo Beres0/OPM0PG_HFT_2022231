@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfContributor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ArrayOfContribution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Contributor>
     <AlbumId>1465758</AlbumId>
     <ArtistId>45</ArtistId>
@@ -112,7 +112,7 @@
     <AlbumId>1308061</AlbumId>
     <ArtistId>1775650</ArtistId>
   </Contributor>
-   <Contributor>
+  <Contributor>
     <AlbumId>5668</AlbumId>
     <ArtistId>660</ArtistId>
   </Contributor>
@@ -148,4 +148,4 @@
     <AlbumId>48184</AlbumId>
     <ArtistId>324134</ArtistId>
   </Contributor>
-</ArrayOfContributor>
+</ArrayOfContribution>
