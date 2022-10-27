@@ -5,32 +5,32 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Seed\AlbumSeed.xml" />
+    <None Remove="Seeds\AlbumSeed.xml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Seed\AlbumSeed.xml">
+    <Content Include="Seeds\AlbumSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seed\ArtistSeed.xml">
+    <Content Include="Seeds\ArtistSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seed\ContributionSeed.xml">
+    <Content Include="Seeds\ContributionSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seed\GenreSeed.xml">
+    <Content Include="Seeds\AlbumGenreSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seed\MembershipSeed.xml">
+    <Content Include="Seeds\MembershipSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seed\PartSeed.xml">
+    <Content Include="Seeds\PartSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seed\ReleaseSeed.xml">
+    <Content Include="Seeds\ReleaseSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seed\TrackSeed.xml">
+    <Content Include="Seeds\TrackSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
