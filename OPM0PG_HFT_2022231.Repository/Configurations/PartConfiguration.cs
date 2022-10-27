@@ -4,7 +4,7 @@ using OPM0PG_HFT_2022231.Models;
 
 namespace OPM0PG_HFT_2022231.Repository.Configuration
 {
-    public class PartConfiguration : IEntityTypeConfiguration<Part>
+    internal class PartConfiguration : IEntityTypeConfiguration<Part>
     {
         public void Configure(EntityTypeBuilder<Part> builder)
         {

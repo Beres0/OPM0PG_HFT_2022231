@@ -4,7 +4,7 @@ using OPM0PG_HFT_2022231.Models;
 
 namespace OPM0PG_HFT_2022231.Repository.Configuration
 {
-    public class ArtistConfiguration : IEntityTypeConfiguration<Artist>
+    internal class ArtistConfiguration : IEntityTypeConfiguration<Artist>
     {
         public void Configure(EntityTypeBuilder<Artist> builder)
         {

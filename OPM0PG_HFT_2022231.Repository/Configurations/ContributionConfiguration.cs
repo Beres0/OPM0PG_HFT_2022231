@@ -4,7 +4,7 @@ using OPM0PG_HFT_2022231.Models;
 
 namespace OPM0PG_HFT_2022231.Repository.Configuration
 {
-    public class ContributionConfiguration : IEntityTypeConfiguration<Contribution>
+    internal class ContributionConfiguration : IEntityTypeConfiguration<Contribution>
     {
         public void Configure(EntityTypeBuilder<Contribution> builder)
         {

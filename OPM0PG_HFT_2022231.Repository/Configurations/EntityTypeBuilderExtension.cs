@@ -7,13 +7,13 @@ using System.Linq.Expressions;
 
 namespace OPM0PG_HFT_2022231.Repository.Configuration
 {
-    public static class EntityTypeBuilderExtension
+    internal static class EntityTypeBuilderExtension
     {
         public static void SetSeed<TEntity>
             (this EntityTypeBuilder<TEntity> builder)
             where TEntity : class
         {
-            builder.HasData(new XmlSerializer<List<TEntity>>().Deserialize($"Seed/{typeof(TEntity).Name}Seed.xml"));
+            builder.HasData(new XmlSerializer<List<TEntity>>().Deserialize($"Seeds/{typeof(TEntity).Name}Seed.xml"));
         }
 
         public static void SetDatabaseGeneratedPrimaryKey<TEntity>

@@ -4,7 +4,7 @@ using OPM0PG_HFT_2022231.Models;
 
 namespace OPM0PG_HFT_2022231.Repository.Configuration
 {
-    public class AlbumConfiguration : IEntityTypeConfiguration<Album>
+    internal class AlbumConfiguration : IEntityTypeConfiguration<Album>
     {
         public void Configure(EntityTypeBuilder<Album> builder)
         {

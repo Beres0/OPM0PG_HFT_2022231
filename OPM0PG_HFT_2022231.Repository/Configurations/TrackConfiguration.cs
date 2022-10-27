@@ -4,7 +4,7 @@ using OPM0PG_HFT_2022231.Models;
 
 namespace OPM0PG_HFT_2022231.Repository.Configuration
 {
-    public class TrackConfiguration : IEntityTypeConfiguration<Track>
+    internal class TrackConfiguration : IEntityTypeConfiguration<Track>
     {
         public void Configure(EntityTypeBuilder<Track> builder)
         {
