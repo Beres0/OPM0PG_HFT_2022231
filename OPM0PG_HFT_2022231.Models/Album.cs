@@ -19,7 +19,7 @@ namespace OPM0PG_HFT_2022231.Models
         public virtual ICollection<Contribution> Contributions { get; set; }
 
         [JsonIgnore, XmlIgnore]
-        public virtual ICollection<Genre> Genres { get; set; }
+        public virtual ICollection<AlbumGenre> Genres { get; set; }
 
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Part> Parts { get; set; }
