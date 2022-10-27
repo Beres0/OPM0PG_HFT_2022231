@@ -11,9 +11,9 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
     public class ReleaseLogic : IReleaseLogic
     {
-        IRepository<int,Release> releases;
+        IRepository<Release> releases;
 
-        public ReleaseLogic(IRepository<int, Release> releases)
+        public ReleaseLogic(IRepository<Release> releases)
         {
             this.releases = releases;
         }

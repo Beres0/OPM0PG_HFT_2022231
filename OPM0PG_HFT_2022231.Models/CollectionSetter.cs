@@ -9,7 +9,6 @@ namespace OPM0PG_HFT_2022231.Models
     internal static class CollectionSetter<TEntity>
     {
         private static readonly Type CollectionType = typeof(HashSet<>);
-        private static readonly bool Allowed = true;
         private static readonly Action<TEntity>[] CollectionSetters = CreateCollectionSetters();
 
         private static ConstructorInfo GetCollectionConstructorInfo(PropertyInfo prop)
@@ -42,13 +41,10 @@ namespace OPM0PG_HFT_2022231.Models
 
         public static void SetCollections(TEntity entity)
         {
-            if (Allowed)
-            {
                 foreach (var setter in CollectionSetters)
                 {
                     setter(entity);
                 }
-            }
         }
     }
 }

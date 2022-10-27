@@ -8,10 +8,6 @@ namespace OPM0PG_HFT_2022231.Logic
 {
     public interface IAlbumLogic
     {
-        IRepository<int, Album> Albums { get; }
-        IRepository<object, Part> Parts { get; }
-        IRepository<object, Track> Tracks { get; }
-
         void CreateAlbum(Album album);
         void CreatePart(Part part);
         void CreateTrack(Track track);

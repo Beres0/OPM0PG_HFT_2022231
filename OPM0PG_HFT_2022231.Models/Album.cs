@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
-    public class Album : IEntity<int>
+    public class Album : IEntity
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -29,5 +29,8 @@ namespace OPM0PG_HFT_2022231.Models
 
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Release> Releases { get; set; }
+
+        object[] IEntity.GetId() => new object[] {Id};
+      
     }
 }

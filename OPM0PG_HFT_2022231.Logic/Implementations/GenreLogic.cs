@@ -11,10 +11,10 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
     public class GenreLogic : IGenreLogic
     {
-        IRepository<object, Contribution> contributions;
-        IRepository<object, AlbumGenre> genres;
+        IRepository<Contribution> contributions;
+        IRepository<AlbumGenre> genres;
 
-        public GenreLogic(IRepository<object, AlbumGenre> genres, IRepository<object, Contribution> contributions)
+        public GenreLogic(IRepository<AlbumGenre> genres, IRepository<Contribution> contributions)
         {
             this.contributions = contributions;
             this.genres = genres;
@@ -38,7 +38,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         }
         public void RemoveGenre(int albumId, string genre)
         {
-            genres.Delete(new { albumId, genre });
+            genres.Delete(albumId, genre);
         }
         public IEnumerable<string> GetGenres()
         {

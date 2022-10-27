@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
-    public class AlbumGenre : IEntity<object>
+    public class AlbumGenre : IEntity
     {
         public int AlbumId { get; set; }
         public string Genre { get; set; }
@@ -12,7 +12,7 @@ namespace OPM0PG_HFT_2022231.Models
         [JsonIgnore, XmlIgnore]
         public virtual Album Album { get; set; }
 
-        [NotMapped, XmlIgnore, JsonIgnore]
-        object IEntity<object>.Id => new {AlbumId,Genre };
+        object[] IEntity.GetId() => new object[] {AlbumId,Genre};
+
     }
 }

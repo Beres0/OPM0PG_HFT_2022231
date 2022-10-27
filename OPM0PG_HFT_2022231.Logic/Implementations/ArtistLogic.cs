@@ -7,12 +7,12 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
     public class ArtistLogic : IArtistLogic
     {
-        IRepository<int, Artist> Artists { get; }
-        IRepository<object, Membership> Memberships { get; }
+        IRepository<Artist> Artists { get; }
+        IRepository<Membership> Memberships { get; }
 
 
-        public ArtistLogic(IRepository<int, Artist> artists,
-                           IRepository<object, Membership> memberships)
+        public ArtistLogic(IRepository<Artist> artists,
+                           IRepository<Membership> memberships)
         {
             Artists = artists;
             Memberships = memberships;
@@ -52,7 +52,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         }
         public void RemoveMembership(int bandId, int memberId)
         {
-            Memberships.Delete(new { bandId, memberId });
+            Memberships.Delete(bandId, memberId);
         }
         public IEnumerable<Artist> GetBands()
         {

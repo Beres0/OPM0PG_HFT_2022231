@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
-    public class Membership : IEntity<object>
+    public class Membership : IEntity
     {
         public int BandId { get; set; }
         public int MemberId { get; set; }
@@ -16,7 +16,8 @@ namespace OPM0PG_HFT_2022231.Models
         [JsonIgnore, XmlIgnore]
         public virtual Artist Member { get; set; }
 
-        [JsonIgnore, XmlIgnore, NotMapped]
-        object IEntity<object>.Id => new { BandId, MemberId };
+        object[] IEntity.GetId() => new object[] {BandId,MemberId };
+
+
     }
 }

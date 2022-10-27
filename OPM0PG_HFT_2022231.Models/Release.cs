@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
-    public class Release : IEntity<int>
+    public class Release : IEntity
     {
         public int Id { get; set; }
         public int AlbumId { get; set; }
@@ -13,5 +13,7 @@ namespace OPM0PG_HFT_2022231.Models
 
         [JsonIgnore, XmlIgnore]
         public virtual Album Album { get; set; }
+
+        object[] IEntity.GetId() => new object[] {Id};
     }
 }

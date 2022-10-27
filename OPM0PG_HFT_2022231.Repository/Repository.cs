@@ -5,29 +5,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using OPM0PG_HFT_2022231.Repository.Exceptions;
+using EntityFramework.Exceptions;
+using System.Runtime.CompilerServices;
 
 namespace OPM0PG_HFT_2022231.Repository
 {
-    public class Repository<TKey, TEntity> : IRepository<TKey, TEntity> where TEntity : class, IEntity<TKey>
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
     {
-        
+
         private static readonly Action<TEntity, TEntity>[] updaters = CreateUpdaters();
         private static Action<TEntity, TEntity>[] CreateUpdaters()
         {
             Type type = typeof(TEntity);
             PropertyInfo[] props = type.GetProperties(BindingFlags.Instance | BindingFlags.Public)
-                .Where(p => !p.SetMethod.IsVirtual&&p.CanWrite).ToArray();
+                .Where(p => !p.SetMethod.IsVirtual && p.CanWrite).ToArray();
 
             Action<TEntity, TEntity>[] updaters = new Action<TEntity, TEntity>[props.Length];
 
             var to = Expression.Parameter(type, "to");
             var from = Expression.Parameter(type, "from");
 
-            
+
             for (int i = 0; i < props.Length; i++)
             {
-                updaters[i] = Expression.Lambda<Action<TEntity, TEntity>> 
-                              (Expression.Assign( 
+                updaters[i] = Expression.Lambda<Action<TEntity, TEntity>>
+                              (Expression.Assign(
                                Expression.Property(to, props[i].Name),
                                Expression.Property(from, props[i].Name)),
                                to, from)
@@ -49,35 +52,36 @@ namespace OPM0PG_HFT_2022231.Repository
 
         public void Create(TEntity item)
         {
-            context.Set<TEntity>().Add(item);
-            context.SaveChanges();
+                context.Set<TEntity>().Add(item);
+                context.SaveChanges();
         }
 
-        public void Delete(TKey id)
+        public void Delete(params object[] id)
         {
             context.Set<TEntity>().Remove(Read(id));
             context.SaveChanges();
         }
 
-        public TEntity Read(TKey id)
+        public TEntity Read(params object[] id)
         {
-            return context.Set<TEntity>().Find(id);
+            return context.Set<TEntity>().Find(id) is TEntity entity ? 
+                entity : throw new IdNotFoundException(id);
         }
 
         public IEnumerable<TEntity> ReadAll()
         {
-            return context.Set<TEntity>();
+                return context.Set<TEntity>();
         }
 
         public void Update(TEntity item)
         {
-            TEntity old = Read(item.Id);
-            for (int i = 0; i < updaters.Length; i++)
-            {
-                updaters[i](item, old);
-            }
+                TEntity old = Read(item.GetId());
+                for (int i = 0; i < updaters.Length; i++)
+                {
+                    updaters[i](item, old);
+                }
 
-            context.SaveChanges();
+                context.SaveChanges();
         }
     }
 }

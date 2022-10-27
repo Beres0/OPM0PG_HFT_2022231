@@ -10,9 +10,9 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
     public class ContributionLogic : IContributionLogic
     {
-        IRepository<object,Contribution> contributions;
+        IRepository<Contribution> contributions;
 
-        public ContributionLogic(IRepository<object, Contribution> contributions)
+        public ContributionLogic(IRepository<Contribution> contributions)
         {
             this.contributions = contributions;
         }
@@ -27,7 +27,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         }
         public void RemoveContribution(int artistId, int albumId)
         {
-            contributions.Delete(new { artistId, albumId });
+            contributions.Delete(artistId, albumId);
         }
     }
 }

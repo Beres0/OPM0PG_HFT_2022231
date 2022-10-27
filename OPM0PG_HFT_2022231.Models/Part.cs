@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
-    public class Part : IEntity<object>
+    public class Part : IEntity
     {
         public Part()
         {
@@ -24,7 +24,6 @@ namespace OPM0PG_HFT_2022231.Models
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Track> Tracks { get; set; }
 
-        [JsonIgnore, XmlIgnore, NotMapped]
-        object IEntity<object>.Id => new { AlbumId, Id };
+        object[] IEntity.GetId() => new object[] {AlbumId, Id };
     }
 }
