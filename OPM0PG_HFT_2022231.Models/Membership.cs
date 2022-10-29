@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
@@ -11,7 +10,6 @@ namespace OPM0PG_HFT_2022231.Models
             CollectionSetter<Membership>.SetCollections(this);
         }
 
-
         public int BandId { get; set; }
         public int MemberId { get; set; }
         public bool Active { get; set; }
@@ -21,8 +19,7 @@ namespace OPM0PG_HFT_2022231.Models
 
         [JsonIgnore, XmlIgnore]
         public virtual Artist Member { get; set; }
-        object[] IEntity.GetId() => new object[] {BandId,MemberId };
 
-
+        object[] IEntity.GetId() => new object[] { BandId, MemberId };
     }
 }

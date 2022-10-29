@@ -6,9 +6,10 @@ using System.Reflection;
 
 namespace OPM0PG_HFT_2022231.Repository
 {
-    internal static class EntityUpdater<TEntity> where TEntity:class,IEntity
+    internal static class EntityUpdater<TEntity> where TEntity : class, IEntity
     {
         private static readonly Action<TEntity, TEntity>[] updaters = CreateUpdaters();
+
         private static Action<TEntity, TEntity>[] CreateUpdaters()
         {
             Type type = typeof(TEntity);
@@ -19,7 +20,6 @@ namespace OPM0PG_HFT_2022231.Repository
 
             var to = Expression.Parameter(type, "to");
             var from = Expression.Parameter(type, "from");
-
 
             for (int i = 0; i < props.Length; i++)
             {
@@ -33,6 +33,7 @@ namespace OPM0PG_HFT_2022231.Repository
 
             return updaters;
         }
+
         public static void Update(TEntity to, TEntity from)
         {
             for (int i = 0; i < updaters.Length; i++)

@@ -1,18 +1,16 @@
 ﻿using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
-using System.Runtime.CompilerServices;
 
 namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
-    public class ArtistLogic :BaseLogic,IArtistLogic
+    public class ArtistLogic : BaseLogic, IArtistLogic
     {
         public ArtistLogic(IMusicRepository musicRepository)
-        :base(musicRepository)
+        : base(musicRepository)
         { }
-
 
         private void ValidateArtist(Artist artist)
         {
@@ -22,6 +20,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             }
             ValidateRequiredText(artist.Name);
         }
+
         private void ValidateMembershipKeys(int bandId, int memberId)
         {
             if (bandId == memberId)
@@ -41,6 +40,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 throw new InvalidOperationException($"'The ({bandId}) 'bandId' is already present as member in memberships. To prevent circular references you can't add that id as band.");
             }
         }
+
         public void CreateArtist(Artist artist)
         {
             artist.Id = 0;
@@ -53,6 +53,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             ValidateMembershipKeys(bandId, memberId);
             repository.Memberships.Create(new Membership() { BandId = bandId, MemberId = memberId });
         }
+
         public Artist ReadArtist(int artistId)
         {
             ValidatePositiveNumber(artistId);
@@ -63,37 +64,44 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             return repository.Artists.ReadAll();
         }
+
         public IEnumerable<Membership> ReadAllMembership()
         {
             return repository.Memberships.ReadAll();
         }
+
         public void UpdateArtist(Artist artist)
         {
             ValidatePositiveNumber(artist.Id);
             ValidateArtist(artist);
             repository.Artists.Update(artist);
         }
+
         public void SetMembershipStatus(int bandId, int memberId, bool active)
         {
             ValidateMembershipKeys(bandId, memberId);
             repository.Memberships.Update(new Membership { BandId = bandId, MemberId = memberId, Active = active });
         }
+
         public void DeleteArtist(int artistId)
         {
             ValidatePositiveNumber(artistId);
             repository.Artists.Delete(artistId);
         }
+
         public void RemoveMembership(int bandId, int memberId)
         {
             ValidateMembershipKeys(bandId, memberId);
             repository.Memberships.Delete(bandId, memberId);
         }
+
         public IEnumerable<Artist> GetBands()
         {
             return repository.Memberships.ReadAll()
                 .Select(m => m.Band)
                 .Distinct();
         }
+
         public IEnumerable<Artist> GetMembers(int bandId)
         {
             ValidatePositiveNumber(bandId);
@@ -101,6 +109,5 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 .Where(m => m.BandId == bandId)
                 .Select(m => m.Member);
         }
-
     }
 }

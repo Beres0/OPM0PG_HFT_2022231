@@ -37,8 +37,7 @@ namespace OPM0PG_HFT_2022231.Repository.Configuration
             (this EntityTypeBuilder<TEntity> builder, Expression<Func<TEntity, object>> propertyExpression)
             where TEntity : class
         {
-           return builder.Property(propertyExpression).HasColumnType("varchar").HasMaxLength(ColumnTypeConstants.MaxTextLength).IsUnicode(true);
-
+            return builder.Property(propertyExpression).HasColumnType("varchar").HasMaxLength(ColumnTypeConstants.MaxTextLength).IsUnicode(true);
         }
 
         public static PropertyBuilder SetDefaultYearType<TEntity>

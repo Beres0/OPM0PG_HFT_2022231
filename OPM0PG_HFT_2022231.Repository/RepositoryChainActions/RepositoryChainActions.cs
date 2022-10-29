@@ -8,16 +8,19 @@ namespace OPM0PG_HFT_2022231.Repository.RepositoryChainActions
 {
     public class RepositoryChainActions<TEntity> : IRepositoryChainActions<TEntity> where TEntity : class, IEntity
     {
-        DbContext context;
+        private DbContext context;
+
         public RepositoryChainActions(DbContext context)
         {
             this.context = context;
         }
+
         public IRepositoryChainActions<TEntity> CreateWithoutSave(IEnumerable<TEntity> entities)
         {
             context.Set<TEntity>().AddRange(entities);
             return this;
         }
+
         public IRepositoryChainActions<TEntity> CreateWithoutSave(params TEntity[] entities)
         {
             return CreateWithoutSave((IEnumerable<TEntity>)entities);
@@ -28,17 +31,18 @@ namespace OPM0PG_HFT_2022231.Repository.RepositoryChainActions
             context.Set<TEntity>().RemoveRange(entities);
             return this;
         }
+
         public IRepositoryChainActions<TEntity> DeleteWithoutSave(params TEntity[] entities)
         {
             return DeleteWithoutSave((IEnumerable<TEntity>)entities);
         }
-
 
         public IRepositoryChainActions<TEntity> Read(out TEntity entity, params object[] id)
         {
             entity = context.Set<TEntity>().Find(id);
             return this;
         }
+
         public IRepositoryChainActions<TEntity> ReadWhere(Func<TEntity, bool> predicate, out IEnumerable<TEntity> entities)
         {
             entities = context.Set<TEntity>().Where(predicate);
@@ -53,9 +57,9 @@ namespace OPM0PG_HFT_2022231.Repository.RepositoryChainActions
 
         public IRepositoryChainActions<TEntity> UpdateWithoutSave(TEntity entity)
         {
-            TEntity old=context.Set<TEntity>().Find(entity.GetId());
+            TEntity old = context.Set<TEntity>().Find(entity.GetId());
             EntityUpdater<TEntity>.Update(old, entity);
-            
+
             return this;
         }
 
@@ -72,7 +76,5 @@ namespace OPM0PG_HFT_2022231.Repository.RepositoryChainActions
         {
             context.SaveChanges();
         }
-
-    
     }
 }

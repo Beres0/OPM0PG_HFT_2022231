@@ -4,7 +4,6 @@ using OPM0PG_HFT_2022231.Repository.Configuration;
 
 namespace OPM0PG_HFT_2022231.Repository
 {
-
     public class MusicDbContext : DbContext
     {
         public DbSet<Artist> Artists { get; set; }

@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
@@ -21,6 +20,6 @@ namespace OPM0PG_HFT_2022231.Models
         [JsonIgnore, XmlIgnore]
         public virtual Artist Artist { get; set; }
 
-        object[] IEntity.GetId() => new object[] { AlbumId,ArtistId };
+        object[] IEntity.GetId() => new object[] { AlbumId, ArtistId };
     }
 }

@@ -1,21 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OPM0PG_HFT_2022231.Models;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using OPM0PG_HFT_2022231.Repository.RepositoryChainActions;
-using System.Security.Cryptography;
-using OPM0PG_HFT_2022231.Repository;
-using System;
+using System.Collections.Generic;
 
 namespace OPM0PG_HFT_2022231.Repository
 {
-
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
     {
         private DbContext context;
 
-        RepositoryChainActions<TEntity> chainActions;
+        private RepositoryChainActions<TEntity> chainActions;
+
         public Repository(DbContext context)
         {
             this.context = context;
@@ -26,7 +21,6 @@ namespace OPM0PG_HFT_2022231.Repository
         {
             context.Set<TEntity>().Add(item);
             context.SaveChanges();
-             
         }
 
         public void Delete(params object[] id)
@@ -48,9 +42,9 @@ namespace OPM0PG_HFT_2022231.Repository
 
         public void Update(TEntity item)
         {
-                TEntity old = Read(item.GetId());
-                EntityUpdater<TEntity>.Update(old, item);
-                context.SaveChanges();
+            TEntity old = Read(item.GetId());
+            EntityUpdater<TEntity>.Update(old, item);
+            context.SaveChanges();
         }
 
         public IRepositoryChainActions<TEntity> ChainActions()
