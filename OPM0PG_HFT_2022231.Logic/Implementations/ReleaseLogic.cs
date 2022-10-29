@@ -9,46 +9,59 @@ using System.Threading.Tasks;
 
 namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
-    public class ReleaseLogic : IReleaseLogic
+    public class ReleaseLogic :BaseLogic, IReleaseLogic
     {
-        IRepository<int,Release> releases;
+        public ReleaseLogic(IMusicRepository musicRepository):base(musicRepository)
+        { }
 
-        public ReleaseLogic(IRepository<int, Release> releases)
+        private void ValidateRelease(Release release)
         {
-            this.releases = releases;
-        }
+            if (release is null)
+            {
+                throw new ArgumentNullException(nameof(release));
+            }
 
+            ValidateText(release.Country);
+            ValidateText(release.Publisher);
+            ValidateYear(release.ReleaseYear);
+            ValidateForeignKey(release.AlbumId,repository.Albums);
+        }
         public void CreateRelease(Release release)
         {
-            releases.Create(release);
+            release.Id = 0;
+            ValidateRelease(release);
+            repository.Releases.Create(release);
         }
         public Release ReadRelease(int id)
         {
-            return releases.Read(id);
+            ValidatePositiveNumber(id);
+            return repository.Releases.Read(id);
         }
         public IEnumerable<Release> ReadAllRelease()
         {
-            return releases.ReadAll();
+            return repository.Releases.ReadAll();
         }
         public void UpdateRelease(Release release)
         {
-            releases.Update(release);
+            ValidateRelease(release);
+            ValidatePositiveNumber(release.Id);
+            repository.Releases.Update(release);
         }
         public IEnumerable<string> GetPublishers()
         {
-            return releases.ReadAll()
+            return repository.Releases.ReadAll()
                 .Select(r => r.Publisher)
                 .Distinct();
         }
         public IEnumerable<ReleasePerCountryDTO> GetReleasePerCountry()
         {
-            return releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
+            return repository.Releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
                 .GroupBy(r => r.Country)
                 .Select(g => new ReleasePerCountryDTO(g.Key, g.Count()));
         }
         public IEnumerable<PublisherPerCountryDTO> GetPublisherPerCountry()
         {
-            return releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
+            return repository.Releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
                 .Select(r => new { r.Country, r.Publisher })
                 .Distinct()
                 .GroupBy(r => r.Country)
@@ -56,7 +69,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         }
         public IEnumerable<ReleasePerYearDTO> GetReleasePerYear()
         {
-            return releases.ReadAll().Where(r => r.ReleaseYear.HasValue)
+            return repository.Releases.ReadAll().Where(r => r.ReleaseYear.HasValue)
                 .GroupBy(r => r.ReleaseYear)
                 .Select(g => new ReleasePerYearDTO(g.Key.Value, g.Count()));
         }

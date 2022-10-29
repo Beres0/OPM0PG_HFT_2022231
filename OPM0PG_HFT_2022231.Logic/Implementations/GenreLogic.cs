@@ -9,45 +9,45 @@ using System.Threading.Tasks;
 
 namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
-    public class GenreLogic : IGenreLogic
+    public class GenreLogic :BaseLogic, IGenreLogic
     {
-        IRepository<object, Contribution> contributions;
-        IRepository<object, AlbumGenre> genres;
-
-        public GenreLogic(IRepository<object, AlbumGenre> genres, IRepository<object, Contribution> contributions)
-        {
-            this.contributions = contributions;
-            this.genres = genres;
-        }
+        public GenreLogic(IMusicRepository musicRepository):base(musicRepository)
+        { }
 
         public IEnumerable<AlbumGenre> ReadAllAlbumGenre()
         {
-            return genres.ReadAll();
+            return repository.Genres.ReadAll();
         }
         public IEnumerable<ArtistGenreDTO> ReadAllArtistGenre()
         {
-            return genres.ReadAll().Join
-                (contributions.ReadAll(),
+            return repository.Genres.ReadAll().Join
+                (repository.Contributions.ReadAll(),
                 (g) => g.AlbumId, (c) => c.AlbumId,
                 (g, c) => new ArtistGenreDTO(c.Artist, g.Genre))
                 .Distinct();
         }
         public void AddGenre(int albumId, string genre)
         {
-            genres.Create(new AlbumGenre { AlbumId = albumId, Genre = genre });
+            ValidatePositiveNumber(albumId);
+            ValidateRequiredText(genre);
+            ValidateForeignKey(albumId, repository.Albums);
+
+            repository.Genres.Create(new AlbumGenre { AlbumId = albumId, Genre = genre });
         }
         public void RemoveGenre(int albumId, string genre)
         {
-            genres.Delete(new { albumId, genre });
+            ValidatePositiveNumber(albumId);
+            ValidateRequiredText(genre);
+            repository.Genres.Delete(albumId, genre);
         }
         public IEnumerable<string> GetGenres()
         {
-            return genres.ReadAll()
+            return repository.Genres.ReadAll()
                  .Select(g => g.Genre).Distinct();
         }
         public IEnumerable<AlbumPerGenreDTO> GetAlbumPerGenre()
         {
-            return genres.ReadAll()
+            return repository.Genres.ReadAll()
                    .GroupBy(g => g.Genre)
                    .Select(g => new AlbumPerGenreDTO(g.Key, g.Count()));
         }

@@ -1,108 +1,309 @@
-﻿using OPM0PG_HFT_2022231.Models;
+﻿using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
+using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
 using OPM0PG_HFT_2022231.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
-    public class AlbumLogic : IAlbumLogic
+    public class AlbumLogic : BaseLogic, IAlbumLogic
     {
-        public IRepository<int, Album> Albums { get; }
-        public IRepository<object, Part> Parts { get; }
-        public IRepository<object, Track> Tracks { get; }
+        public AlbumLogic(IMusicRepository musicRepository) : base(musicRepository)
+        { }
 
-
-        public AlbumLogic(IRepository<int, Album> albums,
-                          IRepository<object, Part> parts,
-                          IRepository<object, Track> tracks)
+        private void ValidateAlbum(Album album)
         {
-            Albums = albums;
-            Parts = parts;
-            Tracks = tracks;
+            if (album is null)
+            {
+                throw new ArgumentNullException(nameof(album));
+            }
+            ValidateRequiredText(album.Title);
+            ValidateYear(album.Year);
         }
+
+        private void ValidateTrackAtCreating(Track track, out Part part)
+        {
+            if (track is null)
+            {
+                throw new ArgumentNullException(nameof(track));
+            }
+
+            ValidatePositiveNumber(track.PartId);
+            ValidateRequiredText(track.Title);
+
+            part = repository.Parts.Read(track.PartId);
+
+            int lastPosition = part.Tracks.Count + 1;
+            if (track.Position < 1 || lastPosition < track.Position)
+            {
+                part.Position = lastPosition;
+            }
+        }
+        private void ValidateTrackAtUpdating(Track track, out Part part)
+        {
+            if (track is null)
+            {
+                throw new ArgumentNullException(nameof(track));
+            }
+            ValidatePositiveNumber(track.PartId);
+            ValidateRequiredText(track.Title);
+            part = repository.Parts.Read(track.PartId);
+
+            int lastPosition = part.Tracks.Count;
+            if (track.Position < 1 || lastPosition < track.Position)
+            {
+                part.Position = lastPosition;
+            }
+
+        }
+        private void ValidatePartAtCreating(Part part, out Album album)
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+            ValidatePositiveNumber(part.AlbumId);
+
+            album = repository.Albums.Read(part.AlbumId);
+            if (string.IsNullOrWhiteSpace(part.Title)) part.Title = album.Title;
+            ValidateRequiredText(part.Title);
+
+            int lastPosition = album.Parts.Count + 1;
+            if (part.Position < 1 || lastPosition < part.Position)
+            {
+                part.Position = lastPosition;
+            }
+        }
+        private void ValidatePartAtUpdating(Part part, out Album album)
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+            ValidatePositiveNumber(part.Id);
+            ValidateRequiredText(part.Title);
+
+            album = repository.Albums.Read(part.AlbumId);
+
+            int lastPosition = album.Parts.Count;
+            if (part.Position < 1 || lastPosition < part.Position)
+            {
+                part.Position = lastPosition;
+            }
+        }
+
 
         public void CreateAlbum(Album album)
         {
-            Albums.Create(album);
+            ValidateAlbum(album);
+            album.Id = 0;
+            repository.Albums.Create(album);
         }
         public void CreatePart(Part part)
         {
-            Parts.Create(part);
+            part.Id = 0;
+            ValidatePartAtCreating(part,out Album album);
+
+            repository.Parts.ChainActions()
+               .UpdateWithoutSave(album.Parts.Where(p => p.Position >= part.Position).OrderByDescending(t => t.Position), t => t.Position++)
+               .CreateWithoutSave(part)
+               .Save();
         }
+
         public void CreateTrack(Track track)
         {
-            Tracks.Create(track);
+            track.Id = 0;
+            ValidateTrackAtCreating(track,out Part part);
+
+            repository.Tracks.ChainActions()
+                .UpdateWithoutSave(part.Tracks.Where(t => t.Position >= track.Position).OrderByDescending(t => t.Position), t => t.Position++)
+                .CreateWithoutSave(track)
+                .Save();
         }
         public IEnumerable<Album> ReadAllAlbum()
         {
-            return Albums.ReadAll();
+            return repository.Albums.ReadAll();
         }
-        public Album ReadAlbum(int id)
+        public Album ReadAlbum(int albumId)
         {
-            return Albums.Read(id);
+            ValidatePositiveNumber(albumId);
+            return repository.Albums.Read(albumId);
         }
         public IEnumerable<Part> ReadAllPart()
         {
-            return Parts.ReadAll();
+            return repository.Parts.ReadAll();
         }
-        public Part ReadPart(int albumid, int partId)
+        public Part ReadPart(int partId)
         {
-            return Parts.Read(new { albumid, partId });
+            ValidatePositiveNumber(partId);
+            return repository.Parts.Read(partId);
         }
+        public Part ReadPartByPosition(int albumId,int position)
+        {
+            ValidatePositiveNumber(albumId);
+            ValidatePositiveNumber(position);
+            Part part = ReadAlbum(albumId).Parts.FirstOrDefault(p => p.Position == position);
+            if (part == null) throw new ArgumentException($" '{position}' position of part doesn't exist!");
+            return part;
+        }
+        public Track ReadTrackByPosition(int partId,int position)
+        {
+            ValidatePositiveNumber(partId);
+            ValidatePositiveNumber(position);
+            Track track = ReadPart(partId).Tracks.FirstOrDefault(t => t.Position == position);
+            if (track == null) throw new ArgumentException($"'{position}' position of track doesn't exist!");
+            return track;
+        }
+        public Track ReadTrackByPosition(int albumId,int partPosition,int trackPosition)
+        {
+            return ReadTrackByPosition(ReadPartByPosition(albumId, partPosition).Id, trackPosition);
+        }
+
         public IEnumerable<Track> ReadAllTrack()
         {
-            return Tracks.ReadAll();
+            return repository.Tracks.ReadAll();
         }
-        public Track ReadTrack(int albumId, int partId, int trackId)
+        public Track ReadTrack(int trackId)
         {
-            return Tracks.Read(new { albumId, partId, trackId });
+            ValidatePositiveNumber(trackId);
+
+
+            return repository.Tracks.Read(trackId);
         }
 
         public void UpdateAlbum(Album album)
         {
-            Albums.Update(album);
+            ValidateAlbum(album);
+            repository.Albums.Update(album);
         }
+
+
+        private void InsertTemplate<TEntity,TParent>(IRepository<TEntity> repository,
+                                                    TEntity entity, TEntity old, TParent parent,
+                                                    Func<TParent, IEnumerable<TEntity>> siblingSelector, Func<TEntity, int> positionGet, Action<TEntity, int> positionSet)
+            where TEntity : class, IEntity
+            where TParent : class, IEntity
+        {
+            if(positionGet(old)!=positionGet(entity))
+            {
+                if (positionGet(old) < positionGet(entity))
+                {
+                    InsertForwardTemplate(repository, entity, old, parent, siblingSelector, positionGet, positionSet);
+                }
+                else
+                {
+                    InsertBackwardTemplate(repository, entity, old, parent, siblingSelector, positionGet, positionSet);
+                }
+            }
+            else
+            {
+                repository.Update(entity);
+            }
+          
+        }
+        private void InsertForwardTemplate<TEntity,TParent>(IRepository<TEntity> repository,
+                                                    TEntity entity,TEntity old, TParent parent,
+                                                    Func<TParent,IEnumerable<TEntity>> siblingSelector,Func<TEntity,int> GetPos,Action<TEntity,int>SetPos)
+            where TEntity : class, IEntity
+            where TParent:class, IEntity
+        {
+            repository.ChainActions()
+                .UpdateWithoutSave(siblingSelector(parent)
+                .Where(e => GetPos(e) > GetPos(old) && GetPos(e) <= GetPos(entity) && GetPos(e) != GetPos(old))
+                .OrderBy(e => GetPos), e => SetPos(e, GetPos(e) - 1))
+                .UpdateWithoutSave(entity)
+                .Save();
+        }
+
+
+        private void InsertBackwardTemplate<TEntity, TParent>(IRepository<TEntity> repository,
+                                                   TEntity entity, TEntity old, TParent parent,
+                                                   Func<TParent, IEnumerable<TEntity>> siblingSelector, Func<TEntity, int> positionGet, Action<TEntity, int> positionSet)
+           where TEntity : class, IEntity
+           where TParent : class, IEntity
+        {
+            repository.ChainActions()
+                .UpdateWithoutSave(siblingSelector(parent)
+                .Where(e => positionGet(e) < positionGet(old) && positionGet(e) >= positionGet(entity) && positionGet(e) != positionGet(old))
+                .OrderByDescending(e => positionGet), e => positionSet(e, positionGet(e) + 1))
+                .UpdateWithoutSave(entity)
+                .Save();
+        }
+        
+
         public void UpdatePart(Part part)
         {
-            Parts.Update(part);
+            ValidatePartAtUpdating(part, out Album album);
+            Part old = repository.Parts.Read(part.Id);
+            InsertTemplate(repository.Parts, part, old, album, (a) => a.Parts, p => p.Position, (p, i) => p.Position = i);
         }
 
         public void UpdateTrack(Track track)
         {
-            Tracks.Update(track);
+            ValidateTrackAtUpdating(track, out Part part);
+            ValidatePositiveNumber(track.Id);
+            Track old = repository.Tracks.Read(track.Id);
+            InsertTemplate(repository.Tracks, track, old, part, (p) => p.Tracks, p => p.Position, (t, i) => t.Position = i);
         }
 
-        public void DeleteAlbum(int id)
+        public void DeleteAlbum(int albumid)
         {
-            Albums.Delete(id);
+            ValidatePositiveNumber(albumid);
+            repository.Albums.Delete(albumid);
         }
-        public void DeletePart(int albumId, int partId)
+        public void DeletePart(int partId)
         {
-            Tracks.Delete(new { albumId, partId });
+            ValidatePositiveNumber(partId);
+            Part part = repository.Parts.Read(partId);
+
+            repository.Parts.ChainActions()
+                .UpdateWithoutSave(part.Album.Parts.OrderBy(p => p.Position), (p) => p.Position--)
+                .DeleteWithoutSave(part)
+                .Save();
         }
-        public void DeleteTrack(int albumId, int partId, int trackId)
+        public void DeletePartByPosition(int albumId, int positionId)
         {
-            Tracks.Delete(new { albumId, partId, trackId });
+            DeletePart(ReadPartByPosition(albumId, positionId).Id);
         }
 
-        public TimeSpan GetTotalDurationOfPart(int albumId, int partId)
+        public void DeleteTrack(int trackId)
         {
-            return TimeSpan.FromMinutes(Tracks.ReadAll()
-                .Where(t => t.AlbumId == albumId && t.PartId == partId)
-                .Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
+            ValidatePositiveNumber(trackId);
+            Track track = repository.Tracks.Read(trackId);
+
+            repository.Tracks.ChainActions()
+                .UpdateWithoutSave(track.Part.Tracks.OrderBy(t => t.Position), t => t.Position--)
+                .DeleteWithoutSave(track)
+                .Save();
+        }
+        public void DeleteTrackByPosition(int partId, int position)
+        {
+            DeleteTrack(ReadTrackByPosition(partId,position).Id);
+        }
+        public void DeleteTrackByPosition(int albumId, int partPosition, int trackPosition)
+        {
+            DeleteTrack(ReadTrackByPosition(albumId,partPosition, trackPosition).Id);
+        }
+        public TimeSpan GetTotalDurationOfPart(int partId)
+        {
+            ValidatePositiveNumber(partId);
+            return TimeSpan.FromMinutes(repository.Parts.Read(partId)
+                                       .Tracks.Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
         }
         public TimeSpan GetTotalDurationOfAlbum(int albumId)
         {
-            return TimeSpan.FromMinutes(Tracks.ReadAll()
-                .Where(t => t.AlbumId == albumId)
-                .Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
+            ValidatePositiveNumber(albumId);
+            return TimeSpan.FromMinutes(repository.Albums.Read(albumId)
+                                       .Parts.SelectMany(p => p.Tracks)
+                                       .Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
         }
 
         public IEnumerable<AlbumPerYearDTO> GetAlbumPerYear()
         {
-            return Albums.ReadAll()
+            return repository.Albums.ReadAll()
                 .GroupBy(a => a.Year)
                 .Select(g => new AlbumPerYearDTO(g.Key, g.Count()));
         }

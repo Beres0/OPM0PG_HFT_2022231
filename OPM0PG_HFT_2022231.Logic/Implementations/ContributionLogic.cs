@@ -8,26 +8,30 @@ using System.Threading.Tasks;
 
 namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
-    public class ContributionLogic : IContributionLogic
+    public class ContributionLogic :BaseLogic, IContributionLogic
     {
-        IRepository<object,Contribution> contributions;
-
-        public ContributionLogic(IRepository<object, Contribution> contributions)
-        {
-            this.contributions = contributions;
-        }
+        public ContributionLogic(IMusicRepository musicRepository):base(musicRepository)
+        { }
 
         public IEnumerable<Contribution> ReadAllContributions()
         {
-            return contributions.ReadAll();
+            return repository.Contributions.ReadAll();
         }
+
+      
         public void AddContribution(int artistId, int albumId)
         {
-            contributions.Create(new Contribution() { ArtistId = artistId, AlbumId = albumId });
+            ValidatePositiveNumber(artistId);
+            ValidatePositiveNumber(albumId);
+            ValidateForeignKey(artistId, repository.Artists);
+            ValidateForeignKey(albumId, repository.Albums);
+            repository.Contributions.Create(new Contribution() { ArtistId = artistId, AlbumId = albumId });
         }
         public void RemoveContribution(int artistId, int albumId)
         {
-            contributions.Delete(new { artistId, albumId });
+            ValidatePositiveNumber(artistId);
+            ValidatePositiveNumber(albumId);
+            repository.Contributions.Delete(artistId, albumId);
         }
     }
 }
