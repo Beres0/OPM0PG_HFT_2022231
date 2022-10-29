@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
 
-namespace OPM0PG_HFT_2022231.Models
+namespace OPM0PG_HFT_2022231.Repository.Xml
 {
     public class XmlSerializer<T>
     {
@@ -14,7 +14,7 @@ namespace OPM0PG_HFT_2022231.Models
 
         public void Serialize(string path, T obj)
         {
-            using (var writer = new StreamWriter(path, true))
+            using (var writer = new StreamWriter(path, false))
             {
                 serializer.Serialize(writer, obj);
             }
