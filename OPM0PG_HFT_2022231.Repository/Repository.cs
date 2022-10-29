@@ -29,13 +29,13 @@ namespace OPM0PG_HFT_2022231.Repository
              
         }
 
-        public void Delete(TKey id)
+        public void Delete(params object[] id)
         {
             context.Set<TEntity>().Remove(Read(id));
             context.SaveChanges();
         }
 
-        public TEntity Read(TKey id)
+        public TEntity Read(params object[] id)
         {
             return context.Set<TEntity>().Find(id) is TEntity entity ?
             entity : throw new KeyNotFoundException($"The given ({string.Join(", ", id)}) id not found in '{typeof(TEntity).Name}' repository!");

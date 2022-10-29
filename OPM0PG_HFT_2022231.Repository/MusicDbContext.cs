@@ -4,6 +4,7 @@ using OPM0PG_HFT_2022231.Repository.Configuration;
 
 namespace OPM0PG_HFT_2022231.Repository
 {
+
     public class MusicDbContext : DbContext
     {
         public DbSet<Artist> Artists { get; set; }
@@ -22,8 +23,10 @@ namespace OPM0PG_HFT_2022231.Repository
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseLazyLoadingProxies();
+            optionsBuilder.EnableSensitiveDataLogging();
             optionsBuilder.UseInMemoryDatabase("MusicDb");
+            //optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Beres\\OneDrive\\OE-UMI\\repos\\3_felev\\Halfej\\OPM0PG_HFT_2022231\\OPM0PG_HFT_2022231.Repository\\TestDb\\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True");
+            optionsBuilder.UseLazyLoadingProxies();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
