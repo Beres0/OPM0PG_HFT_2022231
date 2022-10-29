@@ -1,10 +1,17 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
     public class Release : IEntity<int>
     {
+        public Release()
+        {
+            CollectionSetter<Release>.SetCollections(this);
+        }
+
+
         public int Id { get; set; }
         public int AlbumId { get; set; }
         public int? ReleaseYear { get; set; }

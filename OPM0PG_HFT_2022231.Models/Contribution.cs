@@ -6,6 +6,11 @@ namespace OPM0PG_HFT_2022231.Models
 {
     public class Contribution : IEntity<object>
     {
+        public Contribution()
+        {
+            CollectionSetter<Contribution>.SetCollections(this);
+        }
+
         public int AlbumId { get; set; }
 
         public int ArtistId { get; set; }

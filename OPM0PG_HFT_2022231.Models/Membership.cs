@@ -6,6 +6,12 @@ namespace OPM0PG_HFT_2022231.Models
 {
     public class Membership : IEntity<object>
     {
+        public Membership()
+        {
+            CollectionSetter<Membership>.SetCollections(this);
+        }
+
+
         public int BandId { get; set; }
         public int MemberId { get; set; }
         public bool Active { get; set; }
@@ -15,8 +21,8 @@ namespace OPM0PG_HFT_2022231.Models
 
         [JsonIgnore, XmlIgnore]
         public virtual Artist Member { get; set; }
+        object[] IEntity.GetId() => new object[] {BandId,MemberId };
 
-        [JsonIgnore, XmlIgnore, NotMapped]
-        object IEntity<object>.Id => new { BandId, MemberId };
+
     }
 }

@@ -12,8 +12,8 @@ namespace OPM0PG_HFT_2022231.Models.DataTransferObjects
                         IEnumerable<ReleaseDTO> Releases,
                         IEnumerable<ContributorDTO> Contributors);
     public record ContributorDTO(int Id, string Name);
-    public record PartDTO(int Id, string Title, TimeSpan Duration, IEnumerable<TrackDTO> Tracks);
-    public record TrackDTO(int Id, string Title, TimeSpan? Duration);
+    public record PartDTO(int Id,int Position, string Title, TimeSpan Duration, IEnumerable<TrackDTO> Tracks);
+    public record TrackDTO(int Id,int Position, string Title, TimeSpan? Duration);
     public record ReleaseDTO(int Id, string Publisher, string Country, int? ReleaseYear);
     public record AlbumPerGenreDTO(string Genre, int NumberOfAlbums);
     public record PublisherPerCountryDTO(string Country, int NumberOfPublishers);
