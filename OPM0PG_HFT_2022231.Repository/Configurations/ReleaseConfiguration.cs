@@ -10,9 +10,9 @@ namespace OPM0PG_HFT_2022231.Repository.Configuration
         {
             builder.SetDatabaseGeneratedPrimaryKey(r => r.Id);
             builder.HasOne(r => r.Album).WithMany(a => a.Releases).HasForeignKey(r => r.AlbumId).OnDelete(DeleteBehavior.ClientCascade);
-            builder.SetDefaultTextType(c => c.Country).IsRequired();
-            builder.SetDefaultTextType(c => c.Publisher).IsRequired();
-            builder.SetDefaultYearType(c => c.ReleaseYear);
+            builder.SetDefaultTextType(c => c.Country);
+            builder.SetDefaultTextType(c => c.Publisher);
+            builder.SetDefaultYearType(nameof(Release.ReleaseYear));
             builder.SetSeed();
         }
     }

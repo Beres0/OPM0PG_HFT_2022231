@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OPM0PG_HFT_2022231.Models;
+using OPM0PG_HFT_2022231.Repository.Xml;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -24,18 +25,28 @@ namespace OPM0PG_HFT_2022231.Repository.Configuration
             builder.Property(propertyExpression).ValueGeneratedOnAdd();
         }
 
+        public static PropertyBuilder SetPositiveNumberType<TEntity>
+            (this EntityTypeBuilder<TEntity> builder, string propertyName)
+            where TEntity : class
+        {
+            builder.HasCheckConstraint(propertyName, $"({propertyName}>0)");
+            return builder.Property(propertyName);
+        }
+
         public static PropertyBuilder<object> SetDefaultTextType<TEntity>
             (this EntityTypeBuilder<TEntity> builder, Expression<Func<TEntity, object>> propertyExpression)
             where TEntity : class
         {
-            return builder.Property(propertyExpression).HasColumnType("varchar(255)");
+           return builder.Property(propertyExpression).HasColumnType("varchar").HasMaxLength(ColumnTypeConstants.MaxTextLength).IsUnicode(true);
+
         }
 
-        public static PropertyBuilder<object> SetDefaultYearType<TEntity>
-            (this EntityTypeBuilder<TEntity> builder, Expression<Func<TEntity, object>> propertyExpression)
+        public static PropertyBuilder SetDefaultYearType<TEntity>
+            (this EntityTypeBuilder<TEntity> builder, string propertyName)
             where TEntity : class
         {
-            return builder.Property(propertyExpression).HasPrecision(4);
+            builder.HasCheckConstraint(propertyName, $"({propertyName}>={ColumnTypeConstants.MinYear} and {propertyName}<={ColumnTypeConstants.MaxYear})");
+            return builder.Property(propertyName);
         }
     }
 }
