@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
-    public class Membership : IEntity<object>
+    public class Membership : IEntity
     {
         public Membership()
         {

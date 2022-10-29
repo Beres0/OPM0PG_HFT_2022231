@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
-    public class Artist : IEntity<int>
+    public class Artist : IEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -23,5 +23,7 @@ namespace OPM0PG_HFT_2022231.Models
 
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Contribution> ContributedAlbums { get; set; }
+       
+        object[] IEntity.GetId() => new object[] { Id };
     }
 }
