@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Part>
+    <AlbumId>1465758</AlbumId>
+    <Id>1</Id>
+    <Title>Aphex Mt. Fuji 2017</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>353700</AlbumId>
+    <Id>2</Id>
+    <Title>Instrumental Mixtape</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>1392190</AlbumId>
+    <Id>3</Id>
+    <Title>White Light</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>1574811</AlbumId>
+    <Id>4</Id>
+    <Title>Entity </Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>1029904</AlbumId>
+    <Id>5</Id>
+    <Title>Autumn</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>42319</AlbumId>
+    <Id>6</Id>
+    <Title>Rotten To The Core</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>42312</AlbumId>
+    <Id>7</Id>
+    <Title>Demons Of Hate</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27518</AlbumId>
+    <Id>8</Id>
+    <Title>Bloody Kisses</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27564</AlbumId>
+    <Id>9</Id>
+    <Title>October Rust</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>55827</AlbumId>
+    <Id>10</Id>
+    <Title>Entities</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>461</AlbumId>
+    <Id>11</Id>
+    <Title>Side A</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>461</AlbumId>
+    <Id>12</Id>
+    <Title>Side B.</Title>
+    <Position>2</Position>
+  </Part>
+  <Part>
+    <AlbumId>461</AlbumId>
+    <Id>13</Id>
+    <Title>Side 3.</Title>
+    <Position>3</Position>
+  </Part>
+  <Part>
+    <AlbumId>461</AlbumId>
+    <Id>14</Id>
+    <Title>Side 4</Title>
+    <Position>4</Position>
+  </Part>
+  <Part>
+    <AlbumId>27179</AlbumId>
+    <Id>15</Id>
+    <Title>Embryodead</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27210</AlbumId>
+    <Id>16</Id>
+    <Title>Fuckit</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>33450</AlbumId>
+    <Id>17</Id>
+    <Title>Crystal Castles</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>250274</AlbumId>
+    <Id>18</Id>
+    <Title>Crystal Castles (II)</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>491967</AlbumId>
+    <Id>19</Id>
+    <Title>(III)</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>10889</AlbumId>
+    <Id>20</Id>
+    <Title>Virus Meadow</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>10795</AlbumId>
+    <Id>21</Id>
+    <Title>Farewell To The Shade</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>22</Id>
+    <Title>Live Concerts</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>23</Id>
+    <Title>France: Les Arènes De Nîmes, 23.07.2005</Title>
+    <Position>2</Position>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>24</Id>
+    <Title>England: Brixton Academy, London, 03-05.02.2005</Title>
+    <Position>3</Position>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>25</Id>
+    <Title>Japan: Club Citta, Tokyo, 03.06.2005</Title>
+    <Position>4</Position>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>26</Id>
+    <Title>Russia: Sport Complex Olympiski, Moscow, 28.11.2004</Title>
+    <Position>5</Position>
+  </Part>
+  <Part>
+    <AlbumId>95298</AlbumId>
+    <Id>27</Id>
+    <Title>Live In Nîmes</Title>
+    <Position>6</Position>
+  </Part>
+  <Part>
+    <AlbumId>95285</AlbumId>
+    <Id>28</Id>
+    <Title>Mutter</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>55817</AlbumId>
+    <Id>29</Id>
+    <Title>Dhyani</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>17225</AlbumId>
+    <Id>30</Id>
+    <Title>Attack</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>17225</AlbumId>
+    <Id>31</Id>
+    <Title>Decay</Title>
+    <Position>2</Position>
+  </Part>
+  <Part>
+    <AlbumId>3815</AlbumId>
+    <Id>32</Id>
+    <Title>Rabies</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>4130</AlbumId>
+    <Id>33</Id>
+    <Title>The Process</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27483</AlbumId>
+    <Id>34</Id>
+    <Title>Calling Ov The Dead</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>723622</AlbumId>
+    <Id>35</Id>
+    <Title>Lust For Blood</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>796235</AlbumId>
+    <Id>36</Id>
+    <Title>Deeper</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>1308061</AlbumId>
+    <Id>37</Id>
+    <Title>Criminal</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>5668</AlbumId>
+    <Id>38</Id>
+    <Title>Musick To Play In The Dark²</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>5642</AlbumId>
+    <Id>39</Id>
+    <Title>The Ape Of Naples</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27330</AlbumId>
+    <Id>40</Id>
+    <Title>Memorias Atrás</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>279762</AlbumId>
+    <Id>41</Id>
+    <Title>Tiempos De Furia</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27320</AlbumId>
+    <Id>42</Id>
+    <Title>Wrack And Ruin</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27320</AlbumId>
+    <Id>43</Id>
+    <Title>Maldiciones Para Un Mundo En Decadencia</Title>
+    <Position>2</Position>
+  </Part>
+  <Part>
+    <AlbumId>42663</AlbumId>
+    <Id>44</Id>
+    <Title>Creatures</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>55577</AlbumId>
+    <Id>45</Id>
+    <Title>Notes From The Underground</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>48191</AlbumId>
+    <Id>46</Id>
+    <Title>To Violate The Oblivious</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>48184</AlbumId>
+    <Id>47</Id>
+    <Title>Subliminal Genocide</Title>
+    <Position>1</Position>
+  </Part>
+</ArrayOfPart>

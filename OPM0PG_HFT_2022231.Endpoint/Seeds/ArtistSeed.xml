@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfArtist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Artist>
+    <Id>3066379</Id>
+    <Name>Sidewalks And Skeletons</Name>
+  </Artist>
+  <Artist>
+    <Id>582737</Id>
+    <Name>ColdWorld</Name>
+  </Artist>
+  <Artist>
+    <Id>141437</Id>
+    <Name>X-Fusion</Name>
+  </Artist>
+  <Artist>
+    <Id>11612</Id>
+    <Name>Type O Negative</Name>
+  </Artist>
+  <Artist>
+    <Id>251809</Id>
+    <Name>Josh Silver</Name>
+  </Artist>
+  <Artist>
+    <Id>318685</Id>
+    <Name>Johnny Kelly</Name>
+  </Artist>
+  <Artist>
+    <Id>318686</Id>
+    <Name>Kenny Hickey</Name>
+  </Artist>
+  <Artist>
+    <Id>407019</Id>
+    <Name>Sal Abruscato</Name>
+  </Artist>
+  <Artist>
+    <Id>1785363</Id>
+    <Name>Peter Ratajczyk</Name>
+  </Artist>
+  <Artist>
+    <Id>2077774</Id>
+    <Name>Clams Casino</Name>
+  </Artist>
+  <Artist>
+    <Id>45</Id>
+    <Name>Aphex Twin</Name>
+  </Artist>
+  <Artist>
+    <Id>15023</Id>
+    <Name>:wumpscut:</Name>
+  </Artist>
+  <Artist>
+    <Id>659646</Id>
+    <Name>Crystal Castles</Name>
+  </Artist>
+  <Artist>
+    <Id>1069428</Id>
+    <Name>Alice Glass</Name>
+  </Artist>
+  <Artist>
+    <Id>1081004</Id>
+    <Name>Ethan Kath</Name>
+  </Artist>
+  <Artist>
+    <Id>4824493</Id>
+    <Name>Edith Frances</Name>
+  </Artist>
+  <Artist>
+    <Id>73166</Id>
+    <Name>And Also The Trees</Name>
+  </Artist>
+  <Artist>
+    <Id>59264</Id>
+    <Name>Mark Tibenham</Name>
+  </Artist>
+  <Artist>
+    <Id>269556</Id>
+    <Name>Rab Fae Beith</Name>
+  </Artist>
+  <Artist>
+    <Id>271849</Id>
+    <Name>Grant Gordon</Name>
+  </Artist>
+  <Artist>
+    <Id>313836</Id>
+    <Name>Simon Huw Jones</Name>
+  </Artist>
+  <Artist>
+    <Id>313837</Id>
+    <Name>Justin Jones</Name>
+  </Artist>
+  <Artist>
+    <Id>412527</Id>
+    <Name>Steven Burrows</Name>
+  </Artist>
+  <Artist>
+    <Id>412528</Id>
+    <Name>Nick Havas</Name>
+  </Artist>
+  <Artist>
+    <Id>419522</Id>
+    <Name>William Waghorn</Name>
+  </Artist>
+  <Artist>
+    <Id>522163</Id>
+    <Name>Paul Hill (3)</Name>
+  </Artist>
+  <Artist>
+    <Id>845589</Id>
+    <Name>Colin Ozanne</Name>
+  </Artist>
+  <Artist>
+    <Id>908108</Id>
+    <Name>Ian Jenkins</Name>
+  </Artist>
+  <Artist>
+    <Id>1099147</Id>
+    <Name>Emer Brizzolara</Name>
+  </Artist>
+  <Artist>
+    <Id>1420128</Id>
+    <Name>Graham Havas</Name>
+  </Artist>
+  <Artist>
+    <Id>4671146</Id>
+    <Name>Dale Hodgkinson</Name>
+  </Artist>
+  <Artist>
+    <Id>11771</Id>
+    <Name>Rammstein</Name>
+  </Artist>
+  <Artist>
+    <Id>275286</Id>
+    <Name>Christoph Schneider</Name>
+  </Artist>
+  <Artist>
+    <Id>429933</Id>
+    <Name>Paul Landers</Name>
+  </Artist>
+  <Artist>
+    <Id>506666</Id>
+    <Name>Richard Kruspe Bernstein</Name>
+  </Artist>
+  <Artist>
+    <Id>506667</Id>
+    <Name>Christian Lorenz</Name>
+  </Artist>
+  <Artist>
+    <Id>506668</Id>
+    <Name>Till Lindemann</Name>
+  </Artist>
+  <Artist>
+    <Id>506669</Id>
+    <Name>Oliver Riedel</Name>
+  </Artist>
+  <Artist>
+    <Id>36661</Id>
+    <Name>Project Pitchfork</Name>
+  </Artist>
+  <Artist>
+    <Id>212203</Id>
+    <Name>Jürgen Jansen</Name>
+  </Artist>
+  <Artist>
+    <Id>239859</Id>
+    <Name>Patricia Nigiani</Name>
+  </Artist>
+  <Artist>
+    <Id>242909</Id>
+    <Name>Peter Spilles</Name>
+  </Artist>
+  <Artist>
+    <Id>277783</Id>
+    <Name>Carsten Klatte</Name>
+  </Artist>
+  <Artist>
+    <Id>328002</Id>
+    <Name>Dirk Scheuber</Name>
+  </Artist>
+  <Artist>
+    <Id>409106</Id>
+    <Name>Achim Färber</Name>
+  </Artist>
+  <Artist>
+    <Id>595461</Id>
+    <Name>Yenz Schrader</Name>
+  </Artist>
+  <Artist>
+    <Id>947085</Id>
+    <Name>Christian Leonhardt</Name>
+  </Artist>
+  <Artist>
+    <Id>11192</Id>
+    <Name>Skinny Puppy</Name>
+  </Artist>
+  <Artist>
+    <Id>46826</Id>
+    <Name>Mark Walk</Name>
+  </Artist>
+  <Artist>
+    <Id>50753</Id>
+    <Name>Dave Ogilvie</Name>
+  </Artist>
+  <Artist>
+    <Id>81282</Id>
+    <Name>Bill Leeb</Name>
+  </Artist>
+  <Artist>
+    <Id>136932</Id>
+    <Name>Dwayne R. Goettel</Name>
+  </Artist>
+  <Artist>
+    <Id>487173</Id>
+    <Name>Kevin Crompton</Name>
+  </Artist>
+  <Artist>
+    <Id>503984</Id>
+    <Name>Kevin Ogilvie</Name>
+  </Artist>
+  <Artist>
+    <Id>664170</Id>
+    <Name>Justin Bennett (2)</Name>
+  </Artist>
+  <Artist>
+    <Id>5378785</Id>
+    <Name>Matthew Setzer</Name>
+  </Artist>
+  <Artist>
+    <Id>10672</Id>
+    <Name>Velvet Acid Christ</Name>
+  </Artist>
+  <Artist>
+    <Id>456037</Id>
+    <Name>Chris Workman</Name>
+  </Artist>
+  <Artist>
+    <Id>456038</Id>
+    <Name>Gary Slaughter</Name>
+  </Artist>
+  <Artist>
+    <Id>456039</Id>
+    <Name>Bryan Erickson</Name>
+  </Artist>
+  <Artist>
+    <Id>628133</Id>
+    <Name>Todd Loomis</Name>
+  </Artist>
+  <Artist>
+    <Id>628134</Id>
+    <Name>Elegia (3)</Name>
+  </Artist>
+  <Artist>
+    <Id>628136</Id>
+    <Name>Dan Olson</Name>
+  </Artist>
+  <Artist>
+    <Id>2958673</Id>
+    <Name>Grigory Bilham</Name>
+  </Artist>
+  <Artist>
+    <Id>7784550</Id>
+    <Name>Dianna Recalde</Name>
+  </Artist>
+  <Artist>
+    <Id>1775650</Id>
+    <Name>The Soft Moon</Name>
+  </Artist>
+  <Artist>
+    <Id>668288</Id>
+    <Name>Luis Vasquez</Name>
+  </Artist>
+  <Artist>
+    <Id>1328293</Id>
+    <Name>Keven Tecon</Name>
+  </Artist>
+  <Artist>
+    <Id>2543659</Id>
+    <Name>Matteo Vallicelli</Name>
+  </Artist>
+  <Artist>
+    <Id>69226</Id>
+    <Name>Hocico</Name>
+  </Artist>
+  <Artist>
+    <Id>244386</Id>
+    <Name>Erk Aicrag</Name>
+  </Artist>
+  <Artist>
+    <Id>480658</Id>
+    <Name>Racso Agroyam</Name>
+  </Artist>
+  <Artist>
+    <Id>58955</Id>
+    <Name>Clan Of Xymox</Name>
+  </Artist>
+  <Artist>
+    <Id>142412</Id>
+    <Name>Ronny Moorings</Name>
+  </Artist>
+  <Artist>
+    <Id>227457</Id>
+    <Name>Pieter Nooten</Name>
+  </Artist>
+  <Artist>
+    <Id>308509</Id>
+    <Name>Mojca</Name>
+  </Artist>
+  <Artist>
+    <Id>400588</Id>
+    <Name>Frank Weyzig</Name>
+  </Artist>
+  <Artist>
+    <Id>400589</Id>
+    <Name>Willem van Antwerpen</Name>
+  </Artist>
+  <Artist>
+    <Id>566611</Id>
+    <Name>Anke Wolbert</Name>
+  </Artist>
+  <Artist>
+    <Id>1363751</Id>
+    <Name>Rob Vonk</Name>
+  </Artist>
+  <Artist>
+    <Id>1363752</Id>
+    <Name>Nina Simic</Name>
+  </Artist>
+  <Artist>
+    <Id>1363753</Id>
+    <Name>Rui Ramos</Name>
+  </Artist>
+  <Artist>
+    <Id>2017036</Id>
+    <Name>Yvonne de Ray</Name>
+  </Artist>
+  <Artist>
+    <Id>6001173</Id>
+    <Name>Patrick van Alphen</Name>
+  </Artist>
+  <Artist>
+    <Id>324134</Id>
+    <Name>Xasthur</Name>
+  </Artist>
+  <Artist>
+    <Id>840110</Id>
+    <Name>Mark Hunter (4)</Name>
+  </Artist>
+  <Artist>
+    <Id>2470200</Id>
+    <Name>Scott Conner</Name>
+  </Artist>
+  <Artist>
+    <Id>2993664</Id>
+    <Name>Mike Pardi</Name>
+  </Artist>
+  <Artist>
+    <Id>660</Id>
+    <Name>Coil</Name>
+  </Artist>
+  <Artist>
+    <Id>34069</Id>
+    <Name>Peter Christopherson</Name>
+  </Artist>
+  <Artist>
+    <Id>52097</Id>
+    <Name>Stephen Thrower</Name>
+  </Artist>
+  <Artist>
+    <Id>62067</Id>
+    <Name>Danny Hyde</Name>
+  </Artist>
+  <Artist>
+    <Id>65583</Id>
+    <Name>Drew McDowall</Name>
+  </Artist>
+  <Artist>
+    <Id>66721</Id>
+    <Name>William Breeze</Name>
+  </Artist>
+  <Artist>
+    <Id>139103</Id>
+    <Name>Ossian Brown</Name>
+  </Artist>
+  <Artist>
+    <Id>274002</Id>
+    <Name>Tim Lewis</Name>
+  </Artist>
+  <Artist>
+    <Id>304486</Id>
+    <Name>Tom Edwards</Name>
+  </Artist>
+  <Artist>
+    <Id>400782</Id>
+    <Name>Otto Avery</Name>
+  </Artist>
+  <Artist>
+    <Id>548529</Id>
+    <Name>Geoff Rushton</Name>
+  </Artist>
+  <Artist>
+    <Id>5256294</Id>
+    <Name>Michael J. York</Name>
+  </Artist>
+</ArrayOfArtist>
