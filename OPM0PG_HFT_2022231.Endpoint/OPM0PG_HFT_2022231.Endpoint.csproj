@@ -5,9 +5,50 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Seeds\AlbumGenreSeed.xml" />
+    <None Remove="Seeds\AlbumSeed.xml" />
+    <None Remove="Seeds\ArtistSeed.xml" />
+    <None Remove="Seeds\ContributionSeed.xml" />
+    <None Remove="Seeds\MembershipSeed.xml" />
+    <None Remove="Seeds\PartSeed.xml" />
+    <None Remove="Seeds\ReleaseSeed.xml" />
+    <None Remove="Seeds\TrackSeed.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Seeds\AlbumGenreSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Seeds\AlbumSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Seeds\ArtistSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Seeds\ContributionSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Seeds\MembershipSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Seeds\PartSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Seeds\ReleaseSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Seeds\TrackSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\OPM0PG_HFT_2022231.Logic\OPM0PG_HFT_2022231.Logic.csproj" />
     <ProjectReference Include="..\OPM0PG_HFT_2022231.Models\OPM0PG_HFT_2022231.Models.csproj" />
-    <ProjectReference Include="..\OPM0PG_HFT_2022231.Repository\OPM0PG_HFT_2022231.Repository.csproj" />
   </ItemGroup>
 
 </Project>
