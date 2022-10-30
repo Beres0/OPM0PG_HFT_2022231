@@ -1,17 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Seeds\AlbumGenreSeed.xml" />
     <None Remove="Seeds\AlbumSeed.xml" />
+    <None Remove="Seeds\ArtistSeed.xml" />
+    <None Remove="Seeds\ContributionSeed.xml" />
+    <None Remove="Seeds\MembershipSeed.xml" />
     <None Remove="Seeds\PartSeed.xml" />
+    <None Remove="Seeds\ReleaseSeed.xml" />
     <None Remove="Seeds\TrackSeed.xml" />
     <None Remove="TestDb\Database1.mdf" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Seeds\AlbumGenreSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Seeds\AlbumSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -19,9 +27,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Seeds\ContributionSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Seeds\AlbumGenreSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Seeds\MembershipSeed.xml">

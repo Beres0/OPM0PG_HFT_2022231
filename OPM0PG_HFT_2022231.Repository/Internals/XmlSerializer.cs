@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
 
-namespace OPM0PG_HFT_2022231.Repository.Xml
+namespace OPM0PG_HFT_2022231.Repository.Internals
 {
     public class XmlSerializer<T>
     {

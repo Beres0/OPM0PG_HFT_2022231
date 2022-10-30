@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 using System.Xml.Serialization;
+using OPM0PG_HFT_2022231.Models.Internals;
 
 namespace OPM0PG_HFT_2022231.Models
 {

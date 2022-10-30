@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace OPM0PG_HFT_2022231.Repository
+namespace OPM0PG_HFT_2022231.Repository.Internals
 {
     internal static class EntityUpdater<TEntity> where TEntity : class, IEntity
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace OPM0PG_HFT_2022231.Repository.RepositoryChainActions
+namespace OPM0PG_HFT_2022231.Repository
 {
     public interface IRepositoryChainActions<TEntity> where TEntity : class, IEntity
     {

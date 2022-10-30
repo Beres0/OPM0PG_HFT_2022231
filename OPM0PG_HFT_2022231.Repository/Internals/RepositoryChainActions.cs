@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OPM0PG_HFT_2022231.Repository.RepositoryChainActions
+namespace OPM0PG_HFT_2022231.Repository.Internals
 {
     public class RepositoryChainActions<TEntity> : IRepositoryChainActions<TEntity> where TEntity : class, IEntity
     {

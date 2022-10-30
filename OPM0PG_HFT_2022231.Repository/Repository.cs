@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OPM0PG_HFT_2022231.Models;
-using OPM0PG_HFT_2022231.Repository.RepositoryChainActions;
+using OPM0PG_HFT_2022231.Repository.Internals;
 using System.Collections.Generic;
 
 namespace OPM0PG_HFT_2022231.Repository
@@ -11,7 +11,7 @@ namespace OPM0PG_HFT_2022231.Repository
 
         private RepositoryChainActions<TEntity> chainActions;
 
-        public Repository(DbContext context)
+        public Repository(MusicDbContext context)
         {
             this.context = context;
             chainActions = new RepositoryChainActions<TEntity>(context);

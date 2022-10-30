@@ -1,4 +1,5 @@
-﻿using OPM0PG_HFT_2022231.Models;
+﻿using OPM0PG_HFT_2022231.Logic.Internals;
+using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
 using System.Linq;
 
@@ -23,6 +24,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public AlbumSummaryDTO GetAlbumSummary(int albumId)
         {
+            Validator.ValidatePositiveNumber(albumId);
+
             Album al = album.ReadAlbum(albumId);
 
             var parts = al.Parts.OrderBy(p => p.Position).Select(p =>
@@ -44,6 +47,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public ArtistSummaryDTO GetArtistSummary(int artistId)
         {
+            Validator.ValidatePositiveNumber(artistId);
             var art = artist.ReadArtist(artistId);
             var albums = contribution.ReadAllContributions()
                          .Where(c => artistId == c.ArtistId)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace OPM0PG_HFT_2022231.Models
+namespace OPM0PG_HFT_2022231.Models.Internals
 {
     internal static class CollectionSetter<TEntity>
     {
@@ -24,7 +24,7 @@ namespace OPM0PG_HFT_2022231.Models
             Type entityType = typeof(TEntity);
 
             var props = entityType.GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                .Where(p => p.SetMethod.IsVirtual && p.PropertyType.Name.Contains("ICollection")).ToArray();
+                .Where(p => p.CanWrite && p.SetMethod.IsVirtual && p.PropertyType.Name.Contains("ICollection")).ToArray();
 
             var entity = Expression.Parameter(entityType, "entity");
 

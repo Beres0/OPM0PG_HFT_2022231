@@ -1,4 +1,5 @@
-﻿using OPM0PG_HFT_2022231.Models;
+﻿using OPM0PG_HFT_2022231.Logic.Internals;
+using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
 using OPM0PG_HFT_2022231.Repository;
 using System.Collections.Generic;
@@ -27,17 +28,17 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public void AddGenre(int albumId, string genre)
         {
-            ValidatePositiveNumber(albumId);
-            ValidateRequiredText(genre);
-            ValidateForeignKey(albumId, repository.Albums);
+            Validator.ValidatePositiveNumber(albumId);
+            Validator.ValidateRequiredText(genre);
+            Validator.ValidateForeignKey(albumId, repository.Albums);
 
             repository.Genres.Create(new AlbumGenre { AlbumId = albumId, Genre = genre });
         }
 
         public void RemoveGenre(int albumId, string genre)
         {
-            ValidatePositiveNumber(albumId);
-            ValidateRequiredText(genre);
+            Validator.ValidatePositiveNumber(albumId);
+            Validator.ValidateRequiredText(genre);
             repository.Genres.Delete(albumId, genre);
         }
 

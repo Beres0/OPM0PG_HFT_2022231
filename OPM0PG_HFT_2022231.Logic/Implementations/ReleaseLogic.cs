@@ -1,4 +1,5 @@
-﻿using OPM0PG_HFT_2022231.Models;
+﻿using OPM0PG_HFT_2022231.Logic.Internals;
+using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
 using OPM0PG_HFT_2022231.Repository;
 using System;
@@ -19,10 +20,10 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 throw new ArgumentNullException(nameof(release));
             }
 
-            ValidateText(release.Country);
-            ValidateText(release.Publisher);
-            ValidateYear(release.ReleaseYear);
-            ValidateForeignKey(release.AlbumId, repository.Albums);
+            Validator.ValidateText(release.Country);
+            Validator.ValidateText(release.Publisher);
+            Validator.ValidateYear(release.ReleaseYear);
+            Validator.ValidateForeignKey(release.AlbumId, repository.Albums);
         }
 
         public void CreateRelease(Release release)
@@ -34,7 +35,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public Release ReadRelease(int id)
         {
-            ValidatePositiveNumber(id);
+            Validator.ValidatePositiveNumber(id);
             return repository.Releases.Read(id);
         }
 
@@ -46,7 +47,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         public void UpdateRelease(Release release)
         {
             ValidateRelease(release);
-            ValidatePositiveNumber(release.Id);
+            Validator.ValidatePositiveNumber(release.Id);
             repository.Releases.Update(release);
         }
 
@@ -87,6 +88,12 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
             return publisherPerCountry.Join(releasePerCountry, (p) => p.Country, (r) => r.Country,
                 (p, r) => new CountryStatDTO(p.Country, p.NumberOfPublishers, r.NumberOfReleases));
+        }
+
+        public void DeleteRelease(int id)
+        {
+            Validator.ValidatePositiveNumber(id);
+            repository.Releases.Delete(id);
         }
     }
 }

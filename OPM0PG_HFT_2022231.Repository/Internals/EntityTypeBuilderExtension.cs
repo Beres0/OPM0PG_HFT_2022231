@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OPM0PG_HFT_2022231.Models;
-using OPM0PG_HFT_2022231.Repository.Xml;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace OPM0PG_HFT_2022231.Repository.Configuration
+namespace OPM0PG_HFT_2022231.Repository.Internals
 {
     internal static class EntityTypeBuilderExtension
     {

@@ -1,4 +1,5 @@
-﻿using OPM0PG_HFT_2022231.Models;
+﻿using OPM0PG_HFT_2022231.Logic.Internals;
+using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
 using OPM0PG_HFT_2022231.Repository;
 using System;
@@ -18,8 +19,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             {
                 throw new ArgumentNullException(nameof(album));
             }
-            ValidateRequiredText(album.Title);
-            ValidateYear(album.Year);
+            Validator.ValidateRequiredText(album.Title);
+            Validator.ValidateYear(album.Year);
         }
 
         private void ValidateTrackAtCreating(Track track, out Part part)
@@ -29,8 +30,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 throw new ArgumentNullException(nameof(track));
             }
 
-            ValidatePositiveNumber(track.PartId);
-            ValidateRequiredText(track.Title);
+            Validator.ValidatePositiveNumber(track.PartId);
+            Validator.ValidateRequiredText(track.Title);
 
             part = repository.Parts.Read(track.PartId);
 
@@ -47,8 +48,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             {
                 throw new ArgumentNullException(nameof(track));
             }
-            ValidatePositiveNumber(track.PartId);
-            ValidateRequiredText(track.Title);
+            Validator.ValidatePositiveNumber(track.PartId);
+            Validator.ValidateRequiredText(track.Title);
             part = repository.Parts.Read(track.PartId);
 
             int lastPosition = part.Tracks.Count;
@@ -64,11 +65,11 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             {
                 throw new ArgumentNullException(nameof(part));
             }
-            ValidatePositiveNumber(part.AlbumId);
+            Validator.ValidatePositiveNumber(part.AlbumId);
 
             album = repository.Albums.Read(part.AlbumId);
             if (string.IsNullOrWhiteSpace(part.Title)) part.Title = album.Title;
-            ValidateRequiredText(part.Title);
+            Validator.ValidateRequiredText(part.Title);
 
             int lastPosition = album.Parts.Count + 1;
             if (part.Position < 1 || lastPosition < part.Position)
@@ -83,8 +84,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             {
                 throw new ArgumentNullException(nameof(part));
             }
-            ValidatePositiveNumber(part.Id);
-            ValidateRequiredText(part.Title);
+            Validator.ValidatePositiveNumber(part.Id);
+            Validator.ValidateRequiredText(part.Title);
 
             album = repository.Albums.Read(part.AlbumId);
 
@@ -131,7 +132,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public Album ReadAlbum(int albumId)
         {
-            ValidatePositiveNumber(albumId);
+            Validator.ValidatePositiveNumber(albumId);
             return repository.Albums.Read(albumId);
         }
 
@@ -142,14 +143,14 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public Part ReadPart(int partId)
         {
-            ValidatePositiveNumber(partId);
+            Validator.ValidatePositiveNumber(partId);
             return repository.Parts.Read(partId);
         }
 
         public Part ReadPartByPosition(int albumId, int position)
         {
-            ValidatePositiveNumber(albumId);
-            ValidatePositiveNumber(position);
+            Validator.ValidatePositiveNumber(albumId);
+            Validator.ValidatePositiveNumber(position);
             Part part = ReadAlbum(albumId).Parts.FirstOrDefault(p => p.Position == position);
             if (part == null) throw new ArgumentException($" '{position}' position of part doesn't exist!");
             return part;
@@ -157,8 +158,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public Track ReadTrackByPosition(int partId, int position)
         {
-            ValidatePositiveNumber(partId);
-            ValidatePositiveNumber(position);
+            Validator.ValidatePositiveNumber(partId);
+            Validator.ValidatePositiveNumber(position);
             Track track = ReadPart(partId).Tracks.FirstOrDefault(t => t.Position == position);
             if (track == null) throw new ArgumentException($"'{position}' position of track doesn't exist!");
             return track;
@@ -176,7 +177,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public Track ReadTrack(int trackId)
         {
-            ValidatePositiveNumber(trackId);
+            Validator.ValidatePositiveNumber(trackId);
 
             return repository.Tracks.Read(trackId);
         }
@@ -248,20 +249,20 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         public void UpdateTrack(Track track)
         {
             ValidateTrackAtUpdating(track, out Part part);
-            ValidatePositiveNumber(track.Id);
+            Validator.ValidatePositiveNumber(track.Id);
             Track old = repository.Tracks.Read(track.Id);
             InsertTemplate(repository.Tracks, track, old, part, (p) => p.Tracks, p => p.Position, (t, i) => t.Position = i);
         }
 
         public void DeleteAlbum(int albumid)
         {
-            ValidatePositiveNumber(albumid);
+            Validator.ValidatePositiveNumber(albumid);
             repository.Albums.Delete(albumid);
         }
 
         public void DeletePart(int partId)
         {
-            ValidatePositiveNumber(partId);
+            Validator.ValidatePositiveNumber(partId);
             Part part = repository.Parts.Read(partId);
 
             repository.Parts.ChainActions()
@@ -277,7 +278,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public void DeleteTrack(int trackId)
         {
-            ValidatePositiveNumber(trackId);
+            Validator.ValidatePositiveNumber(trackId);
             Track track = repository.Tracks.Read(trackId);
 
             repository.Tracks.ChainActions()
@@ -298,14 +299,14 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public TimeSpan GetTotalDurationOfPart(int partId)
         {
-            ValidatePositiveNumber(partId);
+            Validator.ValidatePositiveNumber(partId);
             return TimeSpan.FromMinutes(repository.Parts.Read(partId)
                                        .Tracks.Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
         }
 
         public TimeSpan GetTotalDurationOfAlbum(int albumId)
         {
-            ValidatePositiveNumber(albumId);
+            Validator.ValidatePositiveNumber(albumId);
             return TimeSpan.FromMinutes(repository.Albums.Read(albumId)
                                        .Parts.SelectMany(p => p.Tracks)
                                        .Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
