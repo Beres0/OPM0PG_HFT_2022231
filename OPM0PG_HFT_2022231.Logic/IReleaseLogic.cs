@@ -23,6 +23,7 @@ namespace OPM0PG_HFT_2022231.Logic
         Release ReadRelease(int id);
 
         void UpdateRelease(Release release);
+
         void DeleteRelease(int id);
     }
 }
