@@ -48,7 +48,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OPM0PG_HFT_2022231.Logic\OPM0PG_HFT_2022231.Logic.csproj" />
-    <ProjectReference Include="..\OPM0PG_HFT_2022231.Models\OPM0PG_HFT_2022231.Models.csproj" />
   </ItemGroup>
 
 </Project>

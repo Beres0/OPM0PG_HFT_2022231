@@ -4,11 +4,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using OPM0PG_HFT_2022231.Logic.Implementations;
-using OPM0PG_HFT_2022231.Logic;
-using OPM0PG_HFT_2022231.Repository;
-
 using OPM0PG_HFT_2022231.Endpoint.JsonConverters;
+using OPM0PG_HFT_2022231.Logic;
+using OPM0PG_HFT_2022231.Logic.Implementations;
+using OPM0PG_HFT_2022231.Models;
+using OPM0PG_HFT_2022231.Repository;
 
 namespace OPM0PG_HFT_2022231.Endpoint
 {
@@ -21,10 +21,17 @@ namespace OPM0PG_HFT_2022231.Endpoint
 
         public IConfiguration Configuration { get; }
 
+        private void AddTransientRepositoryService<TEntity>(IServiceCollection services)
+            where TEntity : class, IEntity
+        {
+            services.AddTransient<IRepository<TEntity>, Repository<TEntity>>();
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<MusicDbContext>();
+
             services.AddTransient<IMusicRepository, MusicRepository>();
             services.AddTransient<IAlbumLogic, AlbumLogic>();
             services.AddTransient<IArtistLogic, ArtistLogic>();

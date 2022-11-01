@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Globalization;
-using System.Text.Json.Serialization;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace OPM0PG_HFT_2022231.Endpoint.JsonConverters
 {
-
     public class DurationJsonConverter : JsonConverter<TimeSpan>
     {
-        string format = @"hh\:mm\:ss";
+        private string format = @"hh\:mm\:ss";
 
         public DurationJsonConverter()
         { }

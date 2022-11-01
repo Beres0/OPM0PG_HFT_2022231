@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using OPM0PG_HFT_2022231.Logic;
 using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
@@ -7,18 +6,19 @@ using System.Collections.Generic;
 
 namespace OPM0PG_HFT_2022231.Endpoint.Controllers
 {
-    
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class ReleaseController : ControllerBase
     {
-        IReleaseLogic logic;
+        private IReleaseLogic logic;
+
         public ReleaseController(IReleaseLogic logic)
         {
             this.logic = logic;
         }
+
         [HttpPost]
-        public void CreateRelease([FromBody]Release release)
+        public void CreateRelease([FromBody] Release release)
         {
             logic.CreateRelease(release);
         }
@@ -64,11 +64,13 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         {
             return logic.ReadRelease(id);
         }
+
         [HttpPut]
-        public void UpdateRelease([FromBody]Release release)
+        public void UpdateRelease([FromBody] Release release)
         {
             logic.UpdateRelease(release);
         }
+
         [HttpDelete("{id}")]
         public void DeleteRelease(int id)
         {
