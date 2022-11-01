@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace OPM0PG_HFT_2022231.Repository
+namespace OPM0PG_HFT_2022231.Repository.ChainActions
 {
     public interface IRepositoryChainActions<TEntity> where TEntity : class, IEntity
     {
@@ -16,7 +16,7 @@ namespace OPM0PG_HFT_2022231.Repository
 
         IRepositoryChainActions<TEntity> Read(out TEntity entity, params object[] id);
 
-        IRepositoryChainActions<TEntity> ReadWhere(Func<TEntity, bool> predicate, out IEnumerable<TEntity> entities);
+        IRepositoryChainActions<TEntity> ReadWhere(Func<TEntity, bool> predicate, out IEnumerable<TEntity> result);
 
         void Save();
 
