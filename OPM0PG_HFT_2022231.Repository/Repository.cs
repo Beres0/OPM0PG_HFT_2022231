@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OPM0PG_HFT_2022231.Models;
-using OPM0PG_HFT_2022231.Repository.Internals;
+using OPM0PG_HFT_2022231.Models.Support;
+using OPM0PG_HFT_2022231.Repository.ChainActions;
 using System.Collections.Generic;
 
 namespace OPM0PG_HFT_2022231.Repository
@@ -17,6 +18,12 @@ namespace OPM0PG_HFT_2022231.Repository
             chainActions = new RepositoryChainActions<TEntity>(context);
         }
 
+        public bool TryRead(object[] id, out TEntity entity)
+        {
+            entity = context.Set<TEntity>().Find(id);
+            return entity is not null;
+        }
+
         public void Create(TEntity item)
         {
             context.Set<TEntity>().Add(item);
@@ -31,8 +38,7 @@ namespace OPM0PG_HFT_2022231.Repository
 
         public TEntity Read(params object[] id)
         {
-            return context.Set<TEntity>().Find(id) is TEntity entity ?
-            entity : throw new KeyNotFoundException($"The given ({string.Join(", ", id)}) id not found in '{typeof(TEntity).Name}' repository!");
+            return context.Set<TEntity>().Find(id);
         }
 
         public IEnumerable<TEntity> ReadAll()
@@ -42,8 +48,8 @@ namespace OPM0PG_HFT_2022231.Repository
 
         public void Update(TEntity item)
         {
-            TEntity old = Read(item.GetId());
-            EntityUpdater<TEntity>.Update(old, item);
+            TEntity source = Read(item.GetId());
+            EntityCopier<TEntity>.Copy(source, item);
             context.SaveChanges();
         }
 
