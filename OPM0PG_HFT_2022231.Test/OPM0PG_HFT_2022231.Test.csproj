@@ -2,11 +2,49 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="FakeRepository\FakeSeeds\FakeAlbumGenreSeed.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="FakeRepository\FakeSeeds\FakeAlbumGenreSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FakeRepository\FakeSeeds\FakeAlbumSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FakeRepository\FakeSeeds\FakeArtistSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FakeRepository\FakeSeeds\FakeContributionSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FakeRepository\FakeSeeds\FakeMembershipSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FakeRepository\FakeSeeds\FakePartSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FakeRepository\FakeSeeds\FakeReleaseSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FakeRepository\FakeSeeds\FakeTrackSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="Moq" Version="4.18.2" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2" />
     <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
