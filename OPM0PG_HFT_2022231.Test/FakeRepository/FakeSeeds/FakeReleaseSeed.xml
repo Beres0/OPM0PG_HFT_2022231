@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRelease xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Release>
+    <Id>6642465</Id>
+    <AlbumId>796235</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Captured Tracks</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>10303083</Id>
+    <AlbumId>796235</AlbumId>
+    <ReleaseYear>2015</ReleaseYear>
+    <Publisher>Captured Tracks</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>10725053</Id>
+    <AlbumId>796235</AlbumId>
+    <ReleaseYear>2016</ReleaseYear>
+    <Publisher>Captured Tracks</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>17618641</Id>
+    <AlbumId>796235</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Captured Tracks</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>11535033</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Sacred Bones Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>11523620</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Sacred Bones Records</Publisher>
+    <Country />
+  </Release>
+  <Release>
+    <Id>19575316</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2018</ReleaseYear>
+    <Publisher>Hostess Entertainment Unlimited</Publisher>
+    <Country>Japan</Country>
+  </Release>
+  <Release>
+    <Id>17617789</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2021</ReleaseYear>
+    <Publisher>Sacred Bones Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>24614390</Id>
+    <AlbumId>1308061</AlbumId>
+    <ReleaseYear>2022</ReleaseYear>
+    <Publisher>Sacred Bones Records</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1404564</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Irond</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>1258680</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>1264103</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>COP International</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>14669384</Id>
+    <AlbumId>27330</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2514036</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>2551533</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2010</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>2642979</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2011</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>14730509</Id>
+    <AlbumId>279762</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>336020</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2004</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>385313</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2004</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>2675339</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2005</ReleaseYear>
+    <Publisher>Irond</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>14655884</Id>
+    <AlbumId>27320</AlbumId>
+    <ReleaseYear>2020</ReleaseYear>
+    <Publisher>Out Of Line</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>14752518</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>15870800</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>1999</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>13933710</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>2000</ReleaseYear>
+    <Publisher>Arteria Records</Publisher>
+    <Country>Mexico</Country>
+  </Release>
+  <Release>
+    <Id>1039188</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>2006</ReleaseYear>
+    <Publisher>Gravitator Records</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>13240988</Id>
+    <AlbumId>42663</AlbumId>
+    <ReleaseYear>2019</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>376404</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Metropolis</Publisher>
+    <Country>US</Country>
+  </Release>
+  <Release>
+    <Id>1418601</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Pandaimonium Records</Publisher>
+    <Country>Germany</Country>
+  </Release>
+  <Release>
+    <Id>17197174</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2001</ReleaseYear>
+    <Publisher>Pandaimonium Records (2)</Publisher>
+    <Country>China</Country>
+  </Release>
+  <Release>
+    <Id>3807342</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2002</ReleaseYear>
+    <Publisher>Irond</Publisher>
+    <Country>Russia</Country>
+  </Release>
+  <Release>
+    <Id>1404412</Id>
+    <AlbumId>55577</AlbumId>
+    <ReleaseYear>2008</ReleaseYear>
+    <Publisher>Gravitator Records</Publisher>
+    <Country>Russia</Country>
+  </Release>
+</ArrayOfRelease>

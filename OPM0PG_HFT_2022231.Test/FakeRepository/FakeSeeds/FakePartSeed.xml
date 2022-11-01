@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Part>
+    <AlbumId>796235</AlbumId>
+    <Id>36</Id>
+    <Title>Deeper</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>1308061</AlbumId>
+    <Id>37</Id>
+    <Title>Criminal</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27330</AlbumId>
+    <Id>40</Id>
+    <Title>Memorias Atrás</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>279762</AlbumId>
+    <Id>41</Id>
+    <Title>Tiempos De Furia</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27320</AlbumId>
+    <Id>42</Id>
+    <Title>Wrack And Ruin</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>27320</AlbumId>
+    <Id>43</Id>
+    <Title>Maldiciones Para Un Mundo En Decadencia</Title>
+    <Position>2</Position>
+  </Part>
+  <Part>
+    <AlbumId>42663</AlbumId>
+    <Id>44</Id>
+    <Title>Creatures</Title>
+    <Position>1</Position>
+  </Part>
+  <Part>
+    <AlbumId>55577</AlbumId>
+    <Id>45</Id>
+    <Title>Notes From The Underground</Title>
+    <Position>1</Position>
+  </Part>
+</ArrayOfPart>

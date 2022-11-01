@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfArtist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Artist>
+    <Id>1775650</Id>
+    <Name>The Soft Moon</Name>
+  </Artist>
+  <Artist>
+    <Id>69226</Id>
+    <Name>Hocico</Name>
+  </Artist>
+  <Artist>
+    <Id>58955</Id>
+    <Name>Clan Of Xymox</Name>
+  </Artist>
+  <Artist>
+    <Id>668288</Id>
+    <Name>Luis Vasquez</Name>
+  </Artist>
+  <Artist>
+    <Id>1328293</Id>
+    <Name>Keven Tecon</Name>
+  </Artist>
+  <Artist>
+    <Id>2543659</Id>
+    <Name>Matteo Vallicelli</Name>
+  </Artist>
+  <Artist>
+    <Id>244386</Id>
+    <Name>Erk Aicrag</Name>
+  </Artist>
+  <Artist>
+    <Id>480658</Id>
+    <Name>Racso Agroyam</Name>
+  </Artist>
+  <Artist>
+    <Id>142412</Id>
+    <Name>Ronny Moorings</Name>
+  </Artist>
+  <Artist>
+    <Id>227457</Id>
+    <Name>Pieter Nooten</Name>
+  </Artist>
+  <Artist>
+    <Id>308509</Id>
+    <Name>Mojca</Name>
+  </Artist>
+  <Artist>
+    <Id>400588</Id>
+    <Name>Frank Weyzig</Name>
+  </Artist>
+  <Artist>
+    <Id>400589</Id>
+    <Name>Willem van Antwerpen</Name>
+  </Artist>
+  <Artist>
+    <Id>566611</Id>
+    <Name>Anke Wolbert</Name>
+  </Artist>
+  <Artist>
+    <Id>1363751</Id>
+    <Name>Rob Vonk</Name>
+  </Artist>
+  <Artist>
+    <Id>1363752</Id>
+    <Name>Nina Simic</Name>
+  </Artist>
+  <Artist>
+    <Id>1363753</Id>
+    <Name>Rui Ramos</Name>
+  </Artist>
+  <Artist>
+    <Id>2017036</Id>
+    <Name>Yvonne de Ray</Name>
+  </Artist>
+  <Artist>
+    <Id>6001173</Id>
+    <Name>Patrick van Alphen</Name>
+  </Artist>
+</ArrayOfArtist>

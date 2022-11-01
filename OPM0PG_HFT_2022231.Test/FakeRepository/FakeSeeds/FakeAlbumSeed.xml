@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Album>
+    <Id>796235</Id>
+    <Title>Deeper</Title>
+    <Year>2015</Year>
+  </Album>
+  <Album>
+    <Id>1308061</Id>
+    <Title>Criminal</Title>
+    <Year>2018</Year>
+  </Album>
+  <Album>
+    <Id>27330</Id>
+    <Title>Memorias Atrás</Title>
+    <Year>2008</Year>
+  </Album>
+  <Album>
+    <Id>279762</Id>
+    <Title>Tiempos De Furia</Title>
+    <Year>2010</Year>
+  </Album>
+  <Album>
+    <Id>27320</Id>
+    <Title>Wrack And Ruin</Title>
+    <Year>2004</Year>
+  </Album>
+  <Album>
+    <Id>42663</Id>
+    <Title>Creatures</Title>
+    <Year>1999</Year>
+  </Album>
+  <Album>
+    <Id>55577</Id>
+    <Title>Notes From The Underground</Title>
+    <Year>2001</Year>
+  </Album>
+</ArrayOfAlbum>
