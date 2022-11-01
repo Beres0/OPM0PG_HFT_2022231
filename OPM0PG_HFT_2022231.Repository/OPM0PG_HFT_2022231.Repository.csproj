@@ -13,7 +13,6 @@
     <None Remove="Seeds\PartSeed.xml" />
     <None Remove="Seeds\ReleaseSeed.xml" />
     <None Remove="Seeds\TrackSeed.xml" />
-    <None Remove="TestDb\Database1.mdf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,9 +38,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Seeds\TrackSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestDb\Database1.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
