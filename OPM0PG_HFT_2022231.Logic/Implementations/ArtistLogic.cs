@@ -1,5 +1,6 @@
-﻿using OPM0PG_HFT_2022231.Logic.Internals;
+﻿using OPM0PG_HFT_2022231.Logic.Validating.Exceptions;
 using OPM0PG_HFT_2022231.Models;
+using OPM0PG_HFT_2022231.Models.Support;
 using OPM0PG_HFT_2022231.Repository;
 using System;
 using System.Collections.Generic;
@@ -13,52 +14,79 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         : base(musicRepository)
         { }
 
-        private void ValidateArtist(Artist artist)
+        public void CreateArtist(Artist artist)
         {
             if (artist is null)
             {
                 throw new ArgumentNullException(nameof(artist));
             }
-            Validator.ValidateRequiredText(artist.Name);
-        }
 
-        private void ValidateMembershipKeys(int bandId, int memberId)
-        {
-            if (bandId == memberId)
+            try
             {
-                throw new ArgumentException($"'bandId' and 'memberId' are the same!");
+                artist.Id = 0;
+                Validator<Artist>.Throws(artist.Id);
+                Validator<Artist>.Throws(artist.Name);
+                repository.Artists.Create(artist);
             }
-            Validator.ValidatePositiveNumber(bandId);
-            Validator.ValidatePositiveNumber(memberId);
-            Validator.ValidateForeignKey(memberId, repository.Artists);
-            Validator.ValidateForeignKey(bandId, repository.Artists);
-            if (repository.Memberships.ReadAll().Any(m => m.BandId == memberId))
+            catch (Exception ex)
             {
-                throw new InvalidOperationException($"'The ({memberId}) 'memberId' is already present as band in memberships. To prevent circular references you can't add that id as member.");
-            }
-            if (repository.Memberships.ReadAll().Any(m => m.MemberId == bandId))
-            {
-                throw new InvalidOperationException($"'The ({bandId}) 'bandId' is already present as member in memberships. To prevent circular references you can't add that id as band.");
+                throw new CreateException(artist, ex);
             }
         }
 
-        public void CreateArtist(Artist artist)
+        private void ValidateAddMembership(Membership membership)
         {
-            artist.Id = 0;
-            ValidateArtist(artist);
-            repository.Artists.Create(artist);
+            if (membership.BandId == membership.MemberId)
+            {
+                throw new ArgumentException($"'BandId' and 'MemberId' are the same!");
+            }
+            Validator<Membership>.Throws(membership.BandId);
+            Validator<Membership>.Throws(membership.MemberId);
+
+            CheckKeyExists(repository.Artists, membership.MemberId);
+            CheckKeyExists(repository.Artists, membership.BandId);
+
+            if (repository.Memberships.ReadAll().Any(m => m.BandId == membership.MemberId))
+            {
+                throw new ArgumentException($"'The Membership.MemberId is already present as band in Memberships. To prevent circular references you can't add that id as member.");
+            }
+            if (repository.Memberships.ReadAll().Any(m => m.MemberId == membership.BandId))
+            {
+                throw new ArgumentException($"'The Membership.BandId' is already present as member in memberships. To prevent circular references you can't add that id as band.");
+            }
         }
 
         public void AddMembership(int bandId, int memberId)
         {
-            ValidateMembershipKeys(bandId, memberId);
-            repository.Memberships.Create(new Membership() { BandId = bandId, MemberId = memberId,Active=true });
+            Membership membership = new Membership()
+            {
+                BandId = bandId,
+                MemberId = memberId,
+                Active = true
+            };
+            try
+            {
+                ValidateAddMembership(membership);
+                CheckKeyAlreadyAdded(repository.Memberships, $"(bandId,memberId)", bandId, memberId);
+                repository.Memberships.Create(membership);
+            }
+            catch (Exception ex)
+            {
+                throw new CreateException(membership, ex);
+            }
         }
 
         public Artist ReadArtist(int artistId)
         {
-            Validator.ValidatePositiveNumber(artistId);
-            return repository.Artists.Read(artistId);
+            try
+            {
+                Validator<Artist>.Throws(artistId, nameof(Artist.Id));
+                return repository.Artists.Read(artistId);
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Artist), ex, artistId);
+            }
         }
 
         public IEnumerable<Artist> ReadAllArtist()
@@ -73,27 +101,72 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public void UpdateArtist(Artist artist)
         {
-            Validator.ValidatePositiveNumber(artist.Id);
-            ValidateArtist(artist);
-            repository.Artists.Update(artist);
+            if (artist is null)
+            {
+                throw new ArgumentNullException(nameof(artist));
+            }
+
+            try
+            {
+                Validator<Artist>.Throws(artist.Id);
+                Validator<Artist>.Throws(artist.Name);
+                CheckKeyExists(repository.Artists, artist.Id);
+                repository.Artists.Update(artist);
+            }
+            catch (Exception ex)
+            {
+                throw new UpdateException(artist, ex);
+            }
         }
 
         public void SetMembershipStatus(int bandId, int memberId, bool active)
         {
-            ValidateMembershipKeys(bandId, memberId);
-            repository.Memberships.Update(new Membership { BandId = bandId, MemberId = memberId, Active = active });
+            Membership membership = new Membership()
+            {
+                BandId = bandId,
+                MemberId = memberId,
+                Active = active
+            };
+            try
+            {
+                Validator<Membership>.Throws(bandId);
+                Validator<Membership>.Throws(memberId);
+                CheckKeyExists(repository.Artists, bandId);
+                CheckKeyExists(repository.Artists, memberId);
+                CheckKeyExists(repository.Memberships, "(bandId,memberId)", bandId, memberId);
+                repository.Memberships.Update(membership);
+            }
+            catch (Exception ex)
+            {
+                throw new UpdateException(membership, ex);
+            }
         }
 
         public void DeleteArtist(int artistId)
         {
-            Validator.ValidatePositiveNumber(artistId);
-            repository.Artists.Delete(artistId);
+            try
+            {
+                Validator<Artist>.Throws(artistId, nameof(Artist.Id));
+                CheckKeyExists(repository.Artists, artistId);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Artist), ex, artistId);
+            }
         }
 
         public void RemoveMembership(int bandId, int memberId)
         {
-            ValidateMembershipKeys(bandId, memberId);
-            repository.Memberships.Delete(bandId, memberId);
+            try
+            {
+                Validator<Membership>.Throws(bandId);
+                Validator<Membership>.Throws(memberId);
+                CheckKeyExists(repository.Memberships, "(bandId,memberId)", bandId, memberId);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Membership), ex, bandId, memberId);
+            }
         }
 
         public IEnumerable<Artist> GetBands()
@@ -105,10 +178,17 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public IEnumerable<Artist> GetMembers(int bandId)
         {
-            Validator.ValidatePositiveNumber(bandId);
-            return repository.Memberships.ReadAll()
-                .Where(m => m.BandId == bandId)
-                .Select(m => m.Member);
+            try
+            {
+                Validator<Membership>.Throws(bandId);
+                return repository.Memberships.ReadAll()
+                    .Where(m => m.BandId == bandId)
+                    .Select(m => m.Member);
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Artist), ex, bandId);
+            }
         }
     }
 }

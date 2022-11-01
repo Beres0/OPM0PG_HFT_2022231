@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OPM0PG_HFT_2022231.Models;
-using OPM0PG_HFT_2022231.Repository.Internals;
+using OPM0PG_HFT_2022231.Repository.Configurations;
 
 namespace OPM0PG_HFT_2022231.Repository.Configuration
 {
@@ -11,7 +11,7 @@ namespace OPM0PG_HFT_2022231.Repository.Configuration
         {
             builder.HasKey(c => new { c.AlbumId, c.ArtistId });
             builder.HasOne(c => c.Album).WithMany(a => a.Contributions).HasForeignKey(c => c.AlbumId).OnDelete(DeleteBehavior.ClientCascade);
-            builder.HasOne(c => c.Artist).WithMany(a => a.ContributedAlbums).HasForeignKey(c => c.ArtistId).OnDelete(DeleteBehavior.ClientCascade); ;
+            builder.HasOne(c => c.Artist).WithMany(a => a.ContributedAlbums).HasForeignKey(c => c.ArtistId).OnDelete(DeleteBehavior.ClientCascade);
             builder.SetSeed();
         }
     }

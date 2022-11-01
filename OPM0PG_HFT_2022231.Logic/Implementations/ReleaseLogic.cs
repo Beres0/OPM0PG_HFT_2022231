@@ -1,6 +1,7 @@
-﻿using OPM0PG_HFT_2022231.Logic.Internals;
+﻿using OPM0PG_HFT_2022231.Logic.Validating.Exceptions;
 using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
+using OPM0PG_HFT_2022231.Models.Support;
 using OPM0PG_HFT_2022231.Repository;
 using System;
 using System.Collections.Generic;
@@ -15,28 +16,44 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         private void ValidateRelease(Release release)
         {
+            Validator<Release>.Throws(release.Id);
+            Validator<Release>.Throws(release.AlbumId);
+            Validator<Release>.Throws(release.Country);
+            Validator<Release>.Throws(release.Publisher);
+            Validator<Release>.Throws(release.ReleaseYear);
+            CheckKeyExists(repository.Albums, release.AlbumId);
+        }
+
+        public void CreateRelease(Release release)
+        {
             if (release is null)
             {
                 throw new ArgumentNullException(nameof(release));
             }
 
-            Validator.ValidateText(release.Country);
-            Validator.ValidateText(release.Publisher);
-            Validator.ValidateYear(release.ReleaseYear);
-            Validator.ValidateForeignKey(release.AlbumId, repository.Albums);
+            try
+            {
+                release.Id = 0;
+                ValidateRelease(release);
+                repository.Releases.Create(release);
+            }
+            catch (Exception ex)
+            {
+                throw new CreateException(release, ex);
+            }
         }
 
-        public void CreateRelease(Release release)
+        public Release ReadRelease(int releaseId)
         {
-            release.Id = 0;
-            ValidateRelease(release);
-            repository.Releases.Create(release);
-        }
-
-        public Release ReadRelease(int id)
-        {
-            Validator.ValidatePositiveNumber(id);
-            return repository.Releases.Read(id);
+            try
+            {
+                Validator<Release>.Throws(releaseId, nameof(Release.Id));
+                return repository.Releases.Read(releaseId);
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Release), ex, releaseId);
+            }
         }
 
         public IEnumerable<Release> ReadAllRelease()
@@ -46,9 +63,21 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public void UpdateRelease(Release release)
         {
-            ValidateRelease(release);
-            Validator.ValidatePositiveNumber(release.Id);
-            repository.Releases.Update(release);
+            if (release is null)
+            {
+                throw new ArgumentNullException(nameof(release));
+            }
+
+            try
+            {
+                ValidateRelease(release);
+                CheckKeyExists(repository.Releases, release.Id);
+                repository.Releases.Update(release);
+            }
+            catch (Exception ex)
+            {
+                throw new UpdateException(release, ex);
+            }
         }
 
         public IEnumerable<string> GetPublishers()
@@ -90,10 +119,18 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 (p, r) => new CountryStatDTO(p.Country, p.NumberOfPublishers, r.NumberOfReleases));
         }
 
-        public void DeleteRelease(int id)
+        public void DeleteRelease(int releaseId)
         {
-            Validator.ValidatePositiveNumber(id);
-            repository.Releases.Delete(id);
+            try
+            {
+                Validator<Release>.Throws(releaseId, nameof(Release.Id));
+                CheckKeyExists(repository.Releases, releaseId);
+                repository.Releases.Delete(releaseId);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Release), ex, releaseId);
+            }
         }
     }
 }

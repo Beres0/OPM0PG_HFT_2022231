@@ -1,6 +1,7 @@
-﻿using System.Text.Json.Serialization;
+﻿using OPM0PG_HFT_2022231.Models.Support;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using System.Xml.Serialization;
-using OPM0PG_HFT_2022231.Models.Internals;
 
 namespace OPM0PG_HFT_2022231.Models
 {
@@ -8,11 +9,13 @@ namespace OPM0PG_HFT_2022231.Models
     {
         public Contribution()
         {
-            CollectionSetter<Contribution>.SetCollections(this);
+            InversePropertySetter<Contribution>.SetCollections(this);
         }
 
+        [Range(0, int.MaxValue)]
         public int AlbumId { get; set; }
 
+        [Range(0, int.MaxValue)]
         public int ArtistId { get; set; }
 
         [JsonIgnore, XmlIgnore]

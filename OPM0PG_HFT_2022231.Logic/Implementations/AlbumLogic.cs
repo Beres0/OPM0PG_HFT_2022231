@@ -1,6 +1,7 @@
-﻿using OPM0PG_HFT_2022231.Logic.Internals;
+﻿using OPM0PG_HFT_2022231.Logic.Validating.Exceptions;
 using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
+using OPM0PG_HFT_2022231.Models.Support;
 using OPM0PG_HFT_2022231.Repository;
 using System;
 using System.Collections.Generic;
@@ -13,63 +14,34 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         public AlbumLogic(IMusicRepository musicRepository) : base(musicRepository)
         { }
 
-        private void ValidateAlbum(Album album)
-        {
-            if (album is null)
-            {
-                throw new ArgumentNullException(nameof(album));
-            }
-            Validator.ValidateRequiredText(album.Title);
-            Validator.ValidateYear(album.Year);
-        }
-
         private void ValidateTrackAtCreating(Track track, out Part part)
         {
-            if (track is null)
-            {
-                throw new ArgumentNullException(nameof(track));
-            }
-
-            Validator.ValidatePositiveNumber(track.PartId);
-            Validator.ValidateRequiredText(track.Title);
-
+            Validator<Track>.Throws(track.PartId);
+            Validator<Track>.Throws(track.Title);
             part = repository.Parts.Read(track.PartId);
-
-            int lastPosition = part.Tracks.Count + 1;
-            if (track.Position < 1 || lastPosition < track.Position)
-            {
-                part.Position = lastPosition;
-            }
         }
 
         private void ValidateTrackAtUpdating(Track track, out Part part)
         {
-            if (track is null)
-            {
-                throw new ArgumentNullException(nameof(track));
-            }
-            Validator.ValidatePositiveNumber(track.PartId);
-            Validator.ValidateRequiredText(track.Title);
+            Validator<Track>.Throws(track.PartId);
+            Validator<Track>.Throws(track.Title);
+
             part = repository.Parts.Read(track.PartId);
 
             int lastPosition = part.Tracks.Count;
             if (track.Position < 1 || lastPosition < track.Position)
             {
-                part.Position = lastPosition;
+                track.Position = lastPosition;
             }
         }
 
         private void ValidatePartAtCreating(Part part, out Album album)
         {
-            if (part is null)
-            {
-                throw new ArgumentNullException(nameof(part));
-            }
-            Validator.ValidatePositiveNumber(part.AlbumId);
+            Validator<Part>.Throws(part.AlbumId);
 
             album = repository.Albums.Read(part.AlbumId);
             if (string.IsNullOrWhiteSpace(part.Title)) part.Title = album.Title;
-            Validator.ValidateRequiredText(part.Title);
+            Validator<Part>.Throws(part.Title);
 
             int lastPosition = album.Parts.Count + 1;
             if (part.Position < 1 || lastPosition < part.Position)
@@ -80,12 +52,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         private void ValidatePartAtUpdating(Part part, out Album album)
         {
-            if (part is null)
-            {
-                throw new ArgumentNullException(nameof(part));
-            }
-            Validator.ValidatePositiveNumber(part.Id);
-            Validator.ValidateRequiredText(part.Title);
+            Validator<Part>.Throws(part.Id);
+            Validator<Part>.Throws(part.Title);
 
             album = repository.Albums.Read(part.AlbumId);
 
@@ -98,31 +66,49 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public void CreateAlbum(Album album)
         {
-            ValidateAlbum(album);
-            album.Id = 0;
-            repository.Albums.Create(album);
-        }
+            if (album is null)
+            {
+                throw new ArgumentNullException(nameof(album));
+            }
 
-        public void CreatePart(Part part)
-        {
-            part.Id = 0;
-            ValidatePartAtCreating(part, out Album album);
-
-            repository.Parts.ChainActions()
-               .UpdateWithoutSave(album.Parts.Where(p => p.Position >= part.Position).OrderByDescending(t => t.Position), t => t.Position++)
-               .CreateWithoutSave(part)
-               .Save();
+            try
+            {
+                Validator<Album>.Throws(album.Title);
+                Validator<Album>.Throws(album.Year);
+                repository.Albums.Create(album);
+            }
+            catch (Exception ex)
+            {
+                throw new CreateException(album, ex);
+            }
         }
 
         public void CreateTrack(Track track)
         {
-            track.Id = 0;
-            ValidateTrackAtCreating(track, out Part part);
+            if (track is null)
+            {
+                throw new ArgumentNullException(nameof(track));
+            }
 
-            repository.Tracks.ChainActions()
+            try
+            {
+                ValidateTrackAtCreating(track, out Part part);
+                track.Id = 0;
+                int lastPosition = part.Tracks.Count + 1;
+                if (track.Position < 1 || lastPosition < track.Position)
+                {
+                    track.Position = lastPosition;
+                }
+
+                repository.Tracks.ChainActions()
                 .UpdateWithoutSave(part.Tracks.Where(t => t.Position >= track.Position).OrderByDescending(t => t.Position), t => t.Position++)
                 .CreateWithoutSave(track)
                 .Save();
+            }
+            catch (Exception ex)
+            {
+                throw new CreateException(track, ex);
+            }
         }
 
         public IEnumerable<Album> ReadAllAlbum()
@@ -132,8 +118,35 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public Album ReadAlbum(int albumId)
         {
-            Validator.ValidatePositiveNumber(albumId);
-            return repository.Albums.Read(albumId);
+            try
+            {
+                Validator<Album>.Throws(albumId, nameof(Album.Id));
+                return repository.Albums.Read(albumId);
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Album), ex, albumId);
+            }
+        }
+
+        public void CreatePart(Part part)
+        {
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+
+            try
+            {
+                ValidatePartAtCreating(part, out Album album);
+                part.Id = 0;
+
+                repository.Parts.ChainActions()
+                   .UpdateWithoutSave(album.Parts.Where(p => p.Position >= part.Position).OrderByDescending(t => t.Position), t => t.Position++)
+                   .CreateWithoutSave(part)
+                   .Save();
+            }
+            catch (Exception ex) { throw new CreateException(part, ex); }
         }
 
         public IEnumerable<Part> ReadAllPart()
@@ -143,26 +156,46 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public Part ReadPart(int partId)
         {
-            Validator.ValidatePositiveNumber(partId);
-            return repository.Parts.Read(partId);
+            try
+            {
+                Validator<Part>.Throws(partId, nameof(Part.Id));
+                return repository.Parts.Read(partId);
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Part), ex, partId);
+            }
         }
 
         public Part ReadPartByPosition(int albumId, int position)
         {
-            Validator.ValidatePositiveNumber(albumId);
-            Validator.ValidatePositiveNumber(position);
-            Part part = ReadAlbum(albumId).Parts.FirstOrDefault(p => p.Position == position);
-            if (part == null) throw new ArgumentException($" '{position}' position of part doesn't exist!");
-            return part;
+            try
+            {
+                Validator<Part>.Throws(albumId);
+                Validator<Part>.Throws(position);
+
+                Part part = ReadAlbum(albumId).Parts.FirstOrDefault(p => p.Position == position);
+                if (part == null) throw new ArgumentException($" '{position}' position of part doesn't exist!");
+                return part;
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Part), ex, albumId);
+            }
         }
 
         public Track ReadTrackByPosition(int partId, int position)
         {
-            Validator.ValidatePositiveNumber(partId);
-            Validator.ValidatePositiveNumber(position);
-            Track track = ReadPart(partId).Tracks.FirstOrDefault(t => t.Position == position);
-            if (track == null) throw new ArgumentException($"'{position}' position of track doesn't exist!");
-            return track;
+            try
+            {
+                Validator<Track>.Throws(partId);
+                Validator<Track>.Throws(position);
+
+                Track track = repository.Parts.Read(partId).Tracks.FirstOrDefault(t => t.Position == position);
+                if (track == null) throw new ArgumentException($"'{position}' position of track doesn't exist!");
+                return track;
+            }
+            catch (Exception ex) { throw new ReadException(typeof(Track), ex, partId); }
         }
 
         public Track ReadTrackByPosition(int albumId, int partPosition, int trackPosition)
@@ -177,15 +210,37 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public Track ReadTrack(int trackId)
         {
-            Validator.ValidatePositiveNumber(trackId);
-
-            return repository.Tracks.Read(trackId);
+            try
+            {
+                string a = nameof(Track.Id);
+                Validator<Track>.Throws(trackId, nameof(Track.Id));
+                return repository.Tracks.Read(trackId);
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Track), ex, trackId);
+            }
         }
 
         public void UpdateAlbum(Album album)
         {
-            ValidateAlbum(album);
-            repository.Albums.Update(album);
+            if (album is null)
+            {
+                throw new ArgumentNullException(nameof(album));
+            }
+
+            try
+            {
+                Validator<Album>.Throws(album.Id);
+                Validator<Album>.Throws(album.Title);
+                Validator<Album>.Throws(album.Year);
+                CheckKeyExists(repository.Albums, album.Id);
+                repository.Albums.Update(album);
+            }
+            catch (Exception ex)
+            {
+                throw new UpdateException(album, ex);
+            }
         }
 
         private void InsertTemplate<TEntity, TParent>(IRepository<TEntity> repository,
@@ -241,75 +296,164 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public void UpdatePart(Part part)
         {
-            ValidatePartAtUpdating(part, out Album album);
-            Part old = repository.Parts.Read(part.Id);
-            InsertTemplate(repository.Parts, part, old, album, (a) => a.Parts, p => p.Position, (p, i) => p.Position = i);
+            if (part is null)
+            {
+                throw new ArgumentNullException(nameof(part));
+            }
+
+            try
+            {
+                ValidatePartAtUpdating(part, out Album album);
+                Part old = ReadPart(part.Id);
+                InsertTemplate(repository.Parts, part, old, album, (a) => a.Parts, p => p.Position, (p, i) => p.Position = i);
+            }
+            catch (Exception ex)
+            {
+                throw new UpdateException(part, ex);
+            }
         }
 
         public void UpdateTrack(Track track)
         {
-            ValidateTrackAtUpdating(track, out Part part);
-            Validator.ValidatePositiveNumber(track.Id);
-            Track old = repository.Tracks.Read(track.Id);
-            InsertTemplate(repository.Tracks, track, old, part, (p) => p.Tracks, p => p.Position, (t, i) => t.Position = i);
+            if (track is null)
+            {
+                throw new ArgumentNullException(nameof(track));
+            }
+
+            try
+            {
+                ValidateTrackAtUpdating(track, out Part part);
+                Validator<Track>.Throws(track.Id);
+                Track old = ReadTrack(track.Id);
+                InsertTemplate(repository.Tracks, track, old, part, (p) => p.Tracks, p => p.Position, (t, i) => t.Position = i);
+            }
+            catch (Exception ex)
+            {
+                throw new UpdateException(track, ex);
+            }
         }
 
-        public void DeleteAlbum(int albumid)
+        public void DeleteAlbum(int albumId)
         {
-            Validator.ValidatePositiveNumber(albumid);
-            repository.Albums.Delete(albumid);
+            try
+            {
+                Validator<Album>.Throws(nameof(Album.Id));
+                CheckKeyExists(repository.Albums, albumId);
+                repository.Albums.Delete(albumId);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Album), ex, albumId);
+            }
         }
 
         public void DeletePart(int partId)
         {
-            Validator.ValidatePositiveNumber(partId);
-            Part part = repository.Parts.Read(partId);
+            try
+            {
+                Validator<Part>.Throws(partId, nameof(Part.Id));
+                Part part = ReadPart(partId);
 
-            repository.Parts.ChainActions()
-                .UpdateWithoutSave(part.Album.Parts.OrderBy(p => p.Position), (p) => p.Position--)
-                .DeleteWithoutSave(part)
-                .Save();
+                repository.Parts.ChainActions()
+                    .UpdateWithoutSave(part.Album.Parts.OrderBy(p => p.Position > part.Position).Where(p => p.Position > part.Position), (p) => p.Position--)
+                    .DeleteWithoutSave(part)
+                    .Save();
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Part), ex, partId);
+            }
         }
 
-        public void DeletePartByPosition(int albumId, int positionId)
+        public void DeletePartByPosition(int albumId, int position)
         {
-            DeletePart(ReadPartByPosition(albumId, positionId).Id);
+            try
+            {
+                Validator<Album>.Throws(albumId, nameof(Album.Id));
+                Validator<Part>.Throws(position);
+                DeletePart(ReadPartByPosition(albumId, position).Id);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Part), ex);
+            }
         }
 
         public void DeleteTrack(int trackId)
         {
-            Validator.ValidatePositiveNumber(trackId);
-            Track track = repository.Tracks.Read(trackId);
+            try
+            {
+                Validator<Track>.Throws(trackId, nameof(Track.Id));
+                Track track = ReadTrack(trackId);
 
-            repository.Tracks.ChainActions()
-                .UpdateWithoutSave(track.Part.Tracks.OrderBy(t => t.Position), t => t.Position--)
-                .DeleteWithoutSave(track)
-                .Save();
+                repository.Tracks.ChainActions()
+                    .UpdateWithoutSave(track.Part.Tracks.OrderBy(t => t.Position).Where(t => t.Position > track.Position), t => t.Position--)
+                    .DeleteWithoutSave(track)
+                    .Save();
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Track), ex, trackId);
+            }
         }
 
         public void DeleteTrackByPosition(int partId, int position)
         {
-            DeleteTrack(ReadTrackByPosition(partId, position).Id);
+            try
+            {
+                Validator<Part>.Throws(partId, nameof(Part.Id));
+                Validator<Track>.Throws(position);
+                DeleteTrack(ReadTrackByPosition(partId, position).Id);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Part), ex);
+            }
         }
 
         public void DeleteTrackByPosition(int albumId, int partPosition, int trackPosition)
         {
-            DeleteTrack(ReadTrackByPosition(albumId, partPosition, trackPosition).Id);
+            try
+            {
+                Validator<Album>.Throws(albumId, nameof(Album.Id));
+                Validator<Part>.Throws(partPosition, nameof(Part.Position));
+                DeleteTrack(ReadTrackByPosition(albumId, partPosition, trackPosition).Id);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Part), ex);
+            }
         }
 
         public TimeSpan GetTotalDurationOfPart(int partId)
         {
-            Validator.ValidatePositiveNumber(partId);
-            return TimeSpan.FromMinutes(repository.Parts.Read(partId)
-                                       .Tracks.Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
+            try
+            {
+                Validator<Part>.Throws(partId, nameof(Part.Id));
+                CheckKeyExists(repository.Parts, partId, nameof(Part.Id));
+                return TimeSpan.FromMinutes(repository.Parts.Read(partId)
+                                           .Tracks.Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Part), ex, partId);
+            }
         }
 
         public TimeSpan GetTotalDurationOfAlbum(int albumId)
         {
-            Validator.ValidatePositiveNumber(albumId);
-            return TimeSpan.FromMinutes(repository.Albums.Read(albumId)
-                                       .Parts.SelectMany(p => p.Tracks)
-                                       .Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
+            try
+            {
+                Validator<Album>.Throws(albumId, nameof(Album.Id));
+                CheckKeyExists(repository.Albums, albumId, nameof(Album.Id));
+                return TimeSpan.FromMinutes(repository.Albums.Read(albumId)
+                                           .Parts.SelectMany(p => p.Tracks)
+                                           .Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Album), ex, albumId);
+            }
         }
 
         public IEnumerable<AlbumPerYearDTO> GetAlbumPerYear()

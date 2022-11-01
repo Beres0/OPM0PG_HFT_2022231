@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OPM0PG_HFT_2022231.Models;
-using OPM0PG_HFT_2022231.Repository.Internals;
+using OPM0PG_HFT_2022231.Repository.Configurations;
 
 namespace OPM0PG_HFT_2022231.Repository.Configuration
 {
@@ -10,8 +10,6 @@ namespace OPM0PG_HFT_2022231.Repository.Configuration
         public void Configure(EntityTypeBuilder<Album> builder)
         {
             builder.SetDatabaseGeneratedPrimaryKey(a => a.Id);
-            builder.SetDefaultTextType(a => a.Title).IsRequired();
-            builder.SetDefaultYearType(nameof(Album.Year));
             builder.SetSeed();
         }
     }
