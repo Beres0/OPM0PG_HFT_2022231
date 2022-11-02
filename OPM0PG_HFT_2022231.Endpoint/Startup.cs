@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -59,6 +61,16 @@ namespace OPM0PG_HFT_2022231.Endpoint
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OPM0PG_HFT_2022231.Endpoint v1"));
             }
+
+            app.UseExceptionHandler(c => c.Run(async context =>
+            {
+                var exception = context.Features
+                    .Get<IExceptionHandlerFeature>()
+                    .Error;
+
+                var response = new { error = exception.Message};
+                await context.Response.WriteAsJsonAsync(response);
+            }));
 
             app.UseRouting();
             app.UseAuthorization();
