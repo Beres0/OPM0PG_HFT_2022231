@@ -67,7 +67,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         }
 
         [HttpDelete("{albumId},{partPosition},{trackPosition}")]
-        public void DeleteTrackByPosition(int albumId, int partPosition, int trackPosition)
+        public void DeleteTrackByPosition2(int albumId, int partPosition, int trackPosition)
         {
             logic.DeleteTrackByPosition(albumId, partPosition, trackPosition);
         }
@@ -139,7 +139,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         }
 
         [HttpGet("{albumId},{partPosition},{trackPosition}")]
-        public Track ReadTrackByPosition(int albumId, int partPosition, int trackPosition)
+        public Track ReadTrackByPosition2(int albumId, int partPosition, int trackPosition)
         {
             return logic.ReadTrackByPosition(albumId, partPosition, trackPosition);
         }

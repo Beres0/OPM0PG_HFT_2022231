@@ -8,7 +8,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class GenreController : ControllerBase
+    public class GenreController : ControllerBase,IGenreLogic
     {
         private IGenreLogic logic;
 
@@ -16,11 +16,10 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         {
             this.logic = logic;
         }
-
-        [HttpPost("{albumId},{genre}")]
-        public void AddGenre(int albumId, string genre)
+        [HttpPost]
+        public void CreateGenre([FromBody]AlbumGenre genre)
         {
-            logic.AddGenre(albumId, genre);
+            logic.CreateGenre(genre);
         }
 
         [HttpGet]
@@ -54,9 +53,15 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         }
 
         [HttpDelete("{albumId},{genre}")]
-        public void RemoveGenre(int albumId, string genre)
+        public void DeleteGenre(int albumId, string genre)
         {
-            logic.RemoveGenre(albumId, genre);
+            logic.DeleteGenre(albumId, genre);
+        }
+
+        [HttpGet("{albumId},{genre}")]
+        public AlbumGenre ReadGenre(int albumId, string genre)
+        {
+            return logic.ReadGenre(albumId, genre);
         }
     }
 }

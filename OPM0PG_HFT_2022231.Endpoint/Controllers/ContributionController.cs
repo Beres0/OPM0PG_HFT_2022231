@@ -16,16 +16,21 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
             this.logic = logic;
         }
 
-        [HttpPost("{albumId},{artistId}")]
-        public void AddContribution(int albumId, int artistId)
+        [HttpPost]
+        public void CreateContribution([FromBody] Contribution contribution)
         {
-            logic.AddContribution(albumId, artistId);
+            logic.CreateContribution(contribution);
         }
 
         [HttpGet]
         public IEnumerable<Contribution> ReadAllContributions()
         {
             return logic.ReadAllContributions();
+        }
+        [HttpDelete("{albumId},{artistId}")]
+        public Contribution ReadContribution(int albumId, int artistId)
+        {
+            return logic.ReadContribution(albumId, artistId);
         }
 
         [HttpDelete("{albumId},{artistId}")]

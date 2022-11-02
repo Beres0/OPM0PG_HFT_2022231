@@ -7,7 +7,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class ArtistController : ControllerBase, IArtistLogic
+    public class ArtistController : ControllerBase,IArtistLogic
     {
         private IArtistLogic logic;
 
@@ -16,10 +16,10 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
             this.logic = logic;
         }
 
-        [HttpPost("{bandId},{memberId}")]
-        public void AddMembership(int bandId, int memberId)
+        [HttpPost]
+        public void CreateMembership([FromBody]Membership membership)
         {
-            logic.AddMembership(bandId, memberId);
+            logic.CreateMembership(membership);
         }
 
         [HttpPost]
@@ -65,21 +65,26 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         }
 
         [HttpDelete("{bandId},{memberId}")]
-        public void RemoveMembership(int bandId, int memberId)
+        public void DeleteMembership(int bandId, int memberId)
         {
-            logic.RemoveMembership(bandId, memberId);
+            logic.DeleteMembership(bandId, memberId);
         }
 
-        [HttpPut("{bandId},{memberId},{active}")]
-        public void SetMembershipStatus(int bandId, int memberId, bool active)
+        [HttpPut]
+        public void UpdateMembership([FromBody] Membership membership)
         {
-            logic.SetMembershipStatus(bandId, memberId, active);
+            logic.UpdateMembership(membership);
         }
 
         [HttpPut]
         public void UpdateArtist([FromBody] Artist artist)
         {
             logic.UpdateArtist(artist);
+        }
+        [HttpGet("{bandId},{memberId}")]
+        public Membership ReadMembership(int bandId, int memberId)
+        {
+            return logic.ReadMembership(bandId, memberId);
         }
     }
 }
