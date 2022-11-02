@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,10 +7,15 @@
 
   <ItemGroup>
     <PackageReference Include="ConsoleMenu-simple" Version="2.4.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\OPM0PG_HFT_2022231.Models\OPM0PG_HFT_2022231.Models.csproj" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\OPM0PG_HFT_2022231.Endpoint\OPM0PG_HFT_2022231.Endpoint.csproj" />
   </ItemGroup>
 
 </Project>
