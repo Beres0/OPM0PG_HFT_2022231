@@ -31,6 +31,6 @@ namespace OPM0PG_HFT_2022231.Models
         [JsonIgnore, XmlIgnore]
         public virtual Part Part { get; set; }
 
-        object[] IEntity.GetId() => new object[] { Id };
+        public object[] GetId() => new object[] { Id };
     }
 }

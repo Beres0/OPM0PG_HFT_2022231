@@ -26,6 +26,6 @@ namespace OPM0PG_HFT_2022231.Models
         [JsonIgnore, XmlIgnore]
         public virtual Artist Member { get; set; }
 
-        object[] IEntity.GetId() => new object[] { BandId, MemberId };
+        public object[] GetId() => new object[] { BandId, MemberId };
     }
 }

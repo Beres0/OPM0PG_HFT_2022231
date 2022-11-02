@@ -36,23 +36,8 @@ namespace OPM0PG_HFT_2022231.Models
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Release> Releases { get; set; }
 
-        object[] IEntity.GetId() => new object[] { Id };
+        public object[] GetId() => new object[] { Id };
 
-        public override bool Equals(object obj)
-        {
-            return obj is Album album &&
-                   Id == album.Id &&
-                   Title == album.Title &&
-                   Year == album.Year &&
-                   EqualityComparer<ICollection<Contribution>>.Default.Equals(Contributions, album.Contributions) &&
-                   EqualityComparer<ICollection<AlbumGenre>>.Default.Equals(Genres, album.Genres) &&
-                   EqualityComparer<ICollection<Part>>.Default.Equals(Parts, album.Parts) &&
-                   EqualityComparer<ICollection<Release>>.Default.Equals(Releases, album.Releases);
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id, Title, Year, Contributions, Genres, Parts, Releases);
-        }
+     
     }
 }
