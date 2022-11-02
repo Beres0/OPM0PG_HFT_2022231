@@ -23,6 +23,12 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
             logic.CreateGenre(genre);
         }
 
+        [HttpDelete("{albumId},{genre}")]
+        public void DeleteGenre(int albumId, string genre)
+        {
+            logic.DeleteGenre(albumId, genre);
+        }
+
         [HttpGet]
         public IEnumerable<AlbumPerGenreDTO> GetAlbumPerGenre()
         {
@@ -51,12 +57,6 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         public IEnumerable<ArtistGenreDTO> ReadAllArtistGenre()
         {
             return logic.ReadAllArtistGenre();
-        }
-
-        [HttpDelete("{albumId},{genre}")]
-        public void DeleteGenre(int albumId, string genre)
-        {
-            logic.DeleteGenre(albumId, genre);
         }
 
         [HttpGet("{albumId},{genre}")]

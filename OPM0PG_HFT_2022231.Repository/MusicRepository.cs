@@ -17,9 +17,9 @@ namespace OPM0PG_HFT_2022231.Repository
         }
 
         public IRepository<Album> Albums { get; }
-        public IRepository<AlbumGenre> Genres { get; }
         public IRepository<Artist> Artists { get; }
         public IRepository<Contribution> Contributions { get; }
+        public IRepository<AlbumGenre> Genres { get; }
         public IRepository<Membership> Memberships { get; }
         public IRepository<Part> Parts { get; }
         public IRepository<Release> Releases { get; }

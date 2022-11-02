@@ -11,8 +11,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
     {
         private IAlbumLogic album;
         private IArtistLogic artist;
-        private IGenreLogic genre;
         private IContributionLogic contribution;
+        private IGenreLogic genre;
         private IReleaseLogic release;
 
         public MusicLogic(IAlbumLogic album,

@@ -23,6 +23,12 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
             logic.CreateRelease(release);
         }
 
+        [HttpDelete("{id}")]
+        public void DeleteRelease(int id)
+        {
+            logic.DeleteRelease(id);
+        }
+
         [HttpGet]
         public IEnumerable<CountryStatDTO> GetCountryStatistics()
         {
@@ -69,12 +75,6 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         public void UpdateRelease([FromBody] Release release)
         {
             logic.UpdateRelease(release);
-        }
-
-        [HttpDelete("{id}")]
-        public void DeleteRelease(int id)
-        {
-            logic.DeleteRelease(id);
         }
     }
 }

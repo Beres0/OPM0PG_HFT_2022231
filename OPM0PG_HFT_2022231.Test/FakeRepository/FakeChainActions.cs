@@ -17,12 +17,6 @@ namespace OPM0PG_HFT_2022231.Test.Repository
             this.source = source;
         }
 
-        private IRepositoryChainActions<TEntity> AddAction(Action action)
-        {
-            actions += action;
-            return this;
-        }
-
         public IRepositoryChainActions<TEntity> CreateWithoutSave(IEnumerable<TEntity> entities)
         {
             return AddAction(() =>
@@ -102,6 +96,12 @@ namespace OPM0PG_HFT_2022231.Test.Repository
                 source.Remove(entity.GetId());
                 source.Add(entity);
             });
+        }
+
+        private IRepositoryChainActions<TEntity> AddAction(Action action)
+        {
+            actions += action;
+            return this;
         }
     }
 }

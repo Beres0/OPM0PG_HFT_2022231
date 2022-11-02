@@ -15,19 +15,6 @@ namespace OPM0PG_HFT_2022231.Test
         private ArtistLogic logic;
         private FakeMusicRepository repository;
 
-        [OneTimeSetUp]
-        public void OneTimeSetUp()
-        {
-            repository = new FakeMusicRepository();
-            logic = new ArtistLogic(repository);
-        }
-
-        [SetUp]
-        public void Setup()
-        {
-            repository.Reset();
-        }
-
         [Test]
         public void CreateArtistTest()
         {
@@ -73,10 +60,57 @@ namespace OPM0PG_HFT_2022231.Test
             Assert.That(repository.Memberships.TryRead(ok.GetId(), out Membership okExists));
         }
 
-        private void AssertMembershipReadException(Membership membership)
+        [Test]
+        public void DeleteArtistTest()
         {
-            Assert.Throws<ReadException>(() =>
-                    logic.ReadMembership(membership.BandId, membership.MemberId));
+            int nonExistArtist = 40;
+            Assert.Throws<DeleteException>(() => logic.DeleteArtist(nonExistArtist));
+
+            Artist ok = logic.ReadArtist(308509);
+            Assert.DoesNotThrow(() => logic.DeleteArtist(ok.Id));
+        }
+
+        [Test]
+        public void GetBandsTest()
+        {
+            var bands = logic.GetBands().Select(b => b.Id);
+            Assert.That(bands.Contains(1775650));
+            Assert.That(bands.Contains(69226));
+            Assert.That(bands.Contains(58955));
+            Assert.That(bands.Count() == 3);
+        }
+
+        [Test]
+        public void GetMembersTest()
+        {
+            int nonPosId = -10;
+            Assert.Throws<ReadException>(() => logic.GetMembers(nonPosId));
+
+            int id = 69226;
+            var members = logic.GetMembers(id).Select(m => m.Id);
+
+            Assert.That(members.Contains(244386));
+            Assert.That(members.Contains(480658));
+            Assert.That(members.Count() == 2);
+        }
+
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            repository = new FakeMusicRepository();
+            logic = new ArtistLogic(repository);
+        }
+
+        [Test]
+        public void ReadArtistTest()
+        {
+            var nonPositive = -10;
+            var notFound = 10;
+            Assert.Throws<ReadException>(() => logic.ReadArtist(notFound));
+            Assert.Throws<ReadException>(() => logic.ReadArtist(nonPositive));
+
+            var ok = 58955;
+            Assert.DoesNotThrow(() => logic.ReadArtist(ok));
         }
 
         [Test]
@@ -99,15 +133,29 @@ namespace OPM0PG_HFT_2022231.Test
         }
 
         [Test]
-        public void ReadArtistTest()
+        public void RemoveMembershipTest()
         {
-            var nonPositive = -10;
-            var notFound = 10;
-            Assert.Throws<ReadException>(() => logic.ReadArtist(notFound));
-            Assert.Throws<ReadException>(() => logic.ReadArtist(nonPositive));
+            var nonPosBandId = new Membership { BandId = -10, MemberId = 142412 };
+            var nonPosMemberId = new Membership { BandId = 58955, MemberId = -10 };
+            var nonExistBandId = new Membership { BandId = 10, MemberId = 244386 };
+            var nonExistMemberId = new Membership { BandId = 58955, MemberId = 30 };
+            var nonExistMembership = new Membership { BandId = 69226, MemberId = 308509 };
 
-            var ok = 58955;
-            Assert.DoesNotThrow(() => logic.ReadArtist(ok));
+            AssertMembershipDeleteException(nonPosBandId);
+            AssertMembershipDeleteException(nonPosMemberId);
+            AssertMembershipDeleteException(nonExistBandId);
+            AssertMembershipDeleteException(nonExistMemberId);
+            AssertMembershipDeleteException(nonExistMembership);
+
+            Membership deleted = repository.Memberships.ReadAll().Take(5).Last();
+            Assert.DoesNotThrow(() => logic.DeleteMembership(deleted.BandId, deleted.MemberId));
+            Assert.That(logic.ReadAllMembership().Contains(deleted));
+        }
+
+        [SetUp]
+        public void Setup()
+        {
+            repository.Reset();
         }
 
         [Test]
@@ -160,64 +208,16 @@ namespace OPM0PG_HFT_2022231.Test
             Assert.That(repository.Memberships.Read(falseSetTrue.BandId, falseSetTrue.MemberId).Active);
         }
 
-        [Test]
-        public void DeleteArtistTest()
-        {
-            int nonExistArtist = 40;
-            Assert.Throws<DeleteException>(() => logic.DeleteArtist(nonExistArtist));
-
-            Artist ok = logic.ReadArtist(308509);
-            Assert.DoesNotThrow(() => logic.DeleteArtist(ok.Id));
-        }
-
-        [Test]
-        public void RemoveMembershipTest()
-        {
-            var nonPosBandId = new Membership { BandId = -10, MemberId = 142412 };
-            var nonPosMemberId = new Membership { BandId = 58955, MemberId = -10 };
-            var nonExistBandId = new Membership { BandId = 10, MemberId = 244386 };
-            var nonExistMemberId = new Membership { BandId = 58955, MemberId = 30 };
-            var nonExistMembership = new Membership { BandId = 69226, MemberId = 308509 };
-
-            AssertMembershipDeleteException(nonPosBandId);
-            AssertMembershipDeleteException(nonPosMemberId);
-            AssertMembershipDeleteException(nonExistBandId);
-            AssertMembershipDeleteException(nonExistMemberId);
-            AssertMembershipDeleteException(nonExistMembership);
-
-            Membership deleted = repository.Memberships.ReadAll().Take(5).Last();
-            Assert.DoesNotThrow(() => logic.DeleteMembership(deleted.BandId, deleted.MemberId));
-            Assert.That(logic.ReadAllMembership().Contains(deleted));
-        }
-
         private void AssertMembershipDeleteException(Membership membership)
         {
             Assert.Throws<DeleteException>(() =>
                     logic.DeleteMembership(membership.BandId, membership.MemberId));
         }
 
-        [Test]
-        public void GetBandsTest()
+        private void AssertMembershipReadException(Membership membership)
         {
-            var bands = logic.GetBands().Select(b => b.Id);
-            Assert.That(bands.Contains(1775650));
-            Assert.That(bands.Contains(69226));
-            Assert.That(bands.Contains(58955));
-            Assert.That(bands.Count() == 3);
-        }
-
-        [Test]
-        public void GetMembersTest()
-        {
-            int nonPosId = -10;
-            Assert.Throws<ReadException>(() => logic.GetMembers(nonPosId));
-
-            int id = 69226;
-            var members = logic.GetMembers(id).Select(m => m.Id);
-
-            Assert.That(members.Contains(244386));
-            Assert.That(members.Contains(480658));
-            Assert.That(members.Count() == 2);
+            Assert.Throws<ReadException>(() =>
+                    logic.ReadMembership(membership.BandId, membership.MemberId));
         }
     }
 }

@@ -15,16 +15,6 @@ internal class RestService : IRestService
             ("application/json"));
     }
 
-    public async Task<HttpResponseMessage> PutAsync<T>(string url, T content)
-    {
-        return await client.PutAsJsonAsync(url, content);
-    }
-
-    public async Task<HttpResponseMessage> PostAsync<T>(string url, T content)
-    {
-        return await client.PostAsJsonAsync(url, content);
-    }
-
     public async Task<HttpResponseMessage> DeleteAsync(string url)
     {
         return await client.DeleteAsync(url);
@@ -33,5 +23,15 @@ internal class RestService : IRestService
     public async Task<HttpResponseMessage> GetAsync(string url)
     {
         return await client.GetAsync(url);
+    }
+
+    public async Task<HttpResponseMessage> PostAsync<T>(string url, T content)
+    {
+        return await client.PostAsJsonAsync(url, content);
+    }
+
+    public async Task<HttpResponseMessage> PutAsync<T>(string url, T content)
+    {
+        return await client.PutAsJsonAsync(url, content);
     }
 }

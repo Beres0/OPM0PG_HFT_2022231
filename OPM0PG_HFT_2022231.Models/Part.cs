@@ -13,21 +13,21 @@ namespace OPM0PG_HFT_2022231.Models
             InversePropertySetter<Part>.SetCollections(this);
         }
 
+        [JsonIgnore, XmlIgnore]
+        public virtual Album Album { get; set; }
+
         [Range(0, int.MaxValue)]
         public int AlbumId { get; set; }
 
         [Range(0, int.MaxValue)]
         public int Id { get; set; }
 
-        [StringLength(ColumnTypeConstants.MaxTextLength)]
-        [Required(AllowEmptyStrings = false)]
-        public string Title { get; set; }
-
         [Range(1, int.MaxValue)]
         public int Position { get; set; }
 
-        [JsonIgnore, XmlIgnore]
-        public virtual Album Album { get; set; }
+        [StringLength(ColumnTypeConstants.MaxTextLength)]
+        [Required(AllowEmptyStrings = false)]
+        public string Title { get; set; }
 
         [JsonIgnore, XmlIgnore]
         public virtual ICollection<Track> Tracks { get; set; }

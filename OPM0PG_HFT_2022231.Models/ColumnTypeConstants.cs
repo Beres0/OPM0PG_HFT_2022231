@@ -2,8 +2,8 @@
 {
     public static class ColumnTypeConstants
     {
-        public const int MinYear = 1800;
-        public const int MaxYear = 2100;
         public const int MaxTextLength = 255;
+        public const int MaxYear = 2100;
+        public const int MinYear = 1800;
     }
 }

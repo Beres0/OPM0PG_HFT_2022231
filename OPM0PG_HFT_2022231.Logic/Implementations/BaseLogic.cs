@@ -14,8 +14,17 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             this.repository = repository;
         }
 
-        protected void CheckKeyExists<TEntity>(IRepository<TEntity> repository, string argName, params object[] id)
+        protected void CheckKeyAlreadyAdded<TEntity>(IRepository<TEntity> repository, string argName, params object[] id)
             where TEntity : class, IEntity
+        {
+            if (repository.TryRead(id, out TEntity added))
+            {
+                throw new InvalidOperationException($"The given entity has already been added! Key: ({string.Join(", ", id)})");
+            }
+        }
+
+        protected void CheckKeyExists<TEntity>(IRepository<TEntity> repository, string argName, params object[] id)
+                    where TEntity : class, IEntity
         {
             if (!repository.TryRead(id, out TEntity entity))
             {
@@ -27,15 +36,6 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
          where TEntity : class, IEntity
         {
             CheckKeyExists(repository, argName, id);
-        }
-
-        protected void CheckKeyAlreadyAdded<TEntity>(IRepository<TEntity> repository, string argName, params object[] id)
-            where TEntity : class, IEntity
-        {
-            if (repository.TryRead(id, out TEntity added))
-            {
-                throw new InvalidOperationException($"The given entity has already been added! Key: ({string.Join(", ", id)})");
-            }
         }
     }
 }

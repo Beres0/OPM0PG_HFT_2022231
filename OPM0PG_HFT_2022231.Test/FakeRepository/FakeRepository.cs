@@ -9,8 +9,8 @@ namespace OPM0PG_HFT_2022231.Test.Repository
     public class FakeRepository<TEntity> : IRepository<TEntity>
         where TEntity : class, IEntity
     {
-        private EntityCollection<TEntity> original;
         private EntityCollection<TEntity> entities;
+        private EntityCollection<TEntity> original;
 
         public FakeRepository()
         {
@@ -22,19 +22,6 @@ namespace OPM0PG_HFT_2022231.Test.Repository
             original = new EntityCollection<TEntity>(beginState);
             entities = new EntityCollection<TEntity>();
             Reset();
-        }
-
-        public void Reset()
-        {
-            if (entities.Count > 0) entities.Clear();
-            if (original != null)
-            {
-                foreach (var item in original)
-                {
-                    TEntity copy = EntityCopier<TEntity>.CopyToNew(item);
-                    entities.Add(copy);
-                }
-            }
         }
 
         public IRepositoryChainActions<TEntity> ChainActions()
@@ -65,6 +52,19 @@ namespace OPM0PG_HFT_2022231.Test.Repository
         public IEnumerable<TEntity> ReadAll()
         {
             return entities;
+        }
+
+        public void Reset()
+        {
+            if (entities.Count > 0) entities.Clear();
+            if (original != null)
+            {
+                foreach (var item in original)
+                {
+                    TEntity copy = EntityCopier<TEntity>.CopyToNew(item);
+                    entities.Add(copy);
+                }
+            }
         }
 
         public bool TryRead(object[] id, out TEntity entity)

@@ -7,9 +7,9 @@ namespace OPM0PG_HFT_2022231.Logic
     {
         void CreateContribution(Contribution contribution);
 
-        Contribution ReadContribution(int albumId, int artistId);
-
         IEnumerable<Contribution> ReadAllContributions();
+
+        Contribution ReadContribution(int albumId, int artistId);
 
         void RemoveContribution(int albumId, int artistId);
     }

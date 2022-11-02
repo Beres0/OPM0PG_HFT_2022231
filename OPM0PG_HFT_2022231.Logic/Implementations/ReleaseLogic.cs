@@ -14,16 +14,6 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         public ReleaseLogic(IMusicRepository musicRepository) : base(musicRepository)
         { }
 
-        private void ValidateRelease(Release release)
-        {
-            Validator<Release>.Validate(release.Id);
-            Validator<Release>.Validate(release.AlbumId);
-            Validator<Release>.Validate(release.Country);
-            Validator<Release>.Validate(release.Publisher);
-            Validator<Release>.Validate(release.ReleaseYear);
-            CheckKeyExists(repository.Albums, release.AlbumId);
-        }
-
         public void CreateRelease(Release release)
         {
             if (release is null)
@@ -43,6 +33,64 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             }
         }
 
+        public void DeleteRelease(int releaseId)
+        {
+            try
+            {
+                Validator<Release>.Validate(releaseId, nameof(Release.Id));
+                CheckKeyExists(repository.Releases, releaseId);
+                repository.Releases.Delete(releaseId);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Release), ex, releaseId);
+            }
+        }
+
+        public IEnumerable<CountryStatDTO> GetCountryStatistics()
+        {
+            var publisherPerCountry = GetPublisherPerCountry();
+            var releasePerCountry = GetReleasePerCountry();
+
+            return publisherPerCountry.Join(releasePerCountry, (p) => p.Country, (r) => r.Country,
+                (p, r) => new CountryStatDTO(p.Country, p.NumberOfPublishers, r.NumberOfReleases));
+        }
+
+        public IEnumerable<PublisherPerCountryDTO> GetPublisherPerCountry()
+        {
+            return repository.Releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
+                .Select(r => new { r.Country, r.Publisher })
+                .Distinct()
+                .GroupBy(r => r.Country)
+                .Select(g => new PublisherPerCountryDTO(g.Key, g.Count()));
+        }
+
+        public IEnumerable<string> GetPublishers()
+        {
+            return repository.Releases.ReadAll()
+                .Select(r => r.Publisher)
+                .Distinct();
+        }
+
+        public IEnumerable<ReleasePerCountryDTO> GetReleasePerCountry()
+        {
+            return repository.Releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
+                .GroupBy(r => r.Country)
+                .Select(g => new ReleasePerCountryDTO(g.Key, g.Count()));
+        }
+
+        public IEnumerable<ReleasePerYearDTO> GetReleasePerYear()
+        {
+            return repository.Releases.ReadAll().Where(r => r.ReleaseYear.HasValue)
+                .GroupBy(r => r.ReleaseYear)
+                .Select(g => new ReleasePerYearDTO(g.Key.Value, g.Count()));
+        }
+
+        public IEnumerable<Release> ReadAllRelease()
+        {
+            return repository.Releases.ReadAll();
+        }
+
         public Release ReadRelease(int releaseId)
         {
             try
@@ -55,11 +103,6 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             {
                 throw new ReadException(typeof(Release), ex, releaseId);
             }
-        }
-
-        public IEnumerable<Release> ReadAllRelease()
-        {
-            return repository.Releases.ReadAll();
         }
 
         public void UpdateRelease(Release release)
@@ -81,57 +124,14 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             }
         }
 
-        public IEnumerable<string> GetPublishers()
+        private void ValidateRelease(Release release)
         {
-            return repository.Releases.ReadAll()
-                .Select(r => r.Publisher)
-                .Distinct();
-        }
-
-        public IEnumerable<ReleasePerCountryDTO> GetReleasePerCountry()
-        {
-            return repository.Releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
-                .GroupBy(r => r.Country)
-                .Select(g => new ReleasePerCountryDTO(g.Key, g.Count()));
-        }
-
-        public IEnumerable<PublisherPerCountryDTO> GetPublisherPerCountry()
-        {
-            return repository.Releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
-                .Select(r => new { r.Country, r.Publisher })
-                .Distinct()
-                .GroupBy(r => r.Country)
-                .Select(g => new PublisherPerCountryDTO(g.Key, g.Count()));
-        }
-
-        public IEnumerable<ReleasePerYearDTO> GetReleasePerYear()
-        {
-            return repository.Releases.ReadAll().Where(r => r.ReleaseYear.HasValue)
-                .GroupBy(r => r.ReleaseYear)
-                .Select(g => new ReleasePerYearDTO(g.Key.Value, g.Count()));
-        }
-
-        public IEnumerable<CountryStatDTO> GetCountryStatistics()
-        {
-            var publisherPerCountry = GetPublisherPerCountry();
-            var releasePerCountry = GetReleasePerCountry();
-
-            return publisherPerCountry.Join(releasePerCountry, (p) => p.Country, (r) => r.Country,
-                (p, r) => new CountryStatDTO(p.Country, p.NumberOfPublishers, r.NumberOfReleases));
-        }
-
-        public void DeleteRelease(int releaseId)
-        {
-            try
-            {
-                Validator<Release>.Validate(releaseId, nameof(Release.Id));
-                CheckKeyExists(repository.Releases, releaseId);
-                repository.Releases.Delete(releaseId);
-            }
-            catch (Exception ex)
-            {
-                throw new DeleteException(typeof(Release), ex, releaseId);
-            }
+            Validator<Release>.Validate(release.Id);
+            Validator<Release>.Validate(release.AlbumId);
+            Validator<Release>.Validate(release.Country);
+            Validator<Release>.Validate(release.Publisher);
+            Validator<Release>.Validate(release.ReleaseYear);
+            CheckKeyExists(repository.Albums, release.AlbumId);
         }
     }
 }

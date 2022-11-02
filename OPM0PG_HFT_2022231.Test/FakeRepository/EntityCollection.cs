@@ -9,6 +9,26 @@ namespace OPM0PG_HFT_2022231.Test.Repository
     public class EntityCollection<TEntity> : KeyedCollection<object[], TEntity>
         where TEntity : class, IEntity
     {
+        public EntityCollection() : base(new KeyEqualityComparer())
+        {
+        }
+
+        public EntityCollection(IEnumerable<TEntity> entities) : this()
+        {
+            foreach (var item in entities)
+            {
+                if (!Contains(item))
+                {
+                    Add(item);
+                }
+            }
+        }
+
+        protected override object[] GetKeyForItem(TEntity item)
+        {
+            return item.GetId();
+        }
+
         private class KeyEqualityComparer : IEqualityComparer<object[]>
         {
             public bool Equals(object[] x, object[] y)
@@ -28,26 +48,6 @@ namespace OPM0PG_HFT_2022231.Test.Repository
                     return hash;
                 }
             }
-        }
-
-        public EntityCollection() : base(new KeyEqualityComparer())
-        {
-        }
-
-        public EntityCollection(IEnumerable<TEntity> entities) : this()
-        {
-            foreach (var item in entities)
-            {
-                if (!Contains(item))
-                {
-                    Add(item);
-                }
-            }
-        }
-
-        protected override object[] GetKeyForItem(TEntity item)
-        {
-            return item.GetId();
         }
     }
 }

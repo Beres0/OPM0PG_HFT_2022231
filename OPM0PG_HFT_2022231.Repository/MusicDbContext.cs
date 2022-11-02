@@ -6,19 +6,19 @@ namespace OPM0PG_HFT_2022231.Repository
 {
     public class MusicDbContext : DbContext
     {
-        public DbSet<Artist> Artists { get; set; }
-        public DbSet<Album> Albums { get; set; }
-        public DbSet<AlbumGenre> AlbumGenres { get; set; }
-        public DbSet<Contribution> Contributions { get; set; }
-        public DbSet<Track> Tracks { get; set; }
-        public DbSet<Membership> Memberships { get; set; }
-        public DbSet<Part> Parts { get; set; }
-        public DbSet<Release> Releases { get; set; }
-
         public MusicDbContext()
         {
             Database.EnsureCreated();
         }
+
+        public DbSet<AlbumGenre> AlbumGenres { get; set; }
+        public DbSet<Album> Albums { get; set; }
+        public DbSet<Artist> Artists { get; set; }
+        public DbSet<Contribution> Contributions { get; set; }
+        public DbSet<Membership> Memberships { get; set; }
+        public DbSet<Part> Parts { get; set; }
+        public DbSet<Release> Releases { get; set; }
+        public DbSet<Track> Tracks { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

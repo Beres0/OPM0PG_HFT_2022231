@@ -12,17 +12,17 @@ namespace OPM0PG_HFT_2022231.Models
             InversePropertySetter<Contribution>.SetCollections(this);
         }
 
-        [Range(0, int.MaxValue)]
-        public int AlbumId { get; set; }
-
-        [Range(0, int.MaxValue)]
-        public int ArtistId { get; set; }
-
         [JsonIgnore, XmlIgnore]
         public virtual Album Album { get; set; }
 
+        [Range(0, int.MaxValue)]
+        public int AlbumId { get; set; }
+
         [JsonIgnore, XmlIgnore]
         public virtual Artist Artist { get; set; }
+
+        [Range(0, int.MaxValue)]
+        public int ArtistId { get; set; }
 
         public object[] GetId() => new object[] { AlbumId, ArtistId };
     }

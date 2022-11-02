@@ -14,19 +14,6 @@ namespace OPM0PG_HFT_2022231.Test
         private AlbumLogic logic;
         private FakeMusicRepository repository;
 
-        [OneTimeSetUp]
-        public void OneTimeSetUp()
-        {
-            repository = new FakeMusicRepository();
-            logic = new AlbumLogic(repository);
-        }
-
-        [SetUp]
-        public void Setup()
-        {
-            repository.Reset();
-        }
-
         [Test]
         public void CreateAlbumTest()
         {
@@ -46,58 +33,6 @@ namespace OPM0PG_HFT_2022231.Test
             var ok = new Album() { Title = "Ok", Year = 1950 };
             Assert.DoesNotThrow(() => logic.CreateAlbum(ok));
             Assert.That(repository.Albums.Read(((IEntity)ok).GetId()) is not null);
-        }
-
-        [Test]
-        public void CreateTrackTest()
-        {
-            Track nullTrack = null;
-            var negPartId = new Track { PartId = -1, Title = "Test" };
-            var nonExistPartId = new Track { PartId = 1001, Title = "Test" };
-            var nullTitle = new Track { PartId = 36, Title = null };
-            var emptyTitle = new Track { PartId = 36, Title = "" };
-            var longTitle = new Track { PartId = 36, Title = new string('x', 256) };
-            Assert.Throws<ArgumentNullException>(() => logic.CreateTrack(nullTrack));
-            Assert.Throws<CreateException>(() => logic.CreateTrack(negPartId));
-            Assert.Throws<CreateException>(() => logic.CreateTrack(nonExistPartId));
-            Assert.Throws<CreateException>(() => logic.CreateTrack(nullTitle));
-            Assert.Throws<CreateException>(() => logic.CreateTrack(emptyTitle));
-            Assert.Throws<CreateException>(() => logic.CreateTrack(longTitle));
-        }
-
-        [Test]
-        [TestCase(-1)]
-        [TestCase(2)]
-        [TestCase(6)]
-        [TestCase(12)]
-        [TestCase(13)]
-        public void CreateTrackPositionInsertTest(int position)
-        {
-            var track = new Track() { Position = position, PartId = 36, Title = "Test" };
-            logic.CreateTrack(track);
-            var tracks = repository.Tracks.ReadAll().Where(t => t.PartId == 36).OrderBy(t => t.Position).ToList();
-            int max = tracks.Max(t => t.Position);
-            if (position < 1 || position > max)
-            {
-                Assert.That(tracks[max - 1] == track);
-            }
-            else
-            {
-                Assert.That(tracks[position - 1] == track);
-            }
-            Assert.That(tracks.Select(t => t.Position).SequenceEqual(Enumerable.Range(1, 12)));
-        }
-
-        [Test]
-        public void ReadAlbumTest()
-        {
-            int neg = -1;
-            int nonExist = 1323;
-            Assert.Throws<ReadException>(() => logic.ReadAlbum(neg));
-            Assert.Throws<ReadException>(() => logic.ReadAlbum(nonExist));
-
-            int ok = 279762;
-            Assert.DoesNotThrow(() => logic.ReadAlbum(ok));
         }
 
         [Test]
@@ -141,6 +76,140 @@ namespace OPM0PG_HFT_2022231.Test
         }
 
         [Test]
+        [TestCase(-1)]
+        [TestCase(2)]
+        [TestCase(6)]
+        [TestCase(12)]
+        [TestCase(13)]
+        public void CreateTrackPositionInsertTest(int position)
+        {
+            var track = new Track() { Position = position, PartId = 36, Title = "Test" };
+            logic.CreateTrack(track);
+            var tracks = repository.Tracks.ReadAll().Where(t => t.PartId == 36).OrderBy(t => t.Position).ToList();
+            int max = tracks.Max(t => t.Position);
+            if (position < 1 || position > max)
+            {
+                Assert.That(tracks[max - 1] == track);
+            }
+            else
+            {
+                Assert.That(tracks[position - 1] == track);
+            }
+            Assert.That(tracks.Select(t => t.Position).SequenceEqual(Enumerable.Range(1, 12)));
+        }
+
+        [Test]
+        public void CreateTrackTest()
+        {
+            Track nullTrack = null;
+            var negPartId = new Track { PartId = -1, Title = "Test" };
+            var nonExistPartId = new Track { PartId = 1001, Title = "Test" };
+            var nullTitle = new Track { PartId = 36, Title = null };
+            var emptyTitle = new Track { PartId = 36, Title = "" };
+            var longTitle = new Track { PartId = 36, Title = new string('x', 256) };
+            Assert.Throws<ArgumentNullException>(() => logic.CreateTrack(nullTrack));
+            Assert.Throws<CreateException>(() => logic.CreateTrack(negPartId));
+            Assert.Throws<CreateException>(() => logic.CreateTrack(nonExistPartId));
+            Assert.Throws<CreateException>(() => logic.CreateTrack(nullTitle));
+            Assert.Throws<CreateException>(() => logic.CreateTrack(emptyTitle));
+            Assert.Throws<CreateException>(() => logic.CreateTrack(longTitle));
+        }
+
+        [Test]
+        public void DeleteAlbumTest()
+        {
+            int negId = -1;
+            int nonExistAlbum = 3123;
+
+            int ok = 395;
+            Assert.Throws<DeleteException>(() => logic.DeleteAlbum(negId));
+            Assert.Throws<DeleteException>(() => logic.DeleteAlbum(nonExistAlbum));
+
+            Assert.DoesNotThrow(() => logic.DeleteTrack(ok));
+            Assert.Throws<ReadException>(() => logic.ReadTrack(ok));
+        }
+
+        [Test]
+        public void DeletePartByPositionTest()
+        {
+            int negPosition = -1;
+            int negAlbumId = -1;
+            int nonExistAlbum = 13213123;
+            int nonExistPos = 4;
+            int okAlbum = 27320;
+            int okPos = 2;
+            Assert.Throws<DeleteException>(() => logic.DeletePartByPosition(okAlbum, negPosition));
+            Assert.Throws<DeleteException>(() => logic.DeletePartByPosition(negAlbumId, okPos));
+            Assert.Throws<DeleteException>(() => logic.DeletePartByPosition(nonExistAlbum, okPos));
+            Assert.Throws<DeleteException>(() => logic.DeletePartByPosition(okAlbum, nonExistPos));
+
+            Assert.DoesNotThrow(() => logic.DeletePartByPosition(okAlbum, okPos));
+        }
+
+        [Test]
+        public void DeletePartTest()
+        {
+            int neg = -1;
+            int nonExist = -1;
+            Assert.Throws<DeleteException>(() => logic.DeletePart(neg));
+            Assert.Throws<DeleteException>(() => logic.DeletePart(nonExist));
+
+            int ok = 42;
+            Assert.DoesNotThrow(() => logic.DeletePart(ok));
+            var parts = repository.Parts.ReadAll().Where(p => p.AlbumId == 27320);
+            Assert.That(parts.Count() == 1);
+            Assert.That(parts.First().Position == 1);
+        }
+
+        [Test]
+        public void DeleteTrackByPosition()
+        {
+            int negPosition = -1;
+            int negPartId = -1;
+            int nonExistPart = 13213123;
+            int nonExistPos = 40;
+            int okPart = 36;
+            int okPos = 9;
+            Assert.Throws<DeleteException>(() => logic.DeleteTrackByPosition(negPartId, okPos));
+            Assert.Throws<DeleteException>(() => logic.DeleteTrackByPosition(okPart, negPosition));
+            Assert.Throws<DeleteException>(() => logic.DeleteTrackByPosition(nonExistPart, okPos));
+            Assert.Throws<DeleteException>(() => logic.DeleteTrackByPosition(okPart, nonExistPos));
+
+            Assert.DoesNotThrow(() => logic.DeleteTrackByPosition(okPart, okPos));
+        }
+
+        [Test]
+        public void GetTotalDurationOfAlbumTest()
+        {
+            Assert.That(logic.GetTotalDurationOfAlbum(27320) == new TimeSpan(1, 7, 0));
+        }
+
+        [Test]
+        public void GetTotalDurationOfPartTest()
+        {
+            Assert.That(logic.GetTotalDurationOfPart(40) == TimeSpan.FromMinutes(53));
+        }
+
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            repository = new FakeMusicRepository();
+            logic = new AlbumLogic(repository);
+        }
+
+        [Test]
+        public void ReadAlbumTest()
+        {
+            int neg = -1;
+            int nonExist = 1323;
+            Assert.Throws<ReadException>(() => logic.ReadAlbum(neg));
+            Assert.Throws<ReadException>(() => logic.ReadAlbum(nonExist));
+
+            int ok = 279762;
+            Assert.DoesNotThrow(() => logic.ReadAlbum(ok));
+        }
+
+        [Test]
         public void ReadPartTest()
         {
             int neg = -1;
@@ -176,6 +245,12 @@ namespace OPM0PG_HFT_2022231.Test
             Assert.DoesNotThrow(() => logic.ReadTrackByPosition(okAlbumId, okPartId, okTrackId));
         }
 
+        [SetUp]
+        public void Setup()
+        {
+            repository.Reset();
+        }
+
         [Test]
         public void UpdateAlbum()
         {
@@ -203,30 +278,6 @@ namespace OPM0PG_HFT_2022231.Test
             Assert.That(repository.Albums.Read(ok.Id).Title == "updated");
         }
 
-        [Test]
-        public void UpdatePartTest()
-        {
-            Part nullPart = null;
-            var negPart = new Part { Id = 40, AlbumId = -1, Title = "Test" };
-            var nonExistAlbumId = new Part { Id = 40, AlbumId = 1001, Title = "Test" };
-            var nullTitle = new Part { Id = 40, AlbumId = 36, Title = null };
-            var emptyTitle = new Part { Id = 40, AlbumId = 36, Title = "" };
-            var longTitle = new Part { Id = 40, AlbumId = 36, Title = new string('x', 256) };
-            var nonExistPart = new Part { Id = 44140, AlbumId = 36, Title = new string('x', 256) };
-            Assert.Throws<ArgumentNullException>(() => logic.UpdatePart(nullPart));
-            Assert.Throws<UpdateException>(() => logic.UpdatePart(negPart));
-            Assert.Throws<UpdateException>(() => logic.UpdatePart(nonExistAlbumId));
-            Assert.Throws<UpdateException>(() => logic.UpdatePart(nullTitle));
-            Assert.Throws<UpdateException>(() => logic.UpdatePart(emptyTitle));
-            Assert.Throws<UpdateException>(() => logic.UpdatePart(longTitle));
-            Assert.Throws<UpdateException>(() => logic.UpdatePart(nonExistPart));
-
-            var original = logic.ReadPart(40);
-            var ok = new Part() { Id = original.Id, Title = "updated", AlbumId = original.AlbumId, Position = original.Position };
-            Assert.DoesNotThrow(() => logic.UpdatePart(ok));
-            Assert.That(repository.Parts.Read(ok.Id).Title == "updated");
-        }
-
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(2)]
@@ -249,22 +300,27 @@ namespace OPM0PG_HFT_2022231.Test
         }
 
         [Test]
-        public void UpdateTrackTest()
+        public void UpdatePartTest()
         {
-            Track nullTrack = null;
-            var nonExistTrack = new Track() { Id = 3123, Position = 3, PartId = 36, Title = "Test" };
-            var negPartId = new Track { Id = 392, PartId = -1, Title = "Test" };
-            var nonExistPartId = new Track { Id = 392, PartId = 1001, Title = "Test" };
-            var nullTitle = new Track { Id = 392, PartId = 36, Title = null };
-            var emptyTitle = new Track { Id = 392, PartId = 36, Title = "" };
-            var longTitle = new Track { Id = 392, PartId = 36, Title = new string('x', 256) };
-            Assert.Throws<ArgumentNullException>(() => logic.UpdateTrack(nullTrack));
-            Assert.Throws<UpdateException>(() => logic.UpdateTrack(nonExistTrack));
-            Assert.Throws<UpdateException>(() => logic.UpdateTrack(negPartId));
-            Assert.Throws<UpdateException>(() => logic.UpdateTrack(nonExistPartId));
-            Assert.Throws<UpdateException>(() => logic.UpdateTrack(nullTitle));
-            Assert.Throws<UpdateException>(() => logic.UpdateTrack(emptyTitle));
-            Assert.Throws<UpdateException>(() => logic.UpdateTrack(longTitle));
+            Part nullPart = null;
+            var negPart = new Part { Id = 40, AlbumId = -1, Title = "Test" };
+            var nonExistAlbumId = new Part { Id = 40, AlbumId = 1001, Title = "Test" };
+            var nullTitle = new Part { Id = 40, AlbumId = 36, Title = null };
+            var emptyTitle = new Part { Id = 40, AlbumId = 36, Title = "" };
+            var longTitle = new Part { Id = 40, AlbumId = 36, Title = new string('x', 256) };
+            var nonExistPart = new Part { Id = 44140, AlbumId = 36, Title = new string('x', 256) };
+            Assert.Throws<ArgumentNullException>(() => logic.UpdatePart(nullPart));
+            Assert.Throws<UpdateException>(() => logic.UpdatePart(negPart));
+            Assert.Throws<UpdateException>(() => logic.UpdatePart(nonExistAlbumId));
+            Assert.Throws<UpdateException>(() => logic.UpdatePart(nullTitle));
+            Assert.Throws<UpdateException>(() => logic.UpdatePart(emptyTitle));
+            Assert.Throws<UpdateException>(() => logic.UpdatePart(longTitle));
+            Assert.Throws<UpdateException>(() => logic.UpdatePart(nonExistPart));
+
+            var original = logic.ReadPart(40);
+            var ok = new Part() { Id = original.Id, Title = "updated", AlbumId = original.AlbumId, Position = original.Position };
+            Assert.DoesNotThrow(() => logic.UpdatePart(ok));
+            Assert.That(repository.Parts.Read(ok.Id).Title == "updated");
         }
 
         [Test]
@@ -291,78 +347,22 @@ namespace OPM0PG_HFT_2022231.Test
         }
 
         [Test]
-        public void DeleteAlbumTest()
+        public void UpdateTrackTest()
         {
-            int negId = -1;
-            int nonExistAlbum = 3123;
-
-            int ok = 395;
-            Assert.Throws<DeleteException>(() => logic.DeleteAlbum(negId));
-            Assert.Throws<DeleteException>(() => logic.DeleteAlbum(nonExistAlbum));
-
-            Assert.DoesNotThrow(() => logic.DeleteTrack(ok));
-            Assert.Throws<ReadException>(() => logic.ReadTrack(ok));
-        }
-
-        [Test]
-        public void DeletePartTest()
-        {
-            int neg = -1;
-            int nonExist = -1;
-            Assert.Throws<DeleteException>(() => logic.DeletePart(neg));
-            Assert.Throws<DeleteException>(() => logic.DeletePart(nonExist));
-
-            int ok = 42;
-            Assert.DoesNotThrow(() => logic.DeletePart(ok));
-            var parts = repository.Parts.ReadAll().Where(p => p.AlbumId == 27320);
-            Assert.That(parts.Count() == 1);
-            Assert.That(parts.First().Position == 1);
-        }
-
-        [Test]
-        public void DeletePartByPositionTest()
-        {
-            int negPosition = -1;
-            int negAlbumId = -1;
-            int nonExistAlbum = 13213123;
-            int nonExistPos = 4;
-            int okAlbum = 27320;
-            int okPos = 2;
-            Assert.Throws<DeleteException>(() => logic.DeletePartByPosition(okAlbum, negPosition));
-            Assert.Throws<DeleteException>(() => logic.DeletePartByPosition(negAlbumId, okPos));
-            Assert.Throws<DeleteException>(() => logic.DeletePartByPosition(nonExistAlbum, okPos));
-            Assert.Throws<DeleteException>(() => logic.DeletePartByPosition(okAlbum, nonExistPos));
-
-            Assert.DoesNotThrow(() => logic.DeletePartByPosition(okAlbum, okPos));
-        }
-
-        [Test]
-        public void DeleteTrackByPosition()
-        {
-            int negPosition = -1;
-            int negPartId = -1;
-            int nonExistPart = 13213123;
-            int nonExistPos = 40;
-            int okPart = 36;
-            int okPos = 9;
-            Assert.Throws<DeleteException>(() => logic.DeleteTrackByPosition(negPartId, okPos));
-            Assert.Throws<DeleteException>(() => logic.DeleteTrackByPosition(okPart, negPosition));
-            Assert.Throws<DeleteException>(() => logic.DeleteTrackByPosition(nonExistPart, okPos));
-            Assert.Throws<DeleteException>(() => logic.DeleteTrackByPosition(okPart, nonExistPos));
-
-            Assert.DoesNotThrow(() => logic.DeleteTrackByPosition(okPart, okPos));
-        }
-
-        [Test]
-        public void GetTotalDurationOfPartTest()
-        {
-            Assert.That(logic.GetTotalDurationOfPart(40) == TimeSpan.FromMinutes(53));
-        }
-
-        [Test]
-        public void GetTotalDurationOfAlbumTest()
-        {
-            Assert.That(logic.GetTotalDurationOfAlbum(27320) == new TimeSpan(1, 7, 0));
+            Track nullTrack = null;
+            var nonExistTrack = new Track() { Id = 3123, Position = 3, PartId = 36, Title = "Test" };
+            var negPartId = new Track { Id = 392, PartId = -1, Title = "Test" };
+            var nonExistPartId = new Track { Id = 392, PartId = 1001, Title = "Test" };
+            var nullTitle = new Track { Id = 392, PartId = 36, Title = null };
+            var emptyTitle = new Track { Id = 392, PartId = 36, Title = "" };
+            var longTitle = new Track { Id = 392, PartId = 36, Title = new string('x', 256) };
+            Assert.Throws<ArgumentNullException>(() => logic.UpdateTrack(nullTrack));
+            Assert.Throws<UpdateException>(() => logic.UpdateTrack(nonExistTrack));
+            Assert.Throws<UpdateException>(() => logic.UpdateTrack(negPartId));
+            Assert.Throws<UpdateException>(() => logic.UpdateTrack(nonExistPartId));
+            Assert.Throws<UpdateException>(() => logic.UpdateTrack(nullTitle));
+            Assert.Throws<UpdateException>(() => logic.UpdateTrack(emptyTitle));
+            Assert.Throws<UpdateException>(() => logic.UpdateTrack(longTitle));
         }
     }
 }

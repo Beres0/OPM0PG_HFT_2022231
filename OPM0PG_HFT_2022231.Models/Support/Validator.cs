@@ -11,36 +11,10 @@ namespace OPM0PG_HFT_2022231.Models.Support
     {
         private static readonly Dictionary<string, Dictionary<Type, ValidationAttribute>> validators = CollectAttributes();
 
-        private static Dictionary<string, Dictionary<Type, ValidationAttribute>> CollectAttributes()
-        {
-            var validators = new Dictionary<string, Dictionary<Type, ValidationAttribute>>();
-
-            foreach (var prop in typeof(T).GetProperties(BindingFlags.Instance | BindingFlags.Public).Where(p => p.CanRead))
-            {
-                string propName = Normalize(prop.Name);
-                validators.TryAdd(propName, new Dictionary<Type, ValidationAttribute>());
-                foreach (var attr in prop.GetCustomAttributes<ValidationAttribute>())
-                {
-                    validators[propName].TryAdd(attr.GetType(), attr);
-                }
-            }
-            return validators;
-        }
-
-        private static string Normalize(string propName)
-        {
-            int lastIndex = propName.LastIndexOf('.');
-            if (lastIndex == -1)
-            {
-                return propName.ToLower();
-            }
-            else return propName.Substring(lastIndex + 1).ToLower();
-        }
-
-        private static ValidationAttribute GetValidator<TValidation>(string propName)
+        public static bool IsValid<TValidation, TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null)
             where TValidation : ValidationAttribute
         {
-            return validators[Normalize(propName)][typeof(TValidation)];
+            return GetValidator<TValidation>(propName).IsValid(value);
         }
 
         public static void Throws<TValue>(TValue value, ValidationAttribute attribute, [CallerArgumentExpression("value")] string propName = null)
@@ -62,14 +36,6 @@ namespace OPM0PG_HFT_2022231.Models.Support
             }
         }
 
-        public static void Validate<TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null)
-        {
-            foreach (var attribute in validators[Normalize(propName)])
-            {
-                Throws(value, attribute.Value, propName);
-            }
-        }
-
         public static void Throws<TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null, params Type[] filters)
         {
             foreach (var filter in filters)
@@ -81,10 +47,44 @@ namespace OPM0PG_HFT_2022231.Models.Support
             }
         }
 
-        public static bool IsValid<TValidation, TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null)
+        public static void Validate<TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null)
+        {
+            foreach (var attribute in validators[Normalize(propName)])
+            {
+                Throws(value, attribute.Value, propName);
+            }
+        }
+
+        private static Dictionary<string, Dictionary<Type, ValidationAttribute>> CollectAttributes()
+        {
+            var validators = new Dictionary<string, Dictionary<Type, ValidationAttribute>>();
+
+            foreach (var prop in typeof(T).GetProperties(BindingFlags.Instance | BindingFlags.Public).Where(p => p.CanRead))
+            {
+                string propName = Normalize(prop.Name);
+                validators.TryAdd(propName, new Dictionary<Type, ValidationAttribute>());
+                foreach (var attr in prop.GetCustomAttributes<ValidationAttribute>())
+                {
+                    validators[propName].TryAdd(attr.GetType(), attr);
+                }
+            }
+            return validators;
+        }
+
+        private static ValidationAttribute GetValidator<TValidation>(string propName)
             where TValidation : ValidationAttribute
         {
-            return GetValidator<TValidation>(propName).IsValid(value);
+            return validators[Normalize(propName)][typeof(TValidation)];
+        }
+
+        private static string Normalize(string propName)
+        {
+            int lastIndex = propName.LastIndexOf('.');
+            if (lastIndex == -1)
+            {
+                return propName.ToLower();
+            }
+            else return propName.Substring(lastIndex + 1).ToLower();
         }
     }
 }

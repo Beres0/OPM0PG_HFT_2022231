@@ -17,21 +17,27 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         }
 
         [HttpPost]
-        public void CreateMembership([FromBody] Membership membership)
-        {
-            logic.CreateMembership(membership);
-        }
-
-        [HttpPost]
         public void CreateArtist([FromBody] Artist artist)
         {
             logic.CreateArtist(artist);
+        }
+
+        [HttpPost]
+        public void CreateMembership([FromBody] Membership membership)
+        {
+            logic.CreateMembership(membership);
         }
 
         [HttpDelete("{id}")]
         public void DeleteArtist(int id)
         {
             logic.DeleteArtist(id);
+        }
+
+        [HttpDelete("{bandId},{memberId}")]
+        public void DeleteMembership(int bandId, int memberId)
+        {
+            logic.DeleteMembership(bandId, memberId);
         }
 
         [HttpGet]
@@ -64,16 +70,10 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
             return logic.ReadArtist(id);
         }
 
-        [HttpDelete("{bandId},{memberId}")]
-        public void DeleteMembership(int bandId, int memberId)
+        [HttpGet("{bandId},{memberId}")]
+        public Membership ReadMembership(int bandId, int memberId)
         {
-            logic.DeleteMembership(bandId, memberId);
-        }
-
-        [HttpPut]
-        public void UpdateMembership([FromBody] Membership membership)
-        {
-            logic.UpdateMembership(membership);
+            return logic.ReadMembership(bandId, memberId);
         }
 
         [HttpPut]
@@ -82,10 +82,10 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
             logic.UpdateArtist(artist);
         }
 
-        [HttpGet("{bandId},{memberId}")]
-        public Membership ReadMembership(int bandId, int memberId)
+        [HttpPut]
+        public void UpdateMembership([FromBody] Membership membership)
         {
-            return logic.ReadMembership(bandId, memberId);
+            logic.UpdateMembership(membership);
         }
     }
 }

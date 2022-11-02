@@ -11,17 +11,30 @@ namespace OPM0PG_HFT_2022231.Test
         private ContributionLogic logic;
         private FakeMusicRepository repository;
 
+        [Test]
+        public void CreateContributionTest()
+        {
+            int negArtistId = -1;
+            int negAlbumId = -1;
+            int nonExistArtistId = 4124124;
+            int nonExistAlbumId = 4124124;
+            int okArtistId = 1775650;
+            int okAlbumId = 1308061;
+
+            AssertCreateContributionException(okAlbumId, negArtistId);
+            AssertCreateContributionException(negAlbumId, okArtistId);
+            AssertCreateContributionException(okAlbumId, nonExistArtistId);
+            AssertCreateContributionException(nonExistAlbumId, okArtistId);
+            AssertCreateContributionException(okArtistId, okAlbumId);
+
+            Assert.DoesNotThrow(() => logic.CreateContribution(new Contribution() { AlbumId = 27320, ArtistId = okArtistId }));
+        }
+
         [OneTimeSetUp]
         public void OneTimeSetUp()
         {
             repository = new FakeMusicRepository();
             logic = new ContributionLogic(repository);
-        }
-
-        [SetUp]
-        public void Setup()
-        {
-            repository.Reset();
         }
 
         [Test]
@@ -45,30 +58,6 @@ namespace OPM0PG_HFT_2022231.Test
         }
 
         [Test]
-        public void CreateContributionTest()
-        {
-            int negArtistId = -1;
-            int negAlbumId = -1;
-            int nonExistArtistId = 4124124;
-            int nonExistAlbumId = 4124124;
-            int okArtistId = 1775650;
-            int okAlbumId = 1308061;
-
-            AssertCreateContributionException(okAlbumId, negArtistId);
-            AssertCreateContributionException(negAlbumId, okArtistId);
-            AssertCreateContributionException(okAlbumId, nonExistArtistId);
-            AssertCreateContributionException(nonExistAlbumId, okArtistId);
-            AssertCreateContributionException(okArtistId, okAlbumId);
-
-            Assert.DoesNotThrow(() => logic.CreateContribution(new Contribution() { AlbumId = 27320, ArtistId = okArtistId }));
-        }
-
-        private void AssertCreateContributionException(int albumId, int artistId)
-        {
-            Assert.Throws<CreateException>(() => logic.CreateContribution(new Contribution() { AlbumId = albumId, ArtistId = artistId }));
-        }
-
-        [Test]
         public void RemoveContribution()
         {
             int negArtistId = -1;
@@ -86,6 +75,17 @@ namespace OPM0PG_HFT_2022231.Test
 
             Assert.DoesNotThrow(() => logic.RemoveContribution(okAlbumId, okArtistId));
             Assert.That(!repository.Contributions.TryRead(new object[] { okAlbumId, okArtistId }, out var result));
+        }
+
+        [SetUp]
+        public void Setup()
+        {
+            repository.Reset();
+        }
+
+        private void AssertCreateContributionException(int albumId, int artistId)
+        {
+            Assert.Throws<CreateException>(() => logic.CreateContribution(new Contribution() { AlbumId = albumId, ArtistId = artistId }));
         }
     }
 }

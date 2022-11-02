@@ -8,7 +8,7 @@ namespace OPM0PG_HFT_2022231.Client
     {
         private static void ClientTest(string[] args)
         {
-            ApiClientGenerator client = new ApiClientGenerator("OPM0PG_HFT_2022231.Endpoint.dll", "http://localhost:15486/api/", new RestService(), args);
+            ClientGenerator client = new ClientGenerator("OPM0PG_HFT_2022231.Endpoint.dll", "http://localhost:15486/api/", new RestService(), args);
             client.Writers.Add(new AlbumSummaryWriter());
             client.Writers.Add(new ArtistSummaryWriter());
 

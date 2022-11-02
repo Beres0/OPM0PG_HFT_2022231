@@ -50,6 +50,11 @@ namespace OPM0PG_HFT_2022231.Repository.ChainActions
             return this;
         }
 
+        public void Save()
+        {
+            context.SaveChanges();
+        }
+
         public IRepositoryChainActions<TEntity> UpdateWithoutSave(TEntity entity, Action<TEntity> updateAction)
         {
             updateAction(entity);
@@ -71,11 +76,6 @@ namespace OPM0PG_HFT_2022231.Repository.ChainActions
                 updateAction(item);
             }
             return this;
-        }
-
-        public void Save()
-        {
-            context.SaveChanges();
         }
     }
 }

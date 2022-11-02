@@ -9,9 +9,19 @@ namespace OPM0PG_HFT_2022231.Models.Support
         private static readonly Action<TEntity, TEntity>[] copiers = CreateCopiers();
         private static readonly Func<TEntity> factory = CreateFactory();
 
-        private static Func<TEntity> CreateFactory()
+        public static void Copy(TEntity source, TEntity destination)
         {
-            return Expression.Lambda<Func<TEntity>>(Expression.New(typeof(TEntity).GetConstructor(new Type[] { }))).Compile();
+            for (int i = 0; i < copiers.Length; i++)
+            {
+                copiers[i](source, destination);
+            }
+        }
+
+        public static TEntity CopyToNew(TEntity entity)
+        {
+            TEntity copy = factory();
+            Copy(entity, copy);
+            return copy;
         }
 
         private static Action<TEntity, TEntity>[] CreateCopiers()
@@ -37,19 +47,9 @@ namespace OPM0PG_HFT_2022231.Models.Support
             return updaters;
         }
 
-        public static TEntity CopyToNew(TEntity entity)
+        private static Func<TEntity> CreateFactory()
         {
-            TEntity copy = factory();
-            Copy(entity, copy);
-            return copy;
-        }
-
-        public static void Copy(TEntity source, TEntity destination)
-        {
-            for (int i = 0; i < copiers.Length; i++)
-            {
-                copiers[i](source, destination);
-            }
+            return Expression.Lambda<Func<TEntity>>(Expression.New(typeof(TEntity).GetConstructor(new Type[] { }))).Compile();
         }
     }
 }

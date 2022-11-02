@@ -15,20 +15,6 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         public GenreLogic(IMusicRepository musicRepository) : base(musicRepository)
         { }
 
-        public IEnumerable<AlbumGenre> ReadAllAlbumGenre()
-        {
-            return repository.Genres.ReadAll();
-        }
-
-        public IEnumerable<ArtistGenreDTO> ReadAllArtistGenre()
-        {
-            return repository.Genres.ReadAll().Join
-                (repository.Contributions.ReadAll(),
-                (g) => g.AlbumId, (c) => c.AlbumId,
-                (g, c) => new ArtistGenreDTO(c.Artist, g.Genre))
-                .Distinct();
-        }
-
         public void CreateGenre(AlbumGenre genre)
         {
             try
@@ -60,12 +46,6 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             }
         }
 
-        public IEnumerable<string> GetGenres()
-        {
-            return repository.Genres.ReadAll()
-                 .Select(g => g.Genre).Distinct();
-        }
-
         public IEnumerable<AlbumPerGenreDTO> GetAlbumPerGenre()
         {
             return repository.Genres.ReadAll()
@@ -78,6 +58,26 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             return ReadAllArtistGenre()
                    .GroupBy(g => g.Genre)
                    .Select(g => new ArtistPerGenreDTO(g.Key, g.Count()));
+        }
+
+        public IEnumerable<string> GetGenres()
+        {
+            return repository.Genres.ReadAll()
+                 .Select(g => g.Genre).Distinct();
+        }
+
+        public IEnumerable<AlbumGenre> ReadAllAlbumGenre()
+        {
+            return repository.Genres.ReadAll();
+        }
+
+        public IEnumerable<ArtistGenreDTO> ReadAllArtistGenre()
+        {
+            return repository.Genres.ReadAll().Join
+                (repository.Contributions.ReadAll(),
+                (g) => g.AlbumId, (c) => c.AlbumId,
+                (g, c) => new ArtistGenreDTO(c.Artist, g.Genre))
+                .Distinct();
         }
 
         public AlbumGenre ReadGenre(int albumId, string genre)

@@ -13,17 +13,15 @@ using System.Reflection;
 
 namespace OPM0PG_HFT_2022231.Client
 {
-    public class ApiClientGenerator
+    public class ClientGenerator
     {
         private readonly string assemblyName;
         private readonly string domain;
+        private string[] args;
         private IRestService restService;
         private ConsoleMenu rootMenu;
-        private string[] args;
-        public ConsoleTypeReaderCollection Readers { get; }
-        public ConsoleTypeWriterCollection Writers { get; }
 
-        public ApiClientGenerator(string assemblyName, string domain, IRestService restService, string[] args)
+        public ClientGenerator(string assemblyName, string domain, IRestService restService, string[] args)
         {
             this.assemblyName = assemblyName;
             this.domain = domain;
@@ -34,6 +32,9 @@ namespace OPM0PG_HFT_2022231.Client
 
             rootMenu = BuildRootMenu();
         }
+
+        public ConsoleTypeReaderCollection Readers { get; }
+        public ConsoleTypeWriterCollection Writers { get; }
 
         public void Show()
         {
@@ -93,45 +94,18 @@ namespace OPM0PG_HFT_2022231.Client
             else throw new NotSupportedException();
         }
 
-        private string GetRequestUrl(MethodInfo method)
+        private Action CreateDeleteAction(MethodInfo httpMethod)
         {
-            return domain + method.DeclaringType.Name.Replace("Controller", "") + "/" + method.Name + "/";
-        }
-
-        private string ReadRequestUrlParameters(MethodInfo httpMethod, ParameterInfo[] parameters)
-        {
-            string url = GetRequestUrl(httpMethod);
-            List<string> inputs = new List<string>();
-
-            foreach (var item in parameters)
+            void Delete()
             {
-                if (item.GetCustomAttribute<FromBodyAttribute>() is null)
-                {
-                    Console.Write($"{item.Name}({item.ParameterType.Name}): ");
-                    inputs.Add(Console.ReadLine());
-                }
+                ParameterInfo[] parameters = httpMethod.GetParameters();
+                string requestUrl = ReadRequestUrlParameters(httpMethod, parameters);
+                var response = restService.DeleteAsync(requestUrl).Result;
+                Console.WriteLine(response.StatusCode);
+                Console.WriteLine(JToken.Parse(ResponseAsString(response)).ToString(Formatting.Indented));
+                Console.ReadLine();
             }
-
-            return url + string.Join(",", inputs);
-        }
-
-        private object ReadFromBodyParameter(ParameterInfo parameter)
-        {
-            if (Readers.Contains(parameter.ParameterType))
-            {
-                return Readers[parameter.ParameterType].Read();
-            }
-            else throw new NotSupportedException();
-        }
-
-        private object Deserialize(MethodInfo httpMethod, string jsonString)
-        {
-            return JsonConvert.DeserializeObject(jsonString, httpMethod.ReturnType);
-        }
-
-        private string ResponseAsString(HttpResponseMessage response)
-        {
-            return response.Content.ReadAsStringAsync().Result;
+            return Delete;
         }
 
         private Action CreateGetAction(MethodInfo httpMethod)
@@ -190,18 +164,45 @@ namespace OPM0PG_HFT_2022231.Client
             return Put;
         }
 
-        private Action CreateDeleteAction(MethodInfo httpMethod)
+        private object Deserialize(MethodInfo httpMethod, string jsonString)
         {
-            void Delete()
+            return JsonConvert.DeserializeObject(jsonString, httpMethod.ReturnType);
+        }
+
+        private string GetRequestUrl(MethodInfo method)
+        {
+            return domain + method.DeclaringType.Name.Replace("Controller", "") + "/" + method.Name + "/";
+        }
+
+        private object ReadFromBodyParameter(ParameterInfo parameter)
+        {
+            if (Readers.Contains(parameter.ParameterType))
             {
-                ParameterInfo[] parameters = httpMethod.GetParameters();
-                string requestUrl = ReadRequestUrlParameters(httpMethod, parameters);
-                var response = restService.DeleteAsync(requestUrl).Result;
-                Console.WriteLine(response.StatusCode);
-                Console.WriteLine(JToken.Parse(ResponseAsString(response)).ToString(Formatting.Indented));
-                Console.ReadLine();
+                return Readers[parameter.ParameterType].Read();
             }
-            return Delete;
+            else throw new NotSupportedException();
+        }
+
+        private string ReadRequestUrlParameters(MethodInfo httpMethod, ParameterInfo[] parameters)
+        {
+            string url = GetRequestUrl(httpMethod);
+            List<string> inputs = new List<string>();
+
+            foreach (var item in parameters)
+            {
+                if (item.GetCustomAttribute<FromBodyAttribute>() is null)
+                {
+                    Console.Write($"{item.Name}({item.ParameterType.Name}): ");
+                    inputs.Add(Console.ReadLine());
+                }
+            }
+
+            return url + string.Join(",", inputs);
+        }
+
+        private string ResponseAsString(HttpResponseMessage response)
+        {
+            return response.Content.ReadAsStringAsync().Result;
         }
     }
 }

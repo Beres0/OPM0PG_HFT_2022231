@@ -5,11 +5,13 @@ namespace OPM0PG_HFT_2022231.Logic
 {
     public interface IArtistLogic
     {
-        void CreateMembership(Membership membership);
-
         void CreateArtist(Artist artist);
 
+        void CreateMembership(Membership membership);
+
         void DeleteArtist(int id);
+
+        void DeleteMembership(int bandId, int memberId);
 
         IEnumerable<Artist> GetBands();
 
@@ -19,14 +21,12 @@ namespace OPM0PG_HFT_2022231.Logic
 
         IEnumerable<Membership> ReadAllMembership();
 
-        Membership ReadMembership(int bandId, int memberId);
-
         Artist ReadArtist(int id);
 
-        void DeleteMembership(int bandId, int memberId);
-
-        void UpdateMembership(Membership membership);
+        Membership ReadMembership(int bandId, int memberId);
 
         void UpdateArtist(Artist artist);
+
+        void UpdateMembership(Membership membership);
     }
 }

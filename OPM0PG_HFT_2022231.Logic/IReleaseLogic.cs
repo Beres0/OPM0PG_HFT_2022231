@@ -8,6 +8,8 @@ namespace OPM0PG_HFT_2022231.Logic
     {
         void CreateRelease(Release release);
 
+        void DeleteRelease(int id);
+
         IEnumerable<CountryStatDTO> GetCountryStatistics();
 
         IEnumerable<PublisherPerCountryDTO> GetPublisherPerCountry();
@@ -23,7 +25,5 @@ namespace OPM0PG_HFT_2022231.Logic
         Release ReadRelease(int id);
 
         void UpdateRelease(Release release);
-
-        void DeleteRelease(int id);
     }
 }
