@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OPM0PG_HFT_2022231.Logic.Implementations;
 using OPM0PG_HFT_2022231.Logic.Validating.Exceptions;
+using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
 using OPM0PG_HFT_2022231.Test.Repository;
 using System;
@@ -27,8 +28,12 @@ namespace OPM0PG_HFT_2022231.Test
             repository.Reset();
         }
 
+        private void AssertCreateGenreException(int albumId,string genre)
+        {
+            Assert.Throws<CreateException>(() => logic.CreateGenre(new AlbumGenre() { AlbumId = albumId, Genre = genre }));
+        }
         [Test]
-        public void AddGenreTest()
+        public void CreateGenreTest()
         {
             int negAlbumid = -1;
             int nonExistAlbumId = 1322313;
@@ -38,14 +43,14 @@ namespace OPM0PG_HFT_2022231.Test
             string longGenre = new string('x', 256);
             string okGenre = "Electronic";
 
-            Assert.Throws<CreateException>(() => logic.AddGenre(negAlbumid, okGenre));
-            Assert.Throws<CreateException>(() => logic.AddGenre(nonExistAlbumId, okGenre));
-            Assert.Throws<CreateException>(() => logic.AddGenre(okAlbumId, nullGenre));
-            Assert.Throws<CreateException>(() => logic.AddGenre(okAlbumId, emptyGenre));
-            Assert.Throws<CreateException>(() => logic.AddGenre(okAlbumId, longGenre));
-            Assert.Throws<CreateException>(() => logic.AddGenre(okAlbumId, okGenre));
+            AssertCreateGenreException(negAlbumid, okGenre);
+            AssertCreateGenreException(nonExistAlbumId, okGenre);
+            AssertCreateGenreException(okAlbumId, nullGenre);
+            AssertCreateGenreException(okAlbumId, emptyGenre);
+            AssertCreateGenreException(okAlbumId, longGenre);
+            AssertCreateGenreException(okAlbumId, okGenre);
 
-            Assert.DoesNotThrow(() => logic.AddGenre(okAlbumId, "Test"));
+            Assert.DoesNotThrow(() => logic.CreateGenre(new AlbumGenre() { AlbumId = okAlbumId, Genre = "Test" }));
             Assert.That(repository.Genres.TryRead(new object[] { okAlbumId, "Test" }, out var result));
         }
 
@@ -61,14 +66,14 @@ namespace OPM0PG_HFT_2022231.Test
             string nonExistGenre = "Test";
             string okGenre = "Electronic";
 
-            Assert.Throws<DeleteException>(() => logic.RemoveGenre(negAlbumid, okGenre));
-            Assert.Throws<DeleteException>(() => logic.RemoveGenre(nonExistAlbumId, okGenre));
-            Assert.Throws<DeleteException>(() => logic.RemoveGenre(okAlbumId, nullGenre));
-            Assert.Throws<DeleteException>(() => logic.RemoveGenre(okAlbumId, emptyGenre));
-            Assert.Throws<DeleteException>(() => logic.RemoveGenre(okAlbumId, longGenre));
-            Assert.Throws<DeleteException>(() => logic.RemoveGenre(okAlbumId, nonExistGenre));
+            Assert.Throws<DeleteException>(() => logic.DeleteGenre(negAlbumid, okGenre));
+            Assert.Throws<DeleteException>(() => logic.DeleteGenre(nonExistAlbumId, okGenre));
+            Assert.Throws<DeleteException>(() => logic.DeleteGenre(okAlbumId, nullGenre));
+            Assert.Throws<DeleteException>(() => logic.DeleteGenre(okAlbumId, emptyGenre));
+            Assert.Throws<DeleteException>(() => logic.DeleteGenre(okAlbumId, longGenre));
+            Assert.Throws<DeleteException>(() => logic.DeleteGenre(okAlbumId, nonExistGenre));
 
-            Assert.DoesNotThrow(() => logic.RemoveGenre(okAlbumId, okGenre));
+            Assert.DoesNotThrow(() => logic.DeleteGenre(okAlbumId, okGenre));
             Assert.That(!repository.Genres.TryRead(new object[] { okAlbumId, okGenre }, out var result));
         }
 
@@ -100,7 +105,28 @@ namespace OPM0PG_HFT_2022231.Test
                    .Distinct()
                    .SequenceEqual(logic.ReadAllArtistGenre()));
         }
+        [Test]
+        public void ReadGenreTest()
+        {
+            int negAlbumid = -1;
+            int nonExistAlbumId = 1322313;
+            int okAlbumId = 796235;
+            string nullGenre = null;
+            string emptyGenre = "";
+            string longGenre = new string('x', 256);
+            string nonExistGenre = "Test";
+            string okGenre = "Electronic";
 
+            Assert.Throws<ReadException>(() => logic.ReadGenre(negAlbumid, okGenre));
+            Assert.Throws<ReadException>(() => logic.ReadGenre(nonExistAlbumId, okGenre));
+            Assert.Throws<ReadException>(() => logic.ReadGenre(okAlbumId, nullGenre));
+            Assert.Throws<ReadException>(() => logic.ReadGenre(okAlbumId, emptyGenre));
+            Assert.Throws<ReadException>(() => logic.ReadGenre(okAlbumId, longGenre));
+            Assert.Throws<ReadException>(() => logic.ReadGenre(okAlbumId, nonExistGenre));
+
+            Assert.DoesNotThrow(() => logic.ReadGenre(okAlbumId, okGenre));
+            Assert.That(repository.Genres.TryRead(new object[] { okAlbumId, okGenre }, out var result));
+        }
         [Test]
         public void GetArtistPerGenre()
         {
