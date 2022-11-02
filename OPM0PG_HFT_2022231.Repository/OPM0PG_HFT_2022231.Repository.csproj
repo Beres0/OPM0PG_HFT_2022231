@@ -5,44 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Seeds\AlbumGenreSeed.xml" />
-    <None Remove="Seeds\AlbumSeed.xml" />
-    <None Remove="Seeds\ArtistSeed.xml" />
-    <None Remove="Seeds\ContributionSeed.xml" />
-    <None Remove="Seeds\MembershipSeed.xml" />
-    <None Remove="Seeds\PartSeed.xml" />
-    <None Remove="Seeds\ReleaseSeed.xml" />
-    <None Remove="Seeds\TrackSeed.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Seeds\AlbumGenreSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Seeds\AlbumSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Seeds\ArtistSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Seeds\ContributionSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Seeds\MembershipSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Seeds\PartSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Seeds\ReleaseSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Seeds\TrackSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.14" />
