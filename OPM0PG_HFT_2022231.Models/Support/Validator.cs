@@ -62,7 +62,7 @@ namespace OPM0PG_HFT_2022231.Models.Support
             }
         }
 
-        public static void Throws<TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null)
+        public static void Validate<TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null)
         {
             foreach (var attribute in validators[Normalize(propName)])
             {

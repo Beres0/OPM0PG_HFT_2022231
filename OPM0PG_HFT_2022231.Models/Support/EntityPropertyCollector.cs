@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace OPM0PG_HFT_2022231.Models.Support
 {
-    internal class EntityPropertyCollector<TEntity>
+    public class EntityPropertyCollector<TEntity>
           where TEntity : class, IEntity
     {
         public static PropertyInfo[] CollectProperties()
