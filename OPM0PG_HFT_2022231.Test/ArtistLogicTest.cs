@@ -57,27 +57,28 @@ namespace OPM0PG_HFT_2022231.Test
             var circularRefMemberId = new Membership { BandId = 1775650, MemberId = 58955 };
             var alreadyAdded = new Membership { BandId = 1775650, MemberId = 668288 };
 
-
             Assert.Throws<ArgumentNullException>(() => logic.CreateMembership(nullMembership));
-            Assert.Throws<CreateException>(() =>logic.CreateMembership(sameId));
-            Assert.Throws<CreateException>(() =>logic.CreateMembership(nonPosBandId));
-            Assert.Throws<CreateException>(() =>logic.CreateMembership(nonPosMemberId));
-            Assert.Throws<CreateException>(() =>logic.CreateMembership(nonExistBandId));
-            Assert.Throws<CreateException>(() =>logic.CreateMembership(nonExistMemberId));
-            Assert.Throws<CreateException>(() =>logic.CreateMembership(circularRefBandId));
-            Assert.Throws<CreateException>(() =>logic.CreateMembership(circularRefMemberId));
-            Assert.Throws<CreateException>(() =>logic.CreateMembership(alreadyAdded));
+            Assert.Throws<CreateException>(() => logic.CreateMembership(sameId));
+            Assert.Throws<CreateException>(() => logic.CreateMembership(nonPosBandId));
+            Assert.Throws<CreateException>(() => logic.CreateMembership(nonPosMemberId));
+            Assert.Throws<CreateException>(() => logic.CreateMembership(nonExistBandId));
+            Assert.Throws<CreateException>(() => logic.CreateMembership(nonExistMemberId));
+            Assert.Throws<CreateException>(() => logic.CreateMembership(circularRefBandId));
+            Assert.Throws<CreateException>(() => logic.CreateMembership(circularRefMemberId));
+            Assert.Throws<CreateException>(() => logic.CreateMembership(alreadyAdded));
 
             var ok = new Membership { BandId = 69226, MemberId = 400589 };
             Assert.DoesNotThrow(() => logic.CreateMembership(ok));
 
             Assert.That(repository.Memberships.TryRead(ok.GetId(), out Membership okExists));
         }
+
         private void AssertMembershipReadException(Membership membership)
         {
             Assert.Throws<ReadException>(() =>
                     logic.ReadMembership(membership.BandId, membership.MemberId));
         }
+
         [Test]
         public void ReadMembershipTest()
         {
@@ -144,18 +145,17 @@ namespace OPM0PG_HFT_2022231.Test
             var nonExistMembership = new Membership { BandId = 69226, MemberId = 308509 };
 
             Assert.Throws<ArgumentNullException>(() => logic.UpdateMembership(nullMembership));
-            Assert.Throws<UpdateException>(() =>logic.UpdateMembership(nonPosBandId));
-            Assert.Throws<UpdateException>(() =>logic.UpdateMembership(nonPosMemberId));
-            Assert.Throws<UpdateException>(() =>logic.UpdateMembership(nonExistBandId));
-            Assert.Throws<UpdateException>(() =>logic.UpdateMembership(nonExistMemberId));
-            Assert.Throws<UpdateException>(() =>logic.UpdateMembership(nonExistMembership));
-
+            Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonPosBandId));
+            Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonPosMemberId));
+            Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonExistBandId));
+            Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonExistMemberId));
+            Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonExistMembership));
 
             var trueSetFalse = new Membership() { BandId = 58955, MemberId = 142412 };
             logic.UpdateMembership(trueSetFalse);
             Assert.That(!repository.Memberships.Read(trueSetFalse.BandId, trueSetFalse.MemberId).Active);
 
-            var falseSetTrue = new Membership() { BandId = 58955, MemberId = 400589,Active=true };
+            var falseSetTrue = new Membership() { BandId = 58955, MemberId = 400589, Active = true };
             logic.UpdateMembership(falseSetTrue);
             Assert.That(repository.Memberships.Read(falseSetTrue.BandId, falseSetTrue.MemberId).Active);
         }

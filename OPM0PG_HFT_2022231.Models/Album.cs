@@ -37,7 +37,5 @@ namespace OPM0PG_HFT_2022231.Models
         public virtual ICollection<Release> Releases { get; set; }
 
         public object[] GetId() => new object[] { Id };
-
-     
     }
 }

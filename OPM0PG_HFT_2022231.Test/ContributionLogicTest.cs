@@ -23,6 +23,7 @@ namespace OPM0PG_HFT_2022231.Test
         {
             repository.Reset();
         }
+
         [Test]
         public void ReadContributionTest()
         {
@@ -61,10 +62,12 @@ namespace OPM0PG_HFT_2022231.Test
 
             Assert.DoesNotThrow(() => logic.CreateContribution(new Contribution() { AlbumId = 27320, ArtistId = okArtistId }));
         }
-        private void AssertCreateContributionException(int albumId,int artistId)
+
+        private void AssertCreateContributionException(int albumId, int artistId)
         {
             Assert.Throws<CreateException>(() => logic.CreateContribution(new Contribution() { AlbumId = albumId, ArtistId = artistId }));
         }
+
         [Test]
         public void RemoveContribution()
         {

@@ -7,7 +7,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class ArtistController : ControllerBase,IArtistLogic
+    public class ArtistController : ControllerBase, IArtistLogic
     {
         private IArtistLogic logic;
 
@@ -17,7 +17,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         }
 
         [HttpPost]
-        public void CreateMembership([FromBody]Membership membership)
+        public void CreateMembership([FromBody] Membership membership)
         {
             logic.CreateMembership(membership);
         }
@@ -81,6 +81,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         {
             logic.UpdateArtist(artist);
         }
+
         [HttpGet("{bandId},{memberId}")]
         public Membership ReadMembership(int bandId, int memberId)
         {

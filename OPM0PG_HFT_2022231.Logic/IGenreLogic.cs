@@ -7,6 +7,7 @@ namespace OPM0PG_HFT_2022231.Logic
     public interface IGenreLogic
     {
         void CreateGenre(AlbumGenre genre);
+
         AlbumGenre ReadGenre(int albumId, string genre);
 
         IEnumerable<AlbumPerGenreDTO> GetAlbumPerGenre();

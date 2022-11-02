@@ -26,7 +26,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
                 CheckKeyExists(repository.Artists, contribution.ArtistId);
                 CheckKeyExists(repository.Albums, contribution.AlbumId);
-                CheckKeyAlreadyAdded(repository.Contributions,nameof(contribution), contribution.GetId());
+                CheckKeyAlreadyAdded(repository.Contributions, nameof(contribution), contribution.GetId());
                 repository.Contributions.Create(contribution);
             }
             catch (Exception ex)
@@ -63,7 +63,6 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             {
                 throw new ReadException(typeof(Contribution), ex, albumId, artistId);
             }
-
         }
     }
 }

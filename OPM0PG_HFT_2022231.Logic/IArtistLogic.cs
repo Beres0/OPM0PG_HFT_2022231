@@ -18,6 +18,7 @@ namespace OPM0PG_HFT_2022231.Logic
         IEnumerable<Artist> ReadAllArtist();
 
         IEnumerable<Membership> ReadAllMembership();
+
         Membership ReadMembership(int bandId, int memberId);
 
         Artist ReadArtist(int id);

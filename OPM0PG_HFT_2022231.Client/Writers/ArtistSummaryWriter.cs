@@ -8,10 +8,9 @@ namespace OPM0PG_HFT_2022231.Client.Writers
         public ArtistSummaryWriter() : base(typeof(ArtistSummaryDTO))
         { }
 
-
         protected override void WriteMethod(object obj)
         {
-           var summary=(ArtistSummaryDTO)obj;
+            var summary = (ArtistSummaryDTO)obj;
             Console.WriteLine($"[{summary.Id}] {summary.Name}");
             WriteCollection("Members", summary.Members, (m) => $"[{m.Id}] {m.Name} - {m.Active}");
             WriteCollection("Bands", summary.Bands, (m) => $"[{m.Id}] {m.Name} - {m.IsMemberActive}");

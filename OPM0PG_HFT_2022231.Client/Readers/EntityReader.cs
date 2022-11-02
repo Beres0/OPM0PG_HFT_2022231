@@ -7,16 +7,16 @@ using System.Globalization;
 namespace OPM0PG_HFT_2022231.Client.Readers
 {
     public class EntityReader<TEntity> : ConsoleTypeReader
-        where TEntity : class, IEntity,new()
+        where TEntity : class, IEntity, new()
     {
-        static Dictionary<Type, Func<string, object>> converters = new Dictionary<Type, Func<string, object>>()
+        private static Dictionary<Type, Func<string, object>> converters = new Dictionary<Type, Func<string, object>>()
         {
             {typeof(TimeSpan),(s)=>TimeSpan.ParseExact(s,@"hh\:mm\:ss",CultureInfo.CurrentCulture) },
             {typeof(TimeSpan?),(s)=>TimeSpan.TryParseExact(s,@"hh\:mm\:ss",CultureInfo.CurrentCulture, out var result)?result:null},
         };
+
         public EntityReader() : base(typeof(TEntity))
         { }
-      
 
         protected override object ReadMethod()
         {
@@ -31,13 +31,13 @@ namespace OPM0PG_HFT_2022231.Client.Readers
                     {
                         Console.Write($"\t{item.Name}({item.PropertyType.Name}): ");
                         object input;
-                        if(converters.TryGetValue(item.PropertyType,out var converter))
+                        if (converters.TryGetValue(item.PropertyType, out var converter))
                         {
-                             input = converter(Console.ReadLine());
+                            input = converter(Console.ReadLine());
                         }
                         else
                         {
-                             input = Convert.ChangeType(Console.ReadLine(), item.PropertyType);
+                            input = Convert.ChangeType(Console.ReadLine(), item.PropertyType);
                         }
                         item.SetValue(entity, input);
                         succes = true;

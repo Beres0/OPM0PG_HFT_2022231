@@ -6,7 +6,6 @@ using OPM0PG_HFT_2022231.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using static Microsoft.EntityFrameworkCore.Internal.AsyncLock;
 
 namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
@@ -341,7 +340,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Album>.Validate(albumId,nameof(Album.Id));
+                Validator<Album>.Validate(albumId, nameof(Album.Id));
                 CheckKeyExists(repository.Albums, albumId);
                 repository.Albums.Delete(albumId);
             }

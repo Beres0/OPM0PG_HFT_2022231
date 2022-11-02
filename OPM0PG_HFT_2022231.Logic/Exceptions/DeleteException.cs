@@ -2,8 +2,6 @@
 
 namespace OPM0PG_HFT_2022231.Logic.Validating.Exceptions
 {
-  
-
     public class DeleteException : CRUDException
     {
         private static string ExceptionMessage(Type entityType, Exception innerException, object[] id)
@@ -12,8 +10,9 @@ namespace OPM0PG_HFT_2022231.Logic.Validating.Exceptions
                 $"Error in deleting! [{entityType.Name} - ({(id is null ? "null" : string.Join(", ", id))})"
                 : innerException.Message;
         }
+
         public DeleteException(Type entityType, Exception innerException = null, params object[] id)
-          : base(entityType, ExceptionMessage(entityType,innerException,id), innerException)
+          : base(entityType, ExceptionMessage(entityType, innerException, id), innerException)
         { }
     }
 }

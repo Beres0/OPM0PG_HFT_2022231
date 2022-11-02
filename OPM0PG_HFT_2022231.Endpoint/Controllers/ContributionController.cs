@@ -27,6 +27,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         {
             return logic.ReadAllContributions();
         }
+
         [HttpDelete("{albumId},{artistId}")]
         public Contribution ReadContribution(int albumId, int artistId)
         {

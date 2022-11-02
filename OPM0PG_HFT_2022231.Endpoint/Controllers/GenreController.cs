@@ -8,7 +8,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class GenreController : ControllerBase,IGenreLogic
+    public class GenreController : ControllerBase, IGenreLogic
     {
         private IGenreLogic logic;
 
@@ -16,8 +16,9 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
         {
             this.logic = logic;
         }
+
         [HttpPost]
-        public void CreateGenre([FromBody]AlbumGenre genre)
+        public void CreateGenre([FromBody] AlbumGenre genre)
         {
             logic.CreateGenre(genre);
         }

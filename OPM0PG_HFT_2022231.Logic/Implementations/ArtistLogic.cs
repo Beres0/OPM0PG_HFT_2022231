@@ -66,7 +66,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             try
             {
                 ValidateMembership(membership);
-                CheckKeyAlreadyAdded(repository.Memberships,nameof(membership),membership.GetId());
+                CheckKeyAlreadyAdded(repository.Memberships, nameof(membership), membership.GetId());
                 repository.Memberships.Create(membership);
             }
             catch (Exception ex)
@@ -200,12 +200,10 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 CheckKeyExists(repository.Memberships, "(bandId,memberId)", bandId, memberId);
                 return repository.Memberships.Read(bandId, memberId);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                throw new ReadException(typeof(Membership), ex, bandId,memberId);
+                throw new ReadException(typeof(Membership), ex, bandId, memberId);
             }
-
-
         }
     }
 }

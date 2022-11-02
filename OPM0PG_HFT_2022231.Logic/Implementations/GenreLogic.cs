@@ -36,7 +36,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 Validator<AlbumGenre>.Validate(genre.AlbumId);
                 Validator<AlbumGenre>.Validate(genre.Genre);
                 CheckKeyExists(repository.Albums, genre.AlbumId);
-                CheckKeyAlreadyAdded(repository.Genres,nameof(genre),genre.GetId());
+                CheckKeyAlreadyAdded(repository.Genres, nameof(genre), genre.GetId());
                 repository.Genres.Create(genre);
             }
             catch (Exception ex)

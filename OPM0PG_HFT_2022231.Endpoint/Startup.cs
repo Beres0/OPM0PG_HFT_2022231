@@ -68,7 +68,7 @@ namespace OPM0PG_HFT_2022231.Endpoint
                     .Get<IExceptionHandlerFeature>()
                     .Error;
 
-                var response = new { error = exception.Message};
+                var response = new { error = exception.Message };
                 await context.Response.WriteAsJsonAsync(response);
             }));
 

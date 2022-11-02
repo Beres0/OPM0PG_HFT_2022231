@@ -28,10 +28,11 @@ namespace OPM0PG_HFT_2022231.Test
             repository.Reset();
         }
 
-        private void AssertCreateGenreException(int albumId,string genre)
+        private void AssertCreateGenreException(int albumId, string genre)
         {
             Assert.Throws<CreateException>(() => logic.CreateGenre(new AlbumGenre() { AlbumId = albumId, Genre = genre }));
         }
+
         [Test]
         public void CreateGenreTest()
         {
@@ -105,6 +106,7 @@ namespace OPM0PG_HFT_2022231.Test
                    .Distinct()
                    .SequenceEqual(logic.ReadAllArtistGenre()));
         }
+
         [Test]
         public void ReadGenreTest()
         {
@@ -127,6 +129,7 @@ namespace OPM0PG_HFT_2022231.Test
             Assert.DoesNotThrow(() => logic.ReadGenre(okAlbumId, okGenre));
             Assert.That(repository.Genres.TryRead(new object[] { okAlbumId, okGenre }, out var result));
         }
+
         [Test]
         public void GetArtistPerGenre()
         {
