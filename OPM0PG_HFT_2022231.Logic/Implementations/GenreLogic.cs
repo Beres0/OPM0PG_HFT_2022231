@@ -29,33 +29,28 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 .Distinct();
         }
 
-        public void AddGenre(int albumId, string genre)
+        public void CreateGenre(AlbumGenre genre)
         {
-            AlbumGenre albumGenre = new AlbumGenre()
-            {
-                AlbumId = albumId,
-                Genre = genre
-            };
             try
             {
-                Validator<AlbumGenre>.Throws(albumId);
-                Validator<AlbumGenre>.Throws(genre);
-                CheckKeyExists(repository.Albums, albumId);
-                CheckKeyAlreadyAdded(repository.Genres, "(albumId,genre)", albumId, genre);
-                repository.Genres.Create(albumGenre);
+                Validator<AlbumGenre>.Validate(genre.AlbumId);
+                Validator<AlbumGenre>.Validate(genre.Genre);
+                CheckKeyExists(repository.Albums, genre.AlbumId);
+                CheckKeyAlreadyAdded(repository.Genres,nameof(genre),genre.GetId());
+                repository.Genres.Create(genre);
             }
             catch (Exception ex)
             {
-                throw new CreateException(albumGenre, ex);
+                throw new CreateException(genre, ex);
             }
         }
 
-        public void RemoveGenre(int albumId, string genre)
+        public void DeleteGenre(int albumId, string genre)
         {
             try
             {
-                Validator<AlbumGenre>.Throws(albumId);
-                Validator<AlbumGenre>.Throws(genre);
+                Validator<AlbumGenre>.Validate(albumId);
+                Validator<AlbumGenre>.Validate(genre);
                 CheckKeyExists(repository.Genres, "(albumId,genre)", albumId, genre);
                 repository.Genres.Delete(albumId, genre);
             }
@@ -83,6 +78,21 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             return ReadAllArtistGenre()
                    .GroupBy(g => g.Genre)
                    .Select(g => new ArtistPerGenreDTO(g.Key, g.Count()));
+        }
+
+        public AlbumGenre ReadGenre(int albumId, string genre)
+        {
+            try
+            {
+                Validator<AlbumGenre>.Validate(albumId);
+                Validator<AlbumGenre>.Validate(genre);
+                CheckKeyExists(repository.Genres, "(albumId,genre)", albumId, genre);
+                return repository.Genres.Read(albumId, genre);
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(AlbumGenre), ex, albumId, genre);
+            }
         }
     }
 }

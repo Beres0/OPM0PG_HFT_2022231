@@ -19,7 +19,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             if (!repository.TryRead(id, out TEntity entity))
             {
-                throw new ArgumentException($"The given key '{argName}' is not found! Key: ({string.Join(", ", id)}) ");
+                throw new ArgumentException($"The given key '{argName}' is not found! Key: ({string.Join(", ", id)})");
             }
         }
 

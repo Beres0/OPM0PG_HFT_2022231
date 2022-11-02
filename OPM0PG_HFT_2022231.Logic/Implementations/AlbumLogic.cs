@@ -6,6 +6,7 @@ using OPM0PG_HFT_2022231.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using static Microsoft.EntityFrameworkCore.Internal.AsyncLock;
 
 namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
@@ -16,16 +17,17 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         private void ValidateTrackAtCreating(Track track, out Part part)
         {
-            Validator<Track>.Throws(track.PartId);
-            Validator<Track>.Throws(track.Title);
+            Validator<Track>.Validate(track.PartId);
+            Validator<Track>.Validate(track.Title);
+            CheckKeyExists(repository.Parts, track.PartId);
             part = repository.Parts.Read(track.PartId);
         }
 
         private void ValidateTrackAtUpdating(Track track, out Part part)
         {
-            Validator<Track>.Throws(track.PartId);
-            Validator<Track>.Throws(track.Title);
-
+            Validator<Track>.Validate(track.PartId);
+            Validator<Track>.Validate(track.Title);
+            CheckKeyExists(repository.Parts, track.PartId);
             part = repository.Parts.Read(track.PartId);
 
             int lastPosition = part.Tracks.Count;
@@ -37,11 +39,11 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         private void ValidatePartAtCreating(Part part, out Album album)
         {
-            Validator<Part>.Throws(part.AlbumId);
-
+            Validator<Part>.Validate(part.AlbumId);
+            CheckKeyExists(repository.Albums, part.AlbumId);
             album = repository.Albums.Read(part.AlbumId);
             if (string.IsNullOrWhiteSpace(part.Title)) part.Title = album.Title;
-            Validator<Part>.Throws(part.Title);
+            Validator<Part>.Validate(part.Title);
 
             int lastPosition = album.Parts.Count + 1;
             if (part.Position < 1 || lastPosition < part.Position)
@@ -52,9 +54,9 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         private void ValidatePartAtUpdating(Part part, out Album album)
         {
-            Validator<Part>.Throws(part.Id);
-            Validator<Part>.Throws(part.Title);
-
+            Validator<Part>.Validate(part.Id);
+            Validator<Part>.Validate(part.Title);
+            CheckKeyExists(repository.Albums, part.AlbumId);
             album = repository.Albums.Read(part.AlbumId);
 
             int lastPosition = album.Parts.Count;
@@ -73,8 +75,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
             try
             {
-                Validator<Album>.Throws(album.Title);
-                Validator<Album>.Throws(album.Year);
+                Validator<Album>.Validate(album.Title);
+                Validator<Album>.Validate(album.Year);
                 repository.Albums.Create(album);
             }
             catch (Exception ex)
@@ -120,7 +122,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Album>.Throws(albumId, nameof(Album.Id));
+                Validator<Album>.Validate(albumId, nameof(Album.Id));
+                CheckKeyExists(repository.Albums, albumId);
                 return repository.Albums.Read(albumId);
             }
             catch (Exception ex)
@@ -158,7 +161,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Part>.Throws(partId, nameof(Part.Id));
+                Validator<Part>.Validate(partId, nameof(Part.Id));
+                CheckKeyExists(repository.Parts, partId);
                 return repository.Parts.Read(partId);
             }
             catch (Exception ex)
@@ -171,9 +175,9 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Part>.Throws(albumId);
-                Validator<Part>.Throws(position);
-
+                Validator<Part>.Validate(albumId);
+                Validator<Part>.Validate(position);
+                CheckKeyExists(repository.Albums, albumId);
                 Part part = ReadAlbum(albumId).Parts.FirstOrDefault(p => p.Position == position);
                 if (part == null) throw new ArgumentException($" '{position}' position of part doesn't exist!");
                 return part;
@@ -188,9 +192,9 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Track>.Throws(partId);
-                Validator<Track>.Throws(position);
-
+                Validator<Track>.Validate(partId);
+                Validator<Track>.Validate(position);
+                CheckKeyExists(repository.Parts, partId);
                 Track track = repository.Parts.Read(partId).Tracks.FirstOrDefault(t => t.Position == position);
                 if (track == null) throw new ArgumentException($"'{position}' position of track doesn't exist!");
                 return track;
@@ -212,8 +216,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                string a = nameof(Track.Id);
-                Validator<Track>.Throws(trackId, nameof(Track.Id));
+                Validator<Track>.Validate(trackId, nameof(Track.Id));
+                CheckKeyExists(repository.Tracks, trackId);
                 return repository.Tracks.Read(trackId);
             }
             catch (Exception ex)
@@ -231,9 +235,9 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
             try
             {
-                Validator<Album>.Throws(album.Id);
-                Validator<Album>.Throws(album.Title);
-                Validator<Album>.Throws(album.Year);
+                Validator<Album>.Validate(album.Id);
+                Validator<Album>.Validate(album.Title);
+                Validator<Album>.Validate(album.Year);
                 CheckKeyExists(repository.Albums, album.Id);
                 repository.Albums.Update(album);
             }
@@ -323,7 +327,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             try
             {
                 ValidateTrackAtUpdating(track, out Part part);
-                Validator<Track>.Throws(track.Id);
+                Validator<Track>.Validate(track.Id);
                 Track old = ReadTrack(track.Id);
                 InsertTemplate(repository.Tracks, track, old, part, (p) => p.Tracks, p => p.Position, (t, i) => t.Position = i);
             }
@@ -337,7 +341,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Album>.Throws(nameof(Album.Id));
+                Validator<Album>.Validate(albumId,nameof(Album.Id));
                 CheckKeyExists(repository.Albums, albumId);
                 repository.Albums.Delete(albumId);
             }
@@ -351,7 +355,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Part>.Throws(partId, nameof(Part.Id));
+                Validator<Part>.Validate(partId, nameof(Part.Id));
                 Part part = ReadPart(partId);
 
                 repository.Parts.ChainActions()
@@ -369,8 +373,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Album>.Throws(albumId, nameof(Album.Id));
-                Validator<Part>.Throws(position);
+                Validator<Album>.Validate(albumId, nameof(Album.Id));
+                Validator<Part>.Validate(position);
                 DeletePart(ReadPartByPosition(albumId, position).Id);
             }
             catch (Exception ex)
@@ -383,7 +387,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Track>.Throws(trackId, nameof(Track.Id));
+                Validator<Track>.Validate(trackId, nameof(Track.Id));
                 Track track = ReadTrack(trackId);
 
                 repository.Tracks.ChainActions()
@@ -401,8 +405,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Part>.Throws(partId, nameof(Part.Id));
-                Validator<Track>.Throws(position);
+                Validator<Part>.Validate(partId, nameof(Part.Id));
+                Validator<Track>.Validate(position);
                 DeleteTrack(ReadTrackByPosition(partId, position).Id);
             }
             catch (Exception ex)
@@ -415,8 +419,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Album>.Throws(albumId, nameof(Album.Id));
-                Validator<Part>.Throws(partPosition, nameof(Part.Position));
+                Validator<Album>.Validate(albumId, nameof(Album.Id));
+                Validator<Part>.Validate(partPosition, nameof(Part.Position));
                 DeleteTrack(ReadTrackByPosition(albumId, partPosition, trackPosition).Id);
             }
             catch (Exception ex)
@@ -429,7 +433,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Part>.Throws(partId, nameof(Part.Id));
+                Validator<Part>.Validate(partId, nameof(Part.Id));
                 CheckKeyExists(repository.Parts, partId, nameof(Part.Id));
                 return TimeSpan.FromMinutes(repository.Parts.Read(partId)
                                            .Tracks.Sum(t => t.Duration.HasValue ? t.Duration.Value.Minutes : 0));
@@ -444,7 +448,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Album>.Throws(albumId, nameof(Album.Id));
+                Validator<Album>.Validate(albumId, nameof(Album.Id));
                 CheckKeyExists(repository.Albums, albumId, nameof(Album.Id));
                 return TimeSpan.FromMinutes(repository.Albums.Read(albumId)
                                            .Parts.SelectMany(p => p.Tracks)

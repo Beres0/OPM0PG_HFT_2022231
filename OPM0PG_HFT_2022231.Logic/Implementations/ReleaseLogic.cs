@@ -16,11 +16,11 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         private void ValidateRelease(Release release)
         {
-            Validator<Release>.Throws(release.Id);
-            Validator<Release>.Throws(release.AlbumId);
-            Validator<Release>.Throws(release.Country);
-            Validator<Release>.Throws(release.Publisher);
-            Validator<Release>.Throws(release.ReleaseYear);
+            Validator<Release>.Validate(release.Id);
+            Validator<Release>.Validate(release.AlbumId);
+            Validator<Release>.Validate(release.Country);
+            Validator<Release>.Validate(release.Publisher);
+            Validator<Release>.Validate(release.ReleaseYear);
             CheckKeyExists(repository.Albums, release.AlbumId);
         }
 
@@ -47,7 +47,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Release>.Throws(releaseId, nameof(Release.Id));
+                Validator<Release>.Validate(releaseId, nameof(Release.Id));
+                CheckKeyExists(repository.Releases, releaseId);
                 return repository.Releases.Read(releaseId);
             }
             catch (Exception ex)
@@ -123,7 +124,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Release>.Throws(releaseId, nameof(Release.Id));
+                Validator<Release>.Validate(releaseId, nameof(Release.Id));
                 CheckKeyExists(repository.Releases, releaseId);
                 repository.Releases.Delete(releaseId);
             }

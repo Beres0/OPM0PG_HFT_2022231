@@ -32,7 +32,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Artist>.Throws(albumId, nameof(Album.Id));
+                Validator<Artist>.Validate(albumId, nameof(Album.Id));
 
                 Album al = album.ReadAlbum(albumId);
 
@@ -62,7 +62,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         {
             try
             {
-                Validator<Artist>.Throws(artistId, nameof(Artist.Id));
+                Validator<Artist>.Validate(artistId, nameof(Artist.Id));
                 var art = artist.ReadArtist(artistId);
                 var albums = contribution.ReadAllContributions()
                              .Where(c => artistId == c.ArtistId)
