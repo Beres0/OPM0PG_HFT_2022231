@@ -6,7 +6,8 @@ namespace OPM0PG_HFT_2022231.Logic
 {
     public interface IGenreLogic
     {
-        void AddGenre(int albumId, string genre);
+        void CreateGenre(AlbumGenre genre);
+        AlbumGenre ReadGenre(int albumId, string genre);
 
         IEnumerable<AlbumPerGenreDTO> GetAlbumPerGenre();
 
@@ -18,6 +19,6 @@ namespace OPM0PG_HFT_2022231.Logic
 
         IEnumerable<ArtistGenreDTO> ReadAllArtistGenre();
 
-        void RemoveGenre(int albumId, string genre);
+        void DeleteGenre(int albumId, string genre);
     }
 }
