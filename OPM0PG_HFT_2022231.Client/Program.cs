@@ -26,7 +26,7 @@ namespace OPM0PG_HFT_2022231.Client
             client.JsonConverters.Add(new DurationJsonConverter());
             client.Show();
         }
-       
+
         private static void Main(string[] args)
         {
             ClientTest(args);

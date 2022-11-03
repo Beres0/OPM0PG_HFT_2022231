@@ -1,8 +1,6 @@
-﻿using OPM0PG_HFT_2022231.Models.Support;
+﻿using Newtonsoft.Json;
 using System;
 using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
-
 using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models

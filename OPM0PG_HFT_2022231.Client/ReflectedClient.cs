@@ -29,13 +29,13 @@ namespace OPM0PG_HFT_2022231.Client
             this.args = args;
             Readers = new ConsoleTypeReaderCollection();
             Writers = new ConsoleTypeWriterCollection();
-            JsonConverters =new List<JsonConverter>();
+            JsonConverters = new List<JsonConverter>();
             rootMenu = BuildRootMenu();
         }
 
+        public List<JsonConverter> JsonConverters { get; }
         public ConsoleTypeReaderCollection Readers { get; }
         public ConsoleTypeWriterCollection Writers { get; }
-        public List<JsonConverter> JsonConverters { get; }
 
         public void Show()
         {
@@ -129,7 +129,7 @@ namespace OPM0PG_HFT_2022231.Client
                 ParameterInfo[] parameters = httpMethod.GetParameters();
                 string requestUrl = GetRequestUrl(httpMethod);
                 object content = ReadFromBodyParameter(parameters[0]);
-                var response = restService.PostAsync(requestUrl,content,JsonConverters.ToArray()).Result;
+                var response = restService.PostAsync(requestUrl, content, JsonConverters.ToArray()).Result;
                 WriteResponse(httpMethod, response);
                 Console.ReadLine();
             }
@@ -143,7 +143,7 @@ namespace OPM0PG_HFT_2022231.Client
                 ParameterInfo[] parameters = httpMethod.GetParameters();
                 string requestUrl = GetRequestUrl(httpMethod);
                 object content = ReadFromBodyParameter(parameters[0]);
-                var response = restService.PutAsync(requestUrl, content,JsonConverters.ToArray()).Result;
+                var response = restService.PutAsync(requestUrl, content, JsonConverters.ToArray()).Result;
                 WriteResponse(httpMethod, response);
                 Console.ReadLine();
             };
@@ -191,9 +191,9 @@ namespace OPM0PG_HFT_2022231.Client
                Writers.Contains(httpMethod.ReturnType))
             {
                 Writers[httpMethod.ReturnType]
-                    .Write(JsonConvert.DeserializeObject(jsonString, httpMethod.ReturnType,JsonConverters.ToArray()));
+                    .Write(JsonConvert.DeserializeObject(jsonString, httpMethod.ReturnType, JsonConverters.ToArray()));
             }
-            else if(!string.IsNullOrWhiteSpace(jsonString))
+            else if (!string.IsNullOrWhiteSpace(jsonString))
             {
                 try
                 {

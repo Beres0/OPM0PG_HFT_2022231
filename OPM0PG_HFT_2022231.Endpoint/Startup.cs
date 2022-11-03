@@ -33,7 +33,7 @@ namespace OPM0PG_HFT_2022231.Endpoint
             }
             app.UseExceptionHandler(c => c.Run(async context =>
             {
-                context.Response.StatusCode =StatusCodes.Status400BadRequest;
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
                 var exception = context.Features
                     .Get<IExceptionHandlerFeature>()
                     .Error;
@@ -69,7 +69,7 @@ namespace OPM0PG_HFT_2022231.Endpoint
                 setup.SerializerSettings.Converters.Add(new DurationJsonConverter());
                 setup.SerializerSettings.Converters.Add(new NullableDurationJsonConverter());
             });
-         
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "OPM0PG_HFT_2022231.Endpoint", Version = "v1" });

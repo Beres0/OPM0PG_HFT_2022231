@@ -11,7 +11,13 @@ namespace OPM0PG_HFT_2022231.Models.Support
         private static readonly Type CollectionType = typeof(HashSet<>);
         private static readonly Action<TEntity>[] propertySetters = CreatePropertySetters();
 
-
+        public static void SetInverseProperties(TEntity entity)
+        {
+            foreach (var setter in propertySetters)
+            {
+                setter(entity);
+            }
+        }
 
         private static Action<TEntity>[] CreatePropertySetters()
         {
@@ -33,18 +39,12 @@ namespace OPM0PG_HFT_2022231.Models.Support
             }
             return collectionSetters;
         }
+
         private static ConstructorInfo GetCollectionConstructorInfo(PropertyInfo prop)
         {
             Type genericParameter = prop.PropertyType.GetGenericArguments()[0];
             Type genericCollectionType = CollectionType.GetGenericTypeDefinition().MakeGenericType(genericParameter);
             return genericCollectionType.GetConstructor(new Type[] { });
-        }
-        public static void SetInverseProperties(TEntity entity)
-        {
-            foreach (var setter in propertySetters)
-            {
-                setter(entity);
-            }
         }
     }
 }

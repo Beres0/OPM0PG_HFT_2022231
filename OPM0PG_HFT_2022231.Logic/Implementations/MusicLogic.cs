@@ -33,7 +33,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             try
             {
                 Validator<Artist>.Validate(albumId, nameof(Album.Id));
-                
+
                 Album al = album.ReadAlbum(albumId);
 
                 var parts = al.Parts.OrderBy(p => p.Position).Select(p =>

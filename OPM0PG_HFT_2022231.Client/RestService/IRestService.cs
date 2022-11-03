@@ -9,5 +9,6 @@ public interface IRestService
     Task<HttpResponseMessage> GetAsync(string requestUri);
 
     Task<HttpResponseMessage> PostAsync<T>(string requestUri, T content, params JsonConverter[] converters);
+
     Task<HttpResponseMessage> PutAsync<T>(string requestUri, T content, params JsonConverter[] converters);
 }

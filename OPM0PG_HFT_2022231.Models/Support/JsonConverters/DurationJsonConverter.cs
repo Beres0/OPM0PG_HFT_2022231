@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Globalization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace OPM0PG_HFT_2022231.Models.Support.JsonConverters
 {
@@ -10,8 +9,7 @@ namespace OPM0PG_HFT_2022231.Models.Support.JsonConverters
         private string format = @"hh\:mm\:ss";
 
         public DurationJsonConverter()
-        { 
-        
+        {
         }
 
         public override TimeSpan ReadJson(JsonReader reader, Type objectType, TimeSpan existingValue, bool hasExistingValue, Newtonsoft.Json.JsonSerializer serializer)
@@ -19,7 +17,7 @@ namespace OPM0PG_HFT_2022231.Models.Support.JsonConverters
             TimeSpan.TryParseExact(reader.Value.ToString(), format, CultureInfo.CurrentCulture, out TimeSpan result);
             return result;
         }
-        
+
         public override void WriteJson(JsonWriter writer, TimeSpan value, JsonSerializer serializer)
         {
             writer.WriteValue(value.ToString(format));

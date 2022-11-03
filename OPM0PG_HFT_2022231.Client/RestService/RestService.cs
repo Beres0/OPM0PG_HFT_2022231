@@ -1,10 +1,8 @@
-﻿using System;
-using System.IO;
-using System.Net;
+﻿using Newtonsoft.Json;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+
 internal class RestService : IRestService
 {
     private HttpClient client;
@@ -28,18 +26,19 @@ internal class RestService : IRestService
         return await client.GetAsync(requestUri);
     }
 
-    private StringContent Serialize<T>(T content,params JsonConverter[] converters)
+    public async Task<HttpResponseMessage> PostAsync<T>(string requestUri, T content, params JsonConverter[] converters)
     {
-        var json = JsonConvert.SerializeObject(content, converters);
-        return new StringContent(json, Encoding.UTF8, "application/json");
-    }
-    public async Task<HttpResponseMessage> PostAsync<T>(string requestUri, T content,params JsonConverter[] converters)
-    {
-        return await client.PostAsync(requestUri, Serialize(content,converters));
+        return await client.PostAsync(requestUri, Serialize(content, converters));
     }
 
     public async Task<HttpResponseMessage> PutAsync<T>(string requestUri, T content, params JsonConverter[] converters)
     {
         return await client.PutAsync(requestUri, Serialize(content, converters));
+    }
+
+    private StringContent Serialize<T>(T content, params JsonConverter[] converters)
+    {
+        var json = JsonConvert.SerializeObject(content, converters);
+        return new StringContent(json, Encoding.UTF8, "application/json");
     }
 }
