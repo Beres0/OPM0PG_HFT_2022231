@@ -1,7 +1,10 @@
-﻿using System.Net.Http;
-using System.Net.Http.Json;
+﻿using System;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
-
+using Newtonsoft.Json;
 internal class RestService : IRestService
 {
     private HttpClient client;
@@ -15,23 +18,28 @@ internal class RestService : IRestService
             ("application/json"));
     }
 
-    public async Task<HttpResponseMessage> DeleteAsync(string url)
+    public async Task<HttpResponseMessage> DeleteAsync(string requestUri)
     {
-        return await client.DeleteAsync(url);
+        return await client.DeleteAsync(requestUri);
     }
 
-    public async Task<HttpResponseMessage> GetAsync(string url)
+    public async Task<HttpResponseMessage> GetAsync(string requestUri)
     {
-        return await client.GetAsync(url);
+        return await client.GetAsync(requestUri);
     }
 
-    public async Task<HttpResponseMessage> PostAsync<T>(string url, T content)
+    private StringContent Serialize<T>(T content,params JsonConverter[] converters)
     {
-        return await client.PostAsJsonAsync(url, content);
+        var json = JsonConvert.SerializeObject(content, converters);
+        return new StringContent(json, Encoding.UTF8, "application/json");
+    }
+    public async Task<HttpResponseMessage> PostAsync<T>(string requestUri, T content,params JsonConverter[] converters)
+    {
+        return await client.PostAsync(requestUri, Serialize(content,converters));
     }
 
-    public async Task<HttpResponseMessage> PutAsync<T>(string url, T content)
+    public async Task<HttpResponseMessage> PutAsync<T>(string requestUri, T content, params JsonConverter[] converters)
     {
-        return await client.PutAsJsonAsync(url, content);
+        return await client.PutAsync(requestUri, Serialize(content, converters));
     }
 }

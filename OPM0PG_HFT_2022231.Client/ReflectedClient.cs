@@ -13,7 +13,7 @@ using System.Reflection;
 
 namespace OPM0PG_HFT_2022231.Client
 {
-    public class ClientGenerator
+    public class ReflectedClient
     {
         private readonly string assemblyName;
         private readonly string domain;
@@ -21,7 +21,7 @@ namespace OPM0PG_HFT_2022231.Client
         private IRestService restService;
         private ConsoleMenu rootMenu;
 
-        public ClientGenerator(string assemblyName, string domain, IRestService restService, string[] args)
+        public ReflectedClient(string assemblyName, string domain, IRestService restService, string[] args)
         {
             this.assemblyName = assemblyName;
             this.domain = domain;
@@ -29,12 +29,13 @@ namespace OPM0PG_HFT_2022231.Client
             this.args = args;
             Readers = new ConsoleTypeReaderCollection();
             Writers = new ConsoleTypeWriterCollection();
-
+            JsonConverters =new List<JsonConverter>();
             rootMenu = BuildRootMenu();
         }
 
         public ConsoleTypeReaderCollection Readers { get; }
         public ConsoleTypeWriterCollection Writers { get; }
+        public List<JsonConverter> JsonConverters { get; }
 
         public void Show()
         {
@@ -101,8 +102,7 @@ namespace OPM0PG_HFT_2022231.Client
                 ParameterInfo[] parameters = httpMethod.GetParameters();
                 string requestUrl = ReadRequestUrlParameters(httpMethod, parameters);
                 var response = restService.DeleteAsync(requestUrl).Result;
-                Console.WriteLine(response.StatusCode);
-                Console.WriteLine(JToken.Parse(ResponseAsString(response)).ToString(Formatting.Indented));
+                WriteResponse(httpMethod, response);
                 Console.ReadLine();
             }
             return Delete;
@@ -115,19 +115,7 @@ namespace OPM0PG_HFT_2022231.Client
                 ParameterInfo[] parameters = httpMethod.GetParameters();
                 string requestUrl = ReadRequestUrlParameters(httpMethod, parameters);
                 var response = restService.GetAsync(requestUrl).Result;
-                Console.WriteLine(response.StatusCode);
-                string jsonString = ResponseAsString(response);
-                if (Writers.Contains(httpMethod.ReturnType))
-                {
-                    Writers[httpMethod.ReturnType].Write(Deserialize(httpMethod, jsonString));
-                }
-                else
-                {
-                    if (!string.IsNullOrEmpty(jsonString))
-                    {
-                        Console.WriteLine(JToken.Parse(jsonString).ToString(Formatting.Indented));
-                    }
-                }
+                WriteResponse(httpMethod, response);
                 Console.ReadLine();
             }
 
@@ -141,9 +129,8 @@ namespace OPM0PG_HFT_2022231.Client
                 ParameterInfo[] parameters = httpMethod.GetParameters();
                 string requestUrl = GetRequestUrl(httpMethod);
                 object content = ReadFromBodyParameter(parameters[0]);
-                var response = restService.PostAsync(requestUrl, content).Result;
-                Console.WriteLine(response.StatusCode);
-                Console.WriteLine(JToken.Parse(ResponseAsString(response)).ToString(Formatting.Indented));
+                var response = restService.PostAsync(requestUrl,content,JsonConverters.ToArray()).Result;
+                WriteResponse(httpMethod, response);
                 Console.ReadLine();
             }
             return Post;
@@ -156,17 +143,11 @@ namespace OPM0PG_HFT_2022231.Client
                 ParameterInfo[] parameters = httpMethod.GetParameters();
                 string requestUrl = GetRequestUrl(httpMethod);
                 object content = ReadFromBodyParameter(parameters[0]);
-                var response = restService.PostAsync(requestUrl, content).Result;
-                Console.WriteLine(response.StatusCode);
-                Console.WriteLine(JToken.Parse(ResponseAsString(response)).ToString(Formatting.Indented));
+                var response = restService.PutAsync(requestUrl, content,JsonConverters.ToArray()).Result;
+                WriteResponse(httpMethod, response);
                 Console.ReadLine();
             };
             return Put;
-        }
-
-        private object Deserialize(MethodInfo httpMethod, string jsonString)
-        {
-            return JsonConvert.DeserializeObject(jsonString, httpMethod.ReturnType);
         }
 
         private string GetRequestUrl(MethodInfo method)
@@ -200,9 +181,29 @@ namespace OPM0PG_HFT_2022231.Client
             return url + string.Join(",", inputs);
         }
 
-        private string ResponseAsString(HttpResponseMessage response)
+        private void WriteResponse(MethodInfo httpMethod, HttpResponseMessage response)
         {
-            return response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine($"statuscode: {response.StatusCode}");
+            string jsonString = response.Content.ReadAsStringAsync().Result;
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK &&
+               httpMethod.ReturnType != typeof(void) &&
+               Writers.Contains(httpMethod.ReturnType))
+            {
+                Writers[httpMethod.ReturnType]
+                    .Write(JsonConvert.DeserializeObject(jsonString, httpMethod.ReturnType,JsonConverters.ToArray()));
+            }
+            else if(!string.IsNullOrWhiteSpace(jsonString))
+            {
+                try
+                {
+                    Console.WriteLine(JToken.Parse(jsonString).ToString(Formatting.Indented));
+                }
+                catch
+                {
+                    Console.WriteLine(jsonString);
+                }
+            }
         }
     }
 }

@@ -1,17 +1,13 @@
 ﻿using OPM0PG_HFT_2022231.Models.Support;
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
 using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
     public class Membership : IEntity
     {
-        public Membership()
-        {
-            InversePropertySetter<Membership>.SetCollections(this);
-        }
-
         public bool Active { get; set; }
 
         [JsonIgnore, XmlIgnore]

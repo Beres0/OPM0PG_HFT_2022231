@@ -6,10 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using OPM0PG_HFT_2022231.Endpoint.JsonConverters;
 using OPM0PG_HFT_2022231.Logic;
 using OPM0PG_HFT_2022231.Logic.Implementations;
-using OPM0PG_HFT_2022231.Models;
+using OPM0PG_HFT_2022231.Models.Support.JsonConverters;
 using OPM0PG_HFT_2022231.Repository;
 
 namespace OPM0PG_HFT_2022231.Endpoint
@@ -32,14 +31,14 @@ namespace OPM0PG_HFT_2022231.Endpoint
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OPM0PG_HFT_2022231.Endpoint v1"));
             }
-
             app.UseExceptionHandler(c => c.Run(async context =>
             {
+                context.Response.StatusCode =StatusCodes.Status400BadRequest;
                 var exception = context.Features
                     .Get<IExceptionHandlerFeature>()
                     .Error;
 
-                var response = new { error = exception.Message };
+                var response = new { Error = exception.Message };
                 await context.Response.WriteAsJsonAsync(response);
             }));
 
@@ -65,20 +64,16 @@ namespace OPM0PG_HFT_2022231.Endpoint
             services.AddTransient<IReleaseLogic, ReleaseLogic>();
             services.AddTransient<IMusicLogic, MusicLogic>();
 
-            services.AddControllers().AddJsonOptions(config =>
+            services.AddMvc().AddNewtonsoftJson(setup =>
             {
-                config.JsonSerializerOptions.Converters.Add(new DurationJsonConverter());
+                setup.SerializerSettings.Converters.Add(new DurationJsonConverter());
+                setup.SerializerSettings.Converters.Add(new NullableDurationJsonConverter());
             });
+         
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "OPM0PG_HFT_2022231.Endpoint", Version = "v1" });
             });
-        }
-
-        private void AddTransientRepositoryService<TEntity>(IServiceCollection services)
-                            where TEntity : class, IEntity
-        {
-            services.AddTransient<IRepository<TEntity>, Repository<TEntity>>();
         }
     }
 }

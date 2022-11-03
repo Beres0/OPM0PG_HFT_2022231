@@ -6,14 +6,14 @@ using System.Reflection;
 
 namespace OPM0PG_HFT_2022231.Models.Support
 {
-    internal static class InversePropertySetter<TEntity>
+    internal static class InversePropertiesSetter<TEntity>
     {
         private static readonly Type CollectionType = typeof(HashSet<>);
-        private static readonly Action<TEntity>[] CollectionSetters = CreateCollectionSetters();
+        private static readonly Action<TEntity>[] propertySetters = CreatePropertySetters();
 
 
 
-        private static Action<TEntity>[] CreateCollectionSetters()
+        private static Action<TEntity>[] CreatePropertySetters()
         {
             Type entityType = typeof(TEntity);
 
@@ -39,9 +39,9 @@ namespace OPM0PG_HFT_2022231.Models.Support
             Type genericCollectionType = CollectionType.GetGenericTypeDefinition().MakeGenericType(genericParameter);
             return genericCollectionType.GetConstructor(new Type[] { });
         }
-        public static void SetCollections(TEntity entity)
+        public static void SetInverseProperties(TEntity entity)
         {
-            foreach (var setter in CollectionSetters)
+            foreach (var setter in propertySetters)
             {
                 setter(entity);
             }

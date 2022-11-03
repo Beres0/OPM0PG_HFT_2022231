@@ -1,18 +1,14 @@
 ﻿using OPM0PG_HFT_2022231.Models.Support;
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
 using System.Xml.Serialization;
 
 namespace OPM0PG_HFT_2022231.Models
 {
     public class Track : IEntity
     {
-        public Track()
-        {
-            InversePropertySetter<Track>.SetCollections(this);
-        }
-
         public TimeSpan? Duration { get; set; }
 
         [Range(0, int.MaxValue)]

@@ -1,4 +1,5 @@
-﻿using OPM0PG_HFT_2022231.Models;
+﻿using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
+using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.Support;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,8 @@ namespace OPM0PG_HFT_2022231.Client.Readers
         private static Dictionary<Type, Func<string, object>> converters = new Dictionary<Type, Func<string, object>>()
         {
             {typeof(TimeSpan),(s)=>TimeSpan.ParseExact(s,@"hh\:mm\:ss",CultureInfo.CurrentCulture) },
-            {typeof(TimeSpan?),(s)=>TimeSpan.TryParseExact(s,@"hh\:mm\:ss",CultureInfo.CurrentCulture, out var result)?result:null},
+            {typeof(TimeSpan?),(s)=>string.IsNullOrWhiteSpace(s)?null:TimeSpan.ParseExact(s,@"hh\:mm\:ss",CultureInfo.CurrentCulture)},
+            {typeof(int?),(s)=>string.IsNullOrWhiteSpace(s)?null:int.Parse(s)}
         };
 
         public EntityReader() : base(typeof(TEntity))
