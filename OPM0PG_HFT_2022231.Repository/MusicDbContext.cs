@@ -24,7 +24,6 @@ namespace OPM0PG_HFT_2022231.Repository
         {
             optionsBuilder.EnableSensitiveDataLogging();
             optionsBuilder.UseInMemoryDatabase("MusicDb");
-            //optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Beres\\OneDrive\\OE-UMI\\repos\\3_felev\\Halfej\\OPM0PG_HFT_2022231\\OPM0PG_HFT_2022231.Repository\\TestDb\\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True");
             optionsBuilder.UseLazyLoadingProxies();
         }
 

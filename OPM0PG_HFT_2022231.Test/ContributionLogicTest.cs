@@ -6,6 +6,7 @@ using OPM0PG_HFT_2022231.Test.Repository;
 
 namespace OPM0PG_HFT_2022231.Test
 {
+    [TestFixture]
     internal class ContributionLogicTest
     {
         private ContributionLogic logic;

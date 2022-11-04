@@ -29,11 +29,6 @@ namespace OPM0PG_HFT_2022231.Test.Repository
             return new FakeChainActions<TEntity>(entities);
         }
 
-        public bool ContainsKey(object[] id, out TEntity entity)
-        {
-            return entities.TryGetValue(id, out entity);
-        }
-
         public void Create(TEntity item)
         {
             entities.Add(item);

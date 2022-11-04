@@ -17,7 +17,7 @@ namespace OPM0PG_HFT_2022231.Models.Support
             return GetValidator<TValidation>(propName).IsValid(value);
         }
 
-        public static void Throws<TValue>(TValue value, ValidationAttribute attribute, [CallerArgumentExpression("value")] string propName = null)
+        private static void Throws<TValue>(TValue value, ValidationAttribute attribute, [CallerArgumentExpression("value")] string propName = null)
         {
             if (!attribute.IsValid(value))
             {
@@ -36,7 +36,7 @@ namespace OPM0PG_HFT_2022231.Models.Support
             }
         }
 
-        public static void Throws<TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null, params Type[] filters)
+        public static void Validate<TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null, params Type[] filters)
         {
             foreach (var filter in filters)
             {

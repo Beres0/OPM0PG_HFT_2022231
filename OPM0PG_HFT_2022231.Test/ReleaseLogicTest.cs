@@ -10,6 +10,7 @@ using System.Linq;
 
 namespace OPM0PG_HFT_2022231.Test
 {
+    [TestFixture]
     internal class ReleaseLogicTest
     {
         private ReleaseLogic logic;
