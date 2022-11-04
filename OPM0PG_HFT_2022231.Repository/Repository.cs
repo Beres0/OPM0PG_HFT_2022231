@@ -3,6 +3,7 @@ using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.Support;
 using OPM0PG_HFT_2022231.Repository.ChainActions;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace OPM0PG_HFT_2022231.Repository
 {
@@ -39,7 +40,7 @@ namespace OPM0PG_HFT_2022231.Repository
             return context.Set<TEntity>().Find(id);
         }
 
-        public IEnumerable<TEntity> ReadAll()
+        public IQueryable<TEntity> ReadAll()
         {
             return context.Set<TEntity>();
         }

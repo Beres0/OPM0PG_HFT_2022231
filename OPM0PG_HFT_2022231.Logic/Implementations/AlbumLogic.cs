@@ -135,7 +135,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 Track track = ReadTrack(trackId);
 
                 repository.Tracks.ChainActions()
-                    .UpdateWithoutSave(track.Part.Tracks.OrderBy(t => t.Position).Where(t => t.Position > track.Position), t => t.Position--)
+                    .UpdateWithoutSave(track.Part.Tracks.OrderBy(t => t.Position)
+                        .Where(t => t.Position > track.Position), t => t.Position--)
                     .DeleteWithoutSave(track)
                     .Save();
             }
