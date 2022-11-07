@@ -14,19 +14,19 @@ namespace OPM0PG_HFT_2022231.Models
             InversePropertiesSetter<Album>.SetInverseProperties(this);
         }
 
-        [JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
         public virtual ICollection<Contribution> Contributions { get; set; }
 
-        [JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
         public virtual ICollection<AlbumGenre> Genres { get; set; }
 
         [Range(0, int.MaxValue)]
         public int Id { get; set; }
 
-        [JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
         public virtual ICollection<Part> Parts { get; set; }
 
-        [JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
         public virtual ICollection<Release> Releases { get; set; }
 
         [StringLength(ColumnTypeConstants.MaxTextLength)]
