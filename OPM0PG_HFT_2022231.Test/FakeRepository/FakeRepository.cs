@@ -3,6 +3,7 @@ using OPM0PG_HFT_2022231.Models.Support;
 using OPM0PG_HFT_2022231.Repository;
 using OPM0PG_HFT_2022231.Repository.ChainActions;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace OPM0PG_HFT_2022231.Test.Repository
 {
@@ -44,9 +45,9 @@ namespace OPM0PG_HFT_2022231.Test.Repository
             return entities[id];
         }
 
-        public IEnumerable<TEntity> ReadAll()
+        public IQueryable<TEntity> ReadAll()
         {
-            return entities;
+            return entities.AsQueryable();
         }
 
         public void Reset()
