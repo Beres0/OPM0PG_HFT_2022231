@@ -12,7 +12,7 @@ namespace OPM0PG_HFT_2022231.Models
         [Range(0, int.MaxValue)]
         public int Id { get; set; }
 
-        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
         public virtual Part Part { get; set; }
 
         [Range(0, int.MaxValue)]
@@ -21,7 +21,7 @@ namespace OPM0PG_HFT_2022231.Models
         [Range(1, int.MaxValue)]
         public int Position { get; set; }
 
-        [System.Text.Json.Serialization.JsonIgnore,StringLength(ColumnTypeConstants.MaxTextLength)]
+        [System.Text.Json.Serialization.JsonIgnore, StringLength(ColumnTypeConstants.MaxTextLength)]
         [Required(AllowEmptyStrings = false)]
         public string Title { get; set; }
 

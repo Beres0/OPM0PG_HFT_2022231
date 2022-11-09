@@ -6,7 +6,7 @@ namespace OPM0PG_HFT_2022231.Models
 {
     public class AlbumGenre : IEntity
     {
-        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
         public virtual Album Album { get; set; }
 
         [Range(0, int.MaxValue)]

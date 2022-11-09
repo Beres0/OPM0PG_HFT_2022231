@@ -19,6 +19,7 @@ namespace OPM0PG_HFT_2022231.Test.Repository
             Parts = new FakeRepository<Part>(ReadTestSeed<Part>());
             Releases = new FakeRepository<Release>(ReadTestSeed<Release>());
             Tracks = new FakeRepository<Track>(ReadTestSeed<Track>());
+
             RefreshAllNavigationProperties();
         }
 
@@ -135,7 +136,7 @@ namespace OPM0PG_HFT_2022231.Test.Repository
         }
 
         private IEnumerable<TEntity> ReadTestSeed<TEntity>()
-                                                                                    where TEntity : class, IEntity
+                where TEntity : class, IEntity
         {
             return new XmlSerializer<List<TEntity>>().Deserialize($"FakeRepository/FakeSeeds/Fake{typeof(TEntity).Name}Seed.xml");
         }

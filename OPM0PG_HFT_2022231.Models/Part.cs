@@ -13,7 +13,7 @@ namespace OPM0PG_HFT_2022231.Models
             InversePropertiesSetter<Part>.SetInverseProperties(this);
         }
 
-        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
         public virtual Album Album { get; set; }
 
         [Range(0, int.MaxValue)]
@@ -29,7 +29,7 @@ namespace OPM0PG_HFT_2022231.Models
         [Required(AllowEmptyStrings = false)]
         public string Title { get; set; }
 
-        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
         public virtual ICollection<Track> Tracks { get; set; }
 
         public object[] GetId() => new object[] { Id };

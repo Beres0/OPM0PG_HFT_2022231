@@ -68,6 +68,7 @@ namespace OPM0PG_HFT_2022231.Endpoint
             {
                 setup.SerializerSettings.Converters.Add(new DurationJsonConverter());
                 setup.SerializerSettings.Converters.Add(new NullableDurationJsonConverter());
+                setup.SerializerSettings.Converters.Add(new HttpMethodTypeConverter());
             });
 
             services.AddSwaggerGen(c =>

@@ -17,25 +17,6 @@ namespace OPM0PG_HFT_2022231.Models.Support
             return GetValidator<TValidation>(propName).IsValid(value);
         }
 
-        private static void Throws<TValue>(TValue value, ValidationAttribute attribute, [CallerArgumentExpression("value")] string propName = null)
-        {
-            if (!attribute.IsValid(value))
-            {
-                if (attribute is RangeAttribute range)
-                {
-                    throw new ArgumentOutOfRangeException($"The '{propName}' was out of range. Argument must be between {range.Minimum} and {range.Maximum}! Actual value: {value}");
-                }
-                else if (attribute is RequiredAttribute required)
-                {
-                    throw new ArgumentNullException($"The '{propName}' is missing!");
-                }
-                else if (attribute is StringLengthAttribute stringLength)
-                {
-                    throw new ArgumentException($"The lenght of '{propName}' is not valid! Must be between {stringLength.MinimumLength} and {stringLength.MaximumLength}! Actual length: {value}");
-                }
-            }
-        }
-
         public static void Validate<TValue>(TValue value, [CallerArgumentExpression("value")] string propName = null, params Type[] filters)
         {
             foreach (var filter in filters)
@@ -85,6 +66,25 @@ namespace OPM0PG_HFT_2022231.Models.Support
                 return propName.ToLower();
             }
             else return propName.Substring(lastIndex + 1).ToLower();
+        }
+
+        private static void Throws<TValue>(TValue value, ValidationAttribute attribute, [CallerArgumentExpression("value")] string propName = null)
+        {
+            if (!attribute.IsValid(value))
+            {
+                if (attribute is RangeAttribute range)
+                {
+                    throw new ArgumentOutOfRangeException($"The '{propName}' was out of range. Argument must be between {range.Minimum} and {range.Maximum}! Actual value: {value}");
+                }
+                else if (attribute is RequiredAttribute required)
+                {
+                    throw new ArgumentNullException($"The '{propName}' is missing!");
+                }
+                else if (attribute is StringLengthAttribute stringLength)
+                {
+                    throw new ArgumentException($"The lenght of '{propName}' is not valid! Must be between {stringLength.MinimumLength} and {stringLength.MaximumLength}! Actual length: {value}");
+                }
+            }
         }
     }
 }

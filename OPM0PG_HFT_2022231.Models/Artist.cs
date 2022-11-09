@@ -13,16 +13,16 @@ namespace OPM0PG_HFT_2022231.Models
             InversePropertiesSetter<Artist>.SetInverseProperties(this);
         }
 
-        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
         public virtual ICollection<Membership> Bands { get; set; }
 
-        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
         public virtual ICollection<Contribution> ContributedAlbums { get; set; }
 
         [Range(0, int.MaxValue)]
         public int Id { get; set; }
 
-        [System.Text.Json.Serialization.JsonIgnore,JsonIgnore, XmlIgnore]
+        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
         public virtual ICollection<Membership> Members { get; set; }
 
         [StringLength(ColumnTypeConstants.MaxTextLength)]
