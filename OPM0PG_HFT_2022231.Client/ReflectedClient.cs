@@ -1,197 +1,186 @@
 ﻿using ConsoleTools;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Routing;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OPM0PG_HFT_2022231.Client.Readers;
 using OPM0PG_HFT_2022231.Client.Writers;
+using OPM0PG_HFT_2022231.Models.DataTransferObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Reflection;
 
 namespace OPM0PG_HFT_2022231.Client
 {
     public class ReflectedClient
     {
-        private readonly string assemblyName;
-        private readonly string domain;
+        private readonly string apiInterfaceMapUri;
         private string[] args;
         private IRestService restService;
         private ConsoleMenu rootMenu;
+        private Dictionary<string, Type> types;
 
-        public ReflectedClient(string assemblyName, string domain, IRestService restService, string[] args)
+        public ReflectedClient(string apiInterfaceMapUri,
+                               IRestService restService,
+                               string[] args)
         {
-            this.assemblyName = assemblyName;
-            this.domain = domain;
+            this.apiInterfaceMapUri = apiInterfaceMapUri;
             this.restService = restService;
             this.args = args;
             Readers = new ConsoleTypeReaderCollection();
             Writers = new ConsoleTypeWriterCollection();
             JsonConverters = new List<JsonConverter>();
-            rootMenu = BuildRootMenu();
+            types = new Dictionary<string, Type>();
         }
 
         public List<JsonConverter> JsonConverters { get; }
         public ConsoleTypeReaderCollection Readers { get; }
         public ConsoleTypeWriterCollection Writers { get; }
 
-        public void Show()
+        public string ReadRequestUriParameters(ApiMethodDTO method)
         {
+            string url = method.RequestUri;
+            List<string> inputs = new List<string>();
+            foreach (var item in method.Parameters)
+            {
+                Type param = GetType(method.Parameters.First().AssemblyQTypeName);
+
+                Console.Write($"{item.Name}({param.Name}): ");
+                inputs.Add(Console.ReadLine());
+            }
+
+            return url + string.Join(",", inputs);
+        }
+
+        public void Run()
+        {
+            rootMenu = BuildRootMenu(GetApiInterfaceMap());
             rootMenu.Show();
         }
 
-        private ConsoleMenu BuildRootMenu()
+        private ConsoleMenu BuildRootMenu(ApiInterfaceMapDTO map)
         {
-            var assembly = Assembly.LoadFrom(assemblyName);
-            string controllerPostfix = "Controller";
-            var controllers = assembly.GetTypes()
-                             .Where(t => t.Name.EndsWith(controllerPostfix)).ToArray();
             ConsoleMenu root = new ConsoleMenu(args, 0);
-            foreach (var item in controllers)
+            foreach (var item in map.Controllers)
             {
                 var submenu = BuildSubmenu(item);
-                root.Add(item.Name.Replace(controllerPostfix, ""), submenu.Show);
+                root.Add(item.Name, submenu.Show);
             }
             root.Add("Exit", ConsoleMenu.Close);
             return root;
         }
 
-        private ConsoleMenu BuildSubmenu(Type controllerType)
+        private ConsoleMenu BuildSubmenu(ApiControllerDTO controller)
         {
             ConsoleMenu subMenu = new ConsoleMenu(args, 1);
-            var methods = controllerType.GetMethods(BindingFlags.Instance | BindingFlags.Public);
-            foreach (var method in methods)
+            foreach (var method in controller.Methods)
             {
-                if (method.GetCustomAttribute<HttpMethodAttribute>() is HttpMethodAttribute attribute)
-                {
-                    subMenu.Add(method.Name, CreateAction(method, attribute));
-                }
+                subMenu.Add(method.Name, CreateAction(method));
             }
 
             subMenu.Add("Exit", ConsoleMenu.Close);
             return subMenu;
         }
 
-        private Action CreateAction(MethodInfo httpMethod, HttpMethodAttribute attribute)
+        private Action CreateAction(ApiMethodDTO method)
         {
-            if (attribute is HttpGetAttribute)
+            switch (method.MethodType)
             {
-                return CreateGetAction(httpMethod);
+                case HttpMethodType.GET: return CreateGetAction(method);
+                case HttpMethodType.DELETE: return CreateDeleteAction(method);
+                case HttpMethodType.POST: return CreatePostAction(method);
+                case HttpMethodType.PUT: return CreatePutAction(method);
+                default: throw new NotSupportedException();
             }
-            else if (attribute is HttpPostAttribute)
-            {
-                return CreatePostAction(httpMethod);
-            }
-            else if (attribute is HttpPutAttribute)
-            {
-                return CreatePutAction(httpMethod);
-            }
-            else if (attribute is HttpDeleteAttribute)
-            {
-                return CreateDeleteAction(httpMethod);
-            }
-            else throw new NotSupportedException();
         }
 
-        private Action CreateDeleteAction(MethodInfo httpMethod)
+        private Action CreateDeleteAction(ApiMethodDTO method)
         {
             void Delete()
             {
-                ParameterInfo[] parameters = httpMethod.GetParameters();
-                string requestUrl = ReadRequestUrlParameters(httpMethod, parameters);
+                string requestUrl = ReadRequestUriParameters(method);
                 var response = restService.DeleteAsync(requestUrl).Result;
-                WriteResponse(httpMethod, response);
+                WriteResponse(method, response);
                 Console.ReadLine();
             }
             return Delete;
         }
 
-        private Action CreateGetAction(MethodInfo httpMethod)
+        private Action CreateGetAction(ApiMethodDTO method)
         {
             void Get()
             {
-                ParameterInfo[] parameters = httpMethod.GetParameters();
-                string requestUrl = ReadRequestUrlParameters(httpMethod, parameters);
-                var response = restService.GetAsync(requestUrl).Result;
-                WriteResponse(httpMethod, response);
+                string paramRequestUri = ReadRequestUriParameters(method);
+                var response = restService.GetAsync(paramRequestUri).Result;
+                WriteResponse(method, response);
                 Console.ReadLine();
             }
 
             return Get;
         }
 
-        private Action CreatePostAction(MethodInfo httpMethod)
+        private Action CreatePostAction(ApiMethodDTO method)
         {
             void Post()
             {
-                ParameterInfo[] parameters = httpMethod.GetParameters();
-                string requestUrl = GetRequestUrl(httpMethod);
-                object content = ReadFromBodyParameter(parameters[0]);
-                var response = restService.PostAsync(requestUrl, content, JsonConverters.ToArray()).Result;
-                WriteResponse(httpMethod, response);
+                object content = ReadFromBodyParameter(method.Parameters.First());
+                var response = restService.PostAsync(method.RequestUri, content, JsonConverters.ToArray()).Result;
+                WriteResponse(method, response);
                 Console.ReadLine();
             }
             return Post;
         }
 
-        private Action CreatePutAction(MethodInfo httpMethod)
+        private Action CreatePutAction(ApiMethodDTO method)
         {
             void Put()
             {
-                ParameterInfo[] parameters = httpMethod.GetParameters();
-                string requestUrl = GetRequestUrl(httpMethod);
-                object content = ReadFromBodyParameter(parameters[0]);
-                var response = restService.PutAsync(requestUrl, content, JsonConverters.ToArray()).Result;
-                WriteResponse(httpMethod, response);
+                object content = ReadFromBodyParameter(method.Parameters.First());
+                var response = restService.PutAsync(method.RequestUri, content, JsonConverters.ToArray()).Result;
+                WriteResponse(method, response);
                 Console.ReadLine();
             };
             return Put;
         }
 
-        private string GetRequestUrl(MethodInfo method)
+        private ApiInterfaceMapDTO GetApiInterfaceMap()
         {
-            return domain + method.DeclaringType.Name.Replace("Controller", "") + "/" + method.Name + "/";
+            string jsonString = restService.GetAsync(apiInterfaceMapUri).Result
+                              .Content.ReadAsStringAsync().Result;
+            return JsonConvert.DeserializeObject<ApiInterfaceMapDTO>(jsonString);
         }
 
-        private object ReadFromBodyParameter(ParameterInfo parameter)
+        private Type GetType(string assemblyQTypeName)
         {
-            if (Readers.Contains(parameter.ParameterType))
+            if (!types.ContainsKey(assemblyQTypeName))
             {
-                return Readers[parameter.ParameterType].Read();
+                types[assemblyQTypeName] = Type.GetType(assemblyQTypeName, true);
+            }
+
+            return types[assemblyQTypeName];
+        }
+
+        private object ReadFromBodyParameter(ApiParameterDTO parameter)
+        {
+            Type parameterType = GetType(parameter.AssemblyQTypeName);
+            if (Readers.Contains(parameterType))
+            {
+                return Readers[parameterType].Read();
             }
             else throw new NotSupportedException();
         }
 
-        private string ReadRequestUrlParameters(MethodInfo httpMethod, ParameterInfo[] parameters)
-        {
-            string url = GetRequestUrl(httpMethod);
-            List<string> inputs = new List<string>();
-
-            foreach (var item in parameters)
-            {
-                if (item.GetCustomAttribute<FromBodyAttribute>() is null)
-                {
-                    Console.Write($"{item.Name}({item.ParameterType.Name}): ");
-                    inputs.Add(Console.ReadLine());
-                }
-            }
-
-            return url + string.Join(",", inputs);
-        }
-
-        private void WriteResponse(MethodInfo httpMethod, HttpResponseMessage response)
+        private void WriteResponse(ApiMethodDTO method, HttpResponseMessage response)
         {
             Console.WriteLine($"statuscode: {response.StatusCode}");
             string jsonString = response.Content.ReadAsStringAsync().Result;
-
+            Type returnType = GetType(method.AssemblyQReturnType);
             if (response.StatusCode == System.Net.HttpStatusCode.OK &&
-               httpMethod.ReturnType != typeof(void) &&
-               Writers.Contains(httpMethod.ReturnType))
+                returnType != typeof(void) &&
+               Writers.Contains(returnType))
             {
-                Writers[httpMethod.ReturnType]
-                    .Write(JsonConvert.DeserializeObject(jsonString, httpMethod.ReturnType, JsonConverters.ToArray()));
+                Writers[returnType]
+                    .Write(JsonConvert.DeserializeObject(jsonString, returnType, JsonConverters.ToArray()));
             }
             else if (!string.IsNullOrWhiteSpace(jsonString))
             {

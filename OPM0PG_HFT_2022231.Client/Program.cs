@@ -7,9 +7,14 @@ namespace OPM0PG_HFT_2022231.Client
 {
     internal class Program
     {
-        private static void ClientTest(string[] args)
+        private static void Main(string[] args)
         {
-            ReflectedClient client = new ReflectedClient("OPM0PG_HFT_2022231.Endpoint.dll", "http://localhost:15486/api/", new RestService(), args);
+            Run(args);
+        }
+
+        private static void Run(string[] args)
+        {
+            ReflectedClient client = new ReflectedClient("http://localhost:15486/api/Meta/GetApiInterfaceMap", new RestService(), args);
             client.Writers.Add(new AlbumSummaryWriter());
             client.Writers.Add(new ArtistSummaryWriter());
 
@@ -24,12 +29,8 @@ namespace OPM0PG_HFT_2022231.Client
 
             client.JsonConverters.Add(new NullableDurationJsonConverter());
             client.JsonConverters.Add(new DurationJsonConverter());
-            client.Show();
-        }
-
-        private static void Main(string[] args)
-        {
-            ClientTest(args);
+            client.JsonConverters.Add(new HttpMethodTypeConverter());
+            client.Run();
         }
     }
 }
