@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{F922111E-DA47-4E5D-87BF-07EC34BD678E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E0473810-2EE0-45BF-9A8B-BD9BB4EACD8D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OPM0PG_HFT_2022231.Models", "OPM0PG_HFT_2022231.Models\OPM0PG_HFT_2022231.Models.csproj", "{02234013-205E-441B-8629-278DE7EA2E83}"
 EndProject

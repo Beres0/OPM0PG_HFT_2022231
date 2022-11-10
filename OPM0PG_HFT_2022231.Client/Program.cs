@@ -14,7 +14,7 @@ namespace OPM0PG_HFT_2022231.Client
 
         private static void Run(string[] args)
         {
-            ReflectedClient client = new ReflectedClient("http://localhost:15486/api/Meta/GetApiInterfaceMap", new RestService(), args);
+            MapperClient client = new MapperClient("http://localhost:15486/api/Meta/GetApiInterfaceMap", new RestService(), args);
             client.Writers.Add(new AlbumSummaryWriter());
             client.Writers.Add(new ArtistSummaryWriter());
 

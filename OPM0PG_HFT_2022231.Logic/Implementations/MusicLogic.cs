@@ -49,8 +49,9 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 var contributors = contribution.ReadAllContributions()
                                   .Where(c => c.AlbumId == al.Id)
                                   .Select(c => new ContributorDTO(c.ArtistId, c.Artist.Name));
+                var media = al.Media.Select(m => new MediaDTO(m.Id, m.MediaType, m.Main, m.Uri));
 
-                return new AlbumSummaryDTO(al.Id, al.Title, al.Year, parts, genres, releases, contributors);
+                return new AlbumSummaryDTO(al.Id, al.Title, al.Year, parts, genres, releases, contributors, media);
             }
             catch (Exception ex)
             {
@@ -80,8 +81,8 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
                 var members = artist.ReadAllMembership()
                                   .Where(m => m.BandId == artistId)
                                   .Select(m => new MemberDTO(m.MemberId, m.Member.Name, m.Active));
-
-                return new ArtistSummaryDTO(artistId, art.Name, genres, members, bands, albums);
+                var media = art.Media.Select(m => new MediaDTO(m.Id, m.MediaType, m.Main, m.Uri));
+                return new ArtistSummaryDTO(artistId, art.Name, genres, members, bands, albums, media);
             }
             catch (Exception ex)
             {

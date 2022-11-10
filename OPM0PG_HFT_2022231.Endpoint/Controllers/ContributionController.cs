@@ -7,7 +7,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class ContributionController : ControllerBase, IContributionLogic
+    public class ContributionController : ControllerBase
     {
         private IContributionLogic logic;
 

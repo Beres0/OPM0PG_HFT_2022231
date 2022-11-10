@@ -1,10 +1,8 @@
-﻿using OPM0PG_HFT_2022231.Logic.Validating.Exceptions;
-using OPM0PG_HFT_2022231.Models;
+﻿using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
 using OPM0PG_HFT_2022231.Models.Support;
 
 using OPM0PG_HFT_2022231.Repository;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,38 +15,22 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public void CreateGenre(AlbumGenre genre)
         {
-            try
+            CreateEntity(() =>
             {
-                Validator<AlbumGenre>.Validate(genre.AlbumId);
                 Validator<AlbumGenre>.Validate(genre.Genre);
-                CheckKeyExists(repository.Albums, genre.AlbumId);
-                CheckKeyAlreadyAdded(repository.Genres, nameof(genre), genre.GetId());
-                repository.Genres.Create(genre);
-            }
-            catch (Exception ex)
-            {
-                throw new CreateException(genre, ex);
-            }
+                CheckKeyExists<Album>(genre.AlbumId);
+                CheckKeyAlreadyAdded<AlbumGenre>(genre.GetId());
+            }, genre);
         }
 
         public void DeleteGenre(int albumId, string genre)
         {
-            try
-            {
-                Validator<AlbumGenre>.Validate(albumId);
-                Validator<AlbumGenre>.Validate(genre);
-                CheckKeyExists(repository.Genres, "(albumId,genre)", albumId, genre);
-                repository.Genres.Delete(albumId, genre);
-            }
-            catch (Exception ex)
-            {
-                throw new DeleteException(typeof(AlbumGenre), ex, albumId, genre);
-            }
+            DeleteEntity<AlbumGenre>(null, albumId, genre);
         }
 
         public IEnumerable<AlbumPerGenreDTO> GetAlbumPerGenre()
         {
-            return repository.Genres.ReadAll()
+            return ReadAllAlbumGenre()
                    .GroupBy(g => g.Genre)
                    .Select(g => new AlbumPerGenreDTO(g.Key, g.Count()));
         }
@@ -62,19 +44,19 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public IEnumerable<string> GetGenres()
         {
-            return repository.Genres.ReadAll()
+            return ReadAllAlbumGenre()
                  .Select(g => g.Genre).Distinct();
         }
 
         public IEnumerable<AlbumGenre> ReadAllAlbumGenre()
         {
-            return repository.Genres.ReadAll();
+            return repository.ReadAll<AlbumGenre>();
         }
 
         public IEnumerable<ArtistGenreDTO> ReadAllArtistGenre()
         {
-            return repository.Genres.ReadAll().Join
-                (repository.Contributions.ReadAll(),
+            return ReadAllAlbumGenre().Join
+                (repository.ReadAll<Contribution>(),
                 (g) => g.AlbumId, (c) => c.AlbumId,
                 (g, c) => new ArtistGenreDTO(c.Artist, g.Genre))
                 .Distinct();
@@ -82,17 +64,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
 
         public AlbumGenre ReadGenre(int albumId, string genre)
         {
-            try
-            {
-                Validator<AlbumGenre>.Validate(albumId);
-                Validator<AlbumGenre>.Validate(genre);
-                CheckKeyExists(repository.Genres, "(albumId,genre)", albumId, genre);
-                return repository.Genres.Read(albumId, genre);
-            }
-            catch (Exception ex)
-            {
-                throw new ReadException(typeof(AlbumGenre), ex, albumId, genre);
-            }
+            return ReadEntity<AlbumGenre>(null, albumId, genre);
         }
     }
 }

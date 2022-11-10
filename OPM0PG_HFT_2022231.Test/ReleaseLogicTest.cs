@@ -19,7 +19,6 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void CreateReleaseTest()
         {
-            int negAlbumId = -1;
             int nonExistAlbumId = 21515123;
             int okAlbumId = 796235;
             string countryLong = new string('x', 256);
@@ -32,7 +31,6 @@ namespace OPM0PG_HFT_2022231.Test
 
             Assert.Throws<CreateException>(() => logic.CreateRelease(new Release()
             {
-                AlbumId = negAlbumId,
                 Country = okCountry,
                 Publisher = okPublisher,
                 ReleaseYear = okYear
@@ -81,32 +79,30 @@ namespace OPM0PG_HFT_2022231.Test
                 ReleaseYear = okYear
             };
             Assert.DoesNotThrow(() => logic.CreateRelease(okRelease));
-            Assert.That(repository.Releases.TryRead(new object[] { okRelease.Id }, out var result));
+            Assert.That(repository.TryRead(new object[] { okRelease.Id }, out Release result));
         }
 
         [Test]
         public void DeleteReleaseTest()
         {
-            int negReleaseId = -1;
             int nonExistReleaseId = 124214124;
             int okReleaseId = 10725053;
 
-            Assert.Throws<DeleteException>(() => logic.DeleteRelease(negReleaseId));
             Assert.Throws<DeleteException>(() => logic.DeleteRelease(nonExistReleaseId));
 
             Assert.DoesNotThrow(() => logic.DeleteRelease(okReleaseId));
-            Assert.That(!repository.Releases.TryRead(new object[] { okReleaseId }, out var result));
+            Assert.That(!repository.TryRead(new object[] { okReleaseId }, out Release result));
         }
 
         [Test]
         public void GetCountyStatistics()
         {
-            Assert.That(repository.Releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
+            Assert.That(repository.ReadAll<Release>().Where(r => !string.IsNullOrWhiteSpace(r.Country))
                 .Select(r => new { r.Country, r.Publisher })
                 .Distinct()
                 .GroupBy(r => r.Country)
                 .Select(g => new PublisherPerCountryDTO(g.Key, g.Count()))
-                .Join(repository.Releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
+                .Join(repository.ReadAll<Release>().Where(r => !string.IsNullOrWhiteSpace(r.Country))
                 .GroupBy(r => r.Country)
                 .Select(g => new ReleasePerCountryDTO(g.Key, g.Count())),
                 (p) => p.Country, (r) => r.Country,
@@ -117,7 +113,7 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void GetPublisherPerCountry()
         {
-            Assert.That(repository.Releases.ReadAll().Where(r => !string.IsNullOrWhiteSpace(r.Country))
+            Assert.That(repository.ReadAll<Release>().Where(r => !string.IsNullOrWhiteSpace(r.Country))
                 .Select(r => new { r.Country, r.Publisher })
                 .Distinct()
                 .GroupBy(r => r.Country)
@@ -128,7 +124,7 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void GetPublishersTest()
         {
-            Assert.That(repository.Releases.ReadAll()
+            Assert.That(repository.ReadAll<Release>()
                 .Select(r => r.Publisher)
                 .Distinct().SequenceEqual(logic.GetPublishers()));
         }
@@ -136,7 +132,7 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void GetReleasePerCountry()
         {
-            Assert.That(repository.Releases.ReadAll()
+            Assert.That(repository.ReadAll<Release>()
                 .Where(r => !string.IsNullOrWhiteSpace(r.Country))
                 .GroupBy(r => r.Country)
                 .Select(g => new ReleasePerCountryDTO(g.Key, g.Count()))
@@ -146,7 +142,7 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void GetReleasePerYear()
         {
-            Assert.That(repository.Releases.ReadAll().Where(r => r.ReleaseYear.HasValue)
+            Assert.That(repository.ReadAll<Release>().Where(r => r.ReleaseYear.HasValue)
                 .GroupBy(r => r.ReleaseYear)
                 .Select(g => new ReleasePerYearDTO(g.Key.Value, g.Count()))
                 .SequenceEqual(logic.GetReleasePerYear()));
@@ -162,10 +158,8 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void ReadReleaseTest()
         {
-            int negId = -1;
             int nonExistId = 1321131;
 
-            Assert.Throws<ReadException>(() => logic.ReadRelease(negId));
             Assert.Throws<ReadException>(() => logic.ReadRelease(nonExistId));
 
             Assert.DoesNotThrow(() => logic.ReadRelease(10303083));
@@ -180,10 +174,8 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void UpdateReleaseTest()
         {
-            int negReleaseId = -1;
             int nonExistReleaseId = 124214124;
             int okReleaseId = 10725053;
-            int negAlbumId = -1;
             int nonExistAlbumId = 21515123;
             int okAlbumId = 796235;
             string countryLong = new string('x', 256);
@@ -196,7 +188,6 @@ namespace OPM0PG_HFT_2022231.Test
 
             Assert.Throws<UpdateException>(() => logic.UpdateRelease(new Release()
             {
-                Id = negReleaseId,
                 AlbumId = okAlbumId,
                 Country = okCountry,
                 Publisher = okPublisher,
@@ -213,7 +204,6 @@ namespace OPM0PG_HFT_2022231.Test
             Assert.Throws<UpdateException>(() => logic.UpdateRelease(new Release()
             {
                 Id = okReleaseId,
-                AlbumId = negAlbumId,
                 Country = okCountry,
                 Publisher = okPublisher,
                 ReleaseYear = okYear
@@ -268,7 +258,7 @@ namespace OPM0PG_HFT_2022231.Test
                 ReleaseYear = okYear
             };
             Assert.DoesNotThrow(() => logic.UpdateRelease(okRelease));
-            Assert.That(repository.Releases.Read(okRelease.Id).Country == "Test");
+            Assert.That(repository.Read<Release>(okRelease.Id).Country == "Test");
         }
     }
 }

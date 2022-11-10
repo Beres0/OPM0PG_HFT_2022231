@@ -7,7 +7,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class ArtistController : ControllerBase, IArtistLogic
+    public class ArtistController : ControllerBase
     {
         private IArtistLogic logic;
 

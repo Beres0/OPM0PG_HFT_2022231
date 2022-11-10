@@ -5,39 +5,43 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Seeds\AlbumGenreSeed.xml" />
-    <None Remove="Seeds\AlbumSeed.xml" />
-    <None Remove="Seeds\ArtistSeed.xml" />
-    <None Remove="Seeds\ContributionSeed.xml" />
-    <None Remove="Seeds\MembershipSeed.xml" />
-    <None Remove="Seeds\PartSeed.xml" />
-    <None Remove="Seeds\ReleaseSeed.xml" />
-    <None Remove="Seeds\TrackSeed.xml" />
+    <None Remove="Contents\Seeds\AlbumGenreSeed.xml" />
+    <None Remove="Contents\Seeds\AlbumMediaSeed.xml" />
+    <None Remove="Contents\Seeds\AlbumSeed.xml" />
+    <None Remove="Contents\Seeds\ArtistSeed.xml" />
+    <None Remove="Contents\Seeds\ContributionSeed.xml" />
+    <None Remove="Contents\Seeds\MembershipSeed.xml" />
+    <None Remove="Contents\Seeds\PartSeed.xml" />
+    <None Remove="Contents\Seeds\ReleaseSeed.xml" />
+    <None Remove="Contents\Seeds\TrackSeed.xml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Seeds\AlbumGenreSeed.xml">
+    <Content Include="Contents\Seeds\AlbumGenreSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seeds\AlbumSeed.xml">
+    <Content Include="Contents\Seeds\AlbumMediaSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seeds\ArtistSeed.xml">
+    <Content Include="Contents\Seeds\AlbumSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seeds\ContributionSeed.xml">
+    <Content Include="Contents\Seeds\ArtistSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seeds\MembershipSeed.xml">
+    <Content Include="Contents\Seeds\ContributionSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seeds\PartSeed.xml">
+    <Content Include="Contents\Seeds\MembershipSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seeds\ReleaseSeed.xml">
+    <Content Include="Contents\Seeds\PartSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Seeds\TrackSeed.xml">
+    <Content Include="Contents\Seeds\ReleaseSeed.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\Seeds\TrackSeed.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -49,6 +53,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OPM0PG_HFT_2022231.Logic\OPM0PG_HFT_2022231.Logic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contents\Pictures\Artists\" />
   </ItemGroup>
 
 </Project>

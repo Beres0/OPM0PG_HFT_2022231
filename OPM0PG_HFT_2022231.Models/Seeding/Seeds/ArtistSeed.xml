@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfArtist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Artist>
+    <Id>3066379</Id>
+    <Name>Sidewalks And Skeletons</Name>
+  </Artist>
+  <Artist>
+    <Id>582737</Id>
+    <Name>ColdWorld</Name>
+    <Description>Depressive black metal one-man band/project from Erfurt, Germany. Sole member is G.B.</Description>
+  </Artist>
+  <Artist>
+    <Id>141437</Id>
+    <Name>X-Fusion</Name>
+  </Artist>
+  <Artist>
+    <Id>11612</Id>
+    <Name>Type O Negative</Name>
+    <Description>Type O Negative was an American Gothic Metal band from Brooklyn/New York City, formed in 1989. Original drummer Sal Abruscato left Type O Negative in 1994, and Johnny Kelly took his place in the band.On April 14, 2010, vocalist/bassist/songwriter Peter Steele died of sepsis caused by diverticulitis (initially reported as heart failure), effectively ending the band.</Description>
+  </Artist>
+  <Artist>
+    <Id>251809</Id>
+    <Name>Josh Silver</Name>
+  </Artist>
+  <Artist>
+    <Id>318685</Id>
+    <Name>Johnny Kelly</Name>
+  </Artist>
+  <Artist>
+    <Id>318686</Id>
+    <Name>Kenny Hickey</Name>
+  </Artist>
+  <Artist>
+    <Id>407019</Id>
+    <Name>Sal Abruscato</Name>
+  </Artist>
+  <Artist>
+    <Id>1785363</Id>
+    <Name>Peter Ratajczyk</Name>
+  </Artist>
+  <Artist>
+    <Id>2077774</Id>
+    <Name>Clams Casino</Name>
+    <Description>Italian-American electronic musician and hip hop producer from Nutley, New Jersey, born May 1988.</Description>
+  </Artist>
+  <Artist>
+    <Id>45</Id>
+    <Name>Aphex Twin</Name>
+    <Description>UK electronic musician. Born: 18 August 1971 in Limerick, County Limerick, Ireland. Grammy Award winning composer, in 1991 he co-founded the Rephlex label with Grant Wilson-Claridge. After having released a number of albums and EPs on Rephlex, Warp Records, and other labels under many aliases, he gained more and more success from the mid-1990s with releases such as "Come To Daddy" (1997), #36 on UK charts, and "Windowlicker" (1999), #16 on UK charts. The two classic Aphex Twin logos were designed in 1991-1992 by Paul Nicholson (2).</Description>
+  </Artist>
+  <Artist>
+    <Id>15023</Id>
+    <Name>:wumpscut:</Name>
+    <Description>German Dark Electro-Industrial project, originally active between 1991 and 2017, before Rudy Ratzinger put the project to rest. In late 2020 :wumpscut: returned with the announcement of a new album, to be released in 2021. :wumpscut: was formed in May 1991 by Rudy Ratzinger, who started writing music after he DJed for a while in several south German clubs and was impressed by his archetype Leæther Strip. :wumpscut: is a studio only project. Although there were some rumors about live appearences in the past, every time it was just a hoax.</Description>
+  </Artist>
+  <Artist>
+    <Id>659646</Id>
+    <Name>Crystal Castles</Name>
+    <Description>Canadian Electro duo formed in 2003. Alice Glass left the group in October 2014, and Crystal Castles was said to be disbanded, though new Crystal Castles music was posted online in 2015 featuring a new vocalist. The new vocalist was confirmed as Edith Frances.</Description>
+  </Artist>
+  <Artist>
+    <Id>1069428</Id>
+    <Name>Alice Glass</Name>
+  </Artist>
+  <Artist>
+    <Id>1081004</Id>
+    <Name>Ethan Kath</Name>
+  </Artist>
+  <Artist>
+    <Id>4824493</Id>
+    <Name>Edith Frances</Name>
+  </Artist>
+  <Artist>
+    <Id>73166</Id>
+    <Name>And Also The Trees</Name>
+    <Description>
+      And Also the Trees are an English post-punk band, formed in 1979 in Inkberrow, Worcestershire.
+      Line-ups:
+      Simon Huw Jones, vocals (1979-present)
+      Justin Jones, guitar/keyboards/accordion/percussion/zither/xylophone (1979-present)
+      Nick Havas, drums/percussion (1979-1997)
+      Graham Havas, bass guitar (1979-1983)
+      Steven Burrows, bass guitar/percussion/mellotron/trumpet (1983-2004)
+      Mark Tibenham, keyboards (1990-1993)
+      Emer Brizzolara, dulcimer/keyboards/melodica/guitar (1994-2015)
+      Dale Hodgkinson, keyboards (1998)
+      Paul Hill, drums/percussion/harmonica/glockenspiel (1998-present)
+      Ian Jenkins, bass guitar/double bass (2004-2015)
+      Grant Gordon, bass (2016-present)
+      Colin Ozanne, clarinet/guitar/keyboards (2016-present)
+    </Description>
+  </Artist>
+  <Artist>
+    <Id>59264</Id>
+    <Name>Mark Tibenham</Name>
+  </Artist>
+  <Artist>
+    <Id>269556</Id>
+    <Name>Rab Fae Beith</Name>
+  </Artist>
+  <Artist>
+    <Id>271849</Id>
+    <Name>Grant Gordon</Name>
+  </Artist>
+  <Artist>
+    <Id>313836</Id>
+    <Name>Simon Huw Jones</Name>
+  </Artist>
+  <Artist>
+    <Id>313837</Id>
+    <Name>Justin Jones</Name>
+  </Artist>
+  <Artist>
+    <Id>412527</Id>
+    <Name>Steven Burrows</Name>
+  </Artist>
+  <Artist>
+    <Id>412528</Id>
+    <Name>Nick Havas</Name>
+  </Artist>
+  <Artist>
+    <Id>419522</Id>
+    <Name>William Waghorn</Name>
+  </Artist>
+  <Artist>
+    <Id>522163</Id>
+    <Name>Paul Hill (3)</Name>
+  </Artist>
+  <Artist>
+    <Id>845589</Id>
+    <Name>Colin Ozanne</Name>
+  </Artist>
+  <Artist>
+    <Id>908108</Id>
+    <Name>Ian Jenkins</Name>
+  </Artist>
+  <Artist>
+    <Id>1099147</Id>
+    <Name>Emer Brizzolara</Name>
+  </Artist>
+  <Artist>
+    <Id>1420128</Id>
+    <Name>Graham Havas</Name>
+  </Artist>
+  <Artist>
+    <Id>4671146</Id>
+    <Name>Dale Hodgkinson</Name>
+  </Artist>
+  <Artist>
+    <Id>11771</Id>
+    <Name>Rammstein</Name>
+    <Description>
+      Rammstein (German pronunciation: [ˈʁamʃtaɪn]) is a German rock band, formed in 1994 in Berlin. Since its formation, Rammstein's six-man lineup has remained unchanged - singer Till Lindemann, guitarists Richard Z. Kruspe and Paul H. Landers, bassist Oliver "Ollie" Riedel, drummer Christoph "Doom" Schneider and keyboardist Christian "Flake" Lorenz. Rammstein were among the founding bands of a German/Austrian subgenre in the mid-1990's where industrial rock and (groove) metal were mixed in a vein that became known as NDH, Neue Deutsche Härte (New German Hard), clearly inspired by industrial acts like Laibach, Die Krupps and Ministry, but also metal bands like Pantera and Sepultura. The majority of their songs are in German, but they have also performed songs entirely or partially in other languages, including English, Spanish, French and Russian. Rammstein's award-winning live shows are known for their pyrotechnic elements and both on and off-stage theatrics, and nowadays, they call their music Tanz Metal ("Dance Metal"). There has been some controversy around their name. During their formative years 1993/94, they were throwing out names while in Feeling B's tour bus, and someone wrote Rammstein Flugschau ("Rammstein Air Show") on the wall. Ramstein Air Base outside Kaiserslautern in southern Germany is mainly the headquarters for the US Air Forces in Europe and Africa. In 1988 there was a horrible accident during an Italian air show that killed 70 people. They contemplated other names, like Milch (Milk), Erde (Earth) and Mutter (Mother), but the misspelt Rammstein stuck with them. They have long since distanced themselves from the old name and story.
+      Members:
+      Till Lindemann – lead vocals, harmonica
+      Richard Z. Kruspe – lead guitar, keyboard, backing vocals
+      Paul Landers – rhythm guitar, backing vocals
+      Oliver Riedel – bass
+      Christian Lorenz – keyboard, samples, synthesizers
+      Christoph Schneider – drums, percussion
+    </Description>
+  </Artist>
+  <Artist>
+    <Id>275286</Id>
+    <Name>Christoph Schneider</Name>
+  </Artist>
+  <Artist>
+    <Id>429933</Id>
+    <Name>Paul Landers</Name>
+  </Artist>
+  <Artist>
+    <Id>506666</Id>
+    <Name>Richard Kruspe Bernstein</Name>
+  </Artist>
+  <Artist>
+    <Id>506667</Id>
+    <Name>Christian Lorenz</Name>
+  </Artist>
+  <Artist>
+    <Id>506668</Id>
+    <Name>Till Lindemann</Name>
+  </Artist>
+  <Artist>
+    <Id>506669</Id>
+    <Name>Oliver Riedel</Name>
+  </Artist>
+  <Artist>
+    <Id>36661</Id>
+    <Name>Project Pitchfork</Name>
+    <Description>Hamburg-based Project Pitchfork started in 1989, primarly inspired by electronic New Wave artists such as Ultravox, The Human League, Invisible Limits, early Skinny Puppy, and the more pop-oriented era of SPK.Another influence was the New Age movement that included acts like Jean-Michel Jarre and Vangelis.At that date, Pitchfork had become one of the most popular music groups of the German Dark Wave culture.Between the mid- and late-1990s, the band changed their musical direction to a more trend-oriented style, which was strongly influenced by Rock, Electropop, Techno/Trance, Trip Hop, Breakbeat and Big Beat music.The result of this musical blend has been released on the albums "¡Chakra:Red!" (1997), "Eon:Eon" (1998) and the most successful work "Daimonion" (2001).</Description>
+  </Artist>
+  <Artist>
+    <Id>212203</Id>
+    <Name>Jürgen Jansen</Name>
+  </Artist>
+  <Artist>
+    <Id>239859</Id>
+    <Name>Patricia Nigiani</Name>
+  </Artist>
+  <Artist>
+    <Id>242909</Id>
+    <Name>Peter Spilles</Name>
+  </Artist>
+  <Artist>
+    <Id>277783</Id>
+    <Name>Carsten Klatte</Name>
+  </Artist>
+  <Artist>
+    <Id>328002</Id>
+    <Name>Dirk Scheuber</Name>
+  </Artist>
+  <Artist>
+    <Id>409106</Id>
+    <Name>Achim Färber</Name>
+  </Artist>
+  <Artist>
+    <Id>595461</Id>
+    <Name>Yenz Schrader</Name>
+  </Artist>
+  <Artist>
+    <Id>947085</Id>
+    <Name>Christian Leonhardt</Name>
+  </Artist>
+  <Artist>
+    <Id>11192</Id>
+    <Name>Skinny Puppy</Name>
+    <Description>Canadian band with members cEvin Key (keyboards, percussion) and Nivek Ogre (vocals), founded in late 1982 in Vancouver, BC. They got a contract at Nettwerk via the demo tape "Back And Forth" and released their first EP "Remission" in 1984. Their records were released in Europe by Play It Again Sam [PIAS].</Description>
+  </Artist>
+  <Artist>
+    <Id>46826</Id>
+    <Name>Mark Walk</Name>
+  </Artist>
+  <Artist>
+    <Id>50753</Id>
+    <Name>Dave Ogilvie</Name>
+  </Artist>
+  <Artist>
+    <Id>81282</Id>
+    <Name>Bill Leeb</Name>
+  </Artist>
+  <Artist>
+    <Id>136932</Id>
+    <Name>Dwayne R. Goettel</Name>
+  </Artist>
+  <Artist>
+    <Id>487173</Id>
+    <Name>Kevin Crompton</Name>
+  </Artist>
+  <Artist>
+    <Id>503984</Id>
+    <Name>Kevin Ogilvie</Name>
+  </Artist>
+  <Artist>
+    <Id>664170</Id>
+    <Name>Justin Bennett (2)</Name>
+  </Artist>
+  <Artist>
+    <Id>5378785</Id>
+    <Name>Matthew Setzer</Name>
+  </Artist>
+  <Artist>
+    <Id>10672</Id>
+    <Name>Velvet Acid Christ</Name>
+    <Description>Velvet Acid Christ had their origins in an 80's high school electronics class, where Bryan and Chris would debate the merits of Amiga versus Atari.Bryan and Grigory Bilham (an early member of VAC) were at the time working in a punk / funk band, which, by 1990, was altered to the trio of Bryan, Chris, and Grig. The band's name was originally Cyberchrist, although this was changed within a few months to Velvet Acid Christ, named (so they say) in honor of a bad acid trip. Grig left the band in 1992, leaving the core of Bryan and Chris (although various other people have had revolving door membership in the band). VAC is head strong, fighting for animal rights, the rights of women, and the rights of homosexuals. Velvet Acid Christ is a media frenzy, no way to describe their sound, its different on every release.</Description>
+  </Artist>
+  <Artist>
+    <Id>456037</Id>
+    <Name>Chris Workman</Name>
+  </Artist>
+  <Artist>
+    <Id>456038</Id>
+    <Name>Gary Slaughter</Name>
+  </Artist>
+  <Artist>
+    <Id>456039</Id>
+    <Name>Bryan Erickson</Name>
+  </Artist>
+  <Artist>
+    <Id>628133</Id>
+    <Name>Todd Loomis</Name>
+  </Artist>
+  <Artist>
+    <Id>628134</Id>
+    <Name>Elegia (3)</Name>
+  </Artist>
+  <Artist>
+    <Id>628136</Id>
+    <Name>Dan Olson</Name>
+  </Artist>
+  <Artist>
+    <Id>2958673</Id>
+    <Name>Grigory Bilham</Name>
+  </Artist>
+  <Artist>
+    <Id>7784550</Id>
+    <Name>Dianna Recalde</Name>
+  </Artist>
+  <Artist>
+    <Id>1775650</Id>
+    <Name>The Soft Moon</Name>
+    <Description>Oakland, CA based neo-post-punk band founded by Luis Vasquez as a solo project in 2009.</Description>
+  </Artist>
+  <Artist>
+    <Id>668288</Id>
+    <Name>Luis Vasquez</Name>
+  </Artist>
+  <Artist>
+    <Id>1328293</Id>
+    <Name>Keven Tecon</Name>
+  </Artist>
+  <Artist>
+    <Id>2543659</Id>
+    <Name>Matteo Vallicelli</Name>
+  </Artist>
+  <Artist>
+    <Id>69226</Id>
+    <Name>Hocico</Name>
+    <Description>
+      The Mexican group Hocico was officially formed in 1993 by Erk Aicrag (lyrics and vocals) and Racso Agroyam (synthesizer, programming).The names are ananyms of the real names Erik Garcia and Oscar Mayorga. Both cousins had been experimenting with electronic music, mixing Industrial and EBM, since they were fifteen years old and formed a band in 1992 called Hocico de Perro. The first live gig of Hocico was on February 18, 1994. Their music can be described as dark and aggressive electro-industrial. Their lyrics are mostly English although some songs are in Spanish. After being active for 27 years in the underground scene Hocico has become one of the most influential bands of the harder electronic music genre. Hocico is one of the most active bands in the underground music scene, both live and in the studio. They have released 9 albums, a hanfdul of live DVD’s and countless singles to date. The Spanish word 'hocico' means snout and is a derogatory term that indicates ugliness (i.e., ugly as a dog's snout). Agroyam has a side project called Dulce Liquido, while Aicrag has one called Rabia Sorda.
+    </Description>
+  </Artist>
+  <Artist>
+    <Id>244386</Id>
+    <Name>Erk Aicrag</Name>
+  </Artist>
+  <Artist>
+    <Id>480658</Id>
+    <Name>Racso Agroyam</Name>
+  </Artist>
+  <Artist>
+    <Id>58955</Id>
+    <Name>Clan Of Xymox</Name>
+    <Description>
+      Originally formed in Holland in 1983 as Xymox, Clan of Xymox played dark and moody electronic music that later became known as darkwave. They shortened their name to Xymox again in 1988. The Xymox era ended in 1997 when, in the midst of a revival in the gothic scene, Ronny Moorings made the decision to restart Clan of Xymox and return to his musical roots.
+    </Description>
+  </Artist>
+  <Artist>
+    <Id>142412</Id>
+    <Name>Ronny Moorings</Name>
+  </Artist>
+  <Artist>
+    <Id>227457</Id>
+    <Name>Pieter Nooten</Name>
+  </Artist>
+  <Artist>
+    <Id>308509</Id>
+    <Name>Mojca</Name>
+  </Artist>
+  <Artist>
+    <Id>400588</Id>
+    <Name>Frank Weyzig</Name>
+  </Artist>
+  <Artist>
+    <Id>400589</Id>
+    <Name>Willem van Antwerpen</Name>
+  </Artist>
+  <Artist>
+    <Id>566611</Id>
+    <Name>Anke Wolbert</Name>
+  </Artist>
+  <Artist>
+    <Id>1363751</Id>
+    <Name>Rob Vonk</Name>
+  </Artist>
+  <Artist>
+    <Id>1363752</Id>
+    <Name>Nina Simic</Name>
+  </Artist>
+  <Artist>
+    <Id>1363753</Id>
+    <Name>Rui Ramos</Name>
+  </Artist>
+  <Artist>
+    <Id>2017036</Id>
+    <Name>Yvonne de Ray</Name>
+  </Artist>
+  <Artist>
+    <Id>6001173</Id>
+    <Name>Patrick van Alphen</Name>
+  </Artist>
+  <Artist>
+    <Id>324134</Id>
+    <Name>Xasthur</Name>
+    <Description>Xasthur was formed in the US in December 1995 by Malefic. A few rehearsal tapes were made and members were kicked. In 1999, after more were kicked out, Malefic found a person called Mike. They did a split MCD with Orosius. Mike handled drums and vocals while Malefic took care of guitar and bass, but due to lack of funding and only 20 minutes of recording it was not worthy of being distributed. After that incident Mike left.</Description>
+  </Artist>
+  <Artist>
+    <Id>840110</Id>
+    <Name>Mark Hunter (4)</Name>
+  </Artist>
+  <Artist>
+    <Id>2470200</Id>
+    <Name>Scott Conner</Name>
+  </Artist>
+  <Artist>
+    <Id>2993664</Id>
+    <Name>Mike Pardi</Name>
+  </Artist>
+  <Artist>
+    <Id>660</Id>
+    <Name>Coil</Name>
+    <Description>Formed in London in 1983 by John Balance as a solo side project to Psychic TV, Coil developed into a full-scale musical group in 1984, when Balance cemented a partnership with Peter 'Sleazy' Christopherson. Christopherson had been a founder of Psychic TV and member of Throbbing Gristle. John Balance (1962–2004) died tragically in an accident at his home on November 13th, 2004. Peter Christopherson decided that, with the passing of John Balance, Coil would not continue. Peter Martin Christopherson died 25 November 2010 (aged 55).</Description>
+  </Artist>
+  <Artist>
+    <Id>34069</Id>
+    <Name>Peter Christopherson</Name>
+  </Artist>
+  <Artist>
+    <Id>52097</Id>
+    <Name>Stephen Thrower</Name>
+  </Artist>
+  <Artist>
+    <Id>62067</Id>
+    <Name>Danny Hyde</Name>
+  </Artist>
+  <Artist>
+    <Id>65583</Id>
+    <Name>Drew McDowall</Name>
+  </Artist>
+  <Artist>
+    <Id>66721</Id>
+    <Name>William Breeze</Name>
+  </Artist>
+  <Artist>
+    <Id>139103</Id>
+    <Name>Ossian Brown</Name>
+  </Artist>
+  <Artist>
+    <Id>274002</Id>
+    <Name>Tim Lewis</Name>
+  </Artist>
+  <Artist>
+    <Id>304486</Id>
+    <Name>Tom Edwards</Name>
+  </Artist>
+  <Artist>
+    <Id>400782</Id>
+    <Name>Otto Avery</Name>
+  </Artist>
+  <Artist>
+    <Id>548529</Id>
+    <Name>Geoff Rushton</Name>
+  </Artist>
+  <Artist>
+    <Id>5256294</Id>
+    <Name>Michael J. York</Name>
+  </Artist>
+</ArrayOfArtist>

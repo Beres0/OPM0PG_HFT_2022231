@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OPM0PG_HFT_2022231.Repository.Xml;
+using OPM0PG_HFT_2022231.Models;
+using OPM0PG_HFT_2022231.Models.Seeding;
 using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace OPM0PG_HFT_2022231.Repository.Configurations
@@ -18,9 +18,9 @@ namespace OPM0PG_HFT_2022231.Repository.Configurations
 
         public static void SetSeed<TEntity>
                     (this EntityTypeBuilder<TEntity> builder)
-            where TEntity : class
+            where TEntity : class, IEntity
         {
-            builder.HasData(new XmlSerializer<List<TEntity>>().Deserialize($"Seeds/{typeof(TEntity).Name}Seed.xml"));
+            builder.HasData(Seeder.ReadSeed<TEntity>());
         }
     }
 }

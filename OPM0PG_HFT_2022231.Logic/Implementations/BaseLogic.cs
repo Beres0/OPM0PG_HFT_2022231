@@ -1,7 +1,7 @@
-﻿using OPM0PG_HFT_2022231.Models;
+﻿using OPM0PG_HFT_2022231.Logic.Validating.Exceptions;
+using OPM0PG_HFT_2022231.Models;
 using OPM0PG_HFT_2022231.Repository;
 using System;
-using System.Runtime.CompilerServices;
 
 namespace OPM0PG_HFT_2022231.Logic.Implementations
 {
@@ -14,7 +14,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             this.repository = repository;
         }
 
-        protected void CheckKeyAlreadyAdded<TEntity>(IRepository<TEntity> repository, string argName, params object[] id)
+        protected void CheckKeyAlreadyAdded<TEntity>(params object[] id)
             where TEntity : class, IEntity
         {
             if (repository.TryRead(id, out TEntity added))
@@ -23,19 +23,106 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             }
         }
 
-        protected void CheckKeyExists<TEntity>(IRepository<TEntity> repository, string argName, params object[] id)
+        protected void CheckKeyExists<TEntity>(params object[] id)
                     where TEntity : class, IEntity
         {
             if (!repository.TryRead(id, out TEntity entity))
             {
-                throw new ArgumentException($"The given key '{argName}' is not found! Key: ({string.Join(", ", id)})");
+                throw new ArgumentException($"The given key id is not found! Key: ({string.Join(", ", id)})");
             }
         }
 
-        protected void CheckKeyExists<TEntity>(IRepository<TEntity> repository, int id, [CallerArgumentExpression("id")] string argName = null)
-         where TEntity : class, IEntity
+        protected void CreateEntity<TEntity>(Action tryAction, TEntity entity)
+           where TEntity : class, IEntity
         {
-            CheckKeyExists(repository, argName, id);
+            if (entity is null)
+            {
+                throw new ArgumentNullException(nameof(entity));
+            }
+
+            try
+            {
+                tryAction?.Invoke();
+                repository.Create(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new CreateException(entity, ex);
+            }
+        }
+
+        protected void DeleteEntity<TEntity>(Action tryAction, params object[] id)
+           where TEntity : class, IEntity
+        {
+            try
+            {
+                CheckKeyExists<TEntity>(id);
+                tryAction?.Invoke();
+                repository.Delete<TEntity>(id);
+            }
+            catch (Exception ex)
+            {
+                throw new DeleteException(typeof(Album), ex, id);
+            }
+        }
+
+        protected void DeleteEntityWithSimpleNumericKey<TEntity>(int id)
+           where TEntity : class, IEntity
+        {
+            DeleteEntity<TEntity>(null, id);
+        }
+
+        protected TResult QueryRead<TResult>(Func<TResult> tryQuery)
+        {
+            try
+            {
+                return tryQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(Album), ex, null);
+            }
+        }
+
+        protected TEntity ReadEntity<TEntity>(Action tryAction, params object[] id)
+                                           where TEntity : class, IEntity
+        {
+            try
+            {
+                CheckKeyExists<TEntity>(id);
+                tryAction?.Invoke();
+                return repository.Read<TEntity>(id);
+            }
+            catch (Exception ex)
+            {
+                throw new ReadException(typeof(TEntity), ex, id);
+            }
+        }
+
+        protected TEntity ReadEntityWithSimpleNumericKey<TEntity>(int id)
+        where TEntity : class, IEntity
+        {
+            return ReadEntity<TEntity>(null, id);
+        }
+
+        protected void UpdateEntity<TEntity>(Action tryAction, TEntity entity)
+           where TEntity : class, IEntity
+        {
+            if (entity is null)
+            {
+                throw new ArgumentNullException(nameof(entity));
+            }
+
+            try
+            {
+                CheckKeyExists<TEntity>(entity.GetId());
+                tryAction?.Invoke();
+                repository.Update(entity);
+            }
+            catch (Exception ex)
+            {
+                throw new UpdateException(entity, ex);
+            }
         }
     }
 }

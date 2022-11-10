@@ -12,7 +12,9 @@ namespace OPM0PG_HFT_2022231.Repository
         }
 
         public DbSet<AlbumGenre> AlbumGenres { get; set; }
+        public DbSet<AlbumMedia> AlbumMedia { get; set; }
         public DbSet<Album> Albums { get; set; }
+        public DbSet<AlbumMedia> ArtistMedia { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Contribution> Contributions { get; set; }
         public DbSet<Membership> Memberships { get; set; }
@@ -30,6 +32,8 @@ namespace OPM0PG_HFT_2022231.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AlbumConfiguration());
+            modelBuilder.ApplyConfiguration(new AlbumMediaConfiguration());
+            modelBuilder.ApplyConfiguration(new ArtistMediaConfiguration());
             modelBuilder.ApplyConfiguration(new ArtistConfiguration());
             modelBuilder.ApplyConfiguration(new ContributionConfiguration());
             modelBuilder.ApplyConfiguration(new AlbumGenreConfiguration());

@@ -36,8 +36,6 @@ namespace OPM0PG_HFT_2022231.Test
         {
             Membership nullMembership = null;
             var sameId = new Membership { BandId = 142412, MemberId = 142412 };
-            var nonPosBandId = new Membership { BandId = -10, MemberId = 142412 };
-            var nonPosMemberId = new Membership { BandId = 58955, MemberId = -10 };
             var nonExistBandId = new Membership { BandId = 10, MemberId = 244386 };
             var nonExistMemberId = new Membership { BandId = 58955, MemberId = 30 };
             var circularRefBandId = new Membership { BandId = 480658, MemberId = 1328293 };
@@ -46,8 +44,6 @@ namespace OPM0PG_HFT_2022231.Test
 
             Assert.Throws<ArgumentNullException>(() => logic.CreateMembership(nullMembership));
             Assert.Throws<CreateException>(() => logic.CreateMembership(sameId));
-            Assert.Throws<CreateException>(() => logic.CreateMembership(nonPosBandId));
-            Assert.Throws<CreateException>(() => logic.CreateMembership(nonPosMemberId));
             Assert.Throws<CreateException>(() => logic.CreateMembership(nonExistBandId));
             Assert.Throws<CreateException>(() => logic.CreateMembership(nonExistMemberId));
             Assert.Throws<CreateException>(() => logic.CreateMembership(circularRefBandId));
@@ -57,7 +53,7 @@ namespace OPM0PG_HFT_2022231.Test
             var ok = new Membership { BandId = 69226, MemberId = 400589 };
             Assert.DoesNotThrow(() => logic.CreateMembership(ok));
 
-            Assert.That(repository.Memberships.TryRead(ok.GetId(), out Membership okExists));
+            Assert.That(repository.TryRead(ok.GetId(), out Membership okExists));
         }
 
         [Test]
@@ -83,9 +79,6 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void GetMembersTest()
         {
-            int nonPosId = -10;
-            Assert.Throws<ReadException>(() => logic.GetMembers(nonPosId));
-
             int id = 69226;
             var members = logic.GetMembers(id).Select(m => m.Id);
 
@@ -104,10 +97,8 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void ReadArtistTest()
         {
-            var nonPositive = -10;
             var notFound = 10;
             Assert.Throws<ReadException>(() => logic.ReadArtist(notFound));
-            Assert.Throws<ReadException>(() => logic.ReadArtist(nonPositive));
 
             var ok = 58955;
             Assert.DoesNotThrow(() => logic.ReadArtist(ok));
@@ -116,40 +107,32 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void ReadMembershipTest()
         {
-            var nonPosBandId = new Membership { BandId = -10, MemberId = 142412 };
-            var nonPosMemberId = new Membership { BandId = 58955, MemberId = -10 };
             var nonExistBandId = new Membership { BandId = 10, MemberId = 244386 };
             var nonExistMemberId = new Membership { BandId = 58955, MemberId = 30 };
             var nonExistMembership = new Membership { BandId = 69226, MemberId = 308509 };
 
-            AssertMembershipReadException(nonPosBandId);
-            AssertMembershipReadException(nonPosMemberId);
             AssertMembershipReadException(nonExistBandId);
             AssertMembershipReadException(nonExistMemberId);
             AssertMembershipReadException(nonExistMembership);
 
-            Membership ok = repository.Memberships.Read(58955, 142412);
+            Membership ok = repository.Read<Membership>(58955, 142412);
             Assert.DoesNotThrow(() => logic.ReadMembership(ok.BandId, ok.MemberId));
         }
 
         [Test]
         public void RemoveMembershipTest()
         {
-            var nonPosBandId = new Membership { BandId = -10, MemberId = 142412 };
-            var nonPosMemberId = new Membership { BandId = 58955, MemberId = -10 };
             var nonExistBandId = new Membership { BandId = 10, MemberId = 244386 };
             var nonExistMemberId = new Membership { BandId = 58955, MemberId = 30 };
             var nonExistMembership = new Membership { BandId = 69226, MemberId = 308509 };
 
-            AssertMembershipDeleteException(nonPosBandId);
-            AssertMembershipDeleteException(nonPosMemberId);
             AssertMembershipDeleteException(nonExistBandId);
             AssertMembershipDeleteException(nonExistMemberId);
             AssertMembershipDeleteException(nonExistMembership);
 
-            Membership deleted = repository.Memberships.ReadAll().Take(5).Last();
+            Membership deleted = repository.ReadAll<Membership>().Take(5).Last();
             Assert.DoesNotThrow(() => logic.DeleteMembership(deleted.BandId, deleted.MemberId));
-            Assert.That(logic.ReadAllMembership().Contains(deleted));
+            Assert.That(!logic.ReadAllMembership().Contains(deleted));
         }
 
         [SetUp]
@@ -164,14 +147,12 @@ namespace OPM0PG_HFT_2022231.Test
             Artist artist = new Artist() { Id = 668288, Name = "Luis Vasquez" };
 
             Artist nullArtist = null;
-            var nonPos = new Artist() { Id = -1, Name = null };
             var notFound = new Artist() { Id = 10, Name = "Test" };
             var nullName = new Artist() { Id = artist.Id, Name = null };
             var emptyName = new Artist() { Id = artist.Id, Name = "" };
             var longName = new Artist() { Id = artist.Id, Name = new string('x', 256) };
 
             Assert.Throws<ArgumentNullException>(() => logic.UpdateArtist(nullArtist));
-            Assert.Throws<UpdateException>(() => logic.UpdateArtist(nonPos));
             Assert.Throws<UpdateException>(() => logic.UpdateArtist(notFound));
             Assert.Throws<UpdateException>(() => logic.UpdateArtist(nullName));
             Assert.Throws<UpdateException>(() => logic.UpdateArtist(emptyName));
@@ -186,26 +167,22 @@ namespace OPM0PG_HFT_2022231.Test
         public void UpdateMembershipTest()
         {
             Membership nullMembership = null;
-            var nonPosBandId = new Membership { BandId = -10, MemberId = 142412 };
-            var nonPosMemberId = new Membership { BandId = 58955, MemberId = -10 };
             var nonExistBandId = new Membership { BandId = 10, MemberId = 244386 };
             var nonExistMemberId = new Membership { BandId = 58955, MemberId = 30 };
             var nonExistMembership = new Membership { BandId = 69226, MemberId = 308509 };
 
             Assert.Throws<ArgumentNullException>(() => logic.UpdateMembership(nullMembership));
-            Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonPosBandId));
-            Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonPosMemberId));
             Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonExistBandId));
             Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonExistMemberId));
             Assert.Throws<UpdateException>(() => logic.UpdateMembership(nonExistMembership));
 
             var trueSetFalse = new Membership() { BandId = 58955, MemberId = 142412 };
             logic.UpdateMembership(trueSetFalse);
-            Assert.That(!repository.Memberships.Read(trueSetFalse.BandId, trueSetFalse.MemberId).Active);
+            Assert.That(!repository.Read<Membership>(trueSetFalse.BandId, trueSetFalse.MemberId).Active);
 
             var falseSetTrue = new Membership() { BandId = 58955, MemberId = 400589, Active = true };
             logic.UpdateMembership(falseSetTrue);
-            Assert.That(repository.Memberships.Read(falseSetTrue.BandId, falseSetTrue.MemberId).Active);
+            Assert.That(repository.Read<Membership>(falseSetTrue.BandId, falseSetTrue.MemberId).Active);
         }
 
         private void AssertMembershipDeleteException(Membership membership)

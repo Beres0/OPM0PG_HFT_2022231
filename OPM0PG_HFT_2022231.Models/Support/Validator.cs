@@ -84,6 +84,10 @@ namespace OPM0PG_HFT_2022231.Models.Support
                 {
                     throw new ArgumentException($"The lenght of '{propName}' is not valid! Must be between {stringLength.MinimumLength} and {stringLength.MaximumLength}! Actual length: {value}");
                 }
+                else if (attribute is UrlAttribute uri)
+                {
+                    throw new FormatException($"The '{propName}' is not well-formed uri! Value: {value}");
+                }
             }
         }
     }

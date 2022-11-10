@@ -15,15 +15,11 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void CreateContributionTest()
         {
-            int negArtistId = -1;
-            int negAlbumId = -1;
             int nonExistArtistId = 4124124;
             int nonExistAlbumId = 4124124;
             int okArtistId = 1775650;
             int okAlbumId = 1308061;
 
-            AssertCreateContributionException(okAlbumId, negArtistId);
-            AssertCreateContributionException(negAlbumId, okArtistId);
             AssertCreateContributionException(okAlbumId, nonExistArtistId);
             AssertCreateContributionException(nonExistAlbumId, okArtistId);
             AssertCreateContributionException(okArtistId, okAlbumId);
@@ -41,41 +37,33 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void ReadContributionTest()
         {
-            int negArtistId = -1;
-            int negAlbumId = -1;
             int nonExistArtistId = 4124124;
             int nonExistAlbumId = 4124124;
             int okArtistId = 1775650;
             int okAlbumId = 1308061;
 
-            Assert.Throws<ReadException>(() => logic.ReadContribution(okAlbumId, negArtistId));
-            Assert.Throws<ReadException>(() => logic.ReadContribution(negAlbumId, okArtistId));
             Assert.Throws<ReadException>(() => logic.ReadContribution(okAlbumId, nonExistArtistId));
             Assert.Throws<ReadException>(() => logic.ReadContribution(nonExistAlbumId, okArtistId));
             Assert.Throws<ReadException>(() => logic.ReadContribution(okAlbumId, nonExistAlbumId));
 
             Assert.DoesNotThrow(() => logic.ReadContribution(okAlbumId, okArtistId));
-            Assert.That(repository.Contributions.TryRead(new object[] { okAlbumId, okArtistId }, out var result));
+            Assert.That(repository.TryRead(new object[] { okAlbumId, okArtistId }, out Contribution result));
         }
 
         [Test]
         public void RemoveContribution()
         {
-            int negArtistId = -1;
-            int negAlbumId = -1;
             int nonExistArtistId = 4124124;
             int nonExistAlbumId = 4124124;
             int okArtistId = 1775650;
             int okAlbumId = 1308061;
 
-            Assert.Throws<DeleteException>(() => logic.RemoveContribution(okAlbumId, negArtistId));
-            Assert.Throws<DeleteException>(() => logic.RemoveContribution(negAlbumId, okArtistId));
             Assert.Throws<DeleteException>(() => logic.RemoveContribution(okAlbumId, nonExistArtistId));
             Assert.Throws<DeleteException>(() => logic.RemoveContribution(nonExistAlbumId, okArtistId));
             Assert.Throws<DeleteException>(() => logic.RemoveContribution(okAlbumId, nonExistAlbumId));
 
             Assert.DoesNotThrow(() => logic.RemoveContribution(okAlbumId, okArtistId));
-            Assert.That(!repository.Contributions.TryRead(new object[] { okAlbumId, okArtistId }, out var result));
+            Assert.That(!repository.TryRead(new object[] { okAlbumId, okArtistId }, out Contribution result));
         }
 
         [SetUp]

@@ -9,7 +9,10 @@ namespace OPM0PG_HFT_2022231.Models.DataTransferObjects
                         IEnumerable<PartDTO> Parts,
                         IEnumerable<string> Genres,
                         IEnumerable<ReleaseDTO> Releases,
-                        IEnumerable<ContributorDTO> Contributors);
+                        IEnumerable<ContributorDTO> Contributors,
+                        IEnumerable<MediaDTO> Media);
+
+    public record MediaDTO(int Id, MediaType MediaType, bool Main, string Uri);
     public record ContributorDTO(int Id, string Name);
     public record PartDTO(int Id, int Position, string Title, TimeSpan Duration, IEnumerable<TrackDTO> Tracks);
     public record TrackDTO(int Id, int Position, string Title, TimeSpan? Duration);
@@ -23,7 +26,8 @@ namespace OPM0PG_HFT_2022231.Models.DataTransferObjects
                                    IEnumerable<string> Genres,
                                    IEnumerable<MemberDTO> Members,
                                    IEnumerable<BandsDTO> Bands,
-                                   IEnumerable<AlbumDTO> Albums);
+                                   IEnumerable<AlbumDTO> Albums,
+                                   IEnumerable<MediaDTO> Media);
     public record ArtistGenreDTO(Artist Artist, string Genre);
     public record ArtistPerGenreDTO(string Genre, int NumberOfArtists);
 

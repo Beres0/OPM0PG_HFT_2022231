@@ -3,14 +3,9 @@
   <Artist>
     <Id>1775650</Id>
     <Name>The Soft Moon</Name>
-  </Artist>
-  <Artist>
-    <Id>69226</Id>
-    <Name>Hocico</Name>
-  </Artist>
-  <Artist>
-    <Id>58955</Id>
-    <Name>Clan Of Xymox</Name>
+    <Description>
+      Oakland, CA based neo-post-punk band founded by Luis Vasquez as a solo project in 2009.
+    </Description>
   </Artist>
   <Artist>
     <Id>668288</Id>
@@ -25,12 +20,35 @@
     <Name>Matteo Vallicelli</Name>
   </Artist>
   <Artist>
+    <Id>69226</Id>
+    <Name>Hocico</Name>
+    <Description>
+      The Mexican group Hocico was officially formed in 1993 by Erk Aicrag (lyrics and vocals) and Racso Agroyam (synthesizer, programming).
+      The names are ananyms of the real names Erik Garcia and Oscar Mayorga.
+      Both cousins had been experimenting with electronic music, mixing Industrial and EBM, since they were fifteen years old and formed a band in 1992 called Hocico de Perro.
+      The first live gig of Hocico was on February 18, 1994. Their music can be described as dark and aggressive electro-industrial. Their lyrics are mostly English although some songs are in Spanish.
+      After being active for 27 years in the underground scene Hocico has become one of the most influential bands of the harder electronic music genre.
+      Hocico is one of the most active bands in the underground music scene, both live and in the studio. They have released 9 albums, a hanfdul of live DVD’s and countless singles to date.
+      The Spanish word 'hocico' means snout and is a derogatory term that indicates ugliness (i.e., ugly as a dog's snout).
+      Agroyam has a side project called Dulce Liquido, while Aicrag has one called Rabia Sorda.
+    </Description>
+  </Artist>
+  <Artist>
     <Id>244386</Id>
     <Name>Erk Aicrag</Name>
   </Artist>
   <Artist>
     <Id>480658</Id>
     <Name>Racso Agroyam</Name>
+  </Artist>
+  <Artist>
+    <Id>58955</Id>
+    <Name>Clan Of Xymox</Name>
+    <Description>
+      Originally formed in Holland in 1983 as Xymox, Clan of Xymox played dark and moody electronic music that later became known as darkwave.
+      They shortened their name to Xymox again in 1988.
+      The Xymox era ended in 1997 when, in the midst of a revival in the gothic scene, Ronny Moorings made the decision to restart Clan of Xymox and return to his musical roots.
+    </Description>
   </Artist>
   <Artist>
     <Id>142412</Id>

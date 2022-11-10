@@ -1,8 +1,8 @@
-﻿using Newtonsoft.Json;
-using OPM0PG_HFT_2022231.Models.Support;
+﻿using OPM0PG_HFT_2022231.Models.Support;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Serialization;
+using NativeJson = System.Text.Json;
 
 namespace OPM0PG_HFT_2022231.Models
 {
@@ -13,16 +13,19 @@ namespace OPM0PG_HFT_2022231.Models
             InversePropertiesSetter<Artist>.SetInverseProperties(this);
         }
 
-        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
+        [NativeJson.Serialization.JsonIgnore, Newtonsoft.Json.JsonIgnore, XmlIgnore]
         public virtual ICollection<Membership> Bands { get; set; }
 
-        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
+        [NativeJson.Serialization.JsonIgnore, Newtonsoft.Json.JsonIgnore, XmlIgnore]
         public virtual ICollection<Contribution> ContributedAlbums { get; set; }
 
-        [Range(0, int.MaxValue)]
+        public string Description { get; set; }
         public int Id { get; set; }
 
-        [System.Text.Json.Serialization.JsonIgnore, JsonIgnore, XmlIgnore]
+        [NativeJson.Serialization.JsonIgnore, Newtonsoft.Json.JsonIgnore, XmlIgnore]
+        public virtual ICollection<ArtistMedia> Media { get; set; }
+
+        [NativeJson.Serialization.JsonIgnore, Newtonsoft.Json.JsonIgnore, XmlIgnore]
         public virtual ICollection<Membership> Members { get; set; }
 
         [StringLength(ColumnTypeConstants.MaxTextLength)]

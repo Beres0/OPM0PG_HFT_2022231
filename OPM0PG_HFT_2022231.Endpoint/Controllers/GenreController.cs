@@ -8,7 +8,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class GenreController : ControllerBase, IGenreLogic
+    public class GenreController : ControllerBase
     {
         private IGenreLogic logic;
 

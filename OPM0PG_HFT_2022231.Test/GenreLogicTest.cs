@@ -19,7 +19,6 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void CreateGenreTest()
         {
-            int negAlbumid = -1;
             int nonExistAlbumId = 1322313;
             int okAlbumId = 796235;
             string nullGenre = null;
@@ -27,7 +26,6 @@ namespace OPM0PG_HFT_2022231.Test
             string longGenre = new string('x', 256);
             string okGenre = "Electronic";
 
-            AssertCreateGenreException(negAlbumid, okGenre);
             AssertCreateGenreException(nonExistAlbumId, okGenre);
             AssertCreateGenreException(okAlbumId, nullGenre);
             AssertCreateGenreException(okAlbumId, emptyGenre);
@@ -35,13 +33,13 @@ namespace OPM0PG_HFT_2022231.Test
             AssertCreateGenreException(okAlbumId, okGenre);
 
             Assert.DoesNotThrow(() => logic.CreateGenre(new AlbumGenre() { AlbumId = okAlbumId, Genre = "Test" }));
-            Assert.That(repository.Genres.TryRead(new object[] { okAlbumId, "Test" }, out var result));
+            Assert.That(repository.TryRead(new object[] { okAlbumId, "Test" }, out AlbumGenre result));
         }
 
         [Test]
         public void GetAlbumPerGenreTest()
         {
-            Assert.That(repository.Genres.ReadAll()
+            Assert.That(repository.ReadAll<AlbumGenre>()
                      .GroupBy(g => g.Genre)
                      .Select(g => new AlbumPerGenreDTO(g.Key, g.Count()))
                      .SequenceEqual(logic.GetAlbumPerGenre()));
@@ -50,8 +48,8 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void GetArtistPerGenre()
         {
-            Assert.That(repository.Genres.ReadAll().Join
-                    (repository.Contributions.ReadAll(),
+            Assert.That(repository.ReadAll<AlbumGenre>().Join
+                    (repository.ReadAll<Contribution>(),
                     (g) => g.AlbumId, (c) => c.AlbumId,
                     (g, c) => new ArtistGenreDTO(c.Artist, g.Genre))
                    .Distinct()
@@ -63,7 +61,7 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void GetGenresTest()
         {
-            Assert.That(repository.Genres.ReadAll()
+            Assert.That(repository.ReadAll<AlbumGenre>()
                 .Select(g => g.Genre)
                 .Distinct()
                 .SequenceEqual(logic.GetGenres()));
@@ -79,8 +77,8 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void ReadAllArtistGenreTest()
         {
-            Assert.That(repository.Genres.ReadAll().Join
-                   (repository.Contributions.ReadAll(),
+            Assert.That(repository.ReadAll<AlbumGenre>().Join
+                   (repository.ReadAll<Contribution>(),
                    (g) => g.AlbumId, (c) => c.AlbumId,
                    (g, c) => new ArtistGenreDTO(c.Artist, g.Genre))
                    .Distinct()
@@ -90,7 +88,6 @@ namespace OPM0PG_HFT_2022231.Test
         [Test]
         public void ReadGenreTest()
         {
-            int negAlbumid = -1;
             int nonExistAlbumId = 1322313;
             int okAlbumId = 796235;
             string nullGenre = null;
@@ -99,7 +96,6 @@ namespace OPM0PG_HFT_2022231.Test
             string nonExistGenre = "Test";
             string okGenre = "Electronic";
 
-            Assert.Throws<ReadException>(() => logic.ReadGenre(negAlbumid, okGenre));
             Assert.Throws<ReadException>(() => logic.ReadGenre(nonExistAlbumId, okGenre));
             Assert.Throws<ReadException>(() => logic.ReadGenre(okAlbumId, nullGenre));
             Assert.Throws<ReadException>(() => logic.ReadGenre(okAlbumId, emptyGenre));
@@ -107,13 +103,12 @@ namespace OPM0PG_HFT_2022231.Test
             Assert.Throws<ReadException>(() => logic.ReadGenre(okAlbumId, nonExistGenre));
 
             Assert.DoesNotThrow(() => logic.ReadGenre(okAlbumId, okGenre));
-            Assert.That(repository.Genres.TryRead(new object[] { okAlbumId, okGenre }, out var result));
+            Assert.That(repository.TryRead(new object[] { okAlbumId, okGenre }, out AlbumGenre result));
         }
 
         [Test]
         public void RemoveGenreTest()
         {
-            int negAlbumid = -1;
             int nonExistAlbumId = 1322313;
             int okAlbumId = 796235;
             string nullGenre = null;
@@ -122,7 +117,6 @@ namespace OPM0PG_HFT_2022231.Test
             string nonExistGenre = "Test";
             string okGenre = "Electronic";
 
-            Assert.Throws<DeleteException>(() => logic.DeleteGenre(negAlbumid, okGenre));
             Assert.Throws<DeleteException>(() => logic.DeleteGenre(nonExistAlbumId, okGenre));
             Assert.Throws<DeleteException>(() => logic.DeleteGenre(okAlbumId, nullGenre));
             Assert.Throws<DeleteException>(() => logic.DeleteGenre(okAlbumId, emptyGenre));
@@ -130,7 +124,7 @@ namespace OPM0PG_HFT_2022231.Test
             Assert.Throws<DeleteException>(() => logic.DeleteGenre(okAlbumId, nonExistGenre));
 
             Assert.DoesNotThrow(() => logic.DeleteGenre(okAlbumId, okGenre));
-            Assert.That(!repository.Genres.TryRead(new object[] { okAlbumId, okGenre }, out var result));
+            Assert.That(!repository.TryRead(new object[] { okAlbumId, okGenre }, out AlbumGenre result));
         }
 
         [SetUp]

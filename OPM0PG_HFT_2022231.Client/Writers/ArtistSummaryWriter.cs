@@ -17,6 +17,12 @@ namespace OPM0PG_HFT_2022231.Client.Writers
             WriteCollection("Genres", summary.Genres, (g) => g);
             WriteCollection("Albums", summary.Albums, (a) =>
             $"[{a.Id}] {a.Title} ({a.Year}) - Tracks({a.NumberOfTracks}) Duration({a.TotalDuration})");
+            Console.WriteLine();
+            Console.WriteLine("Media: ");
+            foreach (var media in summary.Media)
+            {
+                Console.WriteLine($"\t[{media.Id}]{media.MediaType}{(media.Main ? "-Main" : "")}:{media.Uri}");
+            }
         }
     }
 }

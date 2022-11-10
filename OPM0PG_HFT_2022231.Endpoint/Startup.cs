@@ -55,13 +55,13 @@ namespace OPM0PG_HFT_2022231.Endpoint
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<MusicDbContext>();
-
             services.AddTransient<IMusicRepository, MusicRepository>();
             services.AddTransient<IAlbumLogic, AlbumLogic>();
             services.AddTransient<IArtistLogic, ArtistLogic>();
             services.AddTransient<IContributionLogic, ContributionLogic>();
             services.AddTransient<IGenreLogic, GenreLogic>();
             services.AddTransient<IReleaseLogic, ReleaseLogic>();
+            services.AddTransient<IMediaLogic, MediaLogic>();
             services.AddTransient<IMusicLogic, MusicLogic>();
 
             services.AddMvc().AddNewtonsoftJson(setup =>

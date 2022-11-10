@@ -36,6 +36,12 @@ namespace OPM0PG_HFT_2022231.Client.Writers
             {
                 Console.WriteLine($"\t[{release.Id}] {release.Publisher} - {release.Country} ({release.ReleaseYear})");
             }
+            Console.WriteLine();
+            Console.WriteLine("Media: ");
+            foreach (var media in summary.Media)
+            {
+                Console.WriteLine($"\t[{media.Id}]{media.MediaType}{(media.Main ? "-Main" : "")}:{media.Uri}");
+            }
         }
     }
 }

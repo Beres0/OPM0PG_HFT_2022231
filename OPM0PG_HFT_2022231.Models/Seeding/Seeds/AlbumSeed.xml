@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAlbum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Album>
+    <Id>1465758</Id>
+    <Title>Aphex Mt. Fuji 2017</Title>
+    <Year>2017</Year>
+  </Album>
+  <Album>
+    <Id>353700</Id>
+    <Title>Instrumental Relics</Title>
+    <Year>2020</Year>
+  </Album>
+  <Album>
+    <Id>1392190</Id>
+    <Title>White Light</Title>
+    <Year>2015</Year>
+  </Album>
+  <Album>
+    <Id>1574811</Id>
+    <Title>Entity </Title>
+    <Year>2019</Year>
+  </Album>
+  <Album>
+    <Id>1029904</Id>
+    <Title>Autumn</Title>
+    <Year>2016</Year>
+  </Album>
+  <Album>
+    <Id>42319</Id>
+    <Title>Rotten To The Core</Title>
+    <Year>2007</Year>
+  </Album>
+  <Album>
+    <Id>42312</Id>
+    <Title>Demons Of Hate</Title>
+    <Year>2005</Year>
+  </Album>
+  <Album>
+    <Id>27518</Id>
+    <Title>Bloody Kisses</Title>
+    <Year>1993</Year>
+  </Album>
+  <Album>
+    <Id>27564</Id>
+    <Title>October Rust</Title>
+    <Year>1996</Year>
+  </Album>
+  <Album>
+    <Id>55827</Id>
+    <Title>Entities</Title>
+    <Year>1992</Year>
+  </Album>
+
+  <Album>
+    <Id>461</Id>
+    <Title>...I Care Because You Do</Title>
+    <Year>1995</Year>
+  </Album>
+  <Album>
+    <Id>27179</Id>
+    <Title>Embryodead</Title>
+    <Year>1997</Year>
+  </Album>
+  <Album>
+    <Id>27210</Id>
+    <Title>Fuckit</Title>
+    <Year>2009</Year>
+  </Album>
+  <Album>
+    <Id>33450</Id>
+    <Title>Crystal Castles</Title>
+    <Year>2008</Year>
+  </Album>
+  <Album>
+    <Id>250274</Id>
+    <Title>Crystal Castles (II)</Title>
+    <Year>2010</Year>
+  </Album>
+  <Album>
+    <Id>491967</Id>
+    <Title>(III)</Title>
+    <Year>2012</Year>
+  </Album>
+  <Album>
+    <Id>10889</Id>
+    <Title>Virus Meadow</Title>
+    <Year>1986</Year>
+  </Album>
+  <Album>
+    <Id>10795</Id>
+    <Title>Farewell To The Shade</Title>
+    <Year>1989</Year>
+  </Album>
+  <Album>
+    <Id>95298</Id>
+    <Title>Völkerball</Title>
+    <Year>2006</Year>
+  </Album>
+  <Album>
+    <Id>95285</Id>
+    <Title>Mutter</Title>
+    <Year>2001</Year>
+  </Album>
+  <Album>
+    <Id>55817</Id>
+    <Title>Dhyani</Title>
+    <Year>1991</Year>
+  </Album>
+  <Album>
+    <Id>17225</Id>
+    <Title>Bites</Title>
+    <Year>1985</Year>
+  </Album>
+  <Album>
+    <Id>3815</Id>
+    <Title>Rabies</Title>
+    <Year>1989</Year>
+  </Album>
+  <Album>
+    <Id>4130</Id>
+    <Title>The Process</Title>
+    <Year>1996</Year>
+  </Album>
+  <Album>
+    <Id>27483</Id>
+    <Title>Calling Ov The Dead</Title>
+    <Year>1997</Year>
+  </Album>
+  <Album>
+    <Id>723622</Id>
+    <Title>Lust For Blood</Title>
+    <Year>2006</Year>
+  </Album>
+  <Album>
+    <Id>796235</Id>
+    <Title>Deeper</Title>
+    <Year>2015</Year>
+  </Album>
+  <Album>
+    <Id>1308061</Id>
+    <Title>Criminal</Title>
+    <Year>2018</Year>
+  </Album>
+  <Album>
+    <Id>5668</Id>
+    <Title>Musick To Play In The Dark²</Title>
+    <Year>2000</Year>
+  </Album>
+  <Album>
+    <Id>5642</Id>
+    <Title>The Ape Of Naples</Title>
+    <Year>2005</Year>
+  </Album>
+  <Album>
+    <Id>27330</Id>
+    <Title>Memorias Atrás</Title>
+    <Year>2008</Year>
+  </Album>
+  <Album>
+    <Id>279762</Id>
+    <Title>Tiempos De Furia</Title>
+    <Year>2010</Year>
+  </Album>
+  <Album>
+    <Id>27320</Id>
+    <Title>Wrack And Ruin</Title>
+    <Year>2004</Year>
+  </Album>
+  <Album>
+    <Id>42663</Id>
+    <Title>Creatures</Title>
+    <Year>1999</Year>
+  </Album>
+  <Album>
+    <Id>55577</Id>
+    <Title>Notes From The Underground</Title>
+    <Year>2001</Year>
+  </Album>
+  <Album>
+    <Id>48191</Id>
+    <Title>To Violate The Oblivious</Title>
+    <Year>2004</Year>
+  </Album>
+  <Album>
+    <Id>48184</Id>
+    <Title>Subliminal Genocide</Title>
+    <Year>2006</Year>
+  </Album>
+</ArrayOfAlbum>
