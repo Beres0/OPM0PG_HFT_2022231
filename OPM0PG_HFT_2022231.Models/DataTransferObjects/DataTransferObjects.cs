@@ -46,7 +46,7 @@ namespace OPM0PG_HFT_2022231.Models.DataTransferObjects
 
     public record ApiInterfaceMapDTO(IEnumerable<ApiControllerDTO> Controllers);
     public record ApiControllerDTO(string Name, IEnumerable<ApiMethodDTO> Methods);
-    public record ApiParameterDTO(string Name, string AssemblyQTypeName);
+    public record ApiParameterDTO(string Name,string AssemblyQTypeName);
     public record ApiMethodDTO(string Name,
                                string RequestUri,
                                string AssemblyQReturnType,

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace OPM0PG_HFT_2022231.Client.Readers
 {
@@ -11,9 +12,9 @@ namespace OPM0PG_HFT_2022231.Client.Readers
 
         public Type ReadingType { get; }
 
-        public object Read()
+        public object Read(Func<PropertyInfo,bool> ignore=null)
         {
-            var obj = ReadMethod();
+            var obj = ReadMethod(ignore);
             if (obj.GetType() != ReadingType)
             {
                 throw new NotSupportedException();
@@ -21,6 +22,6 @@ namespace OPM0PG_HFT_2022231.Client.Readers
             return obj;
         }
 
-        protected abstract object ReadMethod();
+        protected abstract object ReadMethod(Func<PropertyInfo,bool> ignore);
     }
 }

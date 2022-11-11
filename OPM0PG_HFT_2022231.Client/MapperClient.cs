@@ -9,8 +9,10 @@ using OPM0PG_HFT_2022231.Models.Utility.Reflection;
 using OPM0PG_HFT_2022231.Models.Utility.Serialization;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection;
 
 namespace OPM0PG_HFT_2022231.Client
 {
@@ -134,7 +136,8 @@ namespace OPM0PG_HFT_2022231.Client
         {
             void Post()
             {
-                object content = ReadFromBodyParameter(method.Parameters.First());
+                object content = ReadFromBodyParameter(method.Parameters.First()
+                                                     ,(p)=>p.GetCustomAttribute<DatabaseGeneratedAttribute>() is not null);
                 var response = restService.PostAsync(method.RequestUri, content).Result;
                 WriteResponse(method, response);
                 Console.ReadLine();
@@ -171,12 +174,12 @@ namespace OPM0PG_HFT_2022231.Client
             return types[assemblyQTypeName];
         }
 
-        private object ReadFromBodyParameter(ApiParameterDTO parameter)
+        private object ReadFromBodyParameter(ApiParameterDTO parameter,Func<PropertyInfo,bool> ignore=null)
         {
             Type parameterType = GetType(parameter.AssemblyQTypeName);
             if (Readers.Contains(parameterType))
             {
-                return Readers[parameterType].Read();
+                return Readers[parameterType].Read(ignore);
             }
             else throw new NotSupportedException();
         }

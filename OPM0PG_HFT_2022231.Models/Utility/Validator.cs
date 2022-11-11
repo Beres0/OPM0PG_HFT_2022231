@@ -86,7 +86,7 @@ namespace OPM0PG_HFT_2022231.Models.Utility
                 }
                 else if (attribute is UrlAttribute uri)
                 {
-                    throw new FormatException($"The '{propName}' is not well-formed uri! Value: {value}");
+                    throw new FormatException($"The '{propName}' is not well-formed URI! Value: {value}");
                 }
             }
         }
