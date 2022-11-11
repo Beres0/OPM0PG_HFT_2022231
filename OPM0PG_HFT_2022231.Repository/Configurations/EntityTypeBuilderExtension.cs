@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OPM0PG_HFT_2022231.Models;
-using OPM0PG_HFT_2022231.Models.Seeding;
 using System;
 using System.Linq.Expressions;
-
+using OPM0PG_HFT_2022231.Models.Utility;
 namespace OPM0PG_HFT_2022231.Repository.Configurations
 {
     internal static class EntityTypeBuilderExtension

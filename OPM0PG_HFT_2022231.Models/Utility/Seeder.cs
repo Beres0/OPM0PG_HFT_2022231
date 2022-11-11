@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace OPM0PG_HFT_2022231.Models.Seeding
+namespace OPM0PG_HFT_2022231.Models.Utility
 {
     public static class Seeder
     {
-        private static readonly string BuildDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        public static string DefaultDirectory { get; set; } = "Seeding";
+        public static string DefaultDirectory { get; set; } = "Seeds";
 
         public static List<TEntity> ReadSeed<TEntity>()
             where TEntity : class, IEntity
         {
-            return ModelXmlSerializer<List<TEntity>>.Deserialize($"{BuildDirectory}/{DefaultDirectory}/Seeds/{typeof(TEntity).Name}Seed.xml");
+            return ModelXmlSerializer<List<TEntity>>.Deserialize($"{DefaultDirectory}/{typeof(TEntity).Name}Seed.xml");
         }
 
         public static List<TEntity> ReadSeed<TEntity>(string path)
