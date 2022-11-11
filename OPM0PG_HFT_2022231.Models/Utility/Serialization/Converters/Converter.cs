@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace OPM0PG_HFT_2022231.Models.Support.Serialization.Converters
+namespace OPM0PG_HFT_2022231.Models.Utility.Serialization.Converters
 {
     public abstract class Converter : JsonConverter
     {

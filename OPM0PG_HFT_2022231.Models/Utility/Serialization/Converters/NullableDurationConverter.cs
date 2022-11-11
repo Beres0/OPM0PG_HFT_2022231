@@ -2,7 +2,7 @@
 using System;
 using System.Globalization;
 
-namespace OPM0PG_HFT_2022231.Models.Support.Serialization.Converters
+namespace OPM0PG_HFT_2022231.Models.Utility.Serialization.Converters
 {
     public class NullableDurationConverter : DurationConverter
     {

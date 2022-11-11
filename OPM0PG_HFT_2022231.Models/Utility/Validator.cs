@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace OPM0PG_HFT_2022231.Models.Support
+namespace OPM0PG_HFT_2022231.Models.Utility
 {
     public static class Validator<T>
     {

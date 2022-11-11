@@ -2,7 +2,7 @@
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
 using System;
 
-namespace OPM0PG_HFT_2022231.Models.Support.Serialization.Converters
+namespace OPM0PG_HFT_2022231.Models.Utility.Serialization.Converters
 {
     public abstract class EnumConverter<TEnum> : Converter
         where TEnum : struct, Enum

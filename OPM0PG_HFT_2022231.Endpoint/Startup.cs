@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OPM0PG_HFT_2022231.Logic;
 using OPM0PG_HFT_2022231.Logic.Implementations;
-using OPM0PG_HFT_2022231.Models.Support.Serialization;
+using OPM0PG_HFT_2022231.Models.Utility.Serialization;
 using OPM0PG_HFT_2022231.Repository;
 
 namespace OPM0PG_HFT_2022231.Endpoint

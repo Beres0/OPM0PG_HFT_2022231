@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml.Serialization;
 
-namespace OPM0PG_HFT_2022231.Models.Support.Serialization
+namespace OPM0PG_HFT_2022231.Models.Utility.Serialization
 {
     public static class ModelXmlSerializer<T>
     {

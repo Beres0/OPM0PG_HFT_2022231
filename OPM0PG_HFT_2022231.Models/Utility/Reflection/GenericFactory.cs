@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace OPM0PG_HFT_2022231.Models.Support.Reflection
+namespace OPM0PG_HFT_2022231.Models.Utility.Reflection
 {
     public static class GenericFactory
     {

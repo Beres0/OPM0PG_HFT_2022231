@@ -1,5 +1,5 @@
 ﻿using OPM0PG_HFT_2022231.Models;
-using OPM0PG_HFT_2022231.Models.Support.Serialization;
+using OPM0PG_HFT_2022231.Models.Utility.Serialization;
 using OPM0PG_HFT_2022231.Repository;
 using OPM0PG_HFT_2022231.Repository.ChainActions;
 using System;

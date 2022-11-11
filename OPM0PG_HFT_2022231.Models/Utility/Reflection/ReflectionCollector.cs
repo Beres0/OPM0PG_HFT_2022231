@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace OPM0PG_HFT_2022231.Models.Support.Reflection
+namespace OPM0PG_HFT_2022231.Models.Utility.Reflection
 {
     public class ReflectionCollector
     {

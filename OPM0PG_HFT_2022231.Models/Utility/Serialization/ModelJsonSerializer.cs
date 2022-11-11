@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json;
-using OPM0PG_HFT_2022231.Models.Support.Serialization.Converters;
+using OPM0PG_HFT_2022231.Models.Utility.Serialization.Converters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace OPM0PG_HFT_2022231.Models.Support.Serialization
+namespace OPM0PG_HFT_2022231.Models.Utility.Serialization
 {
     public static class ModelJsonSerializer
     {
