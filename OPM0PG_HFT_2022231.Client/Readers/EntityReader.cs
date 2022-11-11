@@ -1,21 +1,13 @@
 ﻿using OPM0PG_HFT_2022231.Models;
-using OPM0PG_HFT_2022231.Models.Support;
+using OPM0PG_HFT_2022231.Models.Support.Reflection;
+using OPM0PG_HFT_2022231.Models.Support.Serialization;
 using System;
-using System.Collections.Generic;
-using System.Globalization;
 
 namespace OPM0PG_HFT_2022231.Client.Readers
 {
     public class EntityReader<TEntity> : ConsoleTypeReader
         where TEntity : class, IEntity, new()
     {
-        private static Dictionary<Type, Func<string, object>> converters = new Dictionary<Type, Func<string, object>>()
-        {
-            {typeof(TimeSpan),(s)=>TimeSpan.ParseExact(s,@"hh\:mm\:ss",CultureInfo.CurrentCulture) },
-            {typeof(TimeSpan?),(s)=>string.IsNullOrWhiteSpace(s)?null:TimeSpan.ParseExact(s,@"hh\:mm\:ss",CultureInfo.CurrentCulture)},
-            {typeof(int?),(s)=>string.IsNullOrWhiteSpace(s)?null:int.Parse(s)}
-        };
-
         public EntityReader() : base(typeof(TEntity))
         { }
 
@@ -23,7 +15,7 @@ namespace OPM0PG_HFT_2022231.Client.Readers
         {
             Console.WriteLine(typeof(TEntity).Name + ":");
             TEntity entity = new TEntity();
-            foreach (var item in EntityPropertyCollector<TEntity>.CollectProperties())
+            foreach (var item in ReflectionCollector.CollectNonVirtualProperties<TEntity>())
             {
                 bool succes = false;
                 while (!succes)
@@ -32,9 +24,9 @@ namespace OPM0PG_HFT_2022231.Client.Readers
                     {
                         Console.Write($"\t{item.Name}({item.PropertyType.Name}): ");
                         object input;
-                        if (converters.TryGetValue(item.PropertyType, out var converter))
+                        if (ModelJsonSerializer.TryGetConverter(item.PropertyType, out var converter))
                         {
-                            input = converter(Console.ReadLine());
+                            input = converter.Convert(Console.ReadLine());
                         }
                         else
                         {

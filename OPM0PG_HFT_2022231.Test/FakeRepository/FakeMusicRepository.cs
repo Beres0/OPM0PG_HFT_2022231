@@ -1,5 +1,5 @@
 ﻿using OPM0PG_HFT_2022231.Models;
-using OPM0PG_HFT_2022231.Models.Support;
+using OPM0PG_HFT_2022231.Models.Support.Serialization;
 using OPM0PG_HFT_2022231.Repository;
 using OPM0PG_HFT_2022231.Repository.ChainActions;
 using System;
@@ -171,7 +171,7 @@ namespace OPM0PG_HFT_2022231.Test.Repository
         private IEnumerable<TEntity> ReadTestSeed<TEntity>()
                 where TEntity : class, IEntity
         {
-            return new XmlSerializer<List<TEntity>>().Deserialize($"FakeRepository/FakeSeeds/Fake{typeof(TEntity).Name}Seed.xml");
+            return ModelXmlSerializer<List<TEntity>>.Deserialize($"FakeRepository/FakeSeeds/Fake{typeof(TEntity).Name}Seed.xml");
         }
 
         private void RefreshNavigationPropertiesTemplate<TChild, TParent>

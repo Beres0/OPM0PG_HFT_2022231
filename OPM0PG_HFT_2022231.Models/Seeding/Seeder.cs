@@ -1,4 +1,4 @@
-﻿using OPM0PG_HFT_2022231.Models.Support;
+﻿using OPM0PG_HFT_2022231.Models.Support.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -13,13 +13,13 @@ namespace OPM0PG_HFT_2022231.Models.Seeding
         public static List<TEntity> ReadSeed<TEntity>()
             where TEntity : class, IEntity
         {
-            return new XmlSerializer<List<TEntity>>().Deserialize($"{BuildDirectory}/{DefaultDirectory}/Seeds/{typeof(TEntity).Name}Seed.xml");
+            return ModelXmlSerializer<List<TEntity>>.Deserialize($"{BuildDirectory}/{DefaultDirectory}/Seeds/{typeof(TEntity).Name}Seed.xml");
         }
 
         public static List<TEntity> ReadSeed<TEntity>(string path)
             where TEntity : class, IEntity
         {
-            return new XmlSerializer<List<TEntity>>().Deserialize(path);
+            return ModelXmlSerializer<List<TEntity>>.Deserialize(path);
         }
     }
 }

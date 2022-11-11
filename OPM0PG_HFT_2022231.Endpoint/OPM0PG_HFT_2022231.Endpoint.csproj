@@ -5,58 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Contents\Seeds\AlbumGenreSeed.xml" />
-    <None Remove="Contents\Seeds\AlbumMediaSeed.xml" />
-    <None Remove="Contents\Seeds\AlbumSeed.xml" />
-    <None Remove="Contents\Seeds\ArtistSeed.xml" />
-    <None Remove="Contents\Seeds\ContributionSeed.xml" />
-    <None Remove="Contents\Seeds\MembershipSeed.xml" />
-    <None Remove="Contents\Seeds\PartSeed.xml" />
-    <None Remove="Contents\Seeds\ReleaseSeed.xml" />
-    <None Remove="Contents\Seeds\TrackSeed.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Contents\Seeds\AlbumGenreSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Contents\Seeds\AlbumMediaSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Contents\Seeds\AlbumSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Contents\Seeds\ArtistSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Contents\Seeds\ContributionSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Contents\Seeds\MembershipSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Contents\Seeds\PartSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Contents\Seeds\ReleaseSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Contents\Seeds\TrackSeed.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.14" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\OPM0PG_HFT_2022231.Logic\OPM0PG_HFT_2022231.Logic.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Contents\Pictures\Artists\" />
   </ItemGroup>
 
 </Project>

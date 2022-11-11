@@ -1,4 +1,5 @@
 ﻿using OPM0PG_HFT_2022231.Models;
+using OPM0PG_HFT_2022231.Models.Support.Reflection;
 using OPM0PG_HFT_2022231.Repository.ChainActions;
 using System;
 using System.Collections.Generic;
@@ -8,22 +9,19 @@ namespace OPM0PG_HFT_2022231.Repository
 {
     public class MusicRepository : IMusicRepository
     {
+        private static readonly Dictionary<Type, Func<MusicDbContext, object>> Factories =
+            GenericFactory.CreateFactoriesFromEntities<Func<MusicDbContext, object>>(typeof(Repository<>));
+
         private Dictionary<Type, object> repositories;
 
         public MusicRepository(MusicDbContext context)
         {
             repositories = new Dictionary<Type, object>();
 
-            SetRepository(new Repository<Album>(context));
-            SetRepository(new Repository<AlbumGenre>(context));
-            SetRepository(new Repository<Artist>(context));
-            SetRepository(new Repository<Contribution>(context));
-            SetRepository(new Repository<Membership>(context));
-            SetRepository(new Repository<Part>(context));
-            SetRepository(new Repository<Release>(context));
-            SetRepository(new Repository<Track>(context));
-            SetRepository(new Repository<AlbumMedia>(context));
-            SetRepository(new Repository<ArtistMedia>(context));
+            foreach (var factory in Factories)
+            {
+                repositories[factory.Key] = factory.Value(context);
+            }
         }
 
         public void Create<TEntity>(TEntity entity)
@@ -71,12 +69,6 @@ namespace OPM0PG_HFT_2022231.Repository
            where TEntity : class, IEntity
         {
             return (IRepository<TEntity>)repositories[typeof(TEntity)];
-        }
-
-        private void SetRepository<TEntity>(IRepository<TEntity> repository)
-                                                                            where TEntity : class, IEntity
-        {
-            repositories[typeof(TEntity)] = repository;
         }
     }
 }

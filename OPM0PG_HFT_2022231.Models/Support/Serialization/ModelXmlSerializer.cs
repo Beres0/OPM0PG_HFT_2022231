@@ -2,18 +2,13 @@
 using System.IO;
 using System.Xml.Serialization;
 
-namespace OPM0PG_HFT_2022231.Models.Support
+namespace OPM0PG_HFT_2022231.Models.Support.Serialization
 {
-    public class XmlSerializer<T>
+    public static class ModelXmlSerializer<T>
     {
-        private XmlSerializer serializer;
+        private static XmlSerializer serializer = new XmlSerializer(typeof(T));
 
-        public XmlSerializer()
-        {
-            serializer = new XmlSerializer(typeof(T));
-        }
-
-        public T Deserialize(string path)
+        public static T Deserialize(string path)
         {
             try
             {
@@ -28,7 +23,7 @@ namespace OPM0PG_HFT_2022231.Models.Support
             }
         }
 
-        public void Serialize(string path, T obj)
+        public static void Serialize(string path, T obj)
         {
             using (var writer = new StreamWriter(path, false))
             {

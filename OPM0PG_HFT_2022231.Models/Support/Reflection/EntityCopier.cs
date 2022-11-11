@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace OPM0PG_HFT_2022231.Models.Support
+namespace OPM0PG_HFT_2022231.Models.Support.Reflection
 {
     public static class EntityCopier<TEntity> where TEntity : class, IEntity
     {
@@ -27,7 +27,7 @@ namespace OPM0PG_HFT_2022231.Models.Support
         private static Action<TEntity, TEntity>[] CreateCopiers()
         {
             Type type = typeof(TEntity);
-            PropertyInfo[] props = EntityPropertyCollector<TEntity>.CollectProperties();
+            PropertyInfo[] props = ReflectionCollector.CollectNonVirtualProperties<TEntity>();
 
             Action<TEntity, TEntity>[] updaters = new Action<TEntity, TEntity>[props.Length];
 

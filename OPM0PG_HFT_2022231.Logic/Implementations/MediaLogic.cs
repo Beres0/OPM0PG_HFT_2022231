@@ -71,9 +71,12 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             {
                 media.Id = 0;
                 Validator<Media>.Validate(media.Uri);
-                Validator<TForeign>.Validate(foreignKeySelector(media), "id");
                 CheckKeyExists<TForeign>(foreignKeySelector(media));
-                if (media.Main)
+                if (repository.ReadAll<TMedia>().Count() == 0)
+                {
+                    media.Main = true;
+                }
+                else if (media.Main)
                 {
                     TurnOffPreviousMain(media);
                 }
@@ -97,7 +100,7 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
            where TMedia : Media
         {
             var main = repository.ReadAll<TMedia>()
-             .FirstOrDefault(m => m.Main && m.MediaType == media.MediaType);
+             .FirstOrDefault(m => m.Main && m.MediaType == media.MediaType && m.Id != media.Id);
 
             if (main != null)
             {
@@ -107,9 +110,9 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
         }
 
         private void TurnOnNextMain<TMedia>(TMedia media)
-                                                                                                                   where TMedia : Media
+                        where TMedia : Media
         {
-            TMedia main = repository.ReadAll<TMedia>().FirstOrDefault(m => !m.Main && m.MediaType == media.MediaType);
+            TMedia main = repository.ReadAll<TMedia>().FirstOrDefault(m => !m.Main && m.MediaType == media.MediaType && m.Id != media.Id);
             if (main != null)
             {
                 main.Main = true;
@@ -124,11 +127,17 @@ namespace OPM0PG_HFT_2022231.Logic.Implementations
             UpdateEntity(() =>
             {
                 Validator<Media>.Validate(media.Uri);
-                Validator<TForeign>.Validate(foreignKeySelector(media), "id");
                 CheckKeyExists<TForeign>(foreignKeySelector(media));
-                if (media.Main)
+
+                TMedia oldMedia = repository.Read<TMedia>(media.Id);
+
+                if (media.Main && !oldMedia.Main)
                 {
                     TurnOffPreviousMain(media);
+                }
+                else if (!media.Main && oldMedia.Main)
+                {
+                    TurnOnNextMain(media);
                 }
             }, media);
         }

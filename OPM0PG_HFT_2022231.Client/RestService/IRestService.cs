@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 
 public interface IRestService
@@ -8,7 +7,7 @@ public interface IRestService
 
     Task<HttpResponseMessage> GetAsync(string requestUri);
 
-    Task<HttpResponseMessage> PostAsync<T>(string requestUri, T content, params JsonConverter[] converters);
+    Task<HttpResponseMessage> PostAsync<T>(string requestUri, T content);
 
-    Task<HttpResponseMessage> PutAsync<T>(string requestUri, T content, params JsonConverter[] converters);
+    Task<HttpResponseMessage> PutAsync<T>(string requestUri, T content);
 }

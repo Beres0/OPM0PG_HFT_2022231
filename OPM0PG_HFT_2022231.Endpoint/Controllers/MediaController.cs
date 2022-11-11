@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace OPM0PG_HFT_2022231.Endpoint.Controllers
 {
     [Route("api/[controller]/[action]")]
-    public class MediaController
+    [ApiController]
+    public class MediaController : ControllerBase
     {
         private IMediaLogic logic;
 
@@ -27,19 +28,19 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
             logic.CreateArtistMedia(artistMedia);
         }
 
-        [HttpDelete]
+        [HttpDelete("{albumMediaId}")]
         public void DeleteAlbumMedia(int albumMediaId)
         {
             logic.DeleteAlbumMedia(albumMediaId);
         }
 
-        [HttpDelete]
+        [HttpDelete("{artistMediaId}")]
         public void DeleteArtistMedia(int artistMediaId)
         {
             logic.DeleteArtistMedia(artistMediaId);
         }
 
-        [HttpGet]
+        [HttpGet("{albumMediaId}")]
         public AlbumMedia ReadAlbumMedia(int albumMediaId)
         {
             return logic.ReadAlbumMedia(albumMediaId);
@@ -57,7 +58,7 @@ namespace OPM0PG_HFT_2022231.Endpoint.Controllers
             return logic.ReadAllArtistMedia();
         }
 
-        [HttpGet]
+        [HttpGet("{artistMediaId}")]
         public ArtistMedia ReadArtistMedia(int artistMediaId)
         {
             return logic.ReadArtistMedia(artistMediaId);

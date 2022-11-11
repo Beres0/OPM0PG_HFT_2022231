@@ -5,6 +5,8 @@ using Newtonsoft.Json.Linq;
 using OPM0PG_HFT_2022231.Client.Readers;
 using OPM0PG_HFT_2022231.Client.Writers;
 using OPM0PG_HFT_2022231.Models.DataTransferObjects;
+using OPM0PG_HFT_2022231.Models.Support.Reflection;
+using OPM0PG_HFT_2022231.Models.Support.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,11 +31,10 @@ namespace OPM0PG_HFT_2022231.Client
             this.args = args;
             Readers = new ConsoleTypeReaderCollection();
             Writers = new ConsoleTypeWriterCollection();
-            JsonConverters = new List<JsonConverter>();
             types = new Dictionary<string, Type>();
+            AddDefaultReaders();
         }
 
-        public List<JsonConverter> JsonConverters { get; }
         public ConsoleTypeReaderCollection Readers { get; }
         public ConsoleTypeWriterCollection Writers { get; }
 
@@ -56,6 +57,16 @@ namespace OPM0PG_HFT_2022231.Client
         {
             rootMenu = BuildRootMenu(GetApiInterfaceMap());
             rootMenu.Show();
+        }
+
+        private void AddDefaultReaders()
+        {
+            var factories = GenericFactory
+                                .CreateFactoriesFromEntities<Func<ConsoleTypeReader>>(typeof(EntityReader<>));
+            foreach (var factory in factories)
+            {
+                Readers.Add(factory.Value());
+            }
         }
 
         private ConsoleMenu BuildRootMenu(ApiInterfaceMapDTO map)
@@ -124,7 +135,7 @@ namespace OPM0PG_HFT_2022231.Client
             void Post()
             {
                 object content = ReadFromBodyParameter(method.Parameters.First());
-                var response = restService.PostAsync(method.RequestUri, content, JsonConverters.ToArray()).Result;
+                var response = restService.PostAsync(method.RequestUri, content).Result;
                 WriteResponse(method, response);
                 Console.ReadLine();
             }
@@ -136,7 +147,7 @@ namespace OPM0PG_HFT_2022231.Client
             void Put()
             {
                 object content = ReadFromBodyParameter(method.Parameters.First());
-                var response = restService.PutAsync(method.RequestUri, content, JsonConverters.ToArray()).Result;
+                var response = restService.PutAsync(method.RequestUri, content).Result;
                 WriteResponse(method, response);
                 Console.ReadLine();
             };
@@ -175,12 +186,12 @@ namespace OPM0PG_HFT_2022231.Client
             Console.WriteLine($"statuscode: {response.StatusCode}");
             string jsonString = response.Content.ReadAsStringAsync().Result;
             Type returnType = GetType(method.AssemblyQReturnType);
+
             if (response.StatusCode == System.Net.HttpStatusCode.OK &&
                 returnType != typeof(void) &&
                Writers.Contains(returnType))
             {
-                Writers[returnType]
-                    .Write(JsonConvert.DeserializeObject(jsonString, returnType, JsonConverters.ToArray()));
+                Writers[returnType].Write(ModelJsonSerializer.Deserialize(jsonString, returnType));
             }
             else if (!string.IsNullOrWhiteSpace(jsonString))
             {

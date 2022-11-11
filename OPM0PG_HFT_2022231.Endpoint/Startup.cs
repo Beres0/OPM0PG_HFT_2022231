@@ -5,10 +5,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 using OPM0PG_HFT_2022231.Logic;
 using OPM0PG_HFT_2022231.Logic.Implementations;
-using OPM0PG_HFT_2022231.Models.Support.JsonConverters;
+using OPM0PG_HFT_2022231.Models.Support.Serialization;
 using OPM0PG_HFT_2022231.Repository;
 
 namespace OPM0PG_HFT_2022231.Endpoint
@@ -28,8 +27,6 @@ namespace OPM0PG_HFT_2022231.Endpoint
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OPM0PG_HFT_2022231.Endpoint v1"));
             }
             app.UseExceptionHandler(c => c.Run(async context =>
             {
@@ -66,14 +63,10 @@ namespace OPM0PG_HFT_2022231.Endpoint
 
             services.AddMvc().AddNewtonsoftJson(setup =>
             {
-                setup.SerializerSettings.Converters.Add(new DurationJsonConverter());
-                setup.SerializerSettings.Converters.Add(new NullableDurationJsonConverter());
-                setup.SerializerSettings.Converters.Add(new HttpMethodTypeConverter());
-            });
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "OPM0PG_HFT_2022231.Endpoint", Version = "v1" });
+                foreach (var item in ModelJsonSerializer.GetConverters())
+                {
+                    setup.SerializerSettings.Converters.Add(item);
+                }
             });
         }
     }

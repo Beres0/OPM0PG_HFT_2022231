@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using OPM0PG_HFT_2022231.Models.Support.Serialization;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,19 +26,19 @@ internal class RestService : IRestService
         return await client.GetAsync(requestUri);
     }
 
-    public async Task<HttpResponseMessage> PostAsync<T>(string requestUri, T content, params JsonConverter[] converters)
+    public async Task<HttpResponseMessage> PostAsync<T>(string requestUri, T content)
     {
-        return await client.PostAsync(requestUri, Serialize(content, converters));
+        return await client.PostAsync(requestUri, Serialize(content));
     }
 
-    public async Task<HttpResponseMessage> PutAsync<T>(string requestUri, T content, params JsonConverter[] converters)
+    public async Task<HttpResponseMessage> PutAsync<T>(string requestUri, T content)
     {
-        return await client.PutAsync(requestUri, Serialize(content, converters));
+        return await client.PutAsync(requestUri, Serialize(content));
     }
 
-    private StringContent Serialize<T>(T content, params JsonConverter[] converters)
+    private StringContent Serialize<T>(T content)
     {
-        var json = JsonConvert.SerializeObject(content, converters);
+        var json = ModelJsonSerializer.Serialize(content);
         return new StringContent(json, Encoding.UTF8, "application/json");
     }
 }

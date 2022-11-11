@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-using OPM0PG_HFT_2022231.Models.Support.JsonConverters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace OPM0PG_HFT_2022231.Models.DataTransferObjects
@@ -49,5 +47,9 @@ namespace OPM0PG_HFT_2022231.Models.DataTransferObjects
     public record ApiInterfaceMapDTO(IEnumerable<ApiControllerDTO> Controllers);
     public record ApiControllerDTO(string Name, IEnumerable<ApiMethodDTO> Methods);
     public record ApiParameterDTO(string Name, string AssemblyQTypeName);
-    public record ApiMethodDTO(string Name, string RequestUri, string AssemblyQReturnType, [JsonConverter(typeof(HttpMethodTypeConverter))] HttpMethodType MethodType, IEnumerable<ApiParameterDTO> Parameters);
+    public record ApiMethodDTO(string Name,
+                               string RequestUri,
+                               string AssemblyQReturnType,
+                               HttpMethodType MethodType,
+                               IEnumerable<ApiParameterDTO> Parameters);
 }
